@@ -32,6 +32,9 @@ export interface RecordedActionDraft {
   subject: Subject;
   mode: ActionMode;
   abilityInstanceId?: string;
+  abilityOrigin?: ReplayEvent['abilityOrigin'];
+  roleChange?: ReplayEvent['roleChange'];
+  roleChangeResultId?: string;
   targetPlayerIds: string[];
   action: { name: string; input: { [key: string]: JsonValue } };
   receivedInformation: JsonValue;

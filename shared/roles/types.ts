@@ -46,6 +46,7 @@ export interface ActionProposal {
   normalExample: string;
   boundaryExample: string;
   reviewDocument: string;
+  revisionHistory?: { fromVersion: string; toVersion: string; source: string; summary: string; changedAt: string }[];
   review: {
     status: 'pending' | 'changes-requested' | 're-review' | 'approved';
     feedback: RoleFeedback[];

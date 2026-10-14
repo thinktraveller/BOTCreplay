@@ -12,6 +12,9 @@ export interface PresentedEvent {
   details: string;
   iconAssetId?: string;
   players: PresentedPlayer[];
+  // Shared timeline/HTML/PNG data refer to the same recorded result; no second application.
+  roleChangeResultIds?: string[];
+  playersAfter?: PresentedPlayer[];
 }
 export interface ReplayPresentation {
   replayId: string;

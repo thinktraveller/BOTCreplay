@@ -593,20 +593,29 @@
     "name": "舞蛇人",
     "type": "townsfolk",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v2",
+    "proposalVersion": "m1-action-v3",
     "trigger": "每个夜晚。",
-    "input": "选1名存活玩家；填是否命中恶魔；若交换，列本人/目标交换前后角色、阵营并记录旧恶魔中毒。",
-    "result": "复合生成选择、双方换角/换阵营、旧恶魔中毒、通知记录。",
-    "exceptions": "交换角色不等于自动重置限次或认知；这些事实需显式记录。",
+    "input": "选1名存活玩家；填是否命中恶魔；若交换，列本人/目标交换前后角色、阵营并记录旧恶魔中毒。 另填行动者、触发时来源及快照、结果状态和逐人完整旧→新映射；通知独立。",
+    "result": "复合生成选择、双方换角/换阵营、旧恶魔中毒、通知记录。 实际成功才显示逐人新身份；独立入口引用同一结果，不重复交换。",
+    "exceptions": "交换角色不等于自动重置限次或认知；这些事实需显式记录。 不使用/仅选择/未生效不产生换角后果；重复目标或缺失映射保留草稿提示。",
     "normalExample": "夜2舞蛇人选存活7号恶魔，按实际裁决记录双方角色、阵营交换，旧恶魔中毒。",
     "boundaryExample": "若交换未实际生效，不补造换角；已有能力消耗、认知或生死不因换角自动重置。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t029",
     "review": {
-      "status": "pending",
+      "status": "re-review",
       "feedback": [],
       "implementation": "not-implemented",
       "validation": "not-run"
-    }
+    },
+    "revisionHistory": [
+      {
+        "fromVersion": "m1-action-v2",
+        "toVersion": "m1-action-v3",
+        "source": "project-docs/project-plan.md v0.5（ec076dc），M1第6项、A21/A22；本轮用户同步指令",
+        "summary": "按计划v0.5/A22补齐触发时来源、旧身份/死亡快照、完整角色映射、同一结果引用、独立通知及仅选择/未生效分支；可选技能另列不使用。",
+        "changedAt": "2026-10-15T02:00:00+08:00"
+      }
+    ]
   },
   {
     "roleId": "woshidingzhenbuhuishuxue111",
@@ -1034,20 +1043,29 @@
     "name": "工程师",
     "type": "townsfolk",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v2",
+    "proposalVersion": "m1-action-v3",
     "trigger": "每局限一次，夜晚可发动。",
-    "input": "选“恶魔变角/全部爪牙变角/不使用”；恶魔填新恶魔角色，爪牙填实际各玩家到新爪牙角色的映射。",
-    "result": "记录各玩家换角与通知、限次使用。",
-    "exceptions": "按所选剧本角色及实际裁决记录可选项，不套房规限制；不自动更改阵营或重置已用能力。",
+    "input": "选“恶魔变角/全部爪牙变角/不使用”；恶魔填新恶魔角色，爪牙填实际各玩家到新爪牙角色的映射。 另填行动者、触发时来源及快照、结果状态和逐人完整旧→新映射；通知独立。",
+    "result": "记录各玩家换角与通知、限次使用。 实际成功才显示逐人新身份；独立入口引用同一结果，不重复交换。",
+    "exceptions": "按所选剧本角色及实际裁决记录可选项，不套房规限制；不自动更改阵营或重置已用能力。 不使用/仅选择/未生效不产生换角后果；重复目标或缺失映射保留草稿提示。",
     "normalExample": "夜2工程师选择全部爪牙变角，登记4号投毒者→间谍、9号男爵→刺客并通知。",
     "boundaryExample": "未选择的恶魔不随之变化；每人原阵营、已用次数或生死不因换角自动重置。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t050",
     "review": {
-      "status": "pending",
+      "status": "re-review",
       "feedback": [],
       "implementation": "not-implemented",
       "validation": "not-run"
-    }
+    },
+    "revisionHistory": [
+      {
+        "fromVersion": "m1-action-v2",
+        "toVersion": "m1-action-v3",
+        "source": "project-docs/project-plan.md v0.5（ec076dc），M1第6项、A21/A22；本轮用户同步指令",
+        "summary": "按计划v0.5/A22补齐触发时来源、旧身份/死亡快照、完整角色映射、同一结果引用、独立通知及仅选择/未生效分支；可选技能另列不使用。",
+        "changedAt": "2026-10-15T02:00:00+08:00"
+      }
+    ]
   },
   {
     "roleId": "diaoshangyizhengtiandeyu111",
@@ -1076,20 +1094,29 @@
     "name": "巡山人",
     "type": "townsfolk",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v2",
+    "proposalVersion": "m1-action-v3",
     "trigger": "设置加入落难少女；每局限一次，夜晚可发动。",
-    "input": "设置填落难少女实际玩家；行动选1名存活玩家或不使用；命中时填不在场镇民新角色。",
-    "result": "记录选择、落难少女变角、通知、限次使用。",
-    "exceptions": "首夜/取得角色后的行为按实际触发；新角色必须记真实换角而非能力获得。",
+    "input": "设置填落难少女实际玩家；行动选1名存活玩家或不使用；命中时填不在场镇民新角色。 另填行动者、触发时来源及快照、结果状态和逐人完整旧→新映射；通知独立。",
+    "result": "记录选择、落难少女变角、通知、限次使用。 实际成功才显示逐人新身份；独立入口引用同一结果，不重复交换。",
+    "exceptions": "首夜/取得角色后的行为按实际触发；新角色必须记真实换角而非能力获得。 不使用/仅选择/未生效不产生换角后果；重复目标或缺失映射保留草稿提示。",
     "normalExample": "准备记录落难少女5号；夜2巡山人选择5号，将其实际变为不在场厨师并通知。",
     "boundaryExample": "选择其他存活玩家未变角仍记录尝试与消耗；变角不能仅写成获得厨师能力。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t052",
     "review": {
-      "status": "pending",
+      "status": "re-review",
       "feedback": [],
       "implementation": "not-implemented",
       "validation": "not-run"
-    }
+    },
+    "revisionHistory": [
+      {
+        "fromVersion": "m1-action-v2",
+        "toVersion": "m1-action-v3",
+        "source": "project-docs/project-plan.md v0.5（ec076dc），M1第6项、A21/A22；本轮用户同步指令",
+        "summary": "按计划v0.5/A22补齐触发时来源、旧身份/死亡快照、完整角色映射、同一结果引用、独立通知及仅选择/未生效分支；可选技能另列不使用。",
+        "changedAt": "2026-10-15T02:00:00+08:00"
+      }
+    ]
   },
   {
     "roleId": "xinde_xinjide111",
@@ -1118,20 +1145,29 @@
     "name": "农夫",
     "type": "townsfolk",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v2",
+    "proposalVersion": "m1-action-v3",
     "trigger": "本人在夜晚死亡时。",
-    "input": "绑定本人夜间死亡；选择1名存活善良玩家及实际换角结果。",
-    "result": "记录死亡触发该玩家变为农夫并收到通知。",
-    "exceptions": "死者被动触发保留；新农夫后续以新能力来源继续记录。",
+    "input": "绑定本人夜间死亡；选择1名存活善良玩家及实际换角结果。 另填行动者、触发时来源及快照、结果状态和逐人完整旧→新映射；通知独立。",
+    "result": "记录死亡触发该玩家变为农夫并收到通知。 实际成功才显示逐人新身份；独立入口引用同一结果，不重复交换。",
+    "exceptions": "死者被动触发保留；新农夫后续以新能力来源继续记录。 不使用/仅选择/未生效不产生换角后果；重复目标或缺失映射保留草稿提示。",
     "normalExample": "夜2农夫死亡，选择存活善良5号实际变为农夫，记录死亡、换角与通知。",
     "boundaryExample": "原农夫死亡后仍有该被动触发；新农夫使用独立来源，不能共用原能力实例。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t054",
     "review": {
-      "status": "pending",
+      "status": "re-review",
       "feedback": [],
       "implementation": "not-implemented",
       "validation": "not-run"
-    }
+    },
+    "revisionHistory": [
+      {
+        "fromVersion": "m1-action-v2",
+        "toVersion": "m1-action-v3",
+        "source": "project-docs/project-plan.md v0.5（ec076dc），M1第6项、A21/A22；本轮用户同步指令",
+        "summary": "按计划v0.5/A22补齐触发时来源、旧身份/死亡快照、完整角色映射、同一结果引用、独立通知及仅选择/未生效分支；可选技能另列不使用。",
+        "changedAt": "2026-10-15T02:00:00+08:00"
+      }
+    ]
   },
   {
     "roleId": "liuqian111",
@@ -1706,20 +1742,29 @@
     "name": "悟道者",
     "type": "townsfolk",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v2",
+    "proposalVersion": "m1-action-v3",
     "trigger": "分配认知外来者；邪恶能力选择/影响本人且尚未生效。",
-    "input": "设置认知外来者；绑定来源邪恶能力，先填转成的不在场镇民角色，再填原效果实际如何结算。",
-    "result": "记录认知覆盖，触发前变角及通知/后续效果。",
-    "exceptions": "换角必须在原效果前排序；认知角色不是实际外来者，不自动获得其真实能力。",
+    "input": "设置认知外来者；绑定来源邪恶能力，先填转成的不在场镇民角色，再填原效果实际如何结算。 另填行动者、触发时来源及快照、结果状态和逐人完整旧→新映射；通知独立。",
+    "result": "记录认知覆盖，触发前变角及通知/后续效果。 实际成功才显示逐人新身份；独立入口引用同一结果，不重复交换。",
+    "exceptions": "换角必须在原效果前排序；认知角色不是实际外来者，不自动获得其真实能力。 不使用/仅选择/未生效不产生换角后果；重复目标或缺失映射保留草稿提示。",
     "normalExample": "悟道者原认知圣徒；夜2邪恶能力影响前，先实际变为不在场厨师，再记录原效果结算。",
     "boundaryExample": "认知圣徒不赋予圣徒真实能力；换角效果的顺序必须在来源影响前可追溯。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t082",
     "review": {
-      "status": "pending",
+      "status": "re-review",
       "feedback": [],
       "implementation": "not-implemented",
       "validation": "not-run"
-    }
+    },
+    "revisionHistory": [
+      {
+        "fromVersion": "m1-action-v2",
+        "toVersion": "m1-action-v3",
+        "source": "project-docs/project-plan.md v0.5（ec076dc），M1第6项、A21/A22；本轮用户同步指令",
+        "summary": "按计划v0.5/A22补齐触发时来源、旧身份/死亡快照、完整角色映射、同一结果引用、独立通知及仅选择/未生效分支；可选技能另列不使用。",
+        "changedAt": "2026-10-15T02:00:00+08:00"
+      }
+    ]
   },
   {
     "roleId": "bingbibibibibibibibiibibibibibibibibiiiiihbbibibib",
@@ -1853,20 +1898,29 @@
     "name": "狸猫",
     "type": "townsfolk",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v2",
+    "proposalVersion": "m1-action-v3",
     "trigger": "非首夜选择；所选善良角色玩家当晚被邪恶角色杀死。",
-    "input": "选1名玩家；绑定目标角色、邪恶来源死亡；填双方交换前后真实角色。",
-    "result": "记录选择、死亡触发、两方换角及通知。",
-    "exceptions": "交换角色不自动交换阵营/生死；正文没有附加这些变化，按事实另记。",
+    "input": "选1名玩家；绑定目标角色、邪恶来源死亡；填双方交换前后真实角色。 另填行动者、触发时来源及快照、结果状态和逐人完整旧→新映射；通知独立。",
+    "result": "记录选择、死亡触发、两方换角及通知。 实际成功才显示逐人新身份；独立入口引用同一结果，不重复交换。",
+    "exceptions": "交换角色不自动交换阵营/生死；正文没有附加这些变化，按事实另记。 不使用/仅选择/未生效不产生换角后果；重复目标或缺失映射保留草稿提示。",
     "normalExample": "夜2狸猫选择善良5号，5号当晚被邪恶能力杀死后，记录双方真实角色交换与通知。",
     "boundaryExample": "原生死与阵营不自动互换；5号死于其他来源时记录条件不满足或裁决。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t089",
     "review": {
-      "status": "pending",
+      "status": "re-review",
       "feedback": [],
       "implementation": "not-implemented",
       "validation": "not-run"
-    }
+    },
+    "revisionHistory": [
+      {
+        "fromVersion": "m1-action-v2",
+        "toVersion": "m1-action-v3",
+        "source": "project-docs/project-plan.md v0.5（ec076dc），M1第6项、A21/A22；本轮用户同步指令",
+        "summary": "按计划v0.5/A22补齐触发时来源、旧身份/死亡快照、完整角色映射、同一结果引用、独立通知及仅选择/未生效分支；可选技能另列不使用。",
+        "changedAt": "2026-10-15T02:00:00+08:00"
+      }
+    ]
   },
   {
     "roleId": "qqqqqqqqqqasfasfhfhhrteqarq35q35qaa",
@@ -1979,20 +2033,29 @@
     "name": "偃师",
     "type": "townsfolk",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v2",
+    "proposalVersion": "m1-action-v3",
     "trigger": "本人在夜晚死亡时。",
-    "input": "绑定本人死亡；选1名存活爪牙，填双方原/新真实角色和通知。",
-    "result": "记录死亡后双方交换角色。",
-    "exceptions": "生命状态和阵营不因交换角色自动互换；夜间死者仍有被动事件。",
+    "input": "绑定本人死亡；选1名存活爪牙，填双方原/新真实角色和通知。 另填行动者、触发时来源及快照、结果状态和逐人完整旧→新映射；通知独立。",
+    "result": "记录死亡后双方交换角色。 实际成功才显示逐人新身份；独立入口引用同一结果，不重复交换。",
+    "exceptions": "生命状态和阵营不因交换角色自动互换；夜间死者仍有被动事件。 不使用/仅选择/未生效不产生换角后果；重复目标或缺失映射保留草稿提示。",
     "normalExample": "夜2偃师死亡后选择存活爪牙4号，保存两方原角色、交换后角色与通知。",
     "boundaryExample": "偃师仍保持该次真实死亡，4号仍按其实际生死保存；角色交换不自动换阵营。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t095",
     "review": {
-      "status": "pending",
+      "status": "re-review",
       "feedback": [],
       "implementation": "not-implemented",
       "validation": "not-run"
-    }
+    },
+    "revisionHistory": [
+      {
+        "fromVersion": "m1-action-v2",
+        "toVersion": "m1-action-v3",
+        "source": "project-docs/project-plan.md v0.5（ec076dc），M1第6项、A21/A22；本轮用户同步指令",
+        "summary": "按计划v0.5/A22补齐触发时来源、旧身份/死亡快照、完整角色映射、同一结果引用、独立通知及仅选择/未生效分支；可选技能另列不使用。",
+        "changedAt": "2026-10-15T02:00:00+08:00"
+      }
+    ]
   },
   {
     "roleId": "yishisaarqwwwwwwwwwwwwwwwwwwww",
@@ -2336,20 +2399,29 @@
     "name": "理发师",
     "type": "outsider",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v2",
+    "proposalVersion": "m1-action-v3",
     "trigger": "本人死亡后的当晚。",
-    "input": "关联理发师死亡事件并保留其触发时角色；另填选择行动的恶魔、是否使用、2名不同目标（排除其他恶魔）、双方换角前后映射。目标未限定存活，允许选择已死亡的理发师本人；行动者与死亡的能力来源分别保存。",
-    "result": "记录恶魔因死亡理发师能力作出的选择、实际发生的两人真实角色交换及通知。选择句展示旧身份与当时死亡标记，随后分别列出两人新身份；本次新增设计示例完整展示见S001-G-08。",
-    "exceptions": "选择分支含不使用；选择不等于交换已成功。只换角色不自动换阵营/生死，已死理发师换成调查员后仍已死；不因换角擅自重置认知、获得能力或次数。夜间死亡可行动后插入；后续换角不改写来源死亡事件和本次选择时身份。",
+    "input": "关联理发师死亡事件并保留其触发时角色；另填选择行动的恶魔、是否使用、2名不同目标（排除其他恶魔）、双方换角前后映射。目标未限定存活，允许选择已死亡的理发师本人；行动者与死亡的能力来源分别保存。 另填行动者、触发时来源及快照、结果状态和逐人完整旧→新映射；通知独立。",
+    "result": "记录恶魔因死亡理发师能力作出的选择、实际发生的两人真实角色交换及通知。选择句展示旧身份与当时死亡标记，随后分别列出两人新身份；本次新增设计示例完整展示见S001-G-08。 实际成功才显示逐人新身份；独立入口引用同一结果，不重复交换。",
+    "exceptions": "选择分支含不使用；选择不等于交换已成功。只换角色不自动换阵营/生死，已死理发师换成调查员后仍已死；不因换角擅自重置认知、获得能力或次数。夜间死亡可行动后插入；后续换角不改写来源死亡事件和本次选择时身份。 不使用/仅选择/未生效不产生换角后果；重复目标或缺失映射保留草稿提示。",
     "normalExample": "1号玩家（小恶魔）因2号玩家（理发师）💀的能力而选择了2号玩家（理发师）💀和3号玩家（调查员），他们的身份交换了。\n2号玩家现在的身份是调查员\n3号玩家现在的身份是理发师",
     "boundaryExample": "恶魔也可以不使用；交换不自动换阵营或生死，目标限制按源方案保留。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o011",
     "review": {
-      "status": "pending",
+      "status": "re-review",
       "feedback": [],
       "implementation": "not-implemented",
       "validation": "not-run"
-    }
+    },
+    "revisionHistory": [
+      {
+        "fromVersion": "m1-action-v2",
+        "toVersion": "m1-action-v3",
+        "source": "project-docs/project-plan.md v0.5（ec076dc），M1第6项、A21/A22；本轮用户同步指令",
+        "summary": "按计划v0.5/A22补齐触发时来源、旧身份/死亡快照、完整角色映射、同一结果引用、独立通知及仅选择/未生效分支；可选技能另列不使用。",
+        "changedAt": "2026-10-15T02:00:00+08:00"
+      }
+    ]
   },
   {
     "roleId": "daibi111",
@@ -2525,20 +2597,29 @@
     "name": "帽匠",
     "type": "outsider",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v2",
+    "proposalVersion": "m1-action-v3",
     "trigger": "本人死亡后的当晚。",
-    "input": "列爪牙/恶魔玩家逐人是否变角、新爪牙/恶魔角色；记录茶会时点/通知。",
-    "result": "记录每人选择及真实角色变化。",
-    "exceptions": "死亡后仍有触发；转换同类型范围依角色技能，房规额外范围限制已排除。",
+    "input": "列爪牙/恶魔玩家逐人是否变角、新爪牙/恶魔角色；记录茶会时点/通知。 另填行动者、触发时来源及快照、结果状态和逐人完整旧→新映射；通知独立。",
+    "result": "记录每人选择及真实角色变化。 实际成功才显示逐人新身份；独立入口引用同一结果，不重复交换。",
+    "exceptions": "死亡后仍有触发；转换同类型范围依角色技能，房规额外范围限制已排除。 不使用/仅选择/未生效不产生换角后果；重复目标或缺失映射保留草稿提示。",
     "normalExample": "帽匠日1死亡，当晚记录4号爪牙选择新爪牙角色、7号恶魔选择新恶魔角色并通知。",
     "boundaryExample": "每人可记录未变角；角色变化不自动改变阵营或恢复已用次数，不添房规范围限制。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o020",
     "review": {
-      "status": "pending",
+      "status": "re-review",
       "feedback": [],
       "implementation": "not-implemented",
       "validation": "not-run"
-    }
+    },
+    "revisionHistory": [
+      {
+        "fromVersion": "m1-action-v2",
+        "toVersion": "m1-action-v3",
+        "source": "project-docs/project-plan.md v0.5（ec076dc），M1第6项、A21/A22；本轮用户同步指令",
+        "summary": "按计划v0.5/A22补齐触发时来源、旧身份/死亡快照、完整角色映射、同一结果引用、独立通知及仅选择/未生效分支；可选技能另列不使用。",
+        "changedAt": "2026-10-15T02:00:00+08:00"
+      }
+    ]
   },
   {
     "roleId": "haochiaichi111",
@@ -2714,20 +2795,29 @@
     "name": "入殓师",
     "type": "outsider",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v2",
+    "proposalVersion": "m1-action-v3",
     "trigger": "本人提名恶魔且该恶魔死于此次处决；存活≤4时失能。",
-    "input": "绑定本人提名及对应恶魔处决致死；填本人新恶魔角色、转邪、通知；记录存活数与失能时点。",
-    "result": "记录提名触发本人变邪恶恶魔，及小于等于4存活时失能。",
-    "exceptions": "真实换角与转邪分开事件；先失能时可记录触发未生效原因，不能自动结束游戏删除后继变角。",
+    "input": "绑定本人提名及对应恶魔处决致死；填本人新恶魔角色、转邪、通知；记录存活数与失能时点。 另填行动者、触发时来源及快照、结果状态和逐人完整旧→新映射；通知独立。",
+    "result": "记录提名触发本人变邪恶恶魔，及小于等于4存活时失能。 实际成功才显示逐人新身份；独立入口引用同一结果，不重复交换。",
+    "exceptions": "真实换角与转邪分开事件；先失能时可记录触发未生效原因，不能自动结束游戏删除后继变角。 不使用/仅选择/未生效不产生换角后果；重复目标或缺失映射保留草稿提示。",
     "normalExample": "存活6人时入殓师提名恶魔7号且其死于该处决，记录入殓师真实变恶魔并转邪、通知。",
     "boundaryExample": "存活≤4时先记录失能与时点；不先自动结束游戏而丢失可能的后继换角裁决。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o029",
     "review": {
-      "status": "pending",
+      "status": "re-review",
       "feedback": [],
       "implementation": "not-implemented",
       "validation": "not-run"
-    }
+    },
+    "revisionHistory": [
+      {
+        "fromVersion": "m1-action-v2",
+        "toVersion": "m1-action-v3",
+        "source": "project-docs/project-plan.md v0.5（ec076dc），M1第6项、A21/A22；本轮用户同步指令",
+        "summary": "按计划v0.5/A22补齐触发时来源、旧身份/死亡快照、完整角色映射、同一结果引用、独立通知及仅选择/未生效分支；可选技能另列不使用。",
+        "changedAt": "2026-10-15T02:00:00+08:00"
+      }
+    ]
   },
   {
     "roleId": "zhshutongoashoiahokrtoaiwjsjfn8qh13rfbnoihc-9j",
@@ -2819,20 +2909,29 @@
     "name": "红唇女郎",
     "type": "minion",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v2",
+    "proposalVersion": "m1-action-v3",
     "trigger": "判定时存活≥5且恶魔死亡。",
-    "input": "关联恶魔死亡、当时非旅行者存活数、被继承恶魔角色及通知。",
-    "result": "记录本人变成该恶魔。",
-    "exceptions": "不把每次恶魔死亡都触发；角色变化与阵营变化独立，正文未明示转阵营。",
+    "input": "关联恶魔死亡、当时非旅行者存活数、被继承恶魔角色及通知。 另填行动者、触发时来源及快照、结果状态和逐人完整旧→新映射；通知独立。",
+    "result": "记录本人变成该恶魔。 实际成功才显示逐人新身份；独立入口引用同一结果，不重复交换。",
+    "exceptions": "不把每次恶魔死亡都触发；角色变化与阵营变化独立，正文未明示转阵营。 不使用/仅选择/未生效不产生换角后果；重复目标或缺失映射保留草稿提示。",
     "normalExample": "恶魔死亡，记录该判定的存活非旅行者人数6，红唇女郎实际变为该恶魔并通知。",
     "boundaryExample": "不足通常人数条件时不自动换角；只换角色，不凭角色类型附加转阵营。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m003",
     "review": {
-      "status": "pending",
+      "status": "re-review",
       "feedback": [],
       "implementation": "not-implemented",
       "validation": "not-run"
-    }
+    },
+    "revisionHistory": [
+      {
+        "fromVersion": "m1-action-v2",
+        "toVersion": "m1-action-v3",
+        "source": "project-docs/project-plan.md v0.5（ec076dc），M1第6项、A21/A22；本轮用户同步指令",
+        "summary": "按计划v0.5/A22补齐触发时来源、旧身份/死亡快照、完整角色映射、同一结果引用、独立通知及仅选择/未生效分支；可选技能另列不使用。",
+        "changedAt": "2026-10-15T02:00:00+08:00"
+      }
+    ]
   },
   {
     "roleId": "nanjueeeee111",
@@ -3008,20 +3107,29 @@
     "name": "麻脸巫婆",
     "type": "minion",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v2",
+    "proposalVersion": "m1-action-v3",
     "trigger": "非首夜每晚。",
-    "input": "选1名玩家+1个角色；填该角色是否在场、实际换角；新建恶魔时另填说书人决定的死亡集。",
-    "result": "记录选择、换角/未换角、通知及当晚特殊死亡裁决。",
-    "exceptions": "换角不自动转阵营；不能把“创造恶魔”简化为普通必杀1人。",
+    "input": "选1名玩家+1个角色；填该角色是否在场、实际换角；新建恶魔时另填说书人决定的死亡集。 另填行动者、触发时来源及快照、结果状态和逐人完整旧→新映射；通知独立。",
+    "result": "记录选择、换角/未换角、通知及当晚特殊死亡裁决。 实际成功才显示逐人新身份；独立入口引用同一结果，不重复交换。",
+    "exceptions": "换角不自动转阵营；不能把“创造恶魔”简化为普通必杀1人。 不使用/仅选择/未生效不产生换角后果；重复目标或缺失映射保留草稿提示。",
     "normalExample": "夜2麻脸巫婆选5号和不在场小恶魔，记录换角及当晚说书人裁决的死亡集。",
     "boundaryExample": "创造恶魔不自动等于转邪或必死一人；选择已在场角色时保留未换角原因。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m012",
     "review": {
-      "status": "pending",
+      "status": "re-review",
       "feedback": [],
       "implementation": "not-implemented",
       "validation": "not-run"
-    }
+    },
+    "revisionHistory": [
+      {
+        "fromVersion": "m1-action-v2",
+        "toVersion": "m1-action-v3",
+        "source": "project-docs/project-plan.md v0.5（ec076dc），M1第6项、A21/A22；本轮用户同步指令",
+        "summary": "按计划v0.5/A22补齐触发时来源、旧身份/死亡快照、完整角色映射、同一结果引用、独立通知及仅选择/未生效分支；可选技能另列不使用。",
+        "changedAt": "2026-10-15T02:00:00+08:00"
+      }
+    ]
   },
   {
     "roleId": "youzhizhua11111111",
@@ -3239,20 +3347,29 @@
     "name": "召唤师",
     "type": "minion",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v2",
+    "proposalVersion": "m1-action-v3",
     "trigger": "准备无恶魔；本人首夜得3伪装；游戏第三夜创造恶魔。",
-    "input": "设置填无恶魔；首夜填3个伪装；第三夜选1名玩家+恶魔角色，记录转邪/换角/通知。",
-    "result": "记录三伪装和第三夜创造邪恶恶魔。",
-    "exceptions": "第三夜是游戏轮次，不改为该玩家得到能力后的第三晚；房规范围限制已排除。",
+    "input": "设置填无恶魔；首夜填3个伪装；第三夜选1名玩家+恶魔角色，记录转邪/换角/通知。 另填行动者、触发时来源及快照、结果状态和逐人完整旧→新映射；通知独立。",
+    "result": "记录三伪装和第三夜创造邪恶恶魔。 实际成功才显示逐人新身份；独立入口引用同一结果，不重复交换。",
+    "exceptions": "第三夜是游戏轮次，不改为该玩家得到能力后的第三晚；房规范围限制已排除。 不使用/仅选择/未生效不产生换角后果；重复目标或缺失映射保留草稿提示。",
     "normalExample": "准备无恶魔，召唤师首夜收到三伪装；游戏第3夜选5号变为小恶魔并转邪、通知。",
     "boundaryExample": "第三夜按游戏轮次，不从获得召唤师能力后重新数三夜；换角与转邪分别保存。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m023",
     "review": {
-      "status": "pending",
+      "status": "re-review",
       "feedback": [],
       "implementation": "not-implemented",
       "validation": "not-run"
-    }
+    },
+    "revisionHistory": [
+      {
+        "fromVersion": "m1-action-v2",
+        "toVersion": "m1-action-v3",
+        "source": "project-docs/project-plan.md v0.5（ec076dc），M1第6项、A21/A22；本轮用户同步指令",
+        "summary": "按计划v0.5/A22补齐触发时来源、旧身份/死亡快照、完整角色映射、同一结果引用、独立通知及仅选择/未生效分支；可选技能另列不使用。",
+        "changedAt": "2026-10-15T02:00:00+08:00"
+      }
+    ]
   },
   {
     "roleId": "weishenmebushilianjinshushi111",
@@ -3533,20 +3650,29 @@
     "name": "小恶魔",
     "type": "demon",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v2",
+    "proposalVersion": "m1-action-v3",
     "trigger": "非首夜每晚；本能力自杀成功时传位。",
-    "input": "选1名玩家；填死亡结果；若选本人且实际自杀，填变小恶魔的爪牙及通知。",
-    "result": "记录攻击、死亡与爪牙真实换角。",
-    "exceptions": "自杀失败不自动传位；正文没明示阵营改变，按换角事件独立保存。",
+    "input": "选1名玩家；填死亡结果；若选本人且实际自杀，填变小恶魔的爪牙及通知。 另填行动者、触发时来源及快照、结果状态和逐人完整旧→新映射；通知独立。",
+    "result": "记录攻击、死亡与爪牙真实换角。 实际成功才显示逐人新身份；独立入口引用同一结果，不重复交换。",
+    "exceptions": "自杀失败不自动传位；正文没明示阵营改变，按换角事件独立保存。 不使用/仅选择/未生效不产生换角后果；重复目标或缺失映射保留草稿提示。",
     "normalExample": "夜2小恶魔选择本人且实际自杀，另记爪牙4号变为小恶魔及收到通知。",
     "boundaryExample": "自杀被保护阻止时不能自动传位；换角不附加源文未写的阵营变化。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d001",
     "review": {
-      "status": "pending",
+      "status": "re-review",
       "feedback": [],
       "implementation": "not-implemented",
       "validation": "not-run"
-    }
+    },
+    "revisionHistory": [
+      {
+        "fromVersion": "m1-action-v2",
+        "toVersion": "m1-action-v3",
+        "source": "project-docs/project-plan.md v0.5（ec076dc），M1第6项、A21/A22；本轮用户同步指令",
+        "summary": "按计划v0.5/A22补齐触发时来源、旧身份/死亡快照、完整角色映射、同一结果引用、独立通知及仅选择/未生效分支；可选技能另列不使用。",
+        "changedAt": "2026-10-15T02:00:00+08:00"
+      }
+    ]
   },
   {
     "roleId": "zhiwudazhanjiangshi111",
@@ -3638,20 +3764,29 @@
     "name": "方古",
     "type": "demon",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v2",
+    "proposalVersion": "m1-action-v3",
     "trigger": "准备+1外来者；非首夜攻击；本局一次外来者转化。",
-    "input": "选1名玩家；普通攻击填死亡；转化填目标原外来者→方古、目标转邪、旧方古代死及次数。",
-    "result": "记录攻击或转化连锁并明确转化成功/失败。",
-    "exceptions": "仅本能力杀死外来者才对应转化；转化后再次攻击仍记录，但不得重复套已用转化。",
+    "input": "选1名玩家；普通攻击填死亡；转化填目标原外来者→方古、目标转邪、旧方古代死及次数。 另填行动者、触发时来源及快照、结果状态和逐人完整旧→新映射；通知独立。",
+    "result": "记录攻击或转化连锁并明确转化成功/失败。 实际成功才显示逐人新身份；独立入口引用同一结果，不重复交换。",
+    "exceptions": "仅本能力杀死外来者才对应转化；转化后再次攻击仍记录，但不得重复套已用转化。 不使用/仅选择/未生效不产生换角后果；重复目标或缺失映射保留草稿提示。",
     "normalExample": "准备外来者+1；夜2方古命中外来者5号，记录5号变方古并转邪、旧方古代死及一次转化。",
     "boundaryExample": "转化无效或本局已用不自动重转；普通攻击死亡与转化连锁分开。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d006",
     "review": {
-      "status": "pending",
+      "status": "re-review",
       "feedback": [],
       "implementation": "not-implemented",
       "validation": "not-run"
-    }
+    },
+    "revisionHistory": [
+      {
+        "fromVersion": "m1-action-v2",
+        "toVersion": "m1-action-v3",
+        "source": "project-docs/project-plan.md v0.5（ec076dc），M1第6项、A21/A22；本轮用户同步指令",
+        "summary": "按计划v0.5/A22补齐触发时来源、旧身份/死亡快照、完整角色映射、同一结果引用、独立通知及仅选择/未生效分支；可选技能另列不使用。",
+        "changedAt": "2026-10-15T02:00:00+08:00"
+      }
+    ]
   },
   {
     "roleId": "wangguuuuuuuu111111",
@@ -3827,20 +3962,29 @@
     "name": "暴乱",
     "type": "demon",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v2",
+    "proposalVersion": "m1-action-v3",
     "trigger": "游戏第三白天；当天连续提名。",
-    "input": "列所有爪牙变暴乱的真实换角；每条提名保存提名者、目标、立即死亡结果及该目标必须再提名的后续链。",
-    "result": "记录第三日群体换角和提名-立即死亡-下一提名序列。",
-    "exceptions": "这是死亡而不是处决；已死目标保留继续提名记录；链终点/例外由说书人填。",
+    "input": "列所有爪牙变暴乱的真实换角；每条提名保存提名者、目标、立即死亡结果及该目标必须再提名的后续链。 另填行动者、触发时来源及快照、结果状态和逐人完整旧→新映射；通知独立。",
+    "result": "记录第三日群体换角和提名-立即死亡-下一提名序列。 实际成功才显示逐人新身份；独立入口引用同一结果，不重复交换。",
+    "exceptions": "这是死亡而不是处决；已死目标保留继续提名记录；链终点/例外由说书人填。 不使用/仅选择/未生效不产生换角后果；重复目标或缺失映射保留草稿提示。",
     "normalExample": "游戏第3白天爪牙实际变暴乱；2号提名5号使其死亡，5号继续提名8号，保存连续链。",
     "boundaryExample": "这些是死亡而非处决；5号已死仍保留其后续必须提名，不能按普通死者权限删链。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d015",
     "review": {
-      "status": "pending",
+      "status": "re-review",
       "feedback": [],
       "implementation": "not-implemented",
       "validation": "not-run"
-    }
+    },
+    "revisionHistory": [
+      {
+        "fromVersion": "m1-action-v2",
+        "toVersion": "m1-action-v3",
+        "source": "project-docs/project-plan.md v0.5（ec076dc），M1第6项、A21/A22；本轮用户同步指令",
+        "summary": "按计划v0.5/A22补齐触发时来源、旧身份/死亡快照、完整角色映射、同一结果引用、独立通知及仅选择/未生效分支；可选技能另列不使用。",
+        "changedAt": "2026-10-15T02:00:00+08:00"
+      }
+    ]
   },
   {
     "roleId": "oeeroeeerooooeeeeee1111111",
@@ -3869,20 +4013,29 @@
     "name": "卡扎力",
     "type": "demon",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v2",
+    "proposalVersion": "m1-action-v3",
     "trigger": "准备任意外来者及本人首夜指定爪牙；非首夜攻击。",
-    "input": "首夜填玩家→爪牙角色映射和转邪；记录实际外来者调整；夜间选1名玩家并填死亡。",
-    "result": "记录邪恶爪牙设置、通知、配版及攻击。",
-    "exceptions": "源正文爪牙配置和夜间提醒都保留；用户已排除额外房规可选范围通知。",
+    "input": "首夜填玩家→爪牙角色映射和转邪；记录实际外来者调整；夜间选1名玩家并填死亡。 初始配角单独显示，不填写游戏中换角的旧/新映射。",
+    "result": "记录邪恶爪牙设置、通知、配版及攻击。 逐人标注初始分配。",
+    "exceptions": "源正文爪牙配置和夜间提醒都保留；用户已排除额外房规可选范围通知。 准备配角不等同于实际换角。",
     "normalExample": "卡扎力首夜指定4号为投毒者、9号为刺客并转邪，保存映射与通知；夜2另记攻击。",
     "boundaryExample": "实际外来者配置另存；不靠角色名称合并两名玩家，也不添加房规额外范围通知。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d017",
     "review": {
-      "status": "pending",
+      "status": "re-review",
       "feedback": [],
       "implementation": "not-implemented",
       "validation": "not-run"
-    }
+    },
+    "revisionHistory": [
+      {
+        "fromVersion": "m1-action-v2",
+        "toVersion": "m1-action-v3",
+        "source": "project-docs/project-plan.md v0.5（ec076dc），M1第6项、A21/A22；本轮用户同步指令",
+        "summary": "澄清准备分配与游戏中真实换角；初始角色逐人展示，不虚构旧角色/死亡或交换。",
+        "changedAt": "2026-10-15T02:00:00+08:00"
+      }
+    ]
   },
   {
     "roleId": "waibibaboabbbb1111",
@@ -3911,20 +4064,29 @@
     "name": "堤丰之首",
     "type": "demon",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v2",
+    "proposalVersion": "m1-action-v3",
     "trigger": "设置邪恶连续邻座、居中、爪牙+1、任意外来者；非首夜攻击。",
-    "input": "记录事件时座位与邪恶玩家连续排列、两侧爪牙角色/转邪/通知和配版；夜间选1名玩家。",
-    "result": "记录设置调整、角色/阵营及夜攻击结果。",
-    "exceptions": "阵营颜色不等于角色类型；异常座位设置允许记录说书人解释。",
+    "input": "记录事件时座位与邪恶玩家连续排列、两侧爪牙角色/转邪/通知和配版；夜间选1名玩家。 初始配角单独显示，不填写游戏中换角的旧/新映射。",
+    "result": "记录设置调整、角色/阵营及夜攻击结果。 逐人标注初始分配。",
+    "exceptions": "阵营颜色不等于角色类型；异常座位设置允许记录说书人解释。 准备配角不等同于实际换角。",
     "normalExample": "准备记录堤丰之首居中、邪恶连续邻座、两侧爪牙映射与转邪、爪牙+1和外来者调整，夜2攻击5号。",
     "boundaryExample": "角色类型与阵营分别保存；不符合常规连续座位的实际局保留设置例外说明。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d019",
     "review": {
-      "status": "pending",
+      "status": "re-review",
       "feedback": [],
       "implementation": "not-implemented",
       "validation": "not-run"
-    }
+    },
+    "revisionHistory": [
+      {
+        "fromVersion": "m1-action-v2",
+        "toVersion": "m1-action-v3",
+        "source": "project-docs/project-plan.md v0.5（ec076dc），M1第6项、A21/A22；本轮用户同步指令",
+        "summary": "澄清准备分配与游戏中真实换角；初始角色逐人展示，不虚构旧角色/死亡或交换。",
+        "changedAt": "2026-10-15T02:00:00+08:00"
+      }
+    ]
   },
   {
     "roleId": "hundundundundun111",

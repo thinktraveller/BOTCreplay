@@ -27,6 +27,25 @@ export type Expiry =
   | { kind: 'point'; point: EventPoint }
   | { kind: 'trigger'; triggerId: Id; description: string };
 export interface CausalSource { eventId: Id; abilityInstanceId?: Id; description?: string }
+// Resolve this origin at the referenced event, never against the player's latest identity.
+export interface AbilityOrigin {
+  eventId: Id;
+  timing: 'before' | 'after';
+  playerId: Id;
+  role: RoleReference;
+  abilityInstanceId?: Id;
+}
+export interface RoleMapping { playerId: Id; from: RoleReference; to: RoleReference }
+export interface RoleChangeAction {
+  status: 'not-used' | 'selected' | 'failed' | 'applied';
+  kind: 'exchange' | 'replacement';
+  wording?: 'choice' | 'trigger';
+  selectedPlayerIds: Id[];
+  // Some abilities select one target but also change the actor's role.
+  affectedPlayerIds?: Id[];
+  resultId?: Id;
+  explanation?: string;
+}
 
 export interface AbilityInstance {
   abilityInstanceId: Id;
@@ -80,6 +99,7 @@ export interface PendingTrigger {
 interface EffectBase { effectId: Id; order: number; source: CausalSource }
 export type EffectOperation = EffectBase & (
   | { kind: 'set-role'; playerId: Id; role: RoleReference; perception: 'actual' | 'perceived' | 'disguise' }
+  | { kind: 'change-roles'; resultId: Id; changeKind: 'exchange' | 'replacement'; changes: RoleMapping[] }
   | { kind: 'clear-role'; playerId: Id; perception: 'perceived' | 'disguise' }
   | { kind: 'set-alignment'; playerId: Id; alignment: Alignment }
   | { kind: 'set-life'; playerId: Id; actuallyAlive: boolean }
@@ -99,6 +119,10 @@ export interface ReplayEvent {
   order: number;
   subject: Subject;
   abilityInstanceId?: Id;
+  abilityOrigin?: AbilityOrigin;
+  roleChange?: RoleChangeAction;
+  // A second display of an existing result declares no new role effect.
+  roleChangeResultId?: Id;
   // Explicit targets also preserve information-only choices without inferring player IDs from free text.
   targetPlayerIds?: Id[];
   mode: ActionMode;
@@ -125,6 +149,15 @@ export interface EventSnapshot {
   after: StateSnapshot;
   // Subject, target and grimoire data belong to the event time, never to the latest player state.
   targetPlayerIds: Id[];
+  abilityOrigin?: { playerId: Id; role: RoleReference; state: StateSnapshot };
+  roleChangeResults?: RoleChangeResult[];
+}
+export interface RoleChangeResult {
+  resultId: Id;
+  eventId: Id;
+  effectId: Id;
+  kind: 'exchange' | 'replacement';
+  changes: { playerId: Id; before: PlayerState; after: PlayerState }[];
 }
 export interface AssetReference {
   assetId: Id;

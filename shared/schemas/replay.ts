@@ -8,6 +8,12 @@ const choice = (...values: string[]) => ({ type: 'string', enum: values });
 const point = object({ phaseId: id, eventId: id }, ['phaseId']);
 const source = object({ eventId: id, abilityInstanceId: id, description: text }, ['eventId']);
 const role = object({ roleId: id, name: id, type: choice('townsfolk', 'outsider', 'minion', 'demon'), ruleVersion: id, iconAssetId: id }, ['roleId', 'name', 'type', 'ruleVersion']);
+const origin = object({ eventId: id, timing: choice('before', 'after'), playerId: id, role, abilityInstanceId: id }, ['eventId', 'timing', 'playerId', 'role']);
+const roleChange = { oneOf: [
+  object({ status: { const: 'not-used' }, kind: choice('exchange', 'replacement'), wording: choice('choice', 'trigger'), selectedPlayerIds: { ...array(id), maxItems: 0 }, affectedPlayerIds: { ...array(id), maxItems: 0 }, explanation: text }, ['status', 'kind', 'selectedPlayerIds']),
+  object({ status: choice('selected', 'failed'), kind: choice('exchange', 'replacement'), wording: choice('choice', 'trigger'), selectedPlayerIds: { ...array(id), minItems: 1, uniqueItems: true }, affectedPlayerIds: { ...array(id), uniqueItems: true }, explanation: text }, ['status', 'kind', 'selectedPlayerIds']),
+  object({ status: { const: 'applied' }, kind: choice('exchange', 'replacement'), wording: choice('choice', 'trigger'), selectedPlayerIds: { ...array(id), minItems: 1, uniqueItems: true }, affectedPlayerIds: { ...array(id), minItems: 1, uniqueItems: true }, resultId: id, explanation: text }, ['status', 'kind', 'selectedPlayerIds', 'resultId']),
+] };
 const subject = { oneOf: [object({ kind: { const: 'player' }, playerId: id }), object({ kind: { const: 'storyteller' }, name: id }), object({ kind: { const: 'group' }, name: id, playerIds: { ...array(id), uniqueItems: true } })] };
 const expiry = { oneOf: [object({ kind: { const: 'manual' }, description: id }), object({ kind: { const: 'point' }, point }), object({ kind: { const: 'trigger' }, triggerId: id, description: id })] };
 const usage = object({ state: choice('unused', 'activated', 'consumed', 'lost'), used: integer, limit: integer, evidenceEventIds: { ...array(id), uniqueItems: true } }, ['state', 'used', 'evidenceEventIds']);
@@ -29,6 +35,7 @@ export const replayDocumentSchema = {
     state: object({ players: array(ref('player')), abilities: array(ref('ability')), conditions: array(ref('condition')), pendingTriggers: array(ref('trigger')) }),
     effect: { oneOf: [
       effect('set-role', { playerId: id, role, perception: choice('actual', 'perceived', 'disguise') }),
+      effect('change-roles', { resultId: id, changeKind: choice('exchange', 'replacement'), changes: { ...array(object({ playerId: id, from: role, to: role })), minItems: 1 } }),
       effect('clear-role', { playerId: id, perception: choice('perceived', 'disguise') }),
       effect('set-alignment', { playerId: id, alignment: choice('good', 'evil') }),
       effect('set-life', { playerId: id, actuallyAlive: { type: 'boolean' } }),
@@ -42,7 +49,7 @@ export const replayDocumentSchema = {
       effect('settle-trigger', { triggerId: id, consumed: { type: 'integer', minimum: 1 }, effectIds: { ...array(id), uniqueItems: true } }),
       effect('cancel-trigger', { triggerId: id, reason: id }),
     ] },
-    event: object({ eventId: id, phaseId: id, order: integer, subject, abilityInstanceId: id, targetPlayerIds: { ...array(id), uniqueItems: true }, mode: choice('real-ability', 'perceived-action', 'disguise', 'manual'), action: object({ name: id, input: { type: 'object', additionalProperties: ref('json') } }), receivedInformation: ref('json'), effects: array(ref('effect')), relatedEffectIds: { ...array(id), uniqueItems: true }, causes: array(source), visibility: choice('public', 'private', 'storyteller'), recipients: array(subject), note: text, exceptionReason: id }, ['eventId', 'phaseId', 'order', 'subject', 'mode', 'action', 'receivedInformation', 'effects', 'relatedEffectIds', 'causes', 'visibility', 'recipients', 'note']),
+    event: object({ eventId: id, phaseId: id, order: integer, subject, abilityInstanceId: id, abilityOrigin: origin, roleChange, roleChangeResultId: id, targetPlayerIds: { ...array(id), uniqueItems: true }, mode: choice('real-ability', 'perceived-action', 'disguise', 'manual'), action: object({ name: id, input: { type: 'object', additionalProperties: ref('json') } }), receivedInformation: ref('json'), effects: array(ref('effect')), relatedEffectIds: { ...array(id), uniqueItems: true }, causes: array(source), visibility: choice('public', 'private', 'storyteller'), recipients: array(subject), note: text, exceptionReason: id }, ['eventId', 'phaseId', 'order', 'subject', 'mode', 'action', 'receivedInformation', 'effects', 'relatedEffectIds', 'causes', 'visibility', 'recipients', 'note']),
     asset: object({ assetId: id, originalUrl: text, contentHash: text, mediaType: id, status: choice('cached', 'missing', 'failed'), placeholderLabel: text }, ['assetId', 'mediaType', 'status', 'placeholderLabel']),
     script: object({ originalJson: text, roles: array(object({ role, raw: { type: 'object', additionalProperties: ref('json') }, currentRule: ref('rule') })), excluded: array(object({ id, reason: id, raw: ref('json') })) }),
   },

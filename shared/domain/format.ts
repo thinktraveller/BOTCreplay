@@ -1,4 +1,4 @@
-import type { EffectOperation, JsonValue, PlayerState, ReplayEvent, StateSnapshot, Subject } from './contracts.js';
+import type { EffectOperation, EventSnapshot, JsonValue, PlayerState, ReplayEvent, RoleChangeResult, StateSnapshot, Subject } from './contracts.js';
 import { playerById } from './state.js';
 
 export interface IdentityPart { text: string; alignment?: 'good' | 'evil'; playerId?: string }
@@ -13,7 +13,7 @@ export function formatPlayerIdentity(player: PlayerState, state: StateSnapshot):
     if (inherited) attributes.push(`${ability.mode === 'perceived' ? '认知获得' : '获得'}${abilityName}能力${ability.usage.state === 'consumed' ? '（已耗尽）' : ''}`);
   }
   if (player.disguise) attributes.push(`伪装为${player.disguise.name}`);
-  return `${player.nickname}（${attributes.join('，')}）`;
+  return `${player.nickname}（${attributes.join('，')}）${player.life.actuallyAlive ? '' : '💀'}`;
 }
 export function formatSubject(subject: Subject, state: StateSnapshot): IdentityPart[] {
   if (subject.kind === 'player') { const player = playerById(state, subject.playerId); return [{ text: formatPlayerIdentity(player, state), alignment: player.alignment, playerId: player.playerId }]; }
@@ -32,6 +32,7 @@ export function formatRecordedValue(value: JsonValue): string {
 export function formatEffect(effect: EffectOperation, before: StateSnapshot, after: StateSnapshot): string {
   const playerName = (id: string) => playerById(after, id).nickname;
   switch (effect.kind) {
+    case 'change-roles': return effect.changes.map(change => `${playerName(change.playerId)}现在的身份是${change.to.name}`).join('\n');
     case 'set-role': return `${playerName(effect.playerId)}的${effect.perception === 'actual' ? '真实角色' : effect.perception === 'perceived' ? '认知角色' : '伪装'}为${effect.role.name}`;
     case 'clear-role': return `${playerName(effect.playerId)}清除${effect.perception === 'perceived' ? '认知角色' : '伪装'}`;
     case 'set-alignment': return `${playerName(effect.playerId)}转为${effect.alignment === 'good' ? '善良' : '邪恶'}`;
@@ -47,6 +48,18 @@ export function formatEffect(effect: EffectOperation, before: StateSnapshot, aft
     case 'cancel-trigger': return `取消触发 ${effect.triggerId}：${effect.reason}`;
   }
 }
-export function formatEventText(event: ReplayEvent, before: StateSnapshot, after: StateSnapshot): { action: string; information: string; effects: string[] } {
-  return { action: `${event.action.name}${Object.keys(event.action.input).length ? `：${formatRecordedValue(event.action.input)}` : ''}`, information: event.receivedInformation === null ? '' : `收到信息：${formatRecordedValue(event.receivedInformation)}`, effects: [...event.effects].sort((a, b) => a.order - b.order).map(x => formatEffect(x, before, after)) };
+export function formatEventText(event: ReplayEvent, before: StateSnapshot, after: StateSnapshot, context?: { origin?: EventSnapshot['abilityOrigin']; referencedResult?: RoleChangeResult }): { action: string; information: string; effects: string[] } {
+  let action = `${event.action.name}${Object.keys(event.action.input).length ? `：${formatRecordedValue(event.action.input)}` : ''}`;
+  if (event.roleChange) {
+    const subject = formatSubject(event.subject, before).map(part => part.text).join('');
+    const origin = context?.origin;
+    const source = origin ? formatPlayerIdentity(playerById(origin.state, origin.playerId), origin.state) : '';
+    const cause = source ? `因${source}的能力而` : '';
+    const targets = event.roleChange.selectedPlayerIds.map(id => formatPlayerIdentity(playerById(before, id), before)).join('和');
+    if (event.roleChange.status === 'not-used') action = `${subject}未使用${source ? `${source}提供的` : '本次'}换角机会。`;
+    else action = `${subject}${cause}${event.roleChange.wording === 'trigger' ? `记录了${targets}的换角触发` : `选择了${targets}`}，${event.roleChange.status === 'applied' ? event.roleChange.kind === 'exchange' ? '他们的身份交换了' : '角色变化已生效' : event.roleChange.status === 'selected' ? '换角结果待填写' : '本次换角未生效'}。`;
+  }
+  const effects = [...event.effects].sort((a, b) => a.order - b.order).map(x => formatEffect(x, before, after));
+  if (context?.referencedResult) effects.push(...context.referencedResult.changes.map(change => `${change.after.nickname}现在的身份是${change.after.actualRole.name}`));
+  return { action, information: event.receivedInformation === null ? '' : `收到信息：${formatRecordedValue(event.receivedInformation)}`, effects };
 }

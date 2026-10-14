@@ -3,6 +3,7 @@ import { requireFact } from './errors.js';
 import { abilityById, conditionById, playerById, sameSubject, uniqueIds, validateState, validateSubject, validateUsage } from './state.js';
 import { validateReplayStructure } from '../schemas/validate.js';
 import { abilityAvailability } from './abilities.js';
+import { inspectRoleChangeDraft, resolveAbilityOrigin, validateRoleChangeEvent } from './role-changes.js';
 
 export interface PhaseSnapshot { phaseId: Id; before: StateSnapshot; after: StateSnapshot; eventIds: Id[] }
 export interface ReplayProjection { state: StateSnapshot; events: EventSnapshot[]; phases: PhaseSnapshot[] }
@@ -18,6 +19,7 @@ export function projectReplay(input: ReplayDocument): ReplayProjection {
   uniqueIds(document.rules.map(x => `${x.roleId}/${x.version}`), 'rules');
   uniqueIds(document.script.roles.map(x => x.role.roleId), 'script.roles');
   uniqueIds(document.events.flatMap(x => x.effects.map(y => y.effectId)), 'effects');
+  uniqueIds(document.events.flatMap(event => event.effects.filter((effect): effect is Extract<EffectOperation, { kind: 'change-roles' }> => effect.kind === 'change-roles').map(effect => effect.resultId)), 'role-change.results');
   const phaseMap = new Map(document.phases.map(x => [x.phaseId, x]));
   const eventMap = new Map(document.events.map(x => [x.eventId, x]));
   const declaredTriggerIds = new Set([...document.initialState.pendingTriggers.map(x => x.triggerId), ...document.events.flatMap(event => event.effects.filter((x): x is Extract<EffectOperation, { kind: 'schedule-trigger' }> => x.kind === 'schedule-trigger').map(x => x.trigger.triggerId))]);
@@ -93,7 +95,10 @@ export function projectReplay(input: ReplayDocument): ReplayProjection {
         }
       }
       const before = structuredClone(state);
-      const targetIds = new Set(event.targetPlayerIds ?? []);
+      const abilityOrigin = resolveAbilityOrigin(event, before, eventSnapshots);
+      validateRoleChangeEvent(event, before, eventSnapshots);
+      const roleChangeResults: NonNullable<EventSnapshot['roleChangeResults']> = [];
+      const targetIds = new Set([...(event.targetPlayerIds ?? []), ...(event.roleChange?.selectedPlayerIds ?? []), ...(event.roleChange?.affectedPlayerIds ?? [])]);
       for (const effect of [...event.effects].sort((a, b) => a.order - b.order)) {
         checkSource(effect.source, event.eventId);
         requireFact(effect.source.eventId === event.eventId, 'effect-owner', '效果由单一事件声明，其他入口请使用 relatedEffectIds', effect.effectId);
@@ -103,6 +108,18 @@ export function projectReplay(input: ReplayDocument): ReplayProjection {
         }
         if ('playerId' in effect) targetIds.add(effect.playerId);
         switch (effect.kind) {
+          case 'change-roles': {
+            const issues = inspectRoleChangeDraft(event.roleChange!, state, effect.changes);
+            requireFact(!issues.length, 'role-change-mapping', issues.join('；'), effect.effectId);
+            const changes = effect.changes.map(change => ({ playerId: change.playerId, before: structuredClone(playerById(state, change.playerId)), after: structuredClone(playerById(state, change.playerId)) }));
+            for (const change of effect.changes) {
+              playerById(state, change.playerId).actualRole = structuredClone(change.to);
+              targetIds.add(change.playerId);
+            }
+            for (const change of changes) change.after = structuredClone(playerById(state, change.playerId));
+            roleChangeResults.push({ resultId: effect.resultId, eventId: event.eventId, effectId: effect.effectId, kind: effect.changeKind, changes });
+            break;
+          }
           case 'set-role': {
             const player = playerById(state, effect.playerId);
             if (effect.perception === 'actual') player.actualRole = structuredClone(effect.role);
@@ -213,7 +230,7 @@ export function projectReplay(input: ReplayDocument): ReplayProjection {
       }
       for (const effectId of event.relatedEffectIds) requireFact(knownEffects.has(effectId), 'missing-effect', '关联后果尚未声明', effectId);
       validateState(state, true);
-      eventSnapshots.push({ eventId: event.eventId, before, after: structuredClone(state), targetPlayerIds: [...targetIds] });
+      eventSnapshots.push({ eventId: event.eventId, before, after: structuredClone(state), targetPlayerIds: [...targetIds], ...(abilityOrigin ? { abilityOrigin } : {}), ...(roleChangeResults.length ? { roleChangeResults } : {}) });
       knownEvents.add(event.eventId);
     }
     phaseSnapshots.push({ phaseId: phase.phaseId, before: phaseBefore, after: structuredClone(state), eventIds: events.map(x => x.eventId) });
