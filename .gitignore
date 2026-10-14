@@ -3,3 +3,12 @@ _verify/
 reference-projects/
 project-docs/
 # --- /project-initializer (managed) ---
+
+# Local application dependencies, data, and build outputs
+node_modules/
+dist/
+runtime-data/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
