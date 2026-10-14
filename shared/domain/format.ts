@@ -1,0 +1,52 @@
+import type { EffectOperation, JsonValue, PlayerState, ReplayEvent, StateSnapshot, Subject } from './contracts.js';
+import { playerById } from './state.js';
+
+export interface IdentityPart { text: string; alignment?: 'good' | 'evil'; playerId?: string }
+export function formatPlayerIdentity(player: PlayerState, state: StateSnapshot): string {
+  const attributes: string[] = [player.actualRole.name + (player.perceivedRole ? `[${player.perceivedRole.name}]` : '')];
+  const conditions = state.conditions.filter(x => x.active && x.targetPlayerId === player.playerId);
+  const labels = { drunk: '醉酒', poisoned: '中毒', 'zombuul-alive': '活尸', 'falsely-dead': '假死', registration: '特殊识别' };
+  for (const kind of new Set(conditions.map(x => x.kind))) attributes.push(labels[kind]);
+  for (const ability of state.abilities.filter(x => x.holder.kind === 'player' && x.holder.playerId === player.playerId && x.usage.state !== 'lost')) {
+    const inherited = ability.source || ability.parentAbilityInstanceId || ability.rule.roleId !== player.actualRole.roleId;
+    const abilityName = ability.rule.roleName ?? (typeof ability.parameters.displayName === 'string' ? ability.parameters.displayName : ability.rule.roleId);
+    if (inherited) attributes.push(`${ability.mode === 'perceived' ? '认知获得' : '获得'}${abilityName}能力${ability.usage.state === 'consumed' ? '（已耗尽）' : ''}`);
+  }
+  if (player.disguise) attributes.push(`伪装为${player.disguise.name}`);
+  return `${player.nickname}（${attributes.join('，')}）`;
+}
+export function formatSubject(subject: Subject, state: StateSnapshot): IdentityPart[] {
+  if (subject.kind === 'player') { const player = playerById(state, subject.playerId); return [{ text: formatPlayerIdentity(player, state), alignment: player.alignment, playerId: player.playerId }]; }
+  if (subject.kind === 'storyteller') return [{ text: subject.name }];
+  if (!subject.playerIds.length) return [{ text: subject.name }];
+  return [{ text: `${subject.name}：` }, ...subject.playerIds.flatMap((id, index) => { const player = playerById(state, id); return [...(index ? [{ text: '、' }] : []), { text: formatPlayerIdentity(player, state), alignment: player.alignment, playerId: id }]; })];
+}
+export function formatRecordedValue(value: JsonValue): string {
+  if (value === null) return '无';
+  if (typeof value === 'string') return value;
+  if (typeof value === 'boolean') return value ? '是' : '否';
+  if (Array.isArray(value)) return value.map(formatRecordedValue).join('、');
+  if (typeof value === 'object') return Object.entries(value).map(([key, item]) => `${key}：${formatRecordedValue(item)}`).join('；');
+  return String(value);
+}
+export function formatEffect(effect: EffectOperation, before: StateSnapshot, after: StateSnapshot): string {
+  const playerName = (id: string) => playerById(after, id).nickname;
+  switch (effect.kind) {
+    case 'set-role': return `${playerName(effect.playerId)}的${effect.perception === 'actual' ? '真实角色' : effect.perception === 'perceived' ? '认知角色' : '伪装'}为${effect.role.name}`;
+    case 'clear-role': return `${playerName(effect.playerId)}清除${effect.perception === 'perceived' ? '认知角色' : '伪装'}`;
+    case 'set-alignment': return `${playerName(effect.playerId)}转为${effect.alignment === 'good' ? '善良' : '邪恶'}`;
+    case 'set-life': return `${playerName(effect.playerId)}${effect.actuallyAlive ? '实际存活' : '实际死亡'}`;
+    case 'execution': return `${playerName(effect.playerId)}被处决（生死另记）`;
+    case 'add-condition': return `${playerName(effect.condition.targetPlayerId)}新增${({ drunk: '醉酒', poisoned: '中毒', 'zombuul-alive': '活尸', 'falsely-dead': '假死', registration: '特殊识别' })[effect.condition.kind]}来源 ${effect.condition.conditionId}`;
+    case 'end-condition': { const condition = before.conditions.find(x => x.conditionId === effect.conditionId) ?? after.conditions.find(x => x.conditionId === effect.conditionId); return `${condition ? playerName(condition.targetPlayerId) : ''}解除来源 ${effect.conditionId}`; }
+    case 'grant-ability': return `${formatSubject(effect.ability.holder, after).map(x => x.text).join('')}获得${effect.ability.mode === 'perceived' ? '认知' : '真实'}能力实例 ${effect.ability.abilityInstanceId}`;
+    case 'update-ability': return `能力 ${effect.abilityInstanceId}：已用${effect.usage.used}${effect.usage.limit === undefined ? '' : `/${effect.usage.limit}`}，${({ unused: '未使用', activated: '已发动', consumed: '已耗尽', lost: '已失去' })[effect.usage.state]}`;
+    case 'set-reminder': return `${playerName(effect.playerId)}${effect.active ? '添加' : '移除'}标记“${effect.reminder.text}”`;
+    case 'schedule-trigger': return `建立待结算链 ${effect.trigger.chainId} / ${effect.trigger.triggerId}：${effect.trigger.targetPlayerIds.map(playerName).join('、')}，${effect.trigger.window.description}`;
+    case 'settle-trigger': return `触发 ${effect.triggerId}实际消耗${effect.consumed}次，关联后果${effect.effectIds.length}项`;
+    case 'cancel-trigger': return `取消触发 ${effect.triggerId}：${effect.reason}`;
+  }
+}
+export function formatEventText(event: ReplayEvent, before: StateSnapshot, after: StateSnapshot): { action: string; information: string; effects: string[] } {
+  return { action: `${event.action.name}${Object.keys(event.action.input).length ? `：${formatRecordedValue(event.action.input)}` : ''}`, information: event.receivedInformation === null ? '' : `收到信息：${formatRecordedValue(event.receivedInformation)}`, effects: [...event.effects].sort((a, b) => a.order - b.order).map(x => formatEffect(x, before, after)) };
+}

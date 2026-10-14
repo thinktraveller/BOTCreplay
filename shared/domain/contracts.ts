@@ -1,4 +1,4 @@
-// M0 structure contract. These types describe recorded facts; they do not decide role actions.
+// Recorded facts shared by the editor and viewer; role actions require separate user review.
 export const SCHEMA_VERSION = '0.1.0' as const;
 export type Id = string;
 export type JsonValue = null | boolean | number | string | JsonValue[] | { [key: string]: JsonValue };
@@ -12,11 +12,12 @@ export type Subject =
 
 export interface RuleReference {
   roleId: Id;
+  roleName?: string;
   version: string;
   abilityText: string;
   source: string;
   // A skill-version decision alone is not approval of an action implementation.
-  actionReview?: { proposalVersion: string; status: 'pending' | 'changes-requested' | 'approved'; decisionSource?: string };
+  actionReview?: { proposalVersion: string; status: 'pending' | 'changes-requested' | 're-review' | 'approved'; decisionSource?: string };
 }
 export interface RoleReference { roleId: Id; name: string; type: RoleType; ruleVersion: string; iconAssetId?: Id }
 export interface Phase { phaseId: Id; kind: 'preparation' | 'night' | 'day'; number: number; order: number }
@@ -79,6 +80,7 @@ export interface PendingTrigger {
 interface EffectBase { effectId: Id; order: number; source: CausalSource }
 export type EffectOperation = EffectBase & (
   | { kind: 'set-role'; playerId: Id; role: RoleReference; perception: 'actual' | 'perceived' | 'disguise' }
+  | { kind: 'clear-role'; playerId: Id; perception: 'perceived' | 'disguise' }
   | { kind: 'set-alignment'; playerId: Id; alignment: Alignment }
   | { kind: 'set-life'; playerId: Id; actuallyAlive: boolean }
   | { kind: 'execution'; playerId: Id; exceptionReason?: string }
@@ -89,6 +91,7 @@ export type EffectOperation = EffectBase & (
   | { kind: 'set-reminder'; playerId: Id; reminder: Reminder; active: boolean }
   | { kind: 'schedule-trigger'; trigger: PendingTrigger }
   | { kind: 'settle-trigger'; triggerId: Id; consumed: number; effectIds: Id[] }
+  | { kind: 'cancel-trigger'; triggerId: Id; reason: string }
 );
 export interface ReplayEvent {
   eventId: Id;
@@ -96,6 +99,8 @@ export interface ReplayEvent {
   order: number;
   subject: Subject;
   abilityInstanceId?: Id;
+  // Explicit targets also preserve information-only choices without inferring player IDs from free text.
+  targetPlayerIds?: Id[];
   mode: ActionMode;
   action: { name: string; input: { [key: string]: JsonValue } };
   receivedInformation: JsonValue;

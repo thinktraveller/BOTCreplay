@@ -33,7 +33,7 @@ function embeddedIcon(assetId?: string) {
         <img v-if="embeddedIcon(event.iconAssetId)" class="role-icon" :src="embeddedIcon(event.iconAssetId)" :alt="replay.assets[event.iconAssetId!]?.label || '角色图标'">
         <span v-else class="role-icon placeholder" role="img" aria-label="缺失图标占位">?</span>
         <div class="event-content">
-          <div class="event-heading"><span class="event-index">{{ index + 1 }}</span><span class="subject" :class="event.alignment">{{ event.subject }}</span></div>
+          <div class="event-heading"><span class="event-index">{{ index + 1 }}</span><span v-if="event.subjectParts" class="subject"><span v-for="(part, partIndex) in event.subjectParts" :key="partIndex" :class="part.alignment">{{ part.text }}</span></span><span v-else class="subject" :class="event.alignment">{{ event.subject }}</span></div>
           <p class="event-text">{{ event.text }}</p>
           <details v-if="!print"><summary @click="selectedEventId = event.eventId">事件详情与当时座位</summary><p>{{ event.details }}</p></details>
         </div>

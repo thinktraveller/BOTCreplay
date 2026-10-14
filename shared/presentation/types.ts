@@ -6,6 +6,7 @@ export interface PresentedEvent {
   eventId: string;
   phaseId: string;
   subject: string;
+  subjectParts?: { text: string; alignment?: Alignment; playerId?: string }[];
   alignment: Alignment;
   text: string;
   details: string;

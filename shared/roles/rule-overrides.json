@@ -1,0 +1,52 @@
+[
+  {
+    "roleId": "yishisaarqwwwwwwwwwwwwwwwwwwww",
+    "entryId": "S001-R-T096",
+    "version": "user-confirmed-2026-10-14",
+    "abilityText": "每个白天，你可以公开声明一个角色在场。在当晚，你会得知该声明是否正确。如果你得知过是和否，你失去此能力。",
+    "decisionSource": "QA-S001-Q004",
+    "retiredGuidance": "首次得知否立即失去能力",
+    "recordingSummary": "按实际收到的答案保存历史，累计是与否后另记失能。",
+    "normalizedSummary": false
+  },
+  {
+    "roleId": "gudiao1",
+    "entryId": "S001-R-M031",
+    "version": "user-confirmed-2026-10-14",
+    "abilityText": "每个夜晚，你会得知顺时针方向上的下一名存活的镇民玩家的角色，他中毒且可能被当作邪恶的蛊雕，直到下个黄昏。每局游戏限一次，在夜晚时，你可以改变方向。",
+    "decisionSource": "QA-S001-Q005",
+    "retiredGuidance": "每晚自由变向；目标为下一名任意存活玩家",
+    "recordingSummary": "初始顺时针、每局一次变向；下一存活镇民；独立毒源、可选识别和下个黄昏期限。",
+    "normalizedSummary": false
+  },
+  {
+    "roleId": "waibibaboabbbb1111",
+    "entryId": "S001-R-D018",
+    "version": "user-confirmed-2026-10-14",
+    "abilityText": "在你的首个夜晚，你会得知一段秘密短语。每次你在白天公开说出这段短语，之后可能有一名玩家死亡；允许按触发次数延后到夜晚造成死亡。",
+    "decisionSource": "QA-S001-Q006",
+    "retiredGuidance": "仅当天死亡；把每次触发自动变为必死",
+    "recordingSummary": "逐次触发与白天/夜晚实际结算关联，保存实际消耗、防死裁决及剩余次数，避免重复消费。",
+    "normalizedSummary": true
+  },
+  {
+    "roleId": "baojun3",
+    "entryId": "S001-R-D024",
+    "version": "user-confirmed-2026-10-14",
+    "abilityText": "每个夜晚*，你要选择一名玩家：他死亡。如果你杀死了与爪牙邻近的玩家，下个夜晚你可以选择至多两名玩家：他们死亡。",
+    "decisionSource": "QA-S001-Q003",
+    "retiredGuidance": "普通夜可以不选；按上夜死亡总人数限制人数",
+    "recordingSummary": "普通夜必须1人；实际杀死与爪牙邻近者后仅下一夜可0～2人。",
+    "normalizedSummary": false
+  },
+  {
+    "roleId": "jianiningasihdohwqr91q23rhnfipo1q23",
+    "entryId": "S001-R-D027",
+    "version": "user-confirmed-2026-10-14",
+    "abilityText": "每个夜晚*，你要选择一名玩家：他死亡。爪牙在其死亡的当晚要选择一名玩家：如果他是善良的，他死亡。",
+    "decisionSource": "QA-S001-Q001",
+    "retiredGuidance": "白天未投票可以攻击两次",
+    "recordingSummary": "非首夜攻击1人；逐名爪牙死亡当晚另记选择、善良判定及实际死亡。",
+    "normalizedSummary": false
+  }
+]
