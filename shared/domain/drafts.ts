@@ -1,6 +1,7 @@
 import type { ActionMode, EffectOperation, JsonValue, ReplayEvent, StateSnapshot, Subject } from './contracts.js';
 import { requireFact } from './errors.js';
 import { playerById, validateSubject } from './state.js';
+import { validateCustomRecords } from './custom-records.js';
 
 export interface PlayerSelectionConstraint {
   min: number;
@@ -37,12 +38,14 @@ export interface RecordedActionDraft {
   roleChangeResultId?: string;
   targetPlayerIds: string[];
   action: { name: string; input: { [key: string]: JsonValue } };
+  customRecords?: ReplayEvent['customRecords'];
   receivedInformation: JsonValue;
   effects: EffectOperation[];
 }
 export function createRecordedEvent(draft: RecordedActionDraft, metadata: Pick<ReplayEvent, 'eventId' | 'phaseId' | 'order' | 'visibility' | 'recipients' | 'note'> & Partial<Pick<ReplayEvent, 'relatedEffectIds' | 'causes' | 'exceptionReason'>>, state: StateSnapshot): ReplayEvent {
   validateSubject(state, draft.subject);
   draft.targetPlayerIds.forEach(id => playerById(state, id));
+  validateCustomRecords(draft.customRecords);
   const event: ReplayEvent = structuredClone({ ...draft, ...metadata, relatedEffectIds: metadata.relatedEffectIds ?? [], causes: metadata.causes ?? [] });
   // Action, information and declared effects are independent facts, never inferred from one another.
   return event;

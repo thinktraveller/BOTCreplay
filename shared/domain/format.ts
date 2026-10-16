@@ -32,7 +32,7 @@ export function formatRecordedValue(value: JsonValue): string {
 export function formatEffect(effect: EffectOperation, before: StateSnapshot, after: StateSnapshot): string {
   const playerName = (id: string) => playerById(after, id).nickname;
   switch (effect.kind) {
-    case 'change-roles': return effect.changes.map(change => `${playerName(change.playerId)}现在的身份是${change.to.name}`).join('\n');
+    case 'change-roles': return effect.changes.map(change => `${playerName(change.playerId)}现在的角色是${change.to.name}，当前阵营为${(change.toAlignment ?? playerById(after, change.playerId).alignment) === 'good' ? '善良' : '邪恶'}`).join('\n');
     case 'set-role': return `${playerName(effect.playerId)}的${effect.perception === 'actual' ? '真实角色' : effect.perception === 'perceived' ? '认知角色' : '伪装'}为${effect.role.name}`;
     case 'clear-role': return `${playerName(effect.playerId)}清除${effect.perception === 'perceived' ? '认知角色' : '伪装'}`;
     case 'set-alignment': return `${playerName(effect.playerId)}转为${effect.alignment === 'good' ? '善良' : '邪恶'}`;
@@ -48,18 +48,28 @@ export function formatEffect(effect: EffectOperation, before: StateSnapshot, aft
     case 'cancel-trigger': return `取消触发 ${effect.triggerId}：${effect.reason}`;
   }
 }
-export function formatEventText(event: ReplayEvent, before: StateSnapshot, after: StateSnapshot, context?: { origin?: EventSnapshot['abilityOrigin']; referencedResult?: RoleChangeResult }): { action: string; information: string; effects: string[] } {
+export function formatEventText(event: ReplayEvent, before: StateSnapshot, after: StateSnapshot, context?: { origin?: EventSnapshot['abilityOrigin']; referencedResult?: RoleChangeResult }): { action: string; information: string; effects: string[]; lines: IdentityPart[][] } {
   let action = `${event.action.name}${Object.keys(event.action.input).length ? `：${formatRecordedValue(event.action.input)}` : ''}`;
+  let actionParts: IdentityPart[] = [{ text: action }];
   if (event.roleChange) {
-    const subject = formatSubject(event.subject, before).map(part => part.text).join('');
+    const subject = formatSubject(event.subject, before);
     const origin = context?.origin;
-    const source = origin ? formatPlayerIdentity(playerById(origin.state, origin.playerId), origin.state) : '';
-    const cause = source ? `因${source}的能力而` : '';
-    const targets = event.roleChange.selectedPlayerIds.map(id => formatPlayerIdentity(playerById(before, id), before)).join('和');
-    if (event.roleChange.status === 'not-used') action = `${subject}未使用${source ? `${source}提供的` : '本次'}换角机会。`;
-    else action = `${subject}${cause}${event.roleChange.wording === 'trigger' ? `记录了${targets}的换角触发` : `选择了${targets}`}，${event.roleChange.status === 'applied' ? event.roleChange.kind === 'exchange' ? '他们的身份交换了' : '角色变化已生效' : event.roleChange.status === 'selected' ? '换角结果待填写' : '本次换角未生效'}。`;
+    const source = origin ? formatSubject({kind:'player',playerId:origin.playerId},origin.state) : [];
+    const targets = event.roleChange.selectedPlayerIds.flatMap((id,index) => [...(index ? [{text:'和'}] : []), ...formatSubject({kind:'player',playerId:id},before)]);
+    if (event.roleChange.status === 'not-used') actionParts = [...subject,{text:'未使用'},...source,{text:source.length ? '提供的换角机会。' : '本次换角机会。'}];
+    else actionParts = [...subject,...(source.length ? [{text:'因'},...source,{text:'的能力而'}] : []),{text:event.roleChange.wording === 'trigger'?'记录了':'选择了'},...targets,{text:(event.roleChange.wording === 'trigger'?'的换角触发':'')+'，'+(event.roleChange.status === 'applied' ? event.roleChange.kind === 'exchange' ? '他们的角色交换了' : '角色变化已生效' : event.roleChange.status === 'selected' ? '换角结果待填写' : '本次换角未生效')+'。'}];
+    action = actionParts.map(part=>part.text).join('');
   }
-  const effects = [...event.effects].sort((a, b) => a.order - b.order).map(x => formatEffect(x, before, after));
-  if (context?.referencedResult) effects.push(...context.referencedResult.changes.map(change => `${change.after.nickname}现在的身份是${change.after.actualRole.name}`));
-  return { action, information: event.receivedInformation === null ? '' : `收到信息：${formatRecordedValue(event.receivedInformation)}`, effects };
+  const resultLine = (name: string, role: string, alignment: 'good'|'evil', playerId: string): IdentityPart[] => [{text:`${name}现在的角色是${role}，当前阵营为`,alignment,playerId},{text:alignment==='good'?'善良':'邪恶',alignment,playerId}];
+  let effectLines: IdentityPart[][] = [...event.effects].sort((a,b)=>a.order-b.order).flatMap(effect=>effect.kind==='change-roles' ? effect.changes.map(change=>resultLine(playerById(after,change.playerId).nickname,change.to.name,change.toAlignment??playerById(after,change.playerId).alignment,change.playerId)) : [[{text:formatEffect(effect,before,after)}]]);
+  if(context?.referencedResult)effectLines.push(...context.referencedResult.changes.map(change=>resultLine(change.after.nickname,change.after.actualRole.name,change.after.alignment,change.playerId)));
+  const requiredRoleLines = event.effects.flatMap(effect=>effect.kind==='change-roles'?effect.changes.map(change=>resultLine(playerById(after,change.playerId).nickname,change.to.name,change.toAlignment??playerById(after,change.playerId).alignment,change.playerId)):[]);
+  if(context?.referencedResult)requiredRoleLines.push(...context.referencedResult.changes.map(change=>resultLine(change.after.nickname,change.after.actualRole.name,change.after.alignment,change.playerId)));
+  let information = event.receivedInformation === null ? '' : `收到信息：${formatRecordedValue(event.receivedInformation)}`;
+  const custom = new Map(event.customRecords?.map(record=>[record.part,record.text]));
+  if(custom.has('action')){action=custom.get('action')!;actionParts=[{text:action}];}
+  if(custom.has('information'))information=custom.get('information')!;
+  if(custom.has('result'))effectLines=[[{text:custom.get('result')!}],...requiredRoleLines];
+  if(custom.has('follow-up'))effectLines.push([{text:custom.get('follow-up')!}]);
+  return { action, information, effects:effectLines.map(line=>line.map(part=>part.text).join('')), lines:[...(action?[actionParts]:[]),...(information?[[{text:information}]]:[]),...effectLines] };
 }

@@ -34,7 +34,8 @@ function embeddedIcon(assetId?: string) {
         <span v-else class="role-icon placeholder" role="img" aria-label="缺失图标占位">?</span>
         <div class="event-content">
           <div class="event-heading"><span class="event-index">{{ index + 1 }}</span><span v-if="event.subjectParts" class="subject"><span v-for="(part, partIndex) in event.subjectParts" :key="partIndex" :class="part.alignment">{{ part.text }}</span></span><span v-else class="subject" :class="event.alignment">{{ event.subject }}</span></div>
-          <p class="event-text">{{ event.text }}</p>
+          <p v-if="event.textParts" class="event-text"><template v-for="(line, lineIndex) in event.textParts" :key="lineIndex"><br v-if="lineIndex"><span v-for="(part, partIndex) in line" :key="partIndex" :class="part.alignment">{{ part.text }}</span></template></p>
+          <p v-else class="event-text">{{ event.text }}</p>
           <details v-if="!print"><summary @click="selectedEventId = event.eventId">事件详情与当时座位</summary><p>{{ event.details }}</p></details>
         </div>
       </article>

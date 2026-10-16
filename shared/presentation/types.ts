@@ -9,6 +9,7 @@ export interface PresentedEvent {
   subjectParts?: { text: string; alignment?: Alignment; playerId?: string }[];
   alignment: Alignment;
   text: string;
+  textParts?: { text: string; alignment?: Alignment; playerId?: string }[][];
   details: string;
   iconAssetId?: string;
   players: PresentedPlayer[];

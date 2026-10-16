@@ -18,9 +18,11 @@ export function presentReplay(document: ReplayDocument, projection: ReplayProjec
       const content = formatEventText(event, snapshot.before, snapshot.after, { origin: snapshot.abilityOrigin, referencedResult });
       const subject = event.subject;
       const player = subject.kind === 'player' ? snapshot.before.players.find(x => x.playerId === subject.playerId) : undefined;
+      const richText = !!(event.roleChange || referencedResult || event.customRecords?.length);
       return {
         eventId: event.eventId, phaseId: event.phaseId, subject: parts.map(x => x.text).join(''), subjectParts: parts,
-        alignment: player?.alignment ?? 'good', text: [content.action, content.information, ...content.effects].filter(Boolean).join(event.roleChange || referencedResult ? '\n' : '；'),
+        alignment: player?.alignment ?? 'good', text: richText ? content.lines.map(line=>line.map(part=>part.text).join('')).join('\n') : [content.action, content.information, ...content.effects].filter(Boolean).join('；'),
+        ...(richText ? {textParts:content.lines} : {}),
         details: [event.note, event.exceptionReason ? `特殊裁决：${event.exceptionReason}` : '', `因果来源：${event.causes.map(x => x.eventId).join('、') || '无'}`, `关联后果：${event.relatedEffectIds.join('、') || '无'}`].filter(Boolean).join('\n'),
         iconAssetId: player?.actualRole.iconAssetId,
         roleChangeResultIds: [...(snapshot.roleChangeResults ?? []).map(result => result.resultId), ...(event.roleChangeResultId ? [event.roleChangeResultId] : [])],

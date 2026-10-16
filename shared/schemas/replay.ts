@@ -8,6 +8,9 @@ const choice = (...values: string[]) => ({ type: 'string', enum: values });
 const point = object({ phaseId: id, eventId: id }, ['phaseId']);
 const source = object({ eventId: id, abilityInstanceId: id, description: text }, ['eventId']);
 const role = object({ roleId: id, name: id, type: choice('townsfolk', 'outsider', 'minion', 'demon'), ruleVersion: id, iconAssetId: id }, ['roleId', 'name', 'type', 'ruleVersion']);
+const roleMapping = object({ playerId: id, from: role, to: role, fromAlignment: choice('good', 'evil'), toAlignment: choice('good', 'evil') }, ['playerId', 'from', 'to']);
+const currentRoleMapping = object({ playerId: id, from: role, to: role, fromAlignment: choice('good', 'evil'), toAlignment: choice('good', 'evil') });
+const customRecord = object({ part: choice('action', 'information', 'result', 'follow-up'), branchPath: { ...array(id), minItems: 1 }, choice: { const: '自定义' }, text: { type: 'string', pattern: '\\S' } });
 const origin = object({ eventId: id, timing: choice('before', 'after'), playerId: id, role, abilityInstanceId: id }, ['eventId', 'timing', 'playerId', 'role']);
 const roleChange = { oneOf: [
   object({ status: { const: 'not-used' }, kind: choice('exchange', 'replacement'), wording: choice('choice', 'trigger'), selectedPlayerIds: { ...array(id), maxItems: 0 }, affectedPlayerIds: { ...array(id), maxItems: 0 }, explanation: text }, ['status', 'kind', 'selectedPlayerIds']),
@@ -21,8 +24,9 @@ const reminder = object({ reminderId: id, text: id, source }, ['reminderId', 'te
 const effect = (kind: string, props: Record<string, object>, required = Object.keys(props)) => object({ effectId: id, order: integer, source, kind: { const: kind }, ...props }, ['effectId', 'order', 'source', 'kind', ...required]);
 
 export const replayDocumentSchema = {
-  $id: 'botcreplay/replay-document/0.1.0',
-  ...object({ replayId: id, schemaVersion: { const: '0.1.0' }, revision: integer, title: text, rules: array(ref('rule')), script: ref('script'), initialState: ref('state'), phases: { ...array(ref('phase')), minItems: 1 }, events: array(ref('event')), assets: array(ref('asset')), finalDecision: object({ eventId: id, winningAlignment: choice('good', 'evil'), explanation: id, confirmedByStoryteller: { type: 'boolean' } }, ['eventId', 'explanation', 'confirmedByStoryteller']) }, ['replayId', 'schemaVersion', 'revision', 'title', 'rules', 'script', 'initialState', 'phases', 'events', 'assets']),
+  $id: 'botcreplay/replay-document/0.2.0',
+  ...object({ replayId: id, schemaVersion: choice('0.1.0', '0.2.0'), revision: integer, title: text, rules: array(ref('rule')), script: ref('script'), initialState: ref('state'), phases: { ...array(ref('phase')), minItems: 1 }, events: array(ref('event')), assets: array(ref('asset')), finalDecision: object({ eventId: id, winningAlignment: choice('good', 'evil'), explanation: id, confirmedByStoryteller: { type: 'boolean' } }, ['eventId', 'explanation', 'confirmedByStoryteller']) }, ['replayId', 'schemaVersion', 'revision', 'title', 'rules', 'script', 'initialState', 'phases', 'events', 'assets']),
+  allOf: [{ if: { type: 'object', properties: { schemaVersion: { const: '0.2.0' } }, required: ['schemaVersion'] }, then: { type: 'object', properties: { events: { type: 'array', items: { type: 'object', properties: { effects: { type: 'array', items: { if: { type: 'object', properties: { kind: { const: 'change-roles' } }, required: ['kind'] }, then: { type: 'object', properties: { changes: array(currentRoleMapping) } } } } } } } } } }],
   $defs: {
     json: { anyOf: [{ type: 'null' }, { type: 'boolean' }, { type: 'number' }, text, array(ref('json')), { type: 'object', additionalProperties: ref('json') }] },
     role, subject, point, source, usage,
@@ -35,7 +39,7 @@ export const replayDocumentSchema = {
     state: object({ players: array(ref('player')), abilities: array(ref('ability')), conditions: array(ref('condition')), pendingTriggers: array(ref('trigger')) }),
     effect: { oneOf: [
       effect('set-role', { playerId: id, role, perception: choice('actual', 'perceived', 'disguise') }),
-      effect('change-roles', { resultId: id, changeKind: choice('exchange', 'replacement'), changes: { ...array(object({ playerId: id, from: role, to: role })), minItems: 1 } }),
+      effect('change-roles', { resultId: id, changeKind: choice('exchange', 'replacement'), changes: { ...array(roleMapping), minItems: 1 } }),
       effect('clear-role', { playerId: id, perception: choice('perceived', 'disguise') }),
       effect('set-alignment', { playerId: id, alignment: choice('good', 'evil') }),
       effect('set-life', { playerId: id, actuallyAlive: { type: 'boolean' } }),
@@ -49,7 +53,7 @@ export const replayDocumentSchema = {
       effect('settle-trigger', { triggerId: id, consumed: { type: 'integer', minimum: 1 }, effectIds: { ...array(id), uniqueItems: true } }),
       effect('cancel-trigger', { triggerId: id, reason: id }),
     ] },
-    event: object({ eventId: id, phaseId: id, order: integer, subject, abilityInstanceId: id, abilityOrigin: origin, roleChange, roleChangeResultId: id, targetPlayerIds: { ...array(id), uniqueItems: true }, mode: choice('real-ability', 'perceived-action', 'disguise', 'manual'), action: object({ name: id, input: { type: 'object', additionalProperties: ref('json') } }), receivedInformation: ref('json'), effects: array(ref('effect')), relatedEffectIds: { ...array(id), uniqueItems: true }, causes: array(source), visibility: choice('public', 'private', 'storyteller'), recipients: array(subject), note: text, exceptionReason: id }, ['eventId', 'phaseId', 'order', 'subject', 'mode', 'action', 'receivedInformation', 'effects', 'relatedEffectIds', 'causes', 'visibility', 'recipients', 'note']),
+    event: object({ eventId: id, phaseId: id, order: integer, subject, abilityInstanceId: id, abilityOrigin: origin, roleChange, roleChangeResultId: id, customRecords: { ...array(customRecord), minItems: 1 }, targetPlayerIds: { ...array(id), uniqueItems: true }, mode: choice('real-ability', 'perceived-action', 'disguise', 'manual'), action: object({ name: id, input: { type: 'object', additionalProperties: ref('json') } }), receivedInformation: ref('json'), effects: array(ref('effect')), relatedEffectIds: { ...array(id), uniqueItems: true }, causes: array(source), visibility: choice('public', 'private', 'storyteller'), recipients: array(subject), note: text, exceptionReason: id }, ['eventId', 'phaseId', 'order', 'subject', 'mode', 'action', 'receivedInformation', 'effects', 'relatedEffectIds', 'causes', 'visibility', 'recipients', 'note']),
     asset: object({ assetId: id, originalUrl: text, contentHash: text, mediaType: id, status: choice('cached', 'missing', 'failed'), placeholderLabel: text }, ['assetId', 'mediaType', 'status', 'placeholderLabel']),
     script: object({ originalJson: text, roles: array(object({ role, raw: { type: 'object', additionalProperties: ref('json') }, currentRule: ref('rule') })), excluded: array(object({ id, reason: id, raw: ref('json') })) }),
   },

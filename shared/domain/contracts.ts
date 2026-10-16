@@ -1,5 +1,5 @@
 // Recorded facts shared by the editor and viewer; role actions require separate user review.
-export const SCHEMA_VERSION = '0.1.0' as const;
+export const SCHEMA_VERSION = '0.2.0' as const;
 export type Id = string;
 export type JsonValue = null | boolean | number | string | JsonValue[] | { [key: string]: JsonValue };
 export type Alignment = 'good' | 'evil';
@@ -35,7 +35,13 @@ export interface AbilityOrigin {
   role: RoleReference;
   abilityInstanceId?: Id;
 }
-export interface RoleMapping { playerId: Id; from: RoleReference; to: RoleReference }
+export interface RoleMapping { playerId: Id; from: RoleReference; to: RoleReference; fromAlignment?: Alignment; toAlignment?: Alignment }
+export interface CustomRecord {
+  part: 'action' | 'information' | 'result' | 'follow-up';
+  branchPath: string[];
+  choice: '自定义';
+  text: string;
+}
 export interface RoleChangeAction {
   status: 'not-used' | 'selected' | 'failed' | 'applied';
   kind: 'exchange' | 'replacement';
@@ -127,6 +133,7 @@ export interface ReplayEvent {
   targetPlayerIds?: Id[];
   mode: ActionMode;
   action: { name: string; input: { [key: string]: JsonValue } };
+  customRecords?: CustomRecord[];
   receivedInformation: JsonValue;
   effects: EffectOperation[];
   // Referencing an existing effect for presentation does not apply it again.
@@ -175,7 +182,8 @@ export interface ScriptSnapshot {
 }
 export interface ReplayDocument {
   replayId: Id;
-  schemaVersion: typeof SCHEMA_VERSION;
+  // Legacy 0.1 records remain readable; current 0.2 role changes require explicit alignments.
+  schemaVersion: '0.1.0' | typeof SCHEMA_VERSION;
   revision: number;
   title: string;
   rules: RuleReference[];

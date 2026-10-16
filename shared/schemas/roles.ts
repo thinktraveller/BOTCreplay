@@ -21,6 +21,7 @@ export const actionProposalsSchema = {
     properties: {
       roleId: id, entryId: { type: 'string', pattern: '^S001-R-[TOMD][0-9]{3}$' }, name: id, type: { enum: ['townsfolk', 'outsider', 'minion', 'demon'] }, ruleVersion: id, proposalVersion: id, trigger: id, input: id, result: id, exceptions: id, normalExample: id, boundaryExample: id, reviewDocument: id,
       revisionHistory: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['fromVersion', 'toVersion', 'source', 'summary', 'changedAt'], properties: { fromVersion: id, toVersion: id, source: id, summary: id, changedAt: id } } },
+      recordingProfile: id,
       review: {
         type: 'object', additionalProperties: false, required: ['status', 'feedback', 'implementation', 'validation'],
         properties: {

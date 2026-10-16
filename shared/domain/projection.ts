@@ -4,6 +4,7 @@ import { abilityById, conditionById, playerById, sameSubject, uniqueIds, validat
 import { validateReplayStructure } from '../schemas/validate.js';
 import { abilityAvailability } from './abilities.js';
 import { inspectRoleChangeDraft, resolveAbilityOrigin, validateRoleChangeEvent } from './role-changes.js';
+import { validateCustomRecords } from './custom-records.js';
 
 export interface PhaseSnapshot { phaseId: Id; before: StateSnapshot; after: StateSnapshot; eventIds: Id[] }
 export interface ReplayProjection { state: StateSnapshot; events: EventSnapshot[]; phases: PhaseSnapshot[] }
@@ -82,6 +83,7 @@ export function projectReplay(input: ReplayDocument): ReplayProjection {
       event.recipients.forEach(x => validateSubject(state, x));
       for (const id of event.targetPlayerIds ?? []) playerById(state, id);
       event.causes.forEach(x => checkSource(x, event.eventId));
+      validateCustomRecords(event.customRecords);
       if (event.abilityInstanceId) {
         const ability = abilityById(state, event.abilityInstanceId);
         requireFact(sameSubject(ability.holder, event.subject) || !!event.exceptionReason?.trim(), 'action-holder', '动作主语与能力持有者不一致，需记录特殊裁决', event.eventId);
@@ -96,7 +98,7 @@ export function projectReplay(input: ReplayDocument): ReplayProjection {
       }
       const before = structuredClone(state);
       const abilityOrigin = resolveAbilityOrigin(event, before, eventSnapshots);
-      validateRoleChangeEvent(event, before, eventSnapshots);
+      validateRoleChangeEvent(event, before, eventSnapshots, document.schemaVersion === '0.2.0');
       const roleChangeResults: NonNullable<EventSnapshot['roleChangeResults']> = [];
       const targetIds = new Set([...(event.targetPlayerIds ?? []), ...(event.roleChange?.selectedPlayerIds ?? []), ...(event.roleChange?.affectedPlayerIds ?? [])]);
       for (const effect of [...event.effects].sort((a, b) => a.order - b.order)) {
@@ -109,11 +111,12 @@ export function projectReplay(input: ReplayDocument): ReplayProjection {
         if ('playerId' in effect) targetIds.add(effect.playerId);
         switch (effect.kind) {
           case 'change-roles': {
-            const issues = inspectRoleChangeDraft(event.roleChange!, state, effect.changes);
+            const issues = inspectRoleChangeDraft(event.roleChange!, state, effect.changes, document.schemaVersion === '0.2.0');
             requireFact(!issues.length, 'role-change-mapping', issues.join('；'), effect.effectId);
             const changes = effect.changes.map(change => ({ playerId: change.playerId, before: structuredClone(playerById(state, change.playerId)), after: structuredClone(playerById(state, change.playerId)) }));
             for (const change of effect.changes) {
               playerById(state, change.playerId).actualRole = structuredClone(change.to);
+              if (change.toAlignment !== undefined) playerById(state, change.playerId).alignment = change.toAlignment;
               targetIds.add(change.playerId);
             }
             for (const change of changes) change.after = structuredClone(playerById(state, change.playerId));
@@ -230,6 +233,7 @@ export function projectReplay(input: ReplayDocument): ReplayProjection {
       }
       for (const effectId of event.relatedEffectIds) requireFact(knownEffects.has(effectId), 'missing-effect', '关联后果尚未声明', effectId);
       validateState(state, true);
+      for (const result of roleChangeResults) for (const change of result.changes) change.after = structuredClone(playerById(state, change.playerId));
       eventSnapshots.push({ eventId: event.eventId, before, after: structuredClone(state), targetPlayerIds: [...targetIds], ...(abilityOrigin ? { abilityOrigin } : {}), ...(roleChangeResults.length ? { roleChangeResults } : {}) });
       knownEvents.add(event.eventId);
     }

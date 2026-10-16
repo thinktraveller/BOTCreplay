@@ -1,8 +1,8 @@
 {
   "manifest": {
     "sourcePath": "project-docs/docs/BOTCreplay设计需求.md",
-    "sourceSha256": "318c272e008218ae7dc8e1f9d6c4b23f7ba81d4d8f1f73376da7289e5eb86754",
-    "goalSha256": "d0c56eb5c975b9f6add2ca6eb5d6adfc88894dc27e7f0d2be0291d80c4a4c9fb",
+    "sourceSha256": "3581301886538031e40e8d5ee5da39aa8186a5a613fc74b002cfa58edea1a13a",
+    "goalSha256": "bc5bd3b53924c90776c1febdbbd27039a513ab52e5f9f5fdc6889d3736868ecd",
     "sourceVersion": "source-v1",
     "originalItemCount": 221,
     "supportedCount": 197,
@@ -11,7 +11,15 @@
     "note": "原始字段与缺失保持原状；不执行_meta.state、旅行者或传奇/房规行为。角色动作审查与技能版本决定分别登记。",
     "previousSourceSha256": "7377ac4e2b39d64e4cd5896b27241dfddb4e189afc6e72b1eeab51f388a2d931",
     "previousGoalSha256": "e5b422adc2fa493c4f113b8d0527fb491565337479f9b361ee34878bb1842961",
-    "presentationBaseline": "2026-10-15 aa00d85: 角色JSON不变；正文新增角色变化、死亡来源与逐人新身份。m1-action-v2同步填写设计。"
+    "presentationBaseline": "2026-10-16 8d10b19/计划v0.9：全分支自定义、结果阵营红蓝、统一角色术语；197项m1-action-v4，旧勾选与反馈按原版本保留。",
+    "inputHistory": [
+      {
+        "sourceSha256": "318c272e008218ae7dc8e1f9d6c4b23f7ba81d4d8f1f73376da7289e5eb86754",
+        "goalSha256": "d0c56eb5c975b9f6add2ca6eb5d6adfc88894dc27e7f0d2be0291d80c4a4c9fb",
+        "plan": "v0.6",
+        "note": "上一轮输入基准，保留历史。"
+      }
+    ]
   },
   "roles": [
     {
