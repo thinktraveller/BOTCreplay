@@ -3,12 +3,17 @@ import type { ReplayDocument } from '../domain/contracts.js';
 import { replayDocumentSchema } from './replay.js';
 import { actionProposalsSchema, roleSourceSchema } from './roles.js';
 import { recordingFormatsSchema } from './recording.js';
+import { roleScopeSchema } from './role-scope.js';
 
 const ajv = new Ajv({ allErrors: true, strict: true, strictNumbers: true });
 const validate = ajv.compile<ReplayDocument>(replayDocumentSchema);
 const validateSources = ajv.compile(roleSourceSchema);
 const validateProposals = ajv.compile(actionProposalsSchema);
 const validateRecording = ajv.compile(recordingFormatsSchema);
+const validateScope = ajv.compile(roleScopeSchema);
+export function validateRoleScope(input: unknown): { valid: boolean; errors: { path: string; message: string }[] } {
+  const valid=!!validateScope(input);return {valid,errors:valid?[]:(validateScope.errors??[]).map(error=>({path:error.instancePath||'/',message:error.message??error.keyword}))};
+}
 export function validateRecordingFormats(input: unknown): { valid: boolean; errors: { path: string; message: string }[] } {
   const valid=!!validateRecording(input);return {valid,errors:valid?[]:(validateRecording.errors??[]).map(error=>({path:error.instancePath||'/',message:error.message??error.keyword}))};
 }

@@ -1,0 +1,47 @@
+{
+  "version": "user-scope-20261018-v1",
+  "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+  "retired": [
+    {
+      "roleId": "shiyiwailaizhe",
+      "entryId": "S001-R-T101",
+      "name": "失忆的镇民",
+      "reason": "用户明确要求从实际游戏配版及当前录入目录删除；原始资料和历史事实只读保留。"
+    },
+    {
+      "roleId": "shiyizhaoya",
+      "entryId": "S001-R-O031",
+      "name": "失忆的外来者",
+      "reason": "用户明确要求从实际游戏配版及当前录入目录删除；原始资料和历史事实只读保留。"
+    },
+    {
+      "roleId": "354a531c-7b89-484-243c3e167818",
+      "entryId": "S001-R-M027",
+      "name": "亡魂",
+      "reason": "用户明确要求从实际游戏配版及当前录入目录删除；原始资料和历史事实只读保留。"
+    },
+    {
+      "roleId": "shiyizhenmin",
+      "entryId": "S001-R-M036",
+      "name": "失忆的爪牙",
+      "reason": "用户明确要求从实际游戏配版及当前录入目录删除；原始资料和历史事实只读保留。"
+    },
+    {
+      "roleId": "shiyiemo",
+      "entryId": "S001-R-D029",
+      "name": "失忆的恶魔",
+      "reason": "用户明确要求从实际游戏配版及当前录入目录删除；原始资料和历史事实只读保留。"
+    }
+  ],
+  "cognitiveRoleIds": [
+    "woheduolema111",
+    "wocaishiemo111",
+    "zheyeshigejiugui111",
+    "yiwu111"
+  ],
+  "setupOutsiderOverrideRoleIds": [
+    "tousioahsdoasidhas",
+    "kakakakkakakakakakakakaakakak111",
+    "tifeng11zhishou11111111"
+  ]
+}

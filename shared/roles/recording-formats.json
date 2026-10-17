@@ -1,5 +1,5 @@
 {
-  "version": "m1-recording-v4",
+  "version": "m1-recording-v5",
   "commonForms": [
     {
       "label": "准备配置",
@@ -7660,7 +7660,7 @@
     {
       "roleId": "yiwu111",
       "entryId": "S001-R-T082",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -7912,6 +7912,64 @@
             "path": "新建记录 → 【悟道者的实际主语】 → 实际未生效／条件不满足 → 自定义 → 【正文】 → 预览 → 保存",
             "exampleText": "1号玩家（悟道者）的自定义记录：本次先记录实际情况。\n详细说明保留“引号”、中文与🙂。"
           }
+        },
+        {
+          "branchId": "S001-R-T082-B90",
+          "label": "展开所认知角色的完整填写格式",
+          "timing": "认知角色自身对应时点",
+          "fields": [
+            {
+              "label": "当前认知角色",
+              "control": "对应类型角色选择",
+              "detail": "酒鬼认知镇民、悟道者认知外来者、疯子认知恶魔、提线木偶认知善良角色。",
+              "customOption": "自定义",
+              "customPart": "action"
+            },
+            {
+              "label": "认知能力来源链",
+              "control": "按已登记认知角色或认知获得能力逐层选择",
+              "detail": "展开被认知角色全部相关行动、信息、结果与下级字段，不更换真实角色。",
+              "customOption": "自定义",
+              "customPart": "action"
+            },
+            {
+              "label": "对应角色填写项",
+              "control": "动态展开所选角色具体模板",
+              "detail": "主语保留实际角色[认知角色]，实际收到信息原样保存。",
+              "customOption": "自定义",
+              "customPart": "information"
+            },
+            {
+              "label": "本次模式",
+              "control": "认知行动（固定）",
+              "detail": "不将表面动作推断为真实能力效果；真实效果必须有独立真实来源。",
+              "customOption": "自定义",
+              "customPart": "result"
+            }
+          ],
+          "path": "新建记录 → 【实际主语】 → 展开所认知角色的完整填写格式 → 【当前认知角色】 → 【认知能力来源链】 → 【对应角色填写项】 → 【本次模式】 → 保存",
+          "sentences": [
+            "【实际角色[认知角色]主语】【对应认知角色的实际输入与信息】。"
+          ],
+          "exampleInput": "1号悟道者认知管家；本夜选择5号调查员为主人；未真实获得管家能力",
+          "exampleOutput": [
+            "1号玩家（悟道者[管家]）选择了5号玩家（调查员）作为主人。"
+          ],
+          "notes": "当前生产查询按认知角色展开其完整模板，所有字段仍保留自定义；示例为酒鬼认知占卜师，其余角色仅使用符合自身认知类型的模板。实际生效来源独立，不从认知模板制造死亡、醉毒、换角或次数消耗。",
+          "custom": {
+            "choice": "自定义",
+            "parts": [
+              "action",
+              "information",
+              "result",
+              "follow-up"
+            ],
+            "textRequired": true,
+            "retainContext": true,
+            "effects": "explicit-only",
+            "path": "新建记录 → 【实际主语】 → 展开所认知角色的完整填写格式 → 自定义 → 【正文】 → 预览 → 保存",
+            "exampleText": "1号玩家（悟道者）的自定义记录：保留本次实际输入。\n补充说明只关联本次来源。"
+          }
         }
       ]
     },
@@ -7978,7 +8036,7 @@
     {
       "roleId": "chonggggggggggfeiiiiiiiiiiiiiiiiiiiiiiiiiiiiiwww",
       "entryId": "S001-R-T084",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -8014,15 +8072,15 @@
               "customPart": "result"
             }
           ],
-          "path": "新建记录 → 说书人 → 因宠妃破例 → 【具体例外】 → 【实际效果】 → 秘密告知本人 → 保存",
+          "path": "新建记录 → 说书人 → 为宠妃打破规则 → 【内容】 → 【实际效果】 → 秘密告知本人 → 保存",
           "sentences": [
-            "说书人因宠妃对【玩家】作出规则例外：“【内容】”。",
-            "【玩家】得知说书人为其作出的具体规则例外：“【内容】”。"
+            "说书人为【玩家】打破了规则：“【内容】”。",
+            "【玩家】得知说书人为其打破了规则：“【内容】”。"
           ],
           "exampleInput": "例外=本次攻击不使本人死亡；已通知",
           "exampleOutput": [
-            "说书人因宠妃对1号玩家（宠妃）作出规则例外：“本次攻击不使其死亡”。",
-            "1号玩家（宠妃）得知说书人为其作出的具体规则例外：“本次攻击不使其死亡”。"
+            "说书人为1号玩家（宠妃）打破了规则：“本次攻击不使其死亡”。",
+            "1号玩家（宠妃）得知说书人为其打破了规则：“本次攻击不使其死亡”。"
           ],
           "notes": "保存本次实际输入、信息及来源；不以真值替换已收到的信息。",
           "branchId": "S001-R-T084-B01",
@@ -8304,12 +8362,12 @@
     {
       "roleId": "fengshuisfgsetgshfsdf",
       "entryId": "S001-R-T088",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
           "label": "从起点逐夜得知角色类型",
-          "timing": "本人首夜选起点，之后顺时针逐座位",
+          "timing": "本人首夜由说书人确定起点，之后顺时针逐座位",
           "fields": [
             {
               "label": "首夜起点／本次对应玩家",
@@ -8349,6 +8407,43 @@
             "effects": "explicit-only",
             "path": "新建记录 → 【风水师的实际主语】 → 从起点逐夜得知角色类型 → 自定义 → 【正文】 → 预览 → 保存",
             "exampleText": "1号玩家（风水师）的自定义记录：本次先记录实际情况。\n详细说明保留“引号”、中文与🙂。"
+          }
+        },
+        {
+          "branchId": "S001-R-T088-B02",
+          "label": "记录风水师首个信息起点",
+          "timing": "本人首个夜晚",
+          "fields": [
+            {
+              "label": "初始得知的位置",
+              "control": "玩家／座位单选",
+              "detail": "由说书人记录实际起点，不记成风水师主动选择。",
+              "customOption": "自定义",
+              "customPart": "action"
+            }
+          ],
+          "path": "新建记录 → 【实际主语】 → 记录风水师首个信息起点 → 【初始得知的位置】 → 保存",
+          "sentences": [
+            "风水师初始得知的位置是【位置】。"
+          ],
+          "exampleInput": "初始位置=4号",
+          "exampleOutput": [
+            "风水师初始得知的位置是4号。"
+          ],
+          "notes": "关联同夜首次角色类型信息；后续沿顺时针推进，不重复初始化。",
+          "custom": {
+            "choice": "自定义",
+            "parts": [
+              "action",
+              "information",
+              "result",
+              "follow-up"
+            ],
+            "textRequired": true,
+            "retainContext": true,
+            "effects": "explicit-only",
+            "path": "新建记录 → 【实际主语】 → 记录风水师首个信息起点 → 自定义 → 【正文】 → 预览 → 保存",
+            "exampleText": "1号玩家（风水师）的自定义记录：保留本次实际输入。\n补充说明只关联本次来源。"
           }
         }
       ]
@@ -8620,7 +8715,7 @@
     {
       "roleId": "qqqqqqqqqqasfasfhfhhrteqarq35q35qaa",
       "entryId": "S001-R-T090",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -8717,13 +8812,57 @@
             "path": "新建记录 → 【掮客的实际主语】 → 按掮客关系改向选择 → 自定义 → 【正文】 → 预览 → 保存",
             "exampleText": "1号玩家（掮客）的自定义记录：本次先记录实际情况。\n详细说明保留“引号”、中文与🙂。"
           }
+        },
+        {
+          "branchId": "S001-R-T090-B03",
+          "label": "选择不同阵营，关系不生效",
+          "timing": "本夜选定两名存活玩家并确认结果后",
+          "fields": [
+            {
+              "label": "玩家1、玩家2",
+              "control": "玩家单选×2",
+              "detail": "两名不同的存活玩家。",
+              "customOption": "自定义",
+              "customPart": "action"
+            },
+            {
+              "label": "两人实际阵营",
+              "control": "逐人善良／邪恶",
+              "detail": "保存本次实际阵营与不同阵营依据。",
+              "customOption": "自定义",
+              "customPart": "result"
+            }
+          ],
+          "path": "新建记录 → 【实际主语】 → 选择不同阵营，关系不生效 → 【玩家1、玩家2】 → 【两人实际阵营】 → 保存",
+          "sentences": [
+            "【主语】选择了【玩家1】和【玩家2】，因为他们的阵营不同，无事发生。"
+          ],
+          "exampleInput": "目标=2号厨师善良、7号小恶魔邪恶；不同阵营；本次关系未建立",
+          "exampleOutput": [
+            "1号玩家（掮客）选择了2号玩家（厨师）和7号玩家（小恶魔），因为他们的阵营不同，无事发生。"
+          ],
+          "notes": "本次不建立目标交换关系，不清除其他来源的关系或效果。",
+          "custom": {
+            "choice": "自定义",
+            "parts": [
+              "action",
+              "information",
+              "result",
+              "follow-up"
+            ],
+            "textRequired": true,
+            "retainContext": true,
+            "effects": "explicit-only",
+            "path": "新建记录 → 【实际主语】 → 选择不同阵营，关系不生效 → 自定义 → 【正文】 → 预览 → 保存",
+            "exampleText": "1号玩家（掮客）的自定义记录：保留本次实际输入。\n补充说明只关联本次来源。"
+          }
         }
       ]
     },
     {
       "roleId": "ranfangfangsdthw4etq45",
       "entryId": "S001-R-T091",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -8782,22 +8921,29 @@
           "timing": "替换后非首夜的夜晚",
           "fields": [
             {
-              "label": "实际是否死亡／玩家",
-              "control": "无死亡或实际目标选择",
-              "detail": "说书人决定，保留来源能力替换。",
+              "label": "恶魔能力来源",
+              "control": "玩家与已替换的能力实例",
+              "detail": "实际击杀来源仍为恶魔，行动不是恶魔重新选择。",
+              "customOption": "自定义",
+              "customPart": "action"
+            },
+            {
+              "label": "实际死亡或无死亡",
+              "control": "无死亡／玩家多选",
+              "detail": "由说书人记录实际结果；每个实际死亡关联同一恶魔能力。",
               "customOption": "自定义",
               "customPart": "result"
             }
           ],
-          "path": "新建记录 → 说书人 → 【替换后的恶魔能力】 → 【实际死亡或无死亡】 → 保存",
+          "path": "新建记录 → 【实际死者】 → 因恶魔能力死亡 → 【恶魔来源】 → 【实际生死】 → 保存",
           "sentences": [
-            "【玩家】因【被替换恶魔】的能力而死亡。"
+            "【玩家】因【恶魔】的能力而死亡了。"
           ],
-          "exampleInput": "本夜实际死亡=5号",
+          "exampleInput": "来源=7号小恶魔的已替换能力；死者=5号调查员；恶魔没有主动选择目标",
           "exampleOutput": [
-            "5号玩家（调查员）因被替换后的恶魔能力而死亡。"
+            "5号玩家（调查员）因7号玩家（小恶魔）的能力而死亡了。"
           ],
-          "notes": "保存本次实际输入、信息及来源；不以真值替换已收到的信息。",
+          "notes": "保留染坊坊主死亡→恶魔能力替换→本次实际死亡的因果链；不把来源改成说书人或染坊坊主。",
           "branchId": "S001-R-T091-B02",
           "custom": {
             "choice": "自定义",
@@ -8930,7 +9076,7 @@
     {
       "roleId": "xunchashaoihwronaklsndfkasnd",
       "entryId": "S001-R-T094",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -8982,6 +9128,59 @@
             "effects": "explicit-only",
             "path": "新建记录 → 【巡察的实际主语】 → 选择善良角色并保护对应玩家 → 自定义 → 【正文】 → 预览 → 保存",
             "exampleText": "1号玩家（巡察）的自定义记录：本次先记录实际情况。\n详细说明保留“引号”、中文与🙂。"
+          }
+        },
+        {
+          "branchId": "S001-R-T094-B02",
+          "label": "所选角色不在场或未同时存活，无事发生",
+          "timing": "非首夜选择两个善良角色并完成本次核验后",
+          "fields": [
+            {
+              "label": "角色1、角色2",
+              "control": "角色单选×2",
+              "detail": "保留本次两角色和前一夜选择组。",
+              "customOption": "自定义",
+              "customPart": "action"
+            },
+            {
+              "label": "不在场角色",
+              "control": "从本次角色中选1个或2个",
+              "detail": "明确哪一个或哪两个不在场；不强制提供不存在的玩家映射。",
+              "customOption": "自定义",
+              "customPart": "result"
+            },
+            {
+              "label": "在场但未存活的对应玩家",
+              "control": "可选玩家列表＋生死快照",
+              "detail": "两角色均在场但未同时存活时，保存具体未存活玩家；不把死亡玩家自动复活或建立半份保护。",
+              "customOption": "自定义",
+              "customPart": "result"
+            }
+          ],
+          "path": "新建记录 → 【主语】 → 选择两个善良角色 → 【不在场角色或未存活依据】 → 本次保护无事发生 → 保存",
+          "sentences": [
+            "【主语】选择了【角色1】和【角色2】，其中【不在场角色集】不在场，无事发生。",
+            "【主语】选择了【角色1】和【角色2】，对应玩家未同时存活，无事发生。"
+          ],
+          "exampleInput": "选择厨师与共情者；厨师不在场；本次保护未建立；独立示例：两角色都在场，但2号厨师已死亡、5号共情者存活",
+          "exampleOutput": [
+            "1号玩家（巡察）选择了厨师和共情者，其中厨师不在场，无事发生。",
+            "1号玩家（巡察）选择了厨师和共情者，对应玩家未同时存活，无事发生。"
+          ],
+          "notes": "同一分支可标注两个角色都不在场，不自动建立半份保护。 以上是两个独立的失败示例，一次记录只保存实际一支；成功要求两个对应玩家均存活。",
+          "custom": {
+            "choice": "自定义",
+            "parts": [
+              "action",
+              "information",
+              "result",
+              "follow-up"
+            ],
+            "textRequired": true,
+            "retainContext": true,
+            "effects": "explicit-only",
+            "path": "新建记录 → 【实际主语】 → 选择了不在场角色，无事发生 → 自定义 → 【正文】 → 预览 → 保存",
+            "exampleText": "1号玩家（巡察）的自定义记录：保留本次实际输入。\n补充说明只关联本次来源。"
           }
         }
       ]
@@ -9216,7 +9415,7 @@
     {
       "roleId": "yishisaarqwwwwwwwwwwwwwwwwwwww",
       "entryId": "S001-R-T096",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -9257,7 +9456,7 @@
           }
         },
         {
-          "label": "收到声明正误并确认失能",
+          "label": "得知角色是否在场并确认失能",
           "timing": "对应当晚",
           "fields": [
             {
@@ -9282,14 +9481,14 @@
               "customPart": "result"
             }
           ],
-          "path": "新建记录 → 【主语】 → 得知声明是否正确 → 【声明】 → 是／否 → 【是否实际失能】 → 保存",
+          "path": "新建记录 → 【主语】 → 得知角色是否在场 → 【声明】 → 是／否 → 【是否实际失能】 → 保存",
           "sentences": [
-            "【主语】得知其声明“【角色】在场”是【正确／错误】的。",
+            "【主语】得知其声明“【角色】在场”是否在场的结果是【是／否】。",
             "【主语】因实际得知过是与否，失去了驿使能力。"
           ],
           "exampleInput": "日1声明厨师；首个反馈=否；未有是；不失能",
           "exampleOutput": [
-            "1号玩家（驿使）得知其声明“厨师在场”是错误的。"
+            "1号玩家（驿使）得知其声明“厨师在场”是否在场的结果是“否”。"
           ],
           "notes": "末尾失能句仅在明确记录答案集合两种齐全后追加，不使用旧版“否即失能”。",
           "branchId": "S001-R-T096-B02",
@@ -9365,7 +9564,7 @@
     {
       "roleId": "yongjiangsaohdawjroij4u901qhwrfi13049",
       "entryId": "S001-R-T098",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -9389,13 +9588,13 @@
           ],
           "path": "新建记录 → 【主语】 → 首夜选择保护关联玩家 → 【目标玩家】 → 【目标善良／死亡者中无邪恶】 → 保存",
           "sentences": [
-            "【主语】选择了【目标】；在记录的条件成立时，本人与目标只会死于处决。"
+            "【主语】选择了【目标】，在有邪恶的玩家死亡前，他们只会死于处决。"
           ],
           "exampleInput": "目标=善良5号；已死者无邪恶；关系生效",
           "exampleOutput": [
-            "1号玩家（俑匠）选择了5号玩家（调查员）；在记录的条件成立时，本人与目标只会死于处决。"
+            "1号玩家（俑匠）选择了5号玩家（调查员），在有邪恶的玩家死亡前，他们只会死于处决。"
           ],
-          "notes": "保存本次实际输入、信息及来源；不以真值替换已收到的信息。",
+          "notes": "此成功分支保存所选玩家善良、当时没有已死邪恶玩家的依据；后续条件结束另记，不把选人本身当作永久免死。",
           "branchId": "S001-R-T098-B01",
           "custom": {
             "choice": "自定义",
@@ -9461,6 +9660,50 @@
             "effects": "explicit-only",
             "path": "新建记录 → 【俑匠的实际主语】 → 因俑匠免受非处决死亡 → 自定义 → 【正文】 → 预览 → 保存",
             "exampleText": "1号玩家（俑匠）的自定义记录：本次先记录实际情况。\n详细说明保留“引号”、中文与🙂。"
+          }
+        },
+        {
+          "branchId": "S001-R-T098-B02",
+          "label": "选择邪恶玩家，无事发生",
+          "timing": "本人首夜选择并核验目标后",
+          "fields": [
+            {
+              "label": "目标玩家",
+              "control": "玩家单选",
+              "detail": "保留首夜选择。",
+              "customOption": "自定义",
+              "customPart": "action"
+            },
+            {
+              "label": "目标实际邪恶依据",
+              "control": "实际阵营与来源",
+              "detail": "不能仅按恶魔或爪牙角色类型推断阵营。",
+              "customOption": "自定义",
+              "customPart": "result"
+            }
+          ],
+          "path": "新建记录 → 【实际主语】 → 选择邪恶玩家，无事发生 → 【目标玩家】 → 【目标实际邪恶依据】 → 保存",
+          "sentences": [
+            "【主语】选择了【目标】；因为【目标】是邪恶的，无事发生。"
+          ],
+          "exampleInput": "目标=7号小恶魔；实际邪恶；本次保护未建立",
+          "exampleOutput": [
+            "1号玩家（俑匠）选择了7号玩家（小恶魔）；因为7号玩家（小恶魔）是邪恶的，无事发生。"
+          ],
+          "notes": "本次不建立保护，不清除其他免死来源。",
+          "custom": {
+            "choice": "自定义",
+            "parts": [
+              "action",
+              "information",
+              "result",
+              "follow-up"
+            ],
+            "textRequired": true,
+            "retainContext": true,
+            "effects": "explicit-only",
+            "path": "新建记录 → 【实际主语】 → 选择邪恶玩家，无事发生 → 自定义 → 【正文】 → 预览 → 保存",
+            "exampleText": "1号玩家（俑匠）的自定义记录：保留本次实际输入。\n补充说明只关联本次来源。"
           }
         }
       ]
@@ -9778,7 +10021,7 @@
     {
       "roleId": "woheduolema111",
       "entryId": "S001-R-O002",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -9874,6 +10117,64 @@
             "effects": "explicit-only",
             "path": "新建记录 → 【酒鬼的实际主语】 → 按认知镇民格式记录表面行动 → 自定义 → 【正文】 → 预览 → 保存",
             "exampleText": "1号玩家（酒鬼）的自定义记录：本次先记录实际情况。\n详细说明保留“引号”、中文与🙂。"
+          }
+        },
+        {
+          "branchId": "S001-R-O002-B90",
+          "label": "展开所认知角色的完整填写格式",
+          "timing": "认知角色自身对应时点",
+          "fields": [
+            {
+              "label": "当前认知角色",
+              "control": "对应类型角色选择",
+              "detail": "酒鬼认知镇民、悟道者认知外来者、疯子认知恶魔、提线木偶认知善良角色。",
+              "customOption": "自定义",
+              "customPart": "action"
+            },
+            {
+              "label": "认知能力来源链",
+              "control": "按已登记认知角色或认知获得能力逐层选择",
+              "detail": "展开被认知角色全部相关行动、信息、结果与下级字段，不更换真实角色。",
+              "customOption": "自定义",
+              "customPart": "action"
+            },
+            {
+              "label": "对应角色填写项",
+              "control": "动态展开所选角色具体模板",
+              "detail": "主语保留实际角色[认知角色]，实际收到信息原样保存。",
+              "customOption": "自定义",
+              "customPart": "information"
+            },
+            {
+              "label": "本次模式",
+              "control": "认知行动（固定）",
+              "detail": "不将表面动作推断为真实能力效果；真实效果必须有独立真实来源。",
+              "customOption": "自定义",
+              "customPart": "result"
+            }
+          ],
+          "path": "新建记录 → 【实际主语】 → 展开所认知角色的完整填写格式 → 【当前认知角色】 → 【认知能力来源链】 → 【对应角色填写项】 → 【本次模式】 → 保存",
+          "sentences": [
+            "【实际角色[认知角色]主语】【对应认知角色的实际输入与信息】。"
+          ],
+          "exampleInput": "1号酒鬼认知占卜师；选择2号厨师、5号圣徒；收到没有恶魔",
+          "exampleOutput": [
+            "1号玩家（酒鬼[占卜师]）选择了2号玩家（厨师）和5号玩家（圣徒），得知没有恶魔。"
+          ],
+          "notes": "当前生产查询按认知角色展开其完整模板，所有字段仍保留自定义；示例为酒鬼认知占卜师，其余角色仅使用符合自身认知类型的模板。实际生效来源独立，不从认知模板制造死亡、醉毒、换角或次数消耗。",
+          "custom": {
+            "choice": "自定义",
+            "parts": [
+              "action",
+              "information",
+              "result",
+              "follow-up"
+            ],
+            "textRequired": true,
+            "retainContext": true,
+            "effects": "explicit-only",
+            "path": "新建记录 → 【实际主语】 → 展开所认知角色的完整填写格式 → 自定义 → 【正文】 → 预览 → 保存",
+            "exampleText": "1号玩家（酒鬼）的自定义记录：保留本次实际输入。\n补充说明只关联本次来源。"
           }
         }
       ]
@@ -10234,7 +10535,7 @@
     {
       "roleId": "wocaishiemo111",
       "entryId": "S001-R-O008",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -10374,6 +10675,64 @@
             "effects": "explicit-only",
             "path": "新建记录 → 【疯子的实际主语】 → 真实恶魔得知疯子及其选择 → 自定义 → 【正文】 → 预览 → 保存",
             "exampleText": "1号玩家（疯子）的自定义记录：本次先记录实际情况。\n详细说明保留“引号”、中文与🙂。"
+          }
+        },
+        {
+          "branchId": "S001-R-O008-B90",
+          "label": "展开所认知角色的完整填写格式",
+          "timing": "认知角色自身对应时点",
+          "fields": [
+            {
+              "label": "当前认知角色",
+              "control": "对应类型角色选择",
+              "detail": "酒鬼认知镇民、悟道者认知外来者、疯子认知恶魔、提线木偶认知善良角色。",
+              "customOption": "自定义",
+              "customPart": "action"
+            },
+            {
+              "label": "认知能力来源链",
+              "control": "按已登记认知角色或认知获得能力逐层选择",
+              "detail": "展开被认知角色全部相关行动、信息、结果与下级字段，不更换真实角色。",
+              "customOption": "自定义",
+              "customPart": "action"
+            },
+            {
+              "label": "对应角色填写项",
+              "control": "动态展开所选角色具体模板",
+              "detail": "主语保留实际角色[认知角色]，实际收到信息原样保存。",
+              "customOption": "自定义",
+              "customPart": "information"
+            },
+            {
+              "label": "本次模式",
+              "control": "认知行动（固定）",
+              "detail": "不将表面动作推断为真实能力效果；真实效果必须有独立真实来源。",
+              "customOption": "自定义",
+              "customPart": "result"
+            }
+          ],
+          "path": "新建记录 → 【实际主语】 → 展开所认知角色的完整填写格式 → 【当前认知角色】 → 【认知能力来源链】 → 【对应角色填写项】 → 【本次模式】 → 保存",
+          "sentences": [
+            "【实际角色[认知角色]主语】【对应认知角色的实际输入与信息】。"
+          ],
+          "exampleInput": "1号疯子认知小恶魔；选择5号调查员；无真实死亡",
+          "exampleOutput": [
+            "1号玩家（疯子[小恶魔]）选择了5号玩家（调查员）。"
+          ],
+          "notes": "当前生产查询按认知角色展开其完整模板，所有字段仍保留自定义；示例为酒鬼认知占卜师，其余角色仅使用符合自身认知类型的模板。实际生效来源独立，不从认知模板制造死亡、醉毒、换角或次数消耗。",
+          "custom": {
+            "choice": "自定义",
+            "parts": [
+              "action",
+              "information",
+              "result",
+              "follow-up"
+            ],
+            "textRequired": true,
+            "retainContext": true,
+            "effects": "explicit-only",
+            "path": "新建记录 → 【实际主语】 → 展开所认知角色的完整填写格式 → 自定义 → 【正文】 → 预览 → 保存",
+            "exampleText": "1号玩家（疯子）的自定义记录：保留本次实际输入。\n补充说明只关联本次来源。"
           }
         }
       ]
@@ -10779,7 +11138,7 @@
     {
       "roleId": "daibi111",
       "entryId": "S001-R-O012",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -10810,11 +11169,11 @@
           ],
           "path": "新建记录 → 【主语】 → 知死后公开选择 → 【玩家】 → 【邪恶判定与裁决】 → 保存",
           "sentences": [
-            "【主语】得知自己死亡后公开选择【目标】，因其被判为邪恶而使【本人阵营】阵营落败。"
+            "【主语】得知自己死亡后公开选择【目标】，因其为邪恶阵营，【本人阵营】阵营落败。"
           ],
           "exampleInput": "公开选7号；判邪恶；本人善良阵营落败",
           "exampleOutput": [
-            "1号玩家（呆瓜）💀得知自己死亡后公开选择7号玩家（小恶魔），因其被判为邪恶而使善良阵营落败。"
+            "1号玩家（呆瓜）💀得知自己死亡后公开选择7号玩家（小恶魔），因其为邪恶阵营，善良阵营落败。"
           ],
           "notes": "保存本次实际输入、信息及来源；不以真值替换已收到的信息。",
           "branchId": "S001-R-O012-B01",
@@ -10890,7 +11249,7 @@
     {
       "roleId": "wudidejiemidashi111",
       "entryId": "S001-R-O014",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -10972,13 +11331,15 @@
           ],
           "path": "新建记录 → 【主语】 → 猜测解谜醉酒者 → 本次使用／不使用（不使用直接保存） → 【玩家】 → 【对错判定】 → 【收到恶魔玩家】 → 保存",
           "sentences": [
-            "【主语】猜测【玩家】因自己的能力醉酒，得知【收到玩家】是恶魔。"
+            "【主语】猜测【玩家】因自己的能力醉酒，猜测正确，得知【收到玩家】是恶魔。",
+            "【主语】猜测【玩家】因自己的能力醉酒，猜测错误，错误地得知【收到玩家】是恶魔。"
           ],
-          "exampleInput": "猜5号；判对；收到7号",
+          "exampleInput": "正确例：猜5号即实际解谜醉酒者，收到7号小恶魔；错误例：猜2号，错误收到6号厨师为恶魔",
           "exampleOutput": [
-            "1号玩家（解谜大师）猜测5号玩家（调查员）因自己的能力醉酒，得知7号玩家（小恶魔）是恶魔。"
+            "1号玩家（解谜大师）猜测5号玩家（调查员）因自己的能力醉酒，猜测正确，得知7号玩家（小恶魔）是恶魔。",
+            "1号玩家（解谜大师）猜测2号玩家（厨师）因自己的能力醉酒，猜测错误，错误地得知6号玩家（共情者）是恶魔。"
           ],
-          "notes": "保存本次实际输入、信息及来源；不以真值替换已收到的信息。",
+          "notes": "两行分别为正确、错误两个独立示例，单次使用只保存实际一支；实际收到信息不以真实恶魔自动覆盖。",
           "branchId": "S001-R-O014-B02",
           "custom": {
             "choice": "自定义",
@@ -11207,7 +11568,7 @@
     {
       "roleId": "tougexiangxian111",
       "entryId": "S001-R-O018",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -11238,11 +11599,11 @@
           ],
           "path": "新建记录 → 说书人 → 政客最大败因认定 → 【说明】 → 【换阵营及个人胜利】 → 保存",
           "sentences": [
-            "【主语】被判定为其阵营落败的最大原因，转为【阵营】并获得个人胜利。"
+            "【主语】被判定为其阵营落败负最大责任的人，转为【阵营】并获得胜利。"
           ],
           "exampleInput": "认定=满足；原善良落败；实际转邪并个人获胜",
           "exampleOutput": [
-            "1号玩家（政客）被判定为善良阵营落败的最大原因，转为邪恶并获得个人胜利。"
+            "1号玩家（政客）被判定为其阵营落败负最大责任的人，转为邪恶阵营并获得胜利。"
           ],
           "notes": "保存本次实际输入、信息及来源；不以真值替换已收到的信息。",
           "branchId": "S001-R-O018-B01",
@@ -11266,44 +11627,51 @@
     {
       "roleId": "scp-049049049",
       "entryId": "S001-R-O019",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
-          "label": "死亡后说书人获得爪牙能力",
+          "label": "死亡后实际获得者获得爪牙能力",
           "timing": "本人实际死亡",
           "fields": [
             {
-              "label": "关联的先前记录",
+              "label": "关联的死亡记录",
               "control": "记录选择",
-              "detail": "选择本次触发的原始行动或事实；不另造一次相同后果。",
+              "detail": "本次瘟疫医生死亡。",
               "customOption": "自定义",
               "customPart": "action"
             },
             {
-              "label": "获得者",
-              "control": "说书人",
-              "detail": "不能强行设为某个玩家。",
+              "label": "实际获得者",
+              "control": "说书人／指定玩家",
+              "detail": "通常是说书人；相克或实际裁决可由玩家获得，保存明确依据。",
               "customOption": "自定义",
               "customPart": "action"
             },
             {
               "label": "爪牙能力与参数",
-              "control": "角色能力选择＋具体参数",
-              "detail": "后续行动归属于说书人。",
+              "control": "角色能力及持有者",
+              "detail": "为实际持有者新增能力实例，不改变其真实角色。",
+              "customOption": "自定义",
+              "customPart": "action"
+            },
+            {
+              "label": "相克或裁决依据",
+              "control": "可选来源原文",
+              "detail": "玩家获得时保存相克或明确裁决；不根据文本自动赋能。",
               "customOption": "自定义",
               "customPart": "action"
             }
           ],
-          "path": "新建记录 → 【相关主语】 → 死亡后说书人获得爪牙能力 → 【关联的先前记录】 → 【获得者】 → 【爪牙能力与参数】 → 保存",
+          "path": "新建记录 → 【实际获得者：说书人／玩家】 → 因瘟疫医生死亡获得能力 → 【能力】 → 【依据】 → 保存",
           "sentences": [
-            "说书人因【瘟疫医生】死亡而获得了【角色】的能力。"
+            "【实际获得者】因【瘟疫医生】死亡而获得了【角色】的能力。"
           ],
-          "exampleInput": "本人死亡；说书人获投毒者能力",
+          "exampleInput": "瘟疫医生1号已死；相克／明确裁决使4号红唇女郎获得红唇女郎能力",
           "exampleOutput": [
-            "说书人因1号玩家（瘟疫医生）💀死亡而获得了投毒者的能力。"
+            "4号玩家（红唇女郎）因1号玩家（瘟疫医生）💀死亡而获得了红唇女郎的能力。"
           ],
-          "notes": "保存本次实际输入、信息及来源；不以真值替换已收到的信息。",
+          "notes": "保留说书人选项；玩家选项按用户瘟疫医生与红唇女郎相克示例记录，具体实例参数和实际裁决单独保存。",
           "branchId": "S001-R-O019-B01",
           "custom": {
             "choice": "自定义",
@@ -11321,7 +11689,7 @@
           }
         },
         {
-          "label": "说书人使用所获爪牙能力",
+          "label": "实际获得者使用所获爪牙能力",
           "timing": "该爪牙能力的适用时点",
           "fields": [
             {
@@ -11334,20 +11702,20 @@
             {
               "label": "目标、信息与实际后果",
               "control": "该爪牙的对应控件",
-              "detail": "源为说书人持有的能力。",
+              "detail": "来源为已登记的实际持有者，可以是说书人或玩家。",
               "customOption": "自定义",
               "customPart": "information"
             }
           ],
-          "path": "新建记录 → 说书人 → 【获得的爪牙能力】 → 【该角色对应填写项】 → 保存",
+          "path": "新建记录 → 【实际获得者】 → 【已获得的爪牙能力实例】 → 【该角色对应填写项】 → 保存",
           "sentences": [
-            "说书人选择了【目标】，使其【实际后果】。（投毒者示例）"
+            "【实际获得者】选择了【目标】，使其【实际后果】。（投毒者示例）"
           ],
           "exampleInput": "能力=投毒者；目标5号；中毒生效",
           "exampleOutput": [
             "说书人选择了5号玩家（调查员），使其中毒至明天白天结束。"
           ],
-          "notes": "保存本次实际输入、信息及来源；不以真值替换已收到的信息。",
+          "notes": "按已记录的实际能力持有者展开，既可以是说书人，也可以是玩家；能力来源与角色分开。",
           "branchId": "S001-R-O019-B02",
           "custom": {
             "choice": "自定义",
@@ -11369,7 +11737,7 @@
     {
       "roleId": "fengmaoziyuailisi111",
       "entryId": "S001-R-O020",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -11479,36 +11847,36 @@
           "timing": "本人死亡后的当晚",
           "fields": [
             {
-              "label": "实际行动者与来源",
-              "control": "玩家/说书人＋具体来源记录",
-              "detail": "本例行动者为4号玩家（投毒者）；来源为1号玩家（帽匠）💀的能力及死亡记录，两者分别保存。",
+              "label": "行动者及帽匠死亡来源",
+              "control": "爪牙／恶魔玩家＋关联死亡记录",
+              "detail": "实际玩家选择新的对应类型角色，不是选择自己作为目标。",
               "customOption": "自定义",
-              "customPart": "result"
+              "customPart": "action"
             },
             {
-              "label": "目标及旧角色",
-              "control": "玩家/受影响者选择＋事件时快照",
-              "detail": "本例为4号玩家（投毒者）；旧角色、生死及顺序保留，不按后续当前角色重写。",
+              "label": "想变成的新角色",
+              "control": "对应恶魔／爪牙角色单选",
+              "detail": "保存本次实际选择；尚未确认完整结果与阵营时不生成换角效果。",
               "customOption": "自定义",
               "customPart": "action"
             },
             {
               "label": "结算状态",
-              "control": "仅选择/触发",
-              "detail": "不填成功映射，不新增换角效果；后续实际生效另记并关联本次选择。",
+              "control": "仅选择／待填写",
+              "detail": "保持待填状态，后续填写实际新角色及当前阵营才可生效。",
               "customOption": "自定义",
-              "customPart": "action"
+              "customPart": "result"
             }
           ],
-          "path": "新建记录 → 4号玩家（投毒者） → 关联1号玩家（帽匠）💀的能力及死亡记录 → 4号玩家（投毒者） → 仅选择/触发 → 保存",
+          "path": "新建记录 → 4号玩家（投毒者） → 因1号玩家（帽匠）死亡选择新角色 → 刺客 → 换角结果待填写 → 保存",
           "sentences": [
-            "【行动者】选择了【目标旧角色】，换角结果待填写。"
+            "【行动者】因【帽匠】死亡而选择变成【新角色】，换角结果待填写。"
           ],
-          "exampleInput": "来源=1号玩家（帽匠）💀的能力及死亡记录；目标=4号玩家（投毒者）；实际结果尚未填写。",
+          "exampleInput": "行动者=4号投毒者；来源=1号帽匠死亡；选择新爪牙角色刺客；实际角色与阵营映射待填",
           "exampleOutput": [
-            "4号玩家（投毒者）因1号玩家（帽匠）💀的能力及死亡记录而选择了4号玩家（投毒者），换角结果待填写。"
+            "4号玩家（投毒者）因1号玩家（帽匠）💀死亡而选择变成刺客，换角结果待填写。"
           ],
-          "notes": "没有新角色行、没有真实换角、没有自动通知或次数结论。",
+          "notes": "这是已发生选择的待填状态，不是成功换角；不自动生成新的角色、阵营或通知。",
           "branchId": "S001-R-O020-B02",
           "custom": {
             "choice": "自定义",
@@ -11691,61 +12059,9 @@
     {
       "roleId": "moluotuofujiweijiu11111",
       "entryId": "S001-R-O022",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
-      "forms": [
-        {
-          "label": "记录狂热者投票义务与实际投票",
-          "timing": "每次提名投票，存活≥5时有义务",
-          "fields": [
-            {
-              "label": "关联的先前记录",
-              "control": "记录选择",
-              "detail": "具体提名及票次。",
-              "customOption": "自定义",
-              "customPart": "action"
-            },
-            {
-              "label": "当时存活人数",
-              "control": "数字",
-              "detail": "保存本次时点。",
-              "customOption": "自定义",
-              "customPart": "action"
-            },
-            {
-              "label": "实际是否投票",
-              "control": "是／否＋说明",
-              "detail": "义务不自动补票；未投也能保留事实。",
-              "customOption": "自定义",
-              "customPart": "result"
-            }
-          ],
-          "path": "新建记录 → 【主语】 → 投票 → 【票次】 → 【实际票况】 → 保存",
-          "sentences": [
-            "【主语】在对【目标】的提名中【投票／未投票】；当时有【数字】名玩家存活。"
-          ],
-          "exampleInput": "存活12；对7号提名；实际投票",
-          "exampleOutput": [
-            "1号玩家（狂热者）在对7号玩家（小恶魔）的提名中投票；当时有12名玩家存活。"
-          ],
-          "notes": "保存本次实际输入、信息及来源；不以真值替换已收到的信息。",
-          "branchId": "S001-R-O022-B01",
-          "custom": {
-            "choice": "自定义",
-            "parts": [
-              "action",
-              "information",
-              "result",
-              "follow-up"
-            ],
-            "textRequired": true,
-            "retainContext": true,
-            "effects": "explicit-only",
-            "path": "新建记录 → 【狂热者的实际主语】 → 记录狂热者投票义务与实际投票 → 自定义 → 【正文】 → 预览 → 保存",
-            "exampleText": "1号玩家（狂热者）的自定义记录：本次先记录实际情况。\n详细说明保留“引号”、中文与🙂。"
-          }
-        }
-      ]
+      "forms": []
     },
     {
       "roleId": "yinshishihsihsihsihsihsissssssss",
@@ -12552,7 +12868,7 @@
     {
       "roleId": "zhshutongoashoiahokrtoaiwjsjfn8qh13rfbnoihc-9j",
       "entryId": "S001-R-O030",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -12627,13 +12943,13 @@
           ],
           "path": "新建记录 → 【相关主语】 → 关联玩家受邪恶影响而书童死亡 → 【关联的先前记录】 → 【被影响目标与原关系】 → 【邪恶能力来源】 → 【实际结算】 → 保存",
           "sentences": [
-            "【主语】因关联玩家【目标】被【邪恶来源】选择或影响而在当晚死亡。"
+            "【主语】因关联玩家【目标】被【邪恶来源】【选择／影响】而在当晚死亡。"
           ],
-          "exampleInput": "夜2邪恶能力影响5号；书童当晚死",
+          "exampleInput": "关联5号调查员；2号投毒者实际选择5号；书童本次实际死亡",
           "exampleOutput": [
-            "1号玩家（书童）因关联玩家5号玩家（调查员）被邪恶能力影响而在当晚死亡。"
+            "1号玩家（书童）因关联玩家5号玩家（调查员）被2号玩家（投毒者）选择而在当晚死亡。"
           ],
-          "notes": "保存本次实际输入、信息及来源；不以真值替换已收到的信息。",
+          "notes": "选择／影响是二选一字段；具体邪恶来源必填，保存能力实例与对应时点，首夜不结算。",
           "branchId": "S001-R-O030-B02",
           "custom": {
             "choice": "自定义",
@@ -13952,7 +14268,7 @@
     {
       "roleId": "lllllllllllllllllllllll11111111",
       "entryId": "S001-R-M012",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -13983,7 +14299,7 @@
             {
               "label": "创造恶魔时当晚死亡",
               "control": "实际死者集／无死亡／裁决",
-              "detail": "保存特殊结算，非固定必杀1名。",
+              "detail": "只记录当晚死亡由说书人决定的窗口；实际免死和死亡分别关联麻脸巫婆来源。",
               "customOption": "自定义",
               "customPart": "action"
             },
@@ -14040,13 +14356,14 @@
           "path": "新建记录 → 【主语】 → 选择玩家和角色 → 【目标】 → 【角色】 → 【实际换角及死亡】 → 【触发时来源与快照】 → 【本次换角状态】 → 【成功结果及完整映射】 → 【逐人新角色】 → 【逐人当前阵营】 → 保存",
           "sentences": [
             "【主语】选择了【目标】和【角色】，使其变为【角色】。",
-            "因创造恶魔，当晚死亡由说书人决定：【结果】。",
+            "因创造恶魔，当晚死亡由说书人决定。",
             "【玩家昵称】现在的角色是【本次实际新角色】，当前阵营为【实际阵营】。"
           ],
           "exampleInput": "选择5号变小恶魔；角色不在场；实际换角；当晚死亡5号之外另按裁决；结果阵营由本例实际前值和本次裁决逐人确认（善良恶魔/善良爪牙均可存在）。",
           "exampleOutput": [
-            "1号玩家（麻脸巫婆）选择了5号玩家（调查员）和小恶魔，使其变为小恶魔；当晚死亡由说书人另行记录。",
-            "5号玩家现在的角色是小恶魔，当前阵营为善良"
+            "1号玩家（麻脸巫婆）选择了5号玩家（调查员）和小恶魔，使其变为小恶魔。",
+            "因创造恶魔，当晚死亡由说书人决定。",
+            "5号玩家现在的角色是小恶魔，当前阵营为善良。"
           ],
           "notes": " 来源、选择句使用当时旧角色；已死来源或目标加💀。结果行只展示同一次已确认的映射，不重复应用换角，不自动改变生死、阵营、认知、其他能力或次数。 计划v0.5/A22补充：来源不要求全部为死亡；成功映射完整后才展开逐人新角色。本条的必选或被动触发不能改成自由不使用；未发生与不满足条件须记录实际依据。",
           "branchId": "S001-R-M012-B01",
@@ -14172,6 +14489,94 @@
             "effects": "explicit-only",
             "path": "新建记录 → 【麻脸巫婆的实际主语】 → 实际未生效／条件不满足 → 自定义 → 【正文】 → 预览 → 保存",
             "exampleText": "1号玩家（麻脸巫婆）的自定义记录：本次先记录实际情况。\n详细说明保留“引号”、中文与🙂。"
+          }
+        },
+        {
+          "branchId": "S001-R-M012-B04",
+          "label": "创造恶魔当晚阻止死亡",
+          "timing": "已记录本次创造恶魔的当晚",
+          "fields": [
+            {
+              "label": "关联创造恶魔和原攻击",
+              "control": "两个具体来源记录",
+              "detail": "保留原恶魔行动、攻击目标和麻脸巫婆裁决。",
+              "customOption": "自定义",
+              "customPart": "action"
+            },
+            {
+              "label": "未死目标与阻止来源",
+              "control": "玩家及麻脸巫婆实例",
+              "detail": "实际免死来源为本次麻脸巫婆。",
+              "customOption": "自定义",
+              "customPart": "result"
+            }
+          ],
+          "path": "新建记录 → 【实际主语】 → 创造恶魔当晚阻止死亡 → 【关联创造恶魔和原攻击】 → 【未死目标与阻止来源】 → 保存",
+          "sentences": [
+            "【恶魔】选择了【目标】，但【目标】因【麻脸巫婆】的能力而没有死亡。"
+          ],
+          "exampleInput": "恶魔7号小恶魔选2号厨师；本次麻脸巫婆1号阻止该死亡",
+          "exampleOutput": [
+            "7号玩家（小恶魔）选择了2号玩家（厨师），但2号玩家（厨师）因1号玩家（麻脸巫婆）的能力而没有死亡。"
+          ],
+          "notes": "只对本次有明确麻脸巫婆来源的死亡裁决生效，不推断全部恶魔攻击无效。",
+          "custom": {
+            "choice": "自定义",
+            "parts": [
+              "action",
+              "information",
+              "result",
+              "follow-up"
+            ],
+            "textRequired": true,
+            "retainContext": true,
+            "effects": "explicit-only",
+            "path": "新建记录 → 【实际主语】 → 创造恶魔当晚阻止死亡 → 自定义 → 【正文】 → 预览 → 保存",
+            "exampleText": "1号玩家（麻脸巫婆）的自定义记录：保留本次实际输入。\n补充说明只关联本次来源。"
+          }
+        },
+        {
+          "branchId": "S001-R-M012-B05",
+          "label": "创造恶魔当晚造成死亡",
+          "timing": "同一个说书人决定死亡窗口内",
+          "fields": [
+            {
+              "label": "实际死亡玩家",
+              "control": "玩家多选",
+              "detail": "由说书人记录实际死亡。",
+              "customOption": "自定义",
+              "customPart": "result"
+            },
+            {
+              "label": "麻脸巫婆来源",
+              "control": "关联本次创造恶魔记录",
+              "detail": "本次死亡来源为麻脸巫婆能力，不记为恶魔主动选择。",
+              "customOption": "自定义",
+              "customPart": "action"
+            }
+          ],
+          "path": "新建记录 → 【实际主语】 → 创造恶魔当晚造成死亡 → 【实际死亡玩家】 → 【麻脸巫婆来源】 → 保存",
+          "sentences": [
+            "【玩家】因【麻脸巫婆】的能力而死亡了。"
+          ],
+          "exampleInput": "实际死者=6号共情者；来源=1号麻脸巫婆本次创造恶魔",
+          "exampleOutput": [
+            "6号玩家（共情者）因1号玩家（麻脸巫婆）的能力而死亡了。"
+          ],
+          "notes": "每名实际死者保存独立效果并关联同一裁决，不因多处展示重复死亡。",
+          "custom": {
+            "choice": "自定义",
+            "parts": [
+              "action",
+              "information",
+              "result",
+              "follow-up"
+            ],
+            "textRequired": true,
+            "retainContext": true,
+            "effects": "explicit-only",
+            "path": "新建记录 → 【实际主语】 → 创造恶魔当晚造成死亡 → 自定义 → 【正文】 → 预览 → 保存",
+            "exampleText": "1号玩家（麻脸巫婆）的自定义记录：保留本次实际输入。\n补充说明只关联本次来源。"
           }
         }
       ]
@@ -14387,7 +14792,7 @@
     {
       "roleId": "dafutoufeiguolaila111",
       "entryId": "S001-R-M015",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -14458,17 +14863,26 @@
               "detail": "通常仅本人输才因处决死亡。",
               "customOption": "自定义",
               "customPart": "result"
+            },
+            {
+              "label": "自己提名自己的例外",
+              "control": "提名者=本人时由说书人替代",
+              "detail": "提名者为本人且被处决时，由说书人与精神病患者猜拳。",
+              "customOption": "自定义",
+              "customPart": "action"
             }
           ],
           "path": "新建记录 → 【主语】 → 被处决 → 与【提名者】猜拳 → 【结果】 → 【实际生死】 → 保存",
           "sentences": [
-            "【主语】被处决后与【提名者】猜拳，【输赢】，因此【实际生死】。"
+            "【主语】被处决后与【提名者】猜拳，【输赢】，因此【实际生死】。",
+            "【主语】提名了自己并被处决，由说书人与【主语】猜拳，【输赢】，因此【实际生死】。"
           ],
           "exampleInput": "提名者2号；本人赢；未死",
           "exampleOutput": [
-            "1号玩家（精神病患者）被处决后与2号玩家（厨师）猜拳，自己获胜，因此没有因处决死亡。"
+            "1号玩家（精神病患者）被处决后与2号玩家（厨师）猜拳，自己获胜，因此没有因处决死亡。",
+            "1号玩家（精神病患者）提名了自己并被处决，由说书人与1号玩家（精神病患者）猜拳，1号玩家输，因此死亡。"
           ],
-          "notes": "保存本次实际输入、信息及来源；不以真值替换已收到的信息。",
+          "notes": "以上分别为其他人提名和本人自提名两个独立示例；处决、猜拳与实际死亡分别保留关联。",
           "branchId": "S001-R-M015-B02",
           "custom": {
             "choice": "自定义",
@@ -14586,7 +15000,7 @@
     {
       "roleId": "chukouchengzhang",
       "entryId": "S001-R-M017",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -14627,40 +15041,33 @@
           }
         },
         {
-          "label": "首位善良说词及当晚转邪",
-          "timing": "首个善良玩家说出关键词；当晚结算",
+          "label": "白天说出关键词",
+          "timing": "实际说出关键词的白天",
           "fields": [
             {
-              "label": "原话与说出者",
-              "control": "玩家＋公开文本",
-              "detail": "保留说话时阵营和首位判定。",
+              "label": "说出者及原话",
+              "control": "玩家＋原始文本",
+              "detail": "保留关键词事件与其时点，不在此直接转邪。",
               "customOption": "自定义",
               "customPart": "action"
             },
             {
-              "label": "关联的先前记录",
-              "control": "记录选择",
-              "detail": "首夜关键词及实际说词。",
+              "label": "灵言师来源与首位资格",
+              "control": "关联能力与实际依据",
+              "detail": "首位善良资格用于夜间结算，不把说词同时写作转邪。",
               "customOption": "自定义",
               "customPart": "action"
-            },
-            {
-              "label": "实际转邪与通知",
-              "control": "确认＋通知文本",
-              "detail": "后续重复说词不自动再转人。",
-              "customOption": "自定义",
-              "customPart": "result"
             }
           ],
-          "path": "新建记录 → 【说出者】 → 说出关键词 → 【原话】 → 当晚因灵言师转邪 → 保存",
+          "path": "新建记录 → 【说出者】 → 说出了灵言师关键词 → 【原话与来源】 → 保存",
           "sentences": [
-            "【玩家】说出关键词“【词】”，因【灵言师】的能力在当晚加入邪恶阵营。"
+            "【玩家】说出了灵言师关键词。"
           ],
-          "exampleInput": "首位善良5号说灯塔；当晚转邪",
+          "exampleInput": "说出者=5号调查员；白天原话含灯塔；关联1号灵言师",
           "exampleOutput": [
-            "5号玩家（调查员）说出关键词“灯塔”，因1号玩家（灵言师）的能力在当晚加入邪恶阵营。"
+            "5号玩家（调查员）说出了灵言师关键词。"
           ],
-          "notes": "保存本次实际输入、信息及来源；不以真值替换已收到的信息。",
+          "notes": "保存实际词语但按用户要求用固定句式展示；夜间实际阵营变化另记。",
           "branchId": "S001-R-M017-B02",
           "custom": {
             "choice": "自定义",
@@ -14676,13 +15083,64 @@
             "path": "新建记录 → 【灵言师的实际主语】 → 首位善良说词及当晚转邪 → 自定义 → 【正文】 → 预览 → 保存",
             "exampleText": "1号玩家（灵言师）的自定义记录：本次先记录实际情况。\n详细说明保留“引号”、中文与🙂。"
           }
+        },
+        {
+          "branchId": "S001-R-M017-B03",
+          "label": "当晚因关键词加入邪恶",
+          "timing": "对应白天之后的夜间实际结算时",
+          "fields": [
+            {
+              "label": "关联说关键词事件",
+              "control": "记录选择",
+              "detail": "确认是本次符合条件的首位善良玩家。",
+              "customOption": "自定义",
+              "customPart": "action"
+            },
+            {
+              "label": "实际转邪玩家与阵营前后值",
+              "control": "玩家＋善良→邪恶",
+              "detail": "只保存实际发生的转邪，不从白天说词自动生效。",
+              "customOption": "自定义",
+              "customPart": "result"
+            },
+            {
+              "label": "灵言师能力来源",
+              "control": "具体来源玩家及能力实例",
+              "detail": "保留来源即使之后换角或死亡。",
+              "customOption": "自定义",
+              "customPart": "action"
+            }
+          ],
+          "path": "新建记录 → 【实际主语】 → 当晚因关键词加入邪恶 → 【关联说关键词事件】 → 【实际转邪玩家与阵营前后值】 → 【灵言师能力来源】 → 保存",
+          "sentences": [
+            "【玩家】因【灵言师】的能力在当晚加入邪恶阵营。"
+          ],
+          "exampleInput": "关联白天5号说灯塔；原善良；夜间实际转邪；来源1号灵言师",
+          "exampleOutput": [
+            "5号玩家（调查员）因1号玩家（灵言师）的能力在当晚加入邪恶阵营。"
+          ],
+          "notes": "未实际生效时记录实际依据；不清除其他阵营效果。",
+          "custom": {
+            "choice": "自定义",
+            "parts": [
+              "action",
+              "information",
+              "result",
+              "follow-up"
+            ],
+            "textRequired": true,
+            "retainContext": true,
+            "effects": "explicit-only",
+            "path": "新建记录 → 【实际主语】 → 当晚因关键词加入邪恶 → 自定义 → 【正文】 → 预览 → 保存",
+            "exampleText": "1号玩家（灵言师）的自定义记录：保留本次实际输入。\n补充说明只关联本次来源。"
+          }
         }
       ]
     },
     {
       "roleId": "zheyeshigejiugui111",
       "entryId": "S001-R-M018",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -14787,6 +15245,64 @@
             "effects": "explicit-only",
             "path": "新建记录 → 【提线木偶的实际主语】 → 按认知角色及认知获得能力填写 → 自定义 → 【正文】 → 预览 → 保存",
             "exampleText": "1号玩家（提线木偶）的自定义记录：本次先记录实际情况。\n详细说明保留“引号”、中文与🙂。"
+          }
+        },
+        {
+          "branchId": "S001-R-M018-B90",
+          "label": "展开所认知角色的完整填写格式",
+          "timing": "认知角色自身对应时点",
+          "fields": [
+            {
+              "label": "当前认知角色",
+              "control": "对应类型角色选择",
+              "detail": "酒鬼认知镇民、悟道者认知外来者、疯子认知恶魔、提线木偶认知善良角色。",
+              "customOption": "自定义",
+              "customPart": "action"
+            },
+            {
+              "label": "认知能力来源链",
+              "control": "按已登记认知角色或认知获得能力逐层选择",
+              "detail": "展开被认知角色全部相关行动、信息、结果与下级字段，不更换真实角色。",
+              "customOption": "自定义",
+              "customPart": "action"
+            },
+            {
+              "label": "对应角色填写项",
+              "control": "动态展开所选角色具体模板",
+              "detail": "主语保留实际角色[认知角色]，实际收到信息原样保存。",
+              "customOption": "自定义",
+              "customPart": "information"
+            },
+            {
+              "label": "本次模式",
+              "control": "认知行动（固定）",
+              "detail": "不将表面动作推断为真实能力效果；真实效果必须有独立真实来源。",
+              "customOption": "自定义",
+              "customPart": "result"
+            }
+          ],
+          "path": "新建记录 → 【实际主语】 → 展开所认知角色的完整填写格式 → 【当前认知角色】 → 【认知能力来源链】 → 【对应角色填写项】 → 【本次模式】 → 保存",
+          "sentences": [
+            "【实际角色[认知角色]主语】【对应认知角色的实际输入与信息】。"
+          ],
+          "exampleInput": "1号提线木偶认知共情者；收到数字1；真实角色未变",
+          "exampleOutput": [
+            "1号玩家（提线木偶[共情者]）得知邻近存活玩家中的邪恶人数为1。"
+          ],
+          "notes": "当前生产查询按认知角色展开其完整模板，所有字段仍保留自定义；示例为酒鬼认知占卜师，其余角色仅使用符合自身认知类型的模板。实际生效来源独立，不从认知模板制造死亡、醉毒、换角或次数消耗。",
+          "custom": {
+            "choice": "自定义",
+            "parts": [
+              "action",
+              "information",
+              "result",
+              "follow-up"
+            ],
+            "textRequired": true,
+            "retainContext": true,
+            "effects": "explicit-only",
+            "path": "新建记录 → 【实际主语】 → 展开所认知角色的完整填写格式 → 自定义 → 【正文】 → 预览 → 保存",
+            "exampleText": "1号玩家（提线木偶）的自定义记录：保留本次实际输入。\n补充说明只关联本次来源。"
           }
         }
       ]
@@ -15605,7 +16121,7 @@
     {
       "roleId": "tousioahsdoasidhas",
       "entryId": "S001-R-M025",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -15615,27 +16131,27 @@
             {
               "label": "初始外来者数N",
               "control": "非负整数＋实际分配",
-              "detail": "固定初始计数；后续死活不改N。",
+              "detail": "本局最终初始外来者数，供第N夜能力关联。",
               "customOption": "自定义",
               "customPart": "action"
             },
             {
-              "label": "调整前数量／调整后数量",
-              "control": "两个非负整数",
-              "detail": "按本局实际前值计算增减量，不暗定人数配版。",
+              "label": "外来者数量覆盖依据",
+              "control": "本局存在限／卡扎力／堤丰之首及实际裁决",
+              "detail": "这些来源在场时其他外来者数量调整不生效；若同时有多个任意数量来源，保存说书人的实际最终配置，不虚构先后优先级。",
               "customOption": "自定义",
               "customPart": "action"
             }
           ],
-          "path": "新建记录 → 【设置主语】 → 记录任意外来者设置与初始数 → 【初始外来者数N】 → 保存",
+          "path": "新建记录 → 限 → 为本局带来了外来者 → 【初始外来者数N】 → 【覆盖依据】 → 保存",
           "sentences": [
-            "【来源角色】为本局游戏【增加／减少】了【数量】个外来者。"
+            "限为本局带来了【数量】个外来者。"
           ],
-          "exampleInput": "其他已记录调整后的数量为1；限将其调整为2；本次增加1",
+          "exampleInput": "最终初始外来者=2；男爵等其他外来者数量调整不生效",
           "exampleOutput": [
-            "限为本局游戏增加了1个外来者。"
+            "限为本局带来了2个外来者。"
           ],
-          "notes": "保存本次实际输入、信息及来源；不以真值替换已收到的信息。",
+          "notes": "这是最终外来者数量，不是增减差值。仅覆盖其他外来者数量调整，不抹除爪牙数量、固定指定角色或其他独立配版规则。",
           "branchId": "S001-R-M025-B01",
           "custom": {
             "choice": "自定义",
@@ -16254,7 +16770,7 @@
     {
       "roleId": "huasapidpaiwopippippipp123i123p12ip3p1i23p1",
       "entryId": "S001-R-M032",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -16278,13 +16794,13 @@
           ],
           "path": "新建记录 → 【主语】 → 首夜使玩家成为活尸 → 【目标玩家】 → 【实际结算】 → 保存",
           "sentences": [
-            "【主语】选择了【目标】，使其死亡但被当作存活。"
+            "【主语】选择了【目标】，【目标】因【主语】的能力成为活尸，被当作仍然存活。"
           ],
           "exampleInput": "目标=存活5号；实际死且活尸",
           "exampleOutput": [
-            "1号玩家（画皮）选择了5号玩家（调查员），使其死亡但被当作存活。"
+            "1号玩家（画皮）选择了5号玩家（调查员），5号玩家（调查员）因1号玩家（画皮）的能力成为活尸，被当作仍然存活。"
           ],
-          "notes": "保存本次实际输入、信息及来源；不以真值替换已收到的信息。",
+          "notes": "活尸保存实际已死、被当作存活及来源；实际生死与被当作生死分开。",
           "branchId": "S001-R-M032-B01",
           "custom": {
             "choice": "自定义",
@@ -17021,7 +17537,7 @@
     {
       "roleId": "zhiwudazhanjiangshi111",
       "entryId": "S001-R-D002",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -17105,11 +17621,11 @@
           ],
           "path": "新建记录 → 【相关主语】 → 首次死亡后记录假死 → 【关联的先前记录】 → 【首次机会与实际仍活】 → 【假死状态】 → 保存",
           "sentences": [
-            "【主语】首次死亡结算后仍然存活，但被当作死亡。"
+            "【主语】因【主语】的能力进入假死状态，被当作死亡但实际仍然存活。"
           ],
           "exampleInput": "首次死亡结算；实际活；当作死",
           "exampleOutput": [
-            "1号玩家（僵怖）首次死亡结算后仍然存活，但被当作死亡。"
+            "1号玩家（僵怖）因1号玩家（僵怖）的能力进入假死状态，被当作死亡但实际仍然存活。"
           ],
           "notes": "后续行为主语显示假死；不能以头像灰色移除真实仍活的夜间行动。",
           "branchId": "S001-R-D002-B02",
@@ -17981,7 +18497,7 @@
     {
       "roleId": "woliuliuliu111",
       "entryId": "S001-R-D009",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -18031,50 +18547,6 @@
           }
         },
         {
-          "label": "镇民信息受涡流影响",
-          "timing": "镇民实际获取信息时",
-          "fields": [
-            {
-              "label": "关联的先前记录",
-              "control": "记录选择",
-              "detail": "对应镇民的得知记录。",
-              "customOption": "自定义",
-              "customPart": "action"
-            },
-            {
-              "label": "实际收到错误信息",
-              "control": "对应镇民信息控件",
-              "detail": "沿用本文件该镇民格式并加涡流原因，不能直接替换成真值。",
-              "customOption": "自定义",
-              "customPart": "information"
-            }
-          ],
-          "path": "新建记录 → 【镇民主语】 → 【其原信息行为】 → 【实际收到信息】 → 原因：涡流 → 保存",
-          "sentences": [
-            "【镇民】因涡流能力而得知错误信息：【实际信息】。"
-          ],
-          "exampleInput": "共情者5号实际收到2；关联涡流",
-          "exampleOutput": [
-            "5号玩家（共情者）因涡流能力而得知错误信息：邻近存活玩家中有2人邪恶。"
-          ],
-          "notes": "保存本次实际输入、信息及来源；不以真值替换已收到的信息。",
-          "branchId": "S001-R-D009-B02",
-          "custom": {
-            "choice": "自定义",
-            "parts": [
-              "action",
-              "information",
-              "result",
-              "follow-up"
-            ],
-            "textRequired": true,
-            "retainContext": true,
-            "effects": "explicit-only",
-            "path": "新建记录 → 【涡流的实际主语】 → 镇民信息受涡流影响 → 自定义 → 【正文】 → 预览 → 保存",
-            "exampleText": "1号玩家（涡流）的自定义记录：本次先记录实际情况。\n详细说明保留“引号”、中文与🙂。"
-          }
-        },
-        {
           "label": "无处决的白天结束判定",
           "timing": "每个白天结束",
           "fields": [
@@ -18116,6 +18588,94 @@
             "effects": "explicit-only",
             "path": "新建记录 → 【涡流的实际主语】 → 无处决的白天结束判定 → 自定义 → 【正文】 → 预览 → 保存",
             "exampleText": "1号玩家（涡流）的自定义记录：本次先记录实际情况。\n详细说明保留“引号”、中文与🙂。"
+          }
+        },
+        {
+          "branchId": "S001-R-D009-B04",
+          "label": "涡流具有能力，镇民信息从此错误",
+          "timing": "涡流获得或恢复实际能力时",
+          "fields": [
+            {
+              "label": "全体镇民集合",
+              "control": "集合主语",
+              "detail": "本次实际全体镇民，不要求逐人创建相同通知。",
+              "customOption": "自定义",
+              "customPart": "action"
+            },
+            {
+              "label": "涡流能力来源",
+              "control": "玩家＋能力实例",
+              "detail": "保存此错误覆盖的来源、开始时点与资格。",
+              "customOption": "自定义",
+              "customPart": "action"
+            }
+          ],
+          "path": "新建记录 → 【实际主语】 → 涡流具有能力，镇民信息从此错误 → 【全体镇民集合】 → 【涡流能力来源】 → 保存",
+          "sentences": [
+            "【全体镇民】因【涡流】的能力而从现在开始将获得错误信息。"
+          ],
+          "exampleInput": "全体镇民；1号涡流当前能力有效",
+          "exampleOutput": [
+            "全体镇民因1号玩家（涡流）的能力而从现在开始将获得错误信息。"
+          ],
+          "notes": "这是全体覆盖的起点，不据此重写过去已经收到的信息。",
+          "custom": {
+            "choice": "自定义",
+            "parts": [
+              "action",
+              "information",
+              "result",
+              "follow-up"
+            ],
+            "textRequired": true,
+            "retainContext": true,
+            "effects": "explicit-only",
+            "path": "新建记录 → 【实际主语】 → 涡流具有能力，镇民信息从此错误 → 自定义 → 【正文】 → 预览 → 保存",
+            "exampleText": "1号玩家（涡流）的自定义记录：保留本次实际输入。\n补充说明只关联本次来源。"
+          }
+        },
+        {
+          "branchId": "S001-R-D009-B05",
+          "label": "涡流失能，解除此来源的错误信息覆盖",
+          "timing": "涡流实际死亡、醉酒中毒或其他失能时",
+          "fields": [
+            {
+              "label": "失能事实与涡流来源",
+              "control": "关联事件及具体来源",
+              "detail": "只结束此涡流错误覆盖，不删除其他醉毒和错误信息来源。",
+              "customOption": "自定义",
+              "customPart": "action"
+            },
+            {
+              "label": "全体镇民集合",
+              "control": "集合主语",
+              "detail": "依实际生效范围保存。",
+              "customOption": "自定义",
+              "customPart": "result"
+            }
+          ],
+          "path": "新建记录 → 【实际主语】 → 涡流失能，解除此来源的错误信息覆盖 → 【失能事实与涡流来源】 → 【全体镇民集合】 → 保存",
+          "sentences": [
+            "【全体镇民】从现在开始将获得正确信息。"
+          ],
+          "exampleInput": "1号涡流死亡，结束其错误覆盖；本例没有其他错误信息来源",
+          "exampleOutput": [
+            "全体镇民从现在开始将获得正确信息。"
+          ],
+          "notes": "预设正确信息句用于没有其他错误来源的例子；若仍有其他错误来源，使用自定义保留“涡流覆盖已解除”及实际信息，不强制全体变正确。",
+          "custom": {
+            "choice": "自定义",
+            "parts": [
+              "action",
+              "information",
+              "result",
+              "follow-up"
+            ],
+            "textRequired": true,
+            "retainContext": true,
+            "effects": "explicit-only",
+            "path": "新建记录 → 【实际主语】 → 涡流失能，解除此来源的错误信息覆盖 → 自定义 → 【正文】 → 预览 → 保存",
+            "exampleText": "1号玩家（涡流）的自定义记录：保留本次实际输入。\n补充说明只关联本次来源。"
           }
         }
       ]
@@ -18406,11 +18966,11 @@
     {
       "roleId": "haliluya111",
       "entryId": "S001-R-D012",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
-          "label": "公开选择三名玩家",
+          "label": "依次选择三名玩家",
           "timing": "非首夜可发动",
           "fields": [
             {
@@ -18430,18 +18990,18 @@
             {
               "label": "全体通知",
               "control": "实际公开名单",
-              "detail": "保存实际公开。",
+              "detail": "先秘密依次选择，再按实际顺序逐个公开；保留实际通知内容与时点。",
               "customOption": "自定义",
               "customPart": "action"
             }
           ],
           "path": "新建记录 → 【主语】 → 使用哈迪寂亚能力 → 本次使用／不使用（不使用直接保存） → 【三名玩家】 → 【公开通知】 → 保存",
           "sentences": [
-            "【主语】公开选择了【玩家1】、【玩家2】和【玩家3】。"
+            "【主语】依次选择了【玩家1】、【玩家2】和【玩家3】。"
           ],
           "exampleInput": "选择2、5、8号且已公开",
           "exampleOutput": [
-            "1号玩家（哈迪寂亚）公开选择了2号玩家（厨师）、5号玩家（调查员）和8号玩家（圣徒）。"
+            "1号玩家（哈迪寂亚）依次选择了2号玩家（厨师）、5号玩家（调查员）和8号玩家（圣徒）。"
           ],
           "notes": "保存本次实际输入、信息及来源；不以真值替换已收到的信息。",
           "branchId": "S001-R-D012-B01",
@@ -18456,7 +19016,7 @@
             "textRequired": true,
             "retainContext": true,
             "effects": "explicit-only",
-            "path": "新建记录 → 【哈迪寂亚的实际主语】 → 公开选择三名玩家 → 自定义 → 【正文】 → 预览 → 保存",
+            "path": "新建记录 → 【哈迪寂亚的实际主语】 → 依次选择三名玩家 → 自定义 → 【正文】 → 预览 → 保存",
             "exampleText": "1号玩家（哈迪寂亚）的自定义记录：本次先记录实际情况。\n详细说明保留“引号”、中文与🙂。"
           }
         },
@@ -18525,7 +19085,7 @@
     {
       "roleId": "yiqunshabiemo222",
       "entryId": "S001-R-D013",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -18571,8 +19131,8 @@
           "fields": [
             {
               "label": "实际安排",
-              "control": "无死亡／实际玩家",
-              "detail": "说书人决定，没有军团本人主动选人。",
+              "control": "无死亡／实际玩家多选",
+              "detail": "按在场具有能力的军团实例分别关联来源，同夜可以有多名实际死者；不能从人数自动杀人。",
               "customOption": "自定义",
               "customPart": "result"
             },
@@ -18588,9 +19148,9 @@
           "sentences": [
             "【玩家】因军团能力而死亡。"
           ],
-          "exampleInput": "实际死5号",
+          "exampleInput": "本夜多个军团实际造成死亡=5号调查员、6号厨师；分别关联实际来源",
           "exampleOutput": [
-            "5号玩家（调查员）因军团能力而死亡。"
+            "5号玩家（调查员）和6号玩家（厨师）因军团能力而死亡。"
           ],
           "notes": "保存本次实际输入、信息及来源；不以真值替换已收到的信息。",
           "branchId": "S001-R-D013-B02",
@@ -18673,19 +19233,19 @@
             },
             {
               "label": "本次判定范围",
-              "control": "来源能力＋识别为爪牙",
-              "detail": "不改真实恶魔类型。",
+              "control": "来源能力＋具体爪牙角色单选",
+              "detail": "可以被当作任意爪牙角色，只在本次来源判定内使用，不改变真实军团角色。",
               "customOption": "自定义",
               "customPart": "action"
             }
           ],
           "path": "新建记录 → 【相关主语】 → 军团被当作爪牙 → 【关联的先前记录】 → 【本次判定范围】 → 保存",
           "sentences": [
-            "【军团玩家】被【来源能力】当作爪牙。"
+            "【军团玩家】被【来源能力】当作【爪牙角色】。"
           ],
-          "exampleInput": "来源为调查员；军团1号被当作爪牙",
+          "exampleInput": "来源=2号调查员的能力；1号军团在此被当作投毒者",
           "exampleOutput": [
-            "1号玩家（军团）被调查员的能力当作爪牙。"
+            "1号玩家（军团）被2号玩家（调查员）的能力当作投毒者。"
           ],
           "notes": "保存本次实际输入、信息及来源；不以真值替换已收到的信息。",
           "branchId": "S001-R-D013-B04",
@@ -18709,7 +19269,7 @@
     {
       "roleId": "shenhaijuyao111",
       "entryId": "S001-R-D014",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -18800,13 +19360,57 @@
             "path": "新建记录 → 【利维坦的实际主语】 → 两名善良处决或第五天结束判胜 → 自定义 → 【正文】 → 预览 → 保存",
             "exampleText": "1号玩家（利维坦）的自定义记录：本次先记录实际情况。\n详细说明保留“引号”、中文与🙂。"
           }
+        },
+        {
+          "branchId": "S001-R-D014-B03",
+          "label": "善良玩家被处决计入利维坦条件",
+          "timing": "一名实际善良玩家在利维坦具有能力时被处决",
+          "fields": [
+            {
+              "label": "关联处决事件与实际阵营",
+              "control": "记录＋处决时阵营",
+              "detail": "处决而非死亡；只统计当时善良且利维坦具有能力的实际处决。",
+              "customOption": "自定义",
+              "customPart": "action"
+            },
+            {
+              "label": "利维坦能力与本次序号",
+              "control": "来源资格＋正整数",
+              "detail": "关联先前有效计数；不把仅有死亡者重复计入。",
+              "customOption": "自定义",
+              "customPart": "result"
+            }
+          ],
+          "path": "新建记录 → 【实际主语】 → 善良玩家被处决计入利维坦条件 → 【关联处决事件与实际阵营】 → 【利维坦能力与本次序号】 → 保存",
+          "sentences": [
+            "【善良玩家】被处决，本次处决计入利维坦的特殊胜利条件中，这是第【N】名被处决的善良玩家。"
+          ],
+          "exampleInput": "5号调查员善良被处决未死；1号利维坦有能力；有效序号1",
+          "exampleOutput": [
+            "5号玩家（调查员）被处决，本次处决计入利维坦的特殊胜利条件中，这是第1名被处决的善良玩家。"
+          ],
+          "notes": "胜利判断仍使用独立裁决入口并关联有效处决，不直接自动宣布胜利。",
+          "custom": {
+            "choice": "自定义",
+            "parts": [
+              "action",
+              "information",
+              "result",
+              "follow-up"
+            ],
+            "textRequired": true,
+            "retainContext": true,
+            "effects": "explicit-only",
+            "path": "新建记录 → 【实际主语】 → 善良玩家被处决计入利维坦条件 → 自定义 → 【正文】 → 预览 → 保存",
+            "exampleText": "1号玩家（利维坦）的自定义记录：保留本次实际输入。\n补充说明只关联本次来源。"
+          }
         }
       ]
     },
     {
       "roleId": "zuixihuandeyiji111",
       "entryId": "S001-R-D015",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -19033,13 +19637,13 @@
               "customPart": "result"
             }
           ],
-          "path": "新建记录 → 说书人 → 关联1号玩家（暴乱）的能力及第三白天阶段 → 4号玩家（投毒者）和9号玩家（男爵） → 实际未生效 → 【未生效依据】 → 保存",
+          "path": "新建记录 → 说书人 → 关联1号玩家（暴乱）的能力及第二白天阶段 → 4号玩家（投毒者）和9号玩家（男爵） → 实际未生效 → 【未生效依据】 → 保存",
           "sentences": [
             "【行动者】记录了【目标旧角色】的换角核验：【实际未生效依据】。"
           ],
-          "exampleInput": "来源=1号玩家（暴乱）的能力及第三白天阶段；目标=4号玩家（投毒者）和9号玩家（男爵）；依据=核验当前仍是第二白天，本次未触发群体变角；没有成功映射。",
+          "exampleInput": "来源=1号玩家（暴乱）的能力及第二白天阶段；目标=4号玩家（投毒者）和9号玩家（男爵）；依据=核验当前仍是第二白天，本次未触发群体变角；没有成功映射。",
           "exampleOutput": [
-            "说书人因1号玩家（暴乱）的能力及第三白天阶段而记录了4号玩家（投毒者）和9号玩家（男爵）的换角核验：核验当前仍是第二白天，本次未触发群体变角。"
+            "说书人因1号玩家（暴乱）的能力及第二白天阶段而记录了4号玩家（投毒者）和9号玩家（男爵）的换角核验：核验当前仍是第二白天，本次未触发群体变角。"
           ],
           "notes": "未生效不显示成功句或逐人新角色；通知如实际发生单独保存原文。",
           "branchId": "S001-R-D015-B04",
@@ -19130,7 +19734,7 @@
     {
       "roleId": "kakakakkakakakakakakakaakakak111",
       "entryId": "S001-R-D017",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -19152,24 +19756,26 @@
               "customPart": "result"
             },
             {
-              "label": "外来者实际调整",
-              "control": "有符号数量＋分配",
-              "detail": "任意增减的实际值。",
+              "label": "最终外来者数与覆盖依据",
+              "control": "非负整数＋本局覆盖来源",
+              "detail": "限、卡扎力或堤丰之首在场时其他外来者数量调整不生效，保留本局最终实际分配。",
               "customOption": "自定义",
-              "customPart": "result"
+              "customPart": "action"
             }
           ],
-          "path": "新建记录 → 【设置主语】 → 卡扎力指定爪牙与外来者配置 → 【玩家→爪牙角色映射】 → 【实际转邪与通知】 → 【外来者实际调整】 → 保存",
+          "path": "新建记录 → 【设置主语】 → 卡扎力指定爪牙与外来者配置 → 【初始分配】 → 【最终外来者数量】 → 【覆盖依据】 → 保存",
           "sentences": [
-            "【卡扎力】指定【玩家角色映射】，实际使其成为邪恶爪牙；外来者数量【调整】。"
+            "【卡扎力】指定【玩家角色映射】，实际使其成为邪恶爪牙。",
+            "卡扎力为本局带来了【数量】个外来者。"
           ],
-          "exampleInput": "4号投毒者、9号刺客；均转邪；外来者-1",
+          "exampleInput": "4号投毒者、9号刺客；均邪恶；最终外来者2；其他数量调整不生效",
           "exampleOutput": [
-            "1号玩家（卡扎力）指定4号玩家为投毒者、9号玩家为刺客，实际使其成为邪恶爪牙；卡扎力为本局游戏减少了1个外来者。",
-            "初始分配：4号玩家的角色是投毒者",
-            "初始分配：9号玩家的角色是刺客"
+            "1号玩家（卡扎力）指定4号玩家为投毒者、9号玩家为刺客，实际使其成为邪恶爪牙。",
+            "卡扎力为本局带来了2个外来者。",
+            "初始分配：4号玩家的角色是投毒者。",
+            "初始分配：9号玩家的角色是刺客。"
           ],
-          "notes": "本条是准备阶段的配角/配版与初始分配，逐人展示“初始分配：X的角色是Y”，不据此声称发生了一次游戏中换角。不要求虚构旧角色、死亡触发或交换映射；若后续确有角色变化，另用相应来源与实际换角结果记录。",
+          "notes": "本条是准备阶段的配角/配版与初始分配，逐人展示“初始分配：X的角色是Y”，不据此声称发生了一次游戏中换角。不要求虚构旧角色、死亡触发或交换映射；若后续确有角色变化，另用相应来源与实际换角结果记录。 外来者用最终数量“带来了N个”记录，其他数量调整不生效；不改写原始源技能。",
           "branchId": "S001-R-D017-B01",
           "custom": {
             "choice": "自定义",
@@ -19237,7 +19843,7 @@
     {
       "roleId": "waibibaboabbbb1111",
       "entryId": "S001-R-D018",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -19278,40 +19884,40 @@
           }
         },
         {
-          "label": "白天公开说出短语形成一次触发",
+          "label": "白天公开说出短语次数",
           "timing": "每次白天实际公开说出",
           "fields": [
             {
-              "label": "关联的先前记录",
+              "label": "关联的秘密短语",
               "control": "记录选择",
-              "detail": "对应首夜短语。",
+              "detail": "保留首夜实际收到短语。",
               "customOption": "自定义",
               "customPart": "action"
             },
             {
-              "label": "公开原话与本次序号",
-              "control": "文本＋当次触发显示",
-              "detail": "每次触发单独保存。",
+              "label": "公开说出次数",
+              "control": "本次或累计非负整数＋具体事件",
+              "detail": "保存实际说出次数与来源；底层仍保留逐次触发，不从展示汇总重复建触发。",
               "customOption": "自定义",
               "customPart": "action"
             },
             {
               "label": "实际结算窗口",
-              "control": "本白天／延后到关联夜晚",
-              "detail": "沿用用户已确认的延后许可。",
+              "control": "关联来源时点",
+              "detail": "允许按既有用户决议延迟到夜晚；实际死亡用通用生死变化。",
               "customOption": "自定义",
               "customPart": "result"
             }
           ],
           "path": "新建记录 → 【主语】 → 公开说出短语 → 【原话】 → 【本次结算窗口】 → 保存",
           "sentences": [
-            "【主语】公开说出“【短语】”，形成第【次数】次短语触发。"
+            "【主语】公开说出了【次数】次“【短语】”。"
           ],
-          "exampleInput": "日1第二次说出今晚有风；准备延后夜2",
+          "exampleInput": "本次实际说出2次今晚有风；对应两个独立触发来源",
           "exampleOutput": [
-            "1号玩家（牙噶巴卜）公开说出“今晚有风”，形成第2次短语触发。"
+            "1号玩家（牙噶巴卜）公开说出了2次“今晚有风”。"
           ],
-          "notes": "保存本次实际输入、信息及来源；不以真值替换已收到的信息。",
+          "notes": "次数展示不变更触发与消耗语义；实际死亡移到通用生死变化，显示“X因Y的能力而死亡了”，仍关联未消费触发以防重复。",
           "branchId": "S001-R-D018-B02",
           "custom": {
             "choice": "自定义",
@@ -19327,64 +19933,13 @@
             "path": "新建记录 → 【牙噶巴卜的实际主语】 → 白天公开说出短语形成一次触发 → 自定义 → 【正文】 → 预览 → 保存",
             "exampleText": "1号玩家（牙噶巴卜）的自定义记录：本次先记录实际情况。\n详细说明保留“引号”、中文与🙂。"
           }
-        },
-        {
-          "label": "结算某次短语的可能死亡",
-          "timing": "白天或已关联夜晚实际结算时",
-          "fields": [
-            {
-              "label": "本次消费哪次触发",
-              "control": "具体短语记录选择",
-              "detail": "显示未结算次数，已消费的不能再选。",
-              "customOption": "自定义",
-              "customPart": "action"
-            },
-            {
-              "label": "实际目标及后果",
-              "control": "无死亡／玩家＋实际生死",
-              "detail": "可能不是必死；防死也记录实际消耗裁决。",
-              "customOption": "自定义",
-              "customPart": "result"
-            },
-            {
-              "label": "消费与剩余",
-              "control": "本次实际消费＋剩余展示",
-              "detail": "不以死亡个数反推消费，不跨阶段重复。",
-              "customOption": "自定义",
-              "customPart": "action"
-            }
-          ],
-          "path": "新建记录 → 说书人 → 结算牙噶巴卜短语 → 【具体触发】 → 【目标及实际结果】 → 【消费确认】 → 保存",
-          "sentences": [
-            "【目标】因【牙噶巴卜】第【次数】次公开短语而在【实际阶段】死亡。"
-          ],
-          "exampleInput": "消费第2次触发；夜2；5号实际死；剩余依记录",
-          "exampleOutput": [
-            "5号玩家（调查员）因1号玩家（牙噶巴卜）第2次公开短语而在第2夜死亡。"
-          ],
-          "notes": "保存本次实际输入、信息及来源；不以真值替换已收到的信息。",
-          "branchId": "S001-R-D018-B03",
-          "custom": {
-            "choice": "自定义",
-            "parts": [
-              "action",
-              "information",
-              "result",
-              "follow-up"
-            ],
-            "textRequired": true,
-            "retainContext": true,
-            "effects": "explicit-only",
-            "path": "新建记录 → 【牙噶巴卜的实际主语】 → 结算某次短语的可能死亡 → 自定义 → 【正文】 → 预览 → 保存",
-            "exampleText": "1号玩家（牙噶巴卜）的自定义记录：本次先记录实际情况。\n详细说明保留“引号”、中文与🙂。"
-          }
         }
       ]
     },
     {
       "roleId": "tifeng11zhishou11111111",
       "entryId": "S001-R-D019",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -19401,29 +19956,40 @@
             {
               "label": "两侧爪牙映射与转邪",
               "control": "逐人实际记录",
-              "detail": "爪牙+1与外来者任意调整单独填。",
+              "detail": "爪牙+1与最终外来者数量分开记录。",
               "customOption": "自定义",
               "customPart": "result"
             },
             {
               "label": "实际数量调整",
-              "control": "爪牙+1；外来者有符号数量",
+              "control": "爪牙+1；外来者最终数量",
               "detail": "不以阵营颜色代替角色类型。",
               "customOption": "自定义",
               "customPart": "result"
+            },
+            {
+              "label": "最终外来者数与覆盖依据",
+              "control": "非负整数＋本局覆盖来源",
+              "detail": "限、卡扎力或堤丰之首在场时其他外来者数量调整不生效，保留本局最终实际分配。",
+              "customOption": "自定义",
+              "customPart": "action"
             }
           ],
-          "path": "新建记录 → 【设置主语】 → 连续邪恶邻座与配版 → 【邪恶连续座位与本人居中】 → 【两侧爪牙映射与转邪】 → 【实际数量调整】 → 保存",
+          "path": "新建记录 → 【设置主语】 → 连续邪恶邻座与配版 → 【初始分配】 → 【最终外来者数量】 → 【覆盖依据】 → 保存",
           "sentences": [
-            "初始设置：邪恶玩家按【座位序列】连续邻座，【堤丰之首】居中，爪牙增加1，外来者数量【调整】。"
+            "初始设置：邪恶玩家按【座位序列】连续邻座，【堤丰之首】居中。",
+            "堤丰之首为本局游戏增加了1个爪牙。",
+            "堤丰之首为本局带来了【数量】个外来者。"
           ],
-          "exampleInput": "12人；邪恶12号→1号堤丰→2号；两侧爪牙；外来者0调整",
+          "exampleInput": "邪恶12号→1号→2号；两侧爪牙；最终外来者2；其他数量调整不生效",
           "exampleOutput": [
-            "初始设置：邪恶玩家按12号→1号→2号连续邻座，1号玩家（堤丰之首）居中，堤丰之首为本局游戏增加了1个爪牙，外来者数量本次不变。",
-            "初始分配：12号玩家的角色是投毒者",
-            "初始分配：2号玩家的角色是刺客"
+            "初始设置：邪恶玩家按12号→1号→2号连续邻座，1号玩家（堤丰之首）居中。",
+            "堤丰之首为本局游戏增加了1个爪牙。",
+            "堤丰之首为本局带来了2个外来者。",
+            "初始分配：12号玩家的角色是投毒者。",
+            "初始分配：2号玩家的角色是刺客。"
           ],
-          "notes": "本条是准备阶段的配角/配版与初始分配，逐人展示“初始分配：X的角色是Y”，不据此声称发生了一次游戏中换角。不要求虚构旧角色、死亡触发或交换映射；若后续确有角色变化，另用相应来源与实际换角结果记录。",
+          "notes": "本条是准备阶段的配角/配版与初始分配，逐人展示“初始分配：X的角色是Y”，不据此声称发生了一次游戏中换角。不要求虚构旧角色、死亡触发或交换映射；若后续确有角色变化，另用相应来源与实际换角结果记录。 外来者用最终数量“带来了N个”记录，其他数量调整不生效；不改写原始源技能。",
           "branchId": "S001-R-D019-B01",
           "custom": {
             "choice": "自定义",
@@ -19603,7 +20169,7 @@
     {
       "roleId": "qiongb1111111111",
       "entryId": "S001-R-D021",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -19724,13 +20290,13 @@
           ],
           "path": "新建记录 → 【主语】 → 特殊穷奇攻击 → 【所选玩家】 → 死亡并当作存活 → 【另一实际死亡玩家】 → 保存",
           "sentences": [
-            "【主语】选择了【目标】，使其死亡但被当作存活，随后【另一玩家】死亡。"
+            "【主语】选择了【目标】，【目标】因【主语】的能力成为活尸，被当作仍然存活；随后【另一玩家】死亡。"
           ],
           "exampleInput": "日1外来者死；本夜选5号活尸；另6号死",
           "exampleOutput": [
-            "1号玩家（穷奇）选择了5号玩家（调查员），使其死亡但被当作存活，随后6号玩家（厨师）死亡。"
+            "1号玩家（穷奇）选择了5号玩家（调查员），5号玩家（调查员）因1号玩家（穷奇）的能力成为活尸，被当作仍然存活；随后6号玩家（厨师）死亡。"
           ],
-          "notes": "保存本次实际输入、信息及来源；不以真值替换已收到的信息。",
+          "notes": "活尸实际已死、被当作存活，和之后另一玩家的真实死亡分别保存，不自动复活目标。",
           "branchId": "S001-R-D021-B03",
           "custom": {
             "choice": "自定义",
@@ -20059,7 +20625,7 @@
     {
       "roleId": "dianyuzhangaowhorahwpru903qu5rpiqhnrf1",
       "entryId": "S001-R-D025",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -20134,14 +20700,15 @@
           ],
           "path": "新建记录 → 【主语】 → 结算上一轮目标组 → 【旧组】 → 【处决致死判定】 → 【实际死者】 → 保存",
           "sentences": [
-            "【旧组玩家】因【典狱长】上一轮组中【某人】死于处决而在当晚死亡。",
-            "【旧组玩家】因上一轮组中无人死于处决，被说书人选为本次典狱长死亡目标。"
+            "【主语】因上次选择的玩家中的【处决死者】死于处决而杀死了【本轮死者集】。",
+            "【主语】因上次选择的玩家中无人死于处决而杀死了【本轮死者】。"
           ],
-          "exampleInput": "旧组2、5、8号；日1的2号实际死于处决；夜2实际5、8号死",
+          "exampleInput": "上次组=2、5、8号；2号死于处决；实际杀死5、8号。另例同组无人死于处决，实际杀死5号。",
           "exampleOutput": [
-            "5号玩家（调查员）和8号玩家（圣徒）因1号玩家（典狱长）上一轮组中2号玩家（厨师）死于处决而在当晚死亡。"
+            "1号玩家（典狱长）因上次选择的玩家中的2号玩家（厨师）死于处决而杀死了5号玩家（调查员）和8号玩家（圣徒）。",
+            "1号玩家（典狱长）因上次选择的玩家中无人死于处决而杀死了5号玩家（调查员）。"
           ],
-          "notes": "保存本次实际输入、信息及来源；不以真值替换已收到的信息。",
+          "notes": "两行为两种独立情况，单次只按实际分支保存；结算的是上次组而非刚选的新组，同一死亡只生效一次。",
           "branchId": "S001-R-D025-B02",
           "custom": {
             "choice": "自定义",
@@ -20275,7 +20842,7 @@
     {
       "roleId": "jianiningasihdohwqr91q23rhnfipo1q23",
       "entryId": "S001-R-D027",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -20359,13 +20926,15 @@
           ],
           "path": "新建记录 → 【死亡爪牙】 → 因奸佞获得当晚行动 → 【本次死亡】 → 选择1名玩家 → 【目标】 → 【实际结算】 → 保存",
           "sentences": [
-            "【死爪牙】因奸佞的能力在死亡当晚选择了【目标】，因其被判为善良而使其死亡。"
+            "【死爪牙】因奸佞的能力在死亡当晚选择了【目标】，【目标】死亡了。",
+            "【死爪牙】因奸佞的能力在死亡当晚选择了【目标】，无事发生。"
           ],
-          "exampleInput": "死爪牙4号；选善良5号；实际死",
+          "exampleInput": "死亡爪牙=4号投毒者；死亡当晚选5号调查员并死亡。另例选7号小恶魔且能力未造成其他结果。",
           "exampleOutput": [
-            "4号玩家（投毒者）💀因奸佞的能力在死亡当晚选择了5号玩家（调查员），因其被判为善良而使其死亡。"
+            "4号玩家（投毒者）💀因奸佞的能力在死亡当晚选择了5号玩家（调查员），5号玩家（调查员）死亡了。",
+            "4号玩家（投毒者）💀因奸佞的能力在死亡当晚选择了7号玩家（小恶魔），无事发生。"
           ],
-          "notes": "不恢复白天未投票可双击的旧版本；每个死爪牙是独立触发主语。",
+          "notes": "善良判定作为内部实际依据保留，不在成句强调；选择死亡和无事发生为两种独立结算例。",
           "branchId": "S001-R-D027-B02",
           "custom": {
             "choice": "自定义",
@@ -20387,7 +20956,7 @@
     {
       "roleId": "yanluoaysoiehd0281y0eird1op2y4890r1yh4h01894jr108",
       "entryId": "S001-R-D028",
-      "proposalVersion": "m1-action-v4",
+      "proposalVersion": "m1-action-v5",
       "customOption": "自定义",
       "forms": [
         {
@@ -20448,11 +21017,11 @@
           ],
           "path": "新建记录 → 【主语】 → 选择本夜延迟目标 → 【目标玩家】 → 保存",
           "sentences": [
-            "【主语】在第【N】夜选择了【目标】，作为下一夜的延迟结算目标。"
+            "【主语】在第【N】夜选择了【目标】。"
           ],
           "exampleInput": "夜1延迟目标6号",
           "exampleOutput": [
-            "1号玩家（阎罗）在第1夜选择了6号玩家（厨师），作为下一夜的延迟结算目标。"
+            "1号玩家（阎罗）在第1夜选择了6号玩家（厨师）。"
           ],
           "notes": "保存本次实际输入、信息及来源；不以真值替换已收到的信息。",
           "branchId": "S001-R-D028-B02",
@@ -20500,14 +21069,14 @@
           "path": "新建记录 → 【主语】 → 结算阎罗目标链 → 【固定必杀／上夜延迟】 → 【来源选择】 → 【实际结果】 → 保存",
           "sentences": [
             "【目标】因【阎罗】上一夜的选择而死亡。",
-            "【固定目标】因【阎罗】首夜指定，在第三夜按无视免死的能力死亡。"
+            "【固定目标】因【阎罗】首夜选择而死亡了。"
           ],
           "exampleInput": "夜2结算首夜延迟6号；第三夜固定5号另行结算",
           "exampleOutput": [
             "6号玩家（厨师）因1号玩家（阎罗）上一夜的选择而死亡。",
-            "5号玩家（调查员）因1号玩家（阎罗）首夜指定，在第三夜按无视免死的能力死亡。"
+            "5号玩家（调查员）因1号玩家（阎罗）首夜选择而死亡了。"
           ],
-          "notes": "保存本次实际输入、信息及来源；不以真值替换已收到的信息。",
+          "notes": "首夜固定目标仍在第三夜按原技能结算，另一链仍结算上一夜目标；展示简化不改变窗口、无视免死语义或两链独立消耗。",
           "branchId": "S001-R-D028-B03",
           "custom": {
             "choice": "自定义",

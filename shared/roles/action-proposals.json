@@ -119,6 +119,16 @@
           "originalText": "示例部分有误，1号和2号都是调查员，填写格式无误",
           "source": "project-docs/docs/M1角色行动修改意见.md#t003；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "mangshengnifaxianlehuadian111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "示例部分有误，1号和2号都是调查员，填写格式无误",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t003; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -161,6 +171,16 @@
           "originalText": "在填写数字后，可选补充“记录的是X号玩家和Y号玩家”",
           "source": "project-docs/docs/M1角色行动修改意见.md#t004；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "wocaishichushen111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "在填写数字后，可选补充“记录的是X号玩家和Y号玩家”",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t004; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -203,6 +223,16 @@
           "originalText": "选择得知临近两名存活玩家中的邪恶人数时可选“详细记录”，如果选择了详细记录，填写记录了哪两名玩家，最终生成的记录效果示例：\r\n\r\n1号玩家（共情者）得知邻近存活的2号玩家（投毒者）和12号玩家（调查员）中的邪恶人数为1。",
           "source": "project-docs/docs/M1角色行动修改意见.md#t005；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "ainiii11111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "选择得知临近两名存活玩家中的邪恶人数时可选“详细记录”，如果选择了详细记录，填写记录了哪两名玩家，最终生成的记录效果示例：\r\n\r\n1号玩家（共情者）得知邻近存活的2号玩家（投毒者）和12号玩家（调查员）中的邪恶人数为1。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t005; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -412,6 +442,16 @@
           "originalText": "示例有误，提名的主语只能是提名者，处决不死需要单独列出，而不是跟随在处决后面。\r\n\r\n应改成：\r\n\r\n“1号玩家（弄臣）提名了2号玩家（贞洁者）。”\r\n\r\n“2号玩家（贞洁者）首次被镇民玩家提名，1号玩家（弄臣）立刻被处决。”\r\n\r\n“1号玩家（弄臣）因1号玩家（弄臣）的能力而被处决但没有死亡。”",
           "source": "project-docs/docs/M1角色行动修改意见.md#t010；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "tiepigu111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "示例有误，提名的主语只能是提名者，处决不死需要单独列出，而不是跟随在处决后面。\r\n\r\n应改成：\r\n\r\n“1号玩家（弄臣）提名了2号玩家（贞洁者）。”\r\n\r\n“2号玩家（贞洁者）首次被镇民玩家提名，1号玩家（弄臣）立刻被处决。”\r\n\r\n“1号玩家（弄臣）因1号玩家（弄臣）的能力而被处决但没有死亡。”",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t010; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -454,6 +494,16 @@
           "originalText": "猎手不需要有“本次未使用猎手能力”的记录分支。",
           "source": "project-docs/docs/M1角色行动修改意见.md#t011；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "biubiubiu111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "猎手不需要有“本次未使用猎手能力”的记录分支。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t011; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -496,6 +546,16 @@
           "originalText": "士兵不需要有任何的填写分支，如果1号玩家士兵被7号玩家小恶魔攻击后没有死亡，应该如此记录：\r\n\r\n“1号玩家（士兵）因1号玩家（士兵）的能力而没有死亡”",
           "source": "project-docs/docs/M1角色行动修改意见.md#t012；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "sb111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "士兵不需要有任何的填写分支，如果1号玩家士兵被7号玩家小恶魔攻击后没有死亡，应该如此记录：\r\n\r\n“1号玩家（士兵）因1号玩家（士兵）的能力而没有死亡”",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t012; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -790,6 +850,16 @@
           "originalText": "赌徒是猜测正确/错误，而不是判定正确/错误。",
           "source": "project-docs/docs/M1角色行动修改意见.md#t019；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "wojiushitukuai111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "赌徒是猜测正确/错误，而不是判定正确/错误。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t019; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -832,6 +902,16 @@
           "originalText": "造谣者的声明正误判定是在发表声明时就判定。\r\n\r\n因此，生成的记录示例是\r\n\r\n“1号玩家（造谣者）公开宣称自己是造谣者，发表了一个声明：5号玩家是邪恶的。这个声明是正确的。”\r\n\r\n同理，夜间死亡记录应为\r\n\r\n“6号玩家（厨师）因1号玩家（造谣者）的能力而死亡了。”",
           "source": "project-docs/docs/M1角色行动修改意见.md#t020；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "chunzaoyaoa",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "造谣者的声明正误判定是在发表声明时就判定。\r\n\r\n因此，生成的记录示例是\r\n\r\n“1号玩家（造谣者）公开宣称自己是造谣者，发表了一个声明：5号玩家是邪恶的。这个声明是正确的。”\r\n\r\n同理，夜间死亡记录应为\r\n\r\n“6号玩家（厨师）因1号玩家（造谣者）的能力而死亡了。”",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t020; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -874,6 +954,16 @@
           "originalText": "侍臣选择不在场角色会无事发生，如：\r\n\r\n“1号玩家（侍臣）选择了小恶魔，该角色不在场，无事发生。”\r\n\r\n选择到对应的角色后，不需要单独填写醉酒时间：\r\n\r\n”1号玩家（侍臣）选择了小恶魔，使7号玩家（小恶魔）醉酒三天三夜。“\r\n\r\n”7号玩家（小恶魔）因1号玩家（侍臣）的能力而醉酒了。“",
           "source": "project-docs/docs/M1角色行动修改意见.md#t021；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "wohehehehehehehezuidiaoniladao111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "侍臣选择不在场角色会无事发生，如：\r\n\r\n“1号玩家（侍臣）选择了小恶魔，该角色不在场，无事发生。”\r\n\r\n选择到对应的角色后，不需要单独填写醉酒时间：\r\n\r\n”1号玩家（侍臣）选择了小恶魔，使7号玩家（小恶魔）醉酒三天三夜。“\r\n\r\n”7号玩家（小恶魔）因1号玩家（侍臣）的能力而醉酒了。“",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t021; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -958,6 +1048,16 @@
           "originalText": "需要单独为吟游诗人增加一个主语：”除了XX玩家外的所有玩家“\r\n\r\n增加该主语后，吟游诗人的能力触发时，生成的记录句式是：\r\n\r\n”除了1号玩家（吟游诗人）外的所有玩家因1号玩家（吟游诗人）的能力而醉酒了。“\r\n\r\n不需要强调”爪牙死于处决“，不需要生成记录“因4号玩家（投毒者）死于处决，1号玩家（吟游诗人）使2号玩家（厨师）和5号玩家（调查员）等实际记录玩家醉酒直到明天黄昏。”",
           "source": "project-docs/docs/M1角色行动修改意见.md#t023；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "babatuosi111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "需要单独为吟游诗人增加一个主语：”除了XX玩家外的所有玩家“\r\n\r\n增加该主语后，吟游诗人的能力触发时，生成的记录句式是：\r\n\r\n”除了1号玩家（吟游诗人）外的所有玩家因1号玩家（吟游诗人）的能力而醉酒了。“\r\n\r\n不需要强调”爪牙死于处决“，不需要生成记录“因4号玩家（投毒者）死于处决，1号玩家（吟游诗人）使2号玩家（厨师）和5号玩家（调查员）等实际记录玩家醉酒直到明天黄昏。”",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t023; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -1126,6 +1226,16 @@
           "originalText": "在填写数字后，可选“详细记录”，然后填写实际记录的恶魔和爪牙是谁",
           "source": "project-docs/docs/M1角色行动修改意见.md#t027；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "-1s-1s-1s",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "在填写数字后，可选“详细记录”，然后填写实际记录的恶魔和爪牙是谁",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t027; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -1259,6 +1369,16 @@
           "originalText": "在填写数字后，可选“详细记录”，记录具体是哪些玩家被数学家检测了",
           "source": "project-docs/docs/M1角色行动修改意见.md#t030；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "woshidingzhenbuhuishuxue111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "在填写数字后，可选“详细记录”，记录具体是哪些玩家被数学家检测了",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t030; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -1301,6 +1421,16 @@
           "originalText": "卖花女孩不需要记录上个白天是第几个白天，只需要记录\r\n\r\n“1号玩家（卖花女孩）得知今天白天恶魔投过票”",
           "source": "project-docs/docs/M1角色行动修改意见.md#t031；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "xiongdinihaoxiang111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "卖花女孩不需要记录上个白天是第几个白天，只需要记录\r\n\r\n“1号玩家（卖花女孩）得知今天白天恶魔投过票”",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t031; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -1343,6 +1473,16 @@
           "originalText": "同上，城镇公告员不需要记录今天白天是第几个白天",
           "source": "project-docs/docs/M1角色行动修改意见.md#t032；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "qiaozhong111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "同上，城镇公告员不需要记录今天白天是第几个白天",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t032; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -1385,6 +1525,16 @@
           "originalText": "通数学家，可以详细说明记录了谁",
           "source": "project-docs/docs/M1角色行动修改意见.md#t033；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "zhengdanideyanjing111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "通数学家，可以详细说明记录了谁",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t033; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -1427,6 +1577,16 @@
           "originalText": "博学者需要详细说明两条信息的正误，完整记录格式是：\r\n\r\n操作顺序：新建记录 → 【主语】 → 拜访说书人并得知了两条信息 → 【信息1】 → 【信息2】 → 其中信息1是正确的 → 信息2是错误的 → 保存。\r\n\r\n实际记录为：\r\n\r\n“1号玩家博学者拜访了说书人，得知了两条信息：恶魔在奇数位（正确信息）和4号玩家是外来者（错误信息）。”\r\n\r\n在部分情况下，博学者会获得双正确或者双错误信息，因此需要为每条信息标注正误",
           "source": "project-docs/docs/M1角色行动修改意见.md#t034；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "huojin111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "博学者需要详细说明两条信息的正误，完整记录格式是：\r\n\r\n操作顺序：新建记录 → 【主语】 → 拜访说书人并得知了两条信息 → 【信息1】 → 【信息2】 → 其中信息1是正确的 → 信息2是错误的 → 保存。\r\n\r\n实际记录为：\r\n\r\n“1号玩家博学者拜访了说书人，得知了两条信息：恶魔在奇数位（正确信息）和4号玩家是外来者（错误信息）。”\r\n\r\n在部分情况下，博学者会获得双正确或者双错误信息，因此需要为每条信息标注正误",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t034; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -1511,6 +1671,16 @@
           "originalText": "哲学家获得能力后需要标注出来\r\n\r\n“1号玩家（哲学家）选择了共情者，获得了共情者的能力。”\r\n\r\n“5号玩家（共情者）因1号玩家（哲学家，获得共情者能力）而醉酒。”",
           "source": "project-docs/docs/M1角色行动修改意见.md#t036；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "makesi111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "哲学家获得能力后需要标注出来\r\n\r\n“1号玩家（哲学家）选择了共情者，获得了共情者的能力。”\r\n\r\n“5号玩家（共情者）因1号玩家（哲学家，获得共情者能力）而醉酒。”",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t036; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -1595,6 +1765,16 @@
           "originalText": "1、不需要记录杂耍艺人在哪个白天进行了猜测，统一用今天白天\r\n\r\n2、可以增加“详细记录”，记录猜对了哪些角色",
           "source": "project-docs/docs/M1角色行动修改意见.md#t038；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "caibuduide111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "1、不需要记录杂耍艺人在哪个白天进行了猜测，统一用今天白天\r\n\r\n2、可以增加“详细记录”，记录猜对了哪些角色",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t038; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -1679,6 +1859,16 @@
           "originalText": "失忆者猜测的反馈只有“无关/有关/接近/完美”四种",
           "source": "project-docs/docs/M1角色行动修改意见.md#t040；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "shiyizhezhezhezhe",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "失忆者猜测的反馈只有“无关/有关/接近/完美”四种",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t040; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -1752,6 +1942,16 @@
           "originalText": "示例应为“5号玩家（调查员）因1号玩家（赏金猎人）的能力而加入邪恶阵营”\r\n\r\n不需要给赏金猎人特定的“设置调整”标注",
           "source": "project-docs/docs/M1角色行动修改意见.md#t042；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "eyunxiaojie111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "示例应为“5号玩家（调查员）因1号玩家（赏金猎人）的能力而加入邪恶阵营”\r\n\r\n不需要给赏金猎人特定的“设置调整”标注",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t042; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -1794,6 +1994,16 @@
           "originalText": "在部分情况下，小精灵得知的在场角色并不在场，但依然需要为其配置一个对应的“在场”角色的玩家，因此需要这样子填写记录：\r\n\r\n“1号玩家（小精灵）因2号玩家（间谍）在场而得知了在场角色：厨师。”\r\n\r\n并且在该玩家死亡时获得能力\r\n\r\n“1号玩家（小精灵）因2号玩家（间谍）死亡而获得了初始的能力。”",
           "source": "project-docs/docs/M1角色行动修改意见.md#t043；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "meishayongdeshabi111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "在部分情况下，小精灵得知的在场角色并不在场，但依然需要为其配置一个对应的“在场”角色的玩家，因此需要这样子填写记录：\r\n\r\n“1号玩家（小精灵）因2号玩家（间谍）在场而得知了在场角色：厨师。”\r\n\r\n并且在该玩家死亡时获得能力\r\n\r\n“1号玩家（小精灵）因2号玩家（间谍）死亡而获得了初始的能力。”",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t043; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -1836,6 +2046,16 @@
           "originalText": "将军得知的是善良优势/邪恶优势，而不是善良有优势/邪恶有优势。",
           "source": "project-docs/docs/M1角色行动修改意见.md#t044；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "wuxingshangjiang11",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "将军得知的是善良优势/邪恶优势，而不是善良有优势/邪恶有优势。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t044; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -1962,6 +2182,16 @@
           "originalText": "需要增加情况，如果有善良玩家没有加入教派，则无事发生",
           "source": "project-docs/docs/M1角色行动修改意见.md#t047；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "wobuzhidaoxieshale111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "需要增加情况，如果有善良玩家没有加入教派，则无事发生",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t047; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -2088,6 +2318,16 @@
           "originalText": "工程师是先选择一个恶魔角色或基于当前配版数量的爪牙角色（一般为1-3个），然后进行变化。\r\n\r\n所以正确的填写格式是：\r\n\r\n“1号玩家（工程师）选择了刺客和教父。”\r\n\r\n“2号玩家（间谍）现在是刺客。”\r\n\r\n“3号玩家（女巫）现在是教父。“",
           "source": "project-docs/docs/M1角色行动修改意见.md#t050；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "banimamabianmeile111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "工程师是先选择一个恶魔角色或基于当前配版数量的爪牙角色（一般为1-3个），然后进行变化。\r\n\r\n所以正确的填写格式是：\r\n\r\n“1号玩家（工程师）选择了刺客和教父。”\r\n\r\n“2号玩家（间谍）现在是刺客。”\r\n\r\n“3号玩家（女巫）现在是教父。“",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t050; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -2189,6 +2429,16 @@
           "originalText": "巡山人的配置调整格式固定为\r\n\r\n”巡山人为本局游戏增加了落难少女。“",
           "source": "project-docs/docs/M1角色行动修改意见.md#t052；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "haogaodeshan111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "巡山人的配置调整格式固定为\r\n\r\n”巡山人为本局游戏增加了落难少女。“",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t052; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -2413,6 +2663,16 @@
           "originalText": "唱诗男孩的所需调整和巡山人一致。",
           "source": "project-docs/docs/M1角色行动修改意见.md#t057；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "changshinanniang111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "唱诗男孩的所需调整和巡山人一致。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t057; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -2455,6 +2715,16 @@
           "originalText": "罂粟种植者的死亡互认只有”因为罂粟种植者死亡，恶魔与爪牙将在今晚互认。“\r\n\r\n所有恶魔与爪牙都有固定描述，”与爪牙互认“”与恶魔互认“。",
           "source": "project-docs/docs/M1角色行动修改意见.md#t058；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "zhongdayande111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "罂粟种植者的死亡互认只有”因为罂粟种植者死亡，恶魔与爪牙将在今晚互认。“\r\n\r\n所有恶魔与爪牙都有固定描述，”与爪牙互认“”与恶魔互认“。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t058; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -2539,6 +2809,16 @@
           "originalText": "需要强调“食人族获得下一个能力时，会失去上一个能力”。\r\n\r\n还需要强调“食人族因为中毒而以为自己获得了能力”\r\n\r\n具体而言，食人族要包含以下记录句式：\r\n\r\n“【主语】因【处决死者】死于处决，获得了【角色】的能力。”\r\n\r\n“【主语】因【处决死者】死于处决，获得了【角色】的能力，并失去了【角色】的能力。”\r\n\r\n“【主语】因【处决死者】死于处决而中毒了。”\r\n\r\n“【主语】以为自己获得了【角色】的能力。”\r\n\r\n以及通用的的 “【主语】解除了中毒。”",
           "source": "project-docs/docs/M1角色行动修改意见.md#t060；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "chichichichichichichi111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "需要强调“食人族获得下一个能力时，会失去上一个能力”。\r\n\r\n还需要强调“食人族因为中毒而以为自己获得了能力”\r\n\r\n具体而言，食人族要包含以下记录句式：\r\n\r\n“【主语】因【处决死者】死于处决，获得了【角色】的能力。”\r\n\r\n“【主语】因【处决死者】死于处决，获得了【角色】的能力，并失去了【角色】的能力。”\r\n\r\n“【主语】因【处决死者】死于处决而中毒了。”\r\n\r\n“【主语】以为自己获得了【角色】的能力。”\r\n\r\n以及通用的的 “【主语】解除了中毒。”",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t060; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -2959,6 +3239,16 @@
           "originalText": "可以添加详细信息，得知的角色具体是谁",
           "source": "project-docs/docs/M1角色行动修改意见.md#t070；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "yinyangshiqidong111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "可以添加详细信息，得知的角色具体是谁",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t070; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -3001,6 +3291,16 @@
           "originalText": "可以添加详细信息，得知具体是哪个角色，以及信息是正确/错误的。",
           "source": "project-docs/docs/M1角色行动修改意见.md#t071；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "woshixiuxingzhe111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "可以添加详细信息，得知具体是哪个角色，以及信息是正确/错误的。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t071; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -3179,6 +3479,16 @@
           "originalText": "两名候选死者",
           "source": "2026-10-16本轮异步澄清：打更人“详细记录哪两名玩家”；仅澄清字段，不代表完整方案批准",
           "recordedAt": "2026-10-15T17:15:19.666Z"
+        },
+        {
+          "roleId": "tiandanwuzaoxiaoxinhuozhu111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "可以详细记录打更人猜测的死者具体为哪两名玩家。\r\n\r\n打更人保护成功后，除了所有打更人外的玩家当晚都不会死亡（成为保护目标），只有这一种保护目标的可能。\r\n\r\n打更人的能力触发后，可以自身死亡，也可以不死亡。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t075; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -3221,6 +3531,16 @@
           "originalText": "分支1可生成的记录句式为：\r\n\r\n【主语】选择了【目标】，在下个黄昏前代替其死亡。",
           "source": "project-docs/docs/M1角色行动修改意见.md#t076；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "daneishiwei111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "分支1可生成的记录句式为：\r\n\r\n【主语】选择了【目标】，在下个黄昏前代替其死亡。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t076; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -3263,6 +3583,16 @@
           "originalText": "【具体能力效果】只包括【选择】和【影响】",
           "source": "project-docs/docs/M1角色行动修改意见.md#t077；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "heizongshejide111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "【具体能力效果】只包括【选择】和【影响】",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t077; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -3305,6 +3635,16 @@
           "originalText": "歌伶的”选择“和”死亡“是两个不同时间段发生的事情，需要分开判定，填写2个分支：\r\n\r\n分支1：\r\n\r\n【主语】公开提议参演，从同意者中选择【观众集】作为观众。\r\n\r\n分支2（夜晚）：\r\n\r\n【主语】因选择了【恶魔】作为观众而死亡了。\r\n\r\n这里的【恶魔】为具体哪一名玩家，如【1号玩家（小恶魔）】",
           "source": "project-docs/docs/M1角色行动修改意见.md#t078；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "yiquganchangduan111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "歌伶的”选择“和”死亡“是两个不同时间段发生的事情，需要分开判定，填写2个分支：\r\n\r\n分支1：\r\n\r\n【主语】公开提议参演，从同意者中选择【观众集】作为观众。\r\n\r\n分支2（夜晚）：\r\n\r\n【主语】因选择了【恶魔】作为观众而死亡了。\r\n\r\n这里的【恶魔】为具体哪一名玩家，如【1号玩家（小恶魔）】",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t078; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -3347,6 +3687,16 @@
           "originalText": "和食人族一样，变脸师获得下一个能力时，会失去上一个能力。\r\n\r\n因此需要为分支2增加失去能力的描述。",
           "source": "project-docs/docs/M1角色行动修改意见.md#t079；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "chaojibianbianbian111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "和食人族一样，变脸师获得下一个能力时，会失去上一个能力。\r\n\r\n因此需要为分支2增加失去能力的描述。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t079; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -3431,6 +3781,16 @@
           "originalText": "分支1中是所有善良玩家都得知彼此为善良，没有唯一的接收者。\r\n\r\n分支1的句式2改成：【所有善良玩家】彼此互相认识。",
           "source": "project-docs/docs/M1角色行动修改意见.md#t081；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "yiqunshabi1232134124124142111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "分支1中是所有善良玩家都得知彼此为善良，没有唯一的接收者。\r\n\r\n分支1的句式2改成：【所有善良玩家】彼此互相认识。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t081; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -3453,11 +3813,11 @@
     "name": "悟道者",
     "type": "townsfolk",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "分配认知外来者；邪恶能力选择/影响本人且尚未生效。",
-    "input": "分配认知外来者：认知角色（外来者角色单选）；邪恶效果生效前先变角：关联的先前记录（记录选择）、转为的不在场镇民（角色单选）、原效果后续结算（独立结果）、逐人新角色结果（由本次实际映射展开显示）、触发时来源与快照（来源事件＋前/后时点＋来源玩家/角色/规则版）、本次换角状态（仅选择/触发／未生效／实际成功）、成功结果及完整映射（每个受影响玩家：旧角色→新角色）、展示关联和通知（同一实际结果关联＋独立通知记录）、逐人当前实际阵营（在每人新角色之后选择：善良／邪恶）、旧阵营与生效映射（逐人旧角色/旧阵营→新角色/当前阵营）；仅登记触发，尚未填写实际换角：实际行动者与来源（玩家/说书人＋具体来源记录）、目标及旧角色（玩家/受影响者选择＋事件时快照）、结算状态（仅选择/触发）；实际未生效／条件不满足：实际行动者与来源（玩家/说书人＋具体来源记录）、本次目标与旧角色（玩家/受影响者选择）、未生效依据（文本＋实际来源/条件）、消耗及其他后果（独立确认）。各级字段均保留自定义，选择后仅要求非空原文和适用公共上下文，不适用预设字段不阻断保存。",
-    "result": "【玩家】实际为悟道者，但以为自己是【外来者】。 【主语】被【邪恶来源】【选择／影响】了，因此变为【新镇民】。 【原效果实际结果】。 【玩家昵称】现在的角色是【本次新角色】，当前阵营为【实际阵营】。 【行动者】记录了【受影响玩家】的换角触发，换角结果待填写。 【行动者】记录了【目标旧角色】的换角核验：【实际未生效依据】。 自定义原文及换行原样保存；只有显式实际效果改变状态，其他入口仅引用。",
-    "exceptions": "换角必须在原效果前排序；认知角色不是实际外来者，不自动获得其真实能力。 不使用/仅选择/未生效不产生换角后果；重复目标或缺失映射保留草稿提示。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
+    "input": "分配认知外来者：认知角色（外来者角色单选）；邪恶效果生效前先变角：关联的先前记录（记录选择）、转为的不在场镇民（角色单选）、原效果后续结算（独立结果）、逐人新角色结果（由本次实际映射展开显示）、触发时来源与快照（来源事件＋前/后时点＋来源玩家/角色/规则版）、本次换角状态（仅选择/触发／未生效／实际成功）、成功结果及完整映射（每个受影响玩家：旧角色→新角色）、展示关联和通知（同一实际结果关联＋独立通知记录）、逐人当前实际阵营（在每人新角色之后选择：善良／邪恶）、旧阵营与生效映射（逐人旧角色/旧阵营→新角色/当前阵营）；仅登记触发，尚未填写实际换角：实际行动者与来源（玩家/说书人＋具体来源记录）、目标及旧角色（玩家/受影响者选择＋事件时快照）、结算状态（仅选择/触发）；实际未生效／条件不满足：实际行动者与来源（玩家/说书人＋具体来源记录）、本次目标与旧角色（玩家/受影响者选择）、未生效依据（文本＋实际来源/条件）、消耗及其他后果（独立确认）；展开所认知角色的完整填写格式：当前认知角色（对应类型角色选择）、认知能力来源链（按已登记认知角色或认知获得能力逐层选择）、对应角色填写项（动态展开所选角色具体模板）、本次模式（认知行动（固定））。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【玩家】实际为悟道者，但以为自己是【外来者】。 【主语】被【邪恶来源】【选择／影响】了，因此变为【新镇民】。 【原效果实际结果】。 【玩家昵称】现在的角色是【本次新角色】，当前阵营为【实际阵营】。 【行动者】记录了【受影响玩家】的换角触发，换角结果待填写。 【行动者】记录了【目标旧角色】的换角核验：【实际未生效依据】。 【实际角色[认知角色]主语】【对应认知角色的实际输入与信息】。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "增加动态认知模板：按对应角色字段展开并固定认知模式，不生成真实效果。 保留旧方案和批准证据，当前改变部分单独复审。",
     "normalExample": "1号玩家实际为悟道者，但以为自己是圣徒。",
     "boundaryExample": "认知圣徒不赋予圣徒真实能力；换角效果的顺序必须在来源影响前可追溯。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t082",
@@ -3473,6 +3833,16 @@
           "originalText": "导致悟道者变化的影响并不一定来自于击杀，所以分支2的记录需要调整为：\r\n\r\n【主语】被【邪恶来源】【选择/影响】了，因此变为【新镇民】\r\n\r\n原效果实际效果",
           "source": "project-docs/docs/M1角色行动修改意见.md#t082；原稿SHA 7171ca231ab941b804081c28ec9f1af5f7f1de4e59a4c457ac5c8ef4591a6690",
           "recordedAt": "2026-10-15T17:02:48.280Z"
+        },
+        {
+          "roleId": "yiwu111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "导致悟道者变化的影响并不一定来自于击杀，所以分支2的记录需要调整为：\r\n\r\n【主语】被【邪恶来源】【选择/影响】了，因此变为【新镇民】\r\n\r\n原效果实际效果",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t082; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
         }
       ],
       "implementation": "not-implemented",
@@ -3492,6 +3862,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；角色变化明确当前阵营及红蓝结果；合并本角色用户修改意见；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "增加动态认知模板：按对应角色字段展开并固定认知模式，不生成真实效果。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-T082"
@@ -3511,8 +3888,19 @@
     "boundaryExample": "夜序0或字段缺失不删除死亡后入口；两种死时不能用同一个固定阵营答案。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t083",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "bingbibibibibibibibiibibibibibibibibiiiiihbbibibib",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过秉笔的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-t083; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -3533,17 +3921,28 @@
     "name": "宠妃",
     "type": "townsfolk",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "每局限一次由说书人破例；之后秘密告知本人。",
-    "input": "填关于本人的规则例外全文、所影响事件、实际效果、秘密通知内容。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录例外、次数消耗及本人得知具体破例。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "规则例外可跨常规表单边界，保存原事件与解释；不是通用无条件免死。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
-    "normalExample": "说书人因宠妃对1号玩家（宠妃）作出规则例外：“本次攻击不使其死亡”。\n1号玩家（宠妃）得知说书人为其作出的具体规则例外：“本次攻击不使其死亡”。",
+    "input": "记录一次规则例外及秘密通知：关于本人的例外全文（多行文本）、关联的先前记录（记录选择）、秘密通知全文（文本＋接收者）、本局消耗（确认）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "说书人为【玩家】打破了规则：“【内容】”。 【玩家】得知说书人为其打破了规则：“【内容】”。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "将规则例外统一改为“为玩家打破规则”，保留具体规则与秘密通知。 保留旧方案和批准证据，当前改变部分单独复审。",
+    "normalExample": "说书人为1号玩家（宠妃）打破了规则：“本次攻击不使其死亡”。\n1号玩家（宠妃）得知说书人为其打破了规则：“本次攻击不使其死亡”。",
     "boundaryExample": "例外没涉及免死时不创建免死保护；使用次数、实际效果与通知时点各自保存。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t084",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "chonggggggggggfeiiiiiiiiiiiiiiiiiiiiiiiiiiiiiwww",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "说书人因宠妃对【玩家】作出规则例外：“【内容】”。\r\n\r\n改成\r\n\r\n说书人为【玩家】打破了规则：“【内容】”。\r\n\r\n\r\n\r\n【玩家】得知说书人为其作出的具体规则例外：“【内容】”。\r\n\r\n改成\r\n\r\n【玩家】得知说书人为其打破了规则：“【内容】”。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t084; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -3554,6 +3953,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "将规则例外统一改为“为玩家打破规则”，保留具体规则与秘密通知。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-T084"
@@ -3573,8 +3979,19 @@
     "boundaryExample": "4号为其他爪牙不自动符合‘已知角色’；无死亡时仍保存发动与消耗裁决。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t085",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "daokeeeeeeekekekekekekeke12123123123",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过刀客的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-t085; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -3604,8 +4021,19 @@
     "boundaryExample": "道士未实际死亡或能力失效时保留裁决，不先给恶魔醉酒来反推前一个结果。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t086",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "daoshishishishishishishshishiss",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过道士的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-t086; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -3635,8 +4063,19 @@
     "boundaryExample": "N=1时同夜可反馈；没有源定上限时不静默截断N或列表，同名计数附说明。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t087",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "fangshidfygsgsdg1",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过方士的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-t087; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -3657,17 +4096,28 @@
     "name": "风水师",
     "type": "townsfolk",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "本人首夜；之后每个非首夜。",
-    "input": "首夜填起点玩家与收到角色类型；后续保存顺时针下一非旅行者玩家/所告类型。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录循环队列的每晚角色类型信息。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "队列按座位而非邻近存活，正文未排除死者；不套用侍女存活过滤。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
+    "input": "从起点逐夜得知角色类型：首夜起点／本次对应玩家（玩家选择）、实际收到类型（镇民／外来者／爪牙／恶魔）；记录风水师首个信息起点：初始得知的位置（玩家／座位单选）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【主语】得知本次顺位玩家【目标】的角色类型为【类型】。 风水师初始得知的位置是【位置】。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "补充初始得知位置，纠正首夜起点被误写为玩家选择。 保留旧方案和批准证据，当前改变部分单独复审。",
     "normalExample": "1号玩家（风水师）得知本次顺位玩家4号玩家（调查员）的角色类型为镇民。",
     "boundaryExample": "5号已经死亡也不凭存活过滤跳过；队列按当时座位和实际记录维护。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t088",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "fengshuisfgsetgshfsdf",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "风水师需要添加一个：\r\n\r\n“风水师初始得知的位置是X号”",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t088; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -3678,6 +4128,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "补充初始得知位置，纠正首夜起点被误写为玩家选择。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-T088"
@@ -3697,8 +4154,19 @@
     "boundaryExample": "原生死与阵营不自动互换；5号死于其他来源时记录条件不满足或裁决。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t089",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "linjsdfmeazhfdzgeatteagaeeggaeagae",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过狸猫的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-t089; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -3726,17 +4194,28 @@
     "name": "掮客",
     "type": "townsfolk",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "每个夜晚，包括首夜。",
-    "input": "选2名不同存活玩家；填是否同阵营及当晚交换目标关系；后续事件保存原/最终目标。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录玩家配对与实际目标改向。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "首夜提示为空是信息缺失；改向只针对自身能力选两人之一，不能全体目标随意互换。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
+    "input": "选择同阵营玩家交换目标关系：目标玩家（玩家选择）、同阵营判定（是／否／例外）、实际结算（分支单选／按目标逐项填写）；按掮客关系改向选择：关联的先前记录（记录选择）、原目标／最终目标（两名玩家＋原来源）；选择不同阵营，关系不生效：玩家1、玩家2（玩家单选×2）、两人实际阵营（逐人善良／邪恶）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【主语】选择了【玩家1】和【玩家2】，建立当晚的能力目标交换关系。 【行动者】原本选择【原目标】，因【掮客】的能力改为选择【最终目标】。 【主语】选择了【玩家1】和【玩家2】，因为他们的阵营不同，无事发生。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "补齐不同阵营时无事发生及逐人阵营依据。 保留旧方案和批准证据，当前改变部分单独复审。",
     "normalExample": "1号玩家（掮客）选择了2号玩家（厨师）和5号玩家（调查员），建立当晚的能力目标交换关系。",
     "boundaryExample": "两个玩家不同阵营时保留选择与未生效；原目标、最终目标分别保存，不全局任意互换。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t090",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "qqqqqqqqqqasfasfhfhhrteqarq35q35qaa",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "需要强调掮客选择了不同阵营的玩家会无事发生。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t090; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -3747,6 +4226,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "补齐不同阵营时无事发生及逐人阵营依据。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-T090"
@@ -3757,17 +4243,38 @@
     "name": "染坊坊主",
     "type": "townsfolk",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "本人在夜晚死亡时。",
-    "input": "绑定死亡；填受影响恶魔及旧能力/替换能力全文、后续说书人选择的可能死亡。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录恶魔能力替换和此后按“每个夜晚*，可能有一人死”的事件。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "源提示注明通知运行存疑；通知/唤醒作为实际记录字段，不能替用户断言必需。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
+    "input": "夜间死亡后替换恶魔能力：关联的先前记录（记录选择）、受影响恶魔及原／新能力（玩家＋能力文本）、实际通知／唤醒（有／无＋文本）；记录替换能力的可能死亡：恶魔能力来源（玩家与已替换的能力实例）、实际死亡或无死亡（无死亡／玩家多选）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【恶魔】因【主语】在夜晚死亡而失去原能力，改为：“【新能力】”。 【玩家】因【恶魔】的能力而死亡了。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "将替换后的死亡来源明确到具体恶魔玩家，不新增恶魔主动选人。 保留旧方案和批准证据，当前改变部分单独复审。",
     "normalExample": "7号玩家（小恶魔）因1号玩家（染坊坊主）💀在夜晚死亡而失去原能力，改为：“每个夜晚*，可能有一名玩家死亡”。",
     "boundaryExample": "通知是否发生按实际保存，不把源提示中存疑的唤醒解释成必定通知；不补必杀。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t091",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "ranfangfangsdthw4etq45",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过染坊坊主的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-t091; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        },
+        {
+          "roleId": "ranfangfangsdthw4etq45",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "分支2改成：\r\n\r\n【玩家】因X号（恶魔）的能力而死亡了。\r\n\r\n因为击杀来源依然是恶魔，但是恶魔不再主动选择玩家。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t091; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -3778,6 +4285,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "将替换后的死亡来源明确到具体恶魔玩家，不新增恶魔主动选人。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-T091"
@@ -3797,8 +4311,19 @@
     "boundaryExample": "仅处决未死不充当通常触发；错误数字与真实数量分层保存。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t092",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "shiguanuwhaouhsoifhais",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过史官的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-t092; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -3828,8 +4353,19 @@
     "boundaryExample": "7号是恶魔却被当作善良角色时保留实际信息；第二次提名不再当作首次。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t093",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "tixingguanuahosnrowan34613",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过提刑官的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-t093; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -3850,17 +4386,28 @@
     "name": "巡察",
     "type": "townsfolk",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "非首夜每晚。",
-    "input": "选2个不同善良角色，保存上一晚角色组并说明本晚不同；填在场且存活的对应玩家和保护结果。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录角色选择及当晚免死。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "多实例角色和“与上晚不同”的细节用说明保留；不是直接选择2名玩家。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
+    "input": "选择善良角色并保护对应玩家：两个善良角色（角色单选×2）、实际对应玩家（逐角色映射）、实际结算（分支单选／按目标逐项填写）；所选角色不在场或未同时存活，无事发生：角色1、角色2（角色单选×2）、不在场角色（从本次角色中选1个或2个）、在场但未存活的对应玩家（可选玩家列表＋生死快照）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【主语】选择了【角色1】和【角色2】，使【实际玩家集】当晚不会死亡。 【主语】选择了【角色1】和【角色2】，其中【不在场角色集】不在场，无事发生。 【主语】选择了【角色1】和【角色2】，对应玩家未同时存活，无事发生。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "增加一名或两名角色不在场时的明确结果。 保留旧方案和批准证据，当前改变部分单独复审。",
     "normalExample": "1号玩家（巡察）选择了厨师和共情者，使2号玩家（厨师）和5号玩家（共情者）当晚不会死亡。",
     "boundaryExample": "选择单位是两个善良角色，不是两名玩家；与上晚不同的判定和同角色多人映射附说明。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t094",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "xunchashaoihwronaklsndfkasnd",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "增加分支：如果巡察选择了不在场的角色，会“无事发生”\r\n\r\n并且可以标注是哪个或者哪两个角色不在场。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t094; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -3871,6 +4418,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "增加一名或两名角色不在场时的明确结果。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-T094"
@@ -3890,8 +4444,19 @@
     "boundaryExample": "偃师仍保持该次真实死亡，4号仍按其实际生死保存；角色交换不自动换阵营。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t095",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "yanshisadsadasdasdad",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过偃师的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-t095; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -3919,17 +4484,28 @@
     "name": "驿使",
     "type": "townsfolk",
     "ruleVersion": "user-confirmed-2026-10-14",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "每白天可公开声明一个角色在场；对应当晚得知该声明是否正确；实际收到过是与否后失能。",
-    "input": "填声明角色及“该角色在场”的公开声明，关联当晚收到的“是/否”、此前实际答案集合、本次答案后的集合及失能事件。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录白天声明、夜晚反馈；累计答案集合含“是”和“否”时记录失去此能力，随后移除该能力的默认行动提醒。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "首次得知否但尚未得知是时仍可行动；失能依据实际收到的信息，不以真实在场情况代替。原夜间提示的“得知否立即失能”只作历史资料。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
+    "input": "公开声明某角色在场：声明角色（角色单选）；得知角色是否在场并确认失能：关联的先前记录（记录选择）、实际收到答案（是／否）、此前／本次后的实际答案历史（自动展示已记录事实＋确认）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【主语】公开声明【角色】在场。 【主语】得知其声明“【角色】在场”是否在场的结果是【是／否】。 【主语】因实际得知过是与否，失去了驿使能力。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "夜间答案按“是／否”记录，保留累计两种答案才失能的既有决议。 保留旧方案和批准证据，当前改变部分单独复审。",
     "normalExample": "1号玩家（驿使）公开声明厨师在场。",
     "boundaryExample": "实际答案集合而非角色真值决定登记的失能依据；只有‘否’不能采用旧提示立即失能。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t096",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "yishisaarqwwwwwwwwwwwwwwwwwwww",
+          "ruleVersion": "user-confirmed-2026-10-14",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "【主语】得知其声明“【角色】在场”是【正确／错误】的。\r\n\r\n改成\r\n\r\n【主语】得知其声明“【角色】在场”是否在场的结果是【是/否】。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t096; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -3940,6 +4516,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "夜间答案按“是／否”记录，保留累计两种答案才失能的既有决议。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-T096"
@@ -3959,8 +4542,19 @@
     "boundaryExample": "只有影响而非直接选择也可作为依据；空目标依草案保留实际说明，不能悄悄当三人。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t097",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "yinlureanrlfasrfiaojwrn2k31j95u09uasj",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过引路人的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-t097; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -3981,17 +4575,28 @@
     "name": "俑匠",
     "type": "townsfolk",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "本人首夜设置目标；之后条件保护/死亡结算。",
-    "input": "选1名非旅行者玩家，填其是否善良、死亡玩家中是否无邪恶者；记录本人和目标保护范围“只死于处决”。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "保存配对和保护实际生效/失效。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "条件随死亡邪恶出现需实际确认；“只死于处决”不是活尸/假死状态。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
-    "normalExample": "1号玩家（俑匠）选择了5号玩家（调查员）；在记录的条件成立时，本人与目标只会死于处决。",
+    "input": "首夜选择保护关联玩家：目标玩家（玩家选择）、目标善良／死亡者中无邪恶（判定＋事件时依据）；因俑匠免受非处决死亡：关联的先前记录（记录选择）、受保护者（本人／关联玩家）、实际结算（分支单选／按目标逐项填写）；选择邪恶玩家，无事发生：目标玩家（玩家单选）、目标实际邪恶依据（实际阵营与来源）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【主语】选择了【目标】，在有邪恶的玩家死亡前，他们只会死于处决。 【目标】因【俑匠】的能力不会因本次非处决原因死亡。 【主语】选择了【目标】；因为【目标】是邪恶的，无事发生。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "改成明确的保护时限，保留实际善良与已死者条件。 保留旧方案和批准证据，当前改变部分单独复审。",
+    "normalExample": "1号玩家（俑匠）选择了5号玩家（调查员），在有邪恶的玩家死亡前，他们只会死于处决。",
     "boundaryExample": "出现邪恶死者后重新记录条件和结果；该保护不是把目标改成活尸或假死。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t098",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "yongjiangsaohdawjroij4u901qhwrfi13049",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "【主语】选择了【目标】；在记录的条件成立时，本人与目标只会死于处决。\r\n\r\n改成\r\n\r\n【主语】选择了【目标】；因为【目标】是邪恶的，无事发生。\r\n\r\n或者\r\n\r\n【主语】选择了【目标】，在有邪恶的玩家死亡前，他们只会死于处决。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t098; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4002,6 +4607,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "改成明确的保护时限，保留实际善良与已死者条件。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-T098"
@@ -4021,8 +4633,19 @@
     "boundaryExample": "同角色多名玩家时逐个写实际对象；选不在场角色也保存尝试与消耗裁决。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t099",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "zhenaosheajwiejp214ui90japtu90q23j5t",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过鸩的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-t099; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4052,8 +4675,19 @@
     "boundaryExample": "说明‘今天’起止；错误答案按实际保存，不能把角色类型与阵营混同。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t100",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "zhifusaihriu3q09rni08qh13rfbnoihc",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过知府的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-t100; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4084,7 +4718,18 @@
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-t101",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "shiyiwailaizhe",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "删除该角色，该角色不会出现在实际游戏配版中。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#t101; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4114,8 +4759,19 @@
     "boundaryExample": "5号已死亡但当次仍有实际投票时，不能仅凭主人死亡拒绝；不自动给管家补票。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o001",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "xunzhaonidezhuren111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过管家的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-o001; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4136,17 +4792,28 @@
     "name": "酒鬼",
     "type": "outsider",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "角色分配/认知变化；按认知镇民模板的表面行动。",
-    "input": "填认知镇民角色；表面行动用该角色输入和收到信息，标注认知行动；实际效果另填来源。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录酒鬼真实角色、认知角色及模拟信息/动作。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "自身没有认知镇民真实能力；不能因填了模拟选择就自动产生真实能力效果。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
+    "input": "分配真实与认知角色：实际角色（固定酒鬼）、认知镇民（镇民角色单选）；按认知镇民格式记录表面行动：认知动作模式（认知行动）、实际收到信息（对应镇民结果控件）、实际后果（默认无声称能力真实后果）；展开所认知角色的完整填写格式：当前认知角色（对应类型角色选择）、认知能力来源链（按已登记认知角色或认知获得能力逐层选择）、对应角色填写项（动态展开所选角色具体模板）、本次模式（认知行动（固定））。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【玩家】实际为酒鬼，但以为自己是【镇民角色】。 【主语】选择了【玩家1】和【玩家2】，得知【实际答案】。（占卜师认知示例） 【实际角色[认知角色]主语】【对应认知角色的实际输入与信息】。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "增加动态认知模板：按对应角色字段展开并固定认知模式，不生成真实效果。 保留旧方案和批准证据，当前改变部分单独复审。",
     "normalExample": "1号玩家实际为酒鬼，但以为自己是占卜师。",
     "boundaryExample": "不赋予真实共情者能力；收到信息不因后来揭示酒鬼或解毒而更改。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o002",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "woheduolema111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过酒鬼的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-o002; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4157,6 +4824,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "增加动态认知模板：按对应角色字段展开并固定认知模式，不生成真实效果。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-O002"
@@ -4176,8 +4850,19 @@
     "boundaryExample": "陌客死后仍可被特殊识别；不同能力可有不同判定，真实善良外来者角色不被改写。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o003",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "zhegeshimonk111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过陌客的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-o003; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4207,8 +4892,19 @@
     "boundaryExample": "被处决但免死不满足‘死于处决’；胜负对调应另存，不直接覆盖原判定。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o004",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "shuiganshawo111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过圣徒的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-o004; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4238,8 +4934,19 @@
     "boundaryExample": "其他夜序提醒不把死亡限定到夜间；本次决定未死亡也可保存说明。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o005",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "dabanshou111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过修补匠的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-o005; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4269,8 +4976,19 @@
     "boundaryExample": "知死时点与实际死时分别记录；目标未死或不符善良判定仍保留原公开选择。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o006",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "chousha111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过月之子的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-o006; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4300,8 +5018,19 @@
     "boundaryExample": "后来其他能力再选莽夫不复用本夜首触发；仅被影响不自动当作自身能力选择。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o007",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "woshishui111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过莽夫的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-o007; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4322,17 +5051,28 @@
     "name": "疯子",
     "type": "outsider",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "分配认知恶魔；每个认知恶魔适用夜晚。",
-    "input": "填认知恶魔、模拟恶魔信息/选择；填写真实恶魔收到“疯子是谁”和每夜目标信息。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录认知行动及真实恶魔接收疯子信息。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "模拟攻击不自动杀人；认知能力与真正获得能力分开，真实恶魔可自行选择。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
+    "input": "设置疯子认知恶魔与模拟信息：认知恶魔（恶魔角色单选）、模拟恶魔信息（实际接收信息列表）；模拟恶魔行动：认知恶魔对应输入（按该恶魔的具体格式）、实际告知的结果（对应结果控件／文本）；真实恶魔得知疯子及其选择：真实恶魔接收者（玩家选择）、通知分支（疯子是谁／本夜所选目标）、关联的先前记录（记录选择）；展开所认知角色的完整填写格式：当前认知角色（对应类型角色选择）、认知能力来源链（按已登记认知角色或认知获得能力逐层选择）、对应角色填写项（动态展开所选角色具体模板）、本次模式（认知行动（固定））。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【玩家】实际为疯子，但以为自己是【恶魔角色】。 【主语】选择了【目标】。（认知小恶魔示例） 【真实恶魔】得知【玩家】是疯子／疯子当晚选择了【目标】。 【实际角色[认知角色]主语】【对应认知角色的实际输入与信息】。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "增加动态认知模板：按对应角色字段展开并固定认知模式，不生成真实效果。 保留旧方案和批准证据，当前改变部分单独复审。",
     "normalExample": "1号玩家实际为疯子，但以为自己是小恶魔。",
     "boundaryExample": "模拟攻击不自动杀5号，真实恶魔选择不被强制与疯子相同；两份信息接收者分开。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o008",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "wocaishiemo111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过疯子的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-o008; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4343,6 +5083,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "增加动态认知模板：按对应角色字段展开并固定认知模式，不生成真实效果。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-O008"
@@ -4362,8 +5109,19 @@
     "boundaryExample": "‘可能处决’允许本次未处决；处决与死亡另存，不加入全追自动规则。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o009",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "zhadiaole111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过畸形秀演员的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-o009; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4393,8 +5151,19 @@
     "boundaryExample": "源正文未给下个黄昏期限就不自动填到期；来源心上人死亡后醉酒仍能留存。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o010",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "wuwusidehaocan111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过心上人的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-o010; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4424,8 +5193,19 @@
     "boundaryExample": "恶魔也可以不使用；交换不自动换阵营或生死，目标限制按源方案保留。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o011",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "biezaizhelifadian111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过理发师的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-o011; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4453,17 +5233,28 @@
     "name": "呆瓜",
     "type": "outsider",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "本人得知死亡时公开选人。",
-    "input": "关联死亡/知死；公开选1名当时存活玩家，记录邪恶判定及落败裁决。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录公开选择与本人阵营落败/未落败。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "死者仍能选人；本人阵营按此事件发生时记录，最终胜负另关联。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
-    "normalExample": "1号玩家（呆瓜）💀得知自己死亡后公开选择7号玩家（小恶魔），因其被判为邪恶而使善良阵营落败。",
+    "input": "知死后公开选择并判定落败：关联的先前记录（记录选择）、所选目标（玩家单选）、邪恶判定／实际裁决（是／否＋结果）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【主语】得知自己死亡后公开选择【目标】，因其为邪恶阵营，【本人阵营】阵营落败。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "去掉“被判为”并按实际阵营生成落败记录。 保留旧方案和批准证据，当前改变部分单独复审。",
+    "normalExample": "1号玩家（呆瓜）💀得知自己死亡后公开选择7号玩家（小恶魔），因其为邪恶阵营，善良阵营落败。",
     "boundaryExample": "不能因呆瓜已死删除选择入口；选人时点和最终胜负单独关联。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o012",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "daibi111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "【主语】得知自己死亡后公开选择【目标】，因其被判为邪恶而使【本人阵营】阵营落败。\r\n\r\n改为\r\n\r\n【主语】得知自己死亡后公开选择【目标】，因其为邪恶阵营，【本人阵营】阵营落败。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#o012; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4474,6 +5265,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "去掉“被判为”并按实际阵营生成落败记录。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-O012"
@@ -4493,8 +5291,19 @@
     "boundaryExample": "另一爪牙收到的列表单独保存；伪装信息不改变任何爪牙真实角色。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o013",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "abaaba111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过告密者的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-o013; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4515,17 +5324,28 @@
     "name": "解谜大师",
     "type": "outsider",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "设置醉酒者；每局一次猜测。",
-    "input": "设置填醉酒玩家；猜测填所猜玩家、对/错、收到的恶魔玩家及次数消耗。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录持续醉酒、猜测及“谁是恶魔”信息。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "醉酒源本人死后仍存在；猜错必须保留错误信息而非程序替换成实际恶魔。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
+    "input": "设置解谜醉酒：实际醉酒玩家（玩家单选）；猜测醉酒者并得知恶魔：本次是否使用（使用／不使用）、猜测玩家（玩家单选）、实际判定（正确／错误）、实际收到的恶魔玩家（玩家单选）、次数消耗（确认）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【玩家】因【解谜大师】的能力而醉酒。 【主语】猜测【玩家】因自己的能力醉酒，猜测正确，得知【收到玩家】是恶魔。 【主语】猜测【玩家】因自己的能力醉酒，猜测错误，错误地得知【收到玩家】是恶魔。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "逐个区分猜对得知与猜错误认的信息原文。 保留旧方案和批准证据，当前改变部分单独复审。",
     "normalExample": "5号玩家（调查员）因1号玩家（解谜大师）的能力而醉酒。",
     "boundaryExample": "猜错却收到8号时保存8号与错误依据；解谜大师死亡不自动解除该醉酒。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o014",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "wudidejiemidashi111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "分支2需要增加\r\n\r\n“猜测正确，得知【收到玩家】是恶魔。”\r\n\r\n“猜测错误，错误地得知【收到玩家】是恶魔。”",
+          "source": "project-docs/docs/M1角色行动修改意见.md#o014; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4536,6 +5356,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "逐个区分猜对得知与猜错误认的信息原文。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-O014"
@@ -4555,8 +5382,19 @@
     "boundaryExample": "本人已死仍保存对调；另有对调来源时按实际顺序追加，保留每步原赢家。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o015",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "liangjifanzhuan111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过异端分子的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-o015; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4586,8 +5424,19 @@
     "boundaryExample": "爪牙9号的猜测机会独立，不因4号已使用就清掉所有爪牙机会。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o016",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "bushiwo111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过落难少女的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-o016; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4617,8 +5466,19 @@
     "boundaryExample": "目标判为恶魔时可记录未死亡；死亡不自动等同处决，也不能删通用例外入口。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o017",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "zabusini111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过魔像的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-o017; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4639,17 +5499,28 @@
     "name": "政客",
     "type": "outsider",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "游戏结束判定责任时，即使本人已死。",
-    "input": "填说书人对最大败因的判断、原阵营/原落败、转变后阵营和实际获胜。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录责任认定、换阵营及个人获胜。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "责任是人为判断；不能靠投错票等单个行为自动认定。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
-    "normalExample": "1号玩家（政客）被判定为善良阵营落败的最大原因，转为邪恶并获得个人胜利。",
+    "input": "记录最大败因认定与个人胜利：责任判定全文（文本）、原阵营／原结果／实际新阵营（分段选择）、个人胜负与最终确认（实际裁决）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【主语】被判定为其阵营落败负最大责任的人，转为【阵营】并获得胜利。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "按用户语句记录最大责任与获胜，不使用个人胜利替代结果。 保留旧方案和批准证据，当前改变部分单独复审。",
+    "normalExample": "1号玩家（政客）被判定为其阵营落败负最大责任的人，转为邪恶阵营并获得胜利。",
     "boundaryExample": "一次错误投票不自动构成最大败因；未作责任认定时仅保留事实，不自动转阵营。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o018",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "tougexiangxian111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "【主语】被判定为其阵营落败的最大原因，转为【阵营】并获得个人胜利。\r\n\r\n改为\r\n\r\n【主语】被判定为其阵营落败负最大责任的人，转为【阵营】并获得胜利。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#o018; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4660,6 +5531,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "按用户语句记录最大责任与获胜，不使用个人胜利替代结果。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-O018"
@@ -4670,17 +5548,28 @@
     "name": "瘟疫医生",
     "type": "outsider",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "本人死亡时。",
-    "input": "关联死亡；说书人选择获得的爪牙能力，保存其具体参数及后续行动归属。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录说书人获得能力并按爪牙模板继续记录。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "能力持有者允许说书人，不能强行分配给某玩家；被排除房规的可选范围通知不启用。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
-    "normalExample": "说书人因1号玩家（瘟疫医生）💀死亡而获得了投毒者的能力。",
+    "input": "死亡后实际获得者获得爪牙能力：关联的死亡记录（记录选择）、实际获得者（说书人／指定玩家）、爪牙能力与参数（角色能力及持有者）、相克或裁决依据（可选来源原文）；实际获得者使用所获爪牙能力：所获能力（能力选择）、目标、信息与实际后果（该爪牙的对应控件）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【实际获得者】因【瘟疫医生】死亡而获得了【角色】的能力。 【实际获得者】选择了【目标】，使其【实际后果】。（投毒者示例） 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "获得能力者支持说书人或有依据的具体玩家。 后续能力行动读取实际持有者，去除固定说书人限制。 保留旧方案和批准证据，当前改变部分单独复审。",
+    "normalExample": "4号玩家（红唇女郎）因1号玩家（瘟疫医生）💀死亡而获得了红唇女郎的能力。",
     "boundaryExample": "持有者不强行落到某名玩家；说书人原有其他能力实例仍保留。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o019",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "scp-049049049",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "在部分情况下，说书人不会获得能力，改为一名爪牙获得能力（比如瘟疫医生和红唇女郎的相克规则）。\r\n\r\n因此需要添加X号玩家获得能力的选项。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#o019; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4691,6 +5580,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "获得能力者支持说书人或有依据的具体玩家。 后续能力行动读取实际持有者，去除固定说书人限制。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-O019"
@@ -4701,17 +5597,28 @@
     "name": "帽匠",
     "type": "outsider",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "本人死亡后的当晚。",
-    "input": "列爪牙/恶魔玩家逐人是否变角、新爪牙/恶魔角色；记录茶会时点/通知。 另填行动者、触发时来源及快照、结果状态和逐人完整旧→新映射；通知独立。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。 实际换角逐人先选新角色再选当前阵营，保留前后角色/阵营映射。",
-    "result": "记录每人选择及真实角色变化。 实际成功才显示逐人新角色；独立入口引用同一结果，不重复交换。 自定义原文/换行原样保存，文本本身不产生实际效果。 阵营文字善良蓝字、邪恶红字；角色/阵营同时完整生效，历史颜色不回改。",
-    "exceptions": "死亡后仍有触发；转换同类型范围依角色技能，房规额外范围限制已排除。 不使用/仅选择/未生效不产生换角后果；重复目标或缺失映射保留草稿提示。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
+    "input": "帽匠死亡后的茶会换角：关联的先前记录（记录选择）、爪牙／恶魔逐人选择（每行玩家＋保留/新角色）、实际换角／通知（逐人确认）、逐人新角色结果（由本次实际映射展开显示）、触发时来源与快照（来源事件＋前/后时点＋来源玩家/角色/规则版）、本次换角状态（仅选择/触发／未生效／实际成功／不使用）、成功结果及完整映射（每个受影响玩家：旧角色→新角色）、展示关联和通知（同一实际结果关联＋独立通知记录）、逐人当前实际阵营（在每人新角色之后选择：善良／邪恶）、旧阵营与生效映射（逐人旧角色/旧阵营→新角色/当前阵营）；仅记录选择，尚未填写实际换角：行动者及帽匠死亡来源（爪牙／恶魔玩家＋关联死亡记录）、想变成的新角色（对应恶魔／爪牙角色单选）、结算状态（仅选择／待填写）；实际未生效／条件不满足：实际行动者与来源（玩家/说书人＋具体来源记录）、本次目标与旧角色（玩家/受影响者选择）、未生效依据（文本＋实际来源/条件）、消耗及其他后果（独立确认）；本次不使用换角机会：实际行动者与来源（玩家/说书人＋具体来源记录）、是否使用（不使用）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【玩家】因【帽匠】死亡而选择【新角色】，实际由【原角色】变为【新角色】。 【玩家昵称】现在的角色是【本次实际新角色】，当前阵营为【实际阵营】。 【行动者】因【帽匠】死亡而选择变成【新角色】，换角结果待填写。 【行动者】记录了【目标旧角色】的换角核验：【实际未生效依据】。 【行动者】未使用本次换角机会。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "修正待填分支误将选择新角色写成选择玩家本人的问题。 保留旧方案和批准证据，当前改变部分单独复审。",
     "normalExample": "4号玩家（投毒者）因1号玩家（帽匠）💀的能力而选择间谍，并实际变为间谍。\n4号玩家现在的角色是间谍，当前阵营为邪恶",
     "boundaryExample": "每人可记录未变角；角色变化不自动改变阵营或恢复已用次数，不添房规范围限制。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o020",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "fengmaoziyuailisi111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "解释分支2、3、4存在的意义",
+          "source": "project-docs/docs/M1角色行动修改意见.md#o020; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4729,6 +5636,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；角色变化明确当前阵营及红蓝结果；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "修正待填分支误将选择新角色写成选择玩家本人的问题。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-O020"
@@ -4770,17 +5684,28 @@
     "name": "狂热者",
     "type": "outsider",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "存活人数≥5时，每次提名投票。",
-    "input": "关联当时存活人数、各次提名和本人是否投票。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录强制投票义务与实际投票。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "义务不等于系统自动补票；未投票保存事实和说明；房规自动完美已排除。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
-    "normalExample": "1号玩家（狂热者）在对7号玩家（小恶魔）的提名中投票；当时有12名玩家存活。",
+    "input": "。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": " 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "取消狂热者专用表单，仍保留角色及通用提名／投票事实。 保留旧方案和批准证据，当前改变部分单独复审。",
+    "normalExample": "狂热者通过通用提名／投票保存实际事实，不提供角色专用填写分支。",
     "boundaryExample": "达到义务人数条件但未投票时保存未投票事实和说明，程序不代投。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o022",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "moluotuofujiweijiu11111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "狂热者不需要给出专门的填写分支",
+          "source": "project-docs/docs/M1角色行动修改意见.md#o022; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4791,6 +5716,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "取消狂热者专用表单，仍保留角色及通用提名／投票事实。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-O022"
@@ -4841,8 +5773,19 @@
     "boundaryExample": "可以记录无人因煞星死亡；不能固定选择物理左右座位中的已死玩家充当存活邻居。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o024",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "suaibi1111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过煞星的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-o024; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4872,8 +5815,19 @@
     "boundaryExample": "仅被处决未死不触发通常链；另一人先死于处决应按相反方向登记。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o025",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "kangtuiyige111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过逆臣的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-o025; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4903,8 +5857,19 @@
     "boundaryExample": "书生5号已死也可被猜中；额外攻击与恶魔自身当晚攻击使用两条来源链。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o026",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "ningcaichen111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过书生的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-o026; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4934,8 +5899,19 @@
     "boundaryExample": "允许使节已死；第二次同夜替代应提示已有一次，不覆盖原邪恶目标。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o027",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "shamoluotuo111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过使节的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-o027; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4965,8 +5941,19 @@
     "boundaryExample": "酒保死于处决后该醉酒仍保存；换邻居或其他死亡的处理保留实际裁决。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o028",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "jsioajidnaionsdjiubaooihc-9jj",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过酒保的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-o028; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -4996,8 +5983,29 @@
     "boundaryExample": "存活≤4时先记录失能与时点；不先自动结束游戏而丢失可能的后继换角裁决。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o029",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "zrulianshihsihsihsihishisihc-9j",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过入殓师的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-o029; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        },
+        {
+          "roleId": "zrulianshihsihsihsihishisihc-9j",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "解释分支3、4存在的意义",
+          "source": "project-docs/docs/M1角色行动修改意见.md#o029; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5025,17 +6033,28 @@
     "name": "书童",
     "type": "outsider",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "首夜设置关联玩家；此后邪恶能力选择/影响目标时。",
-    "input": "选1名除本人外玩家；绑定非首夜的邪恶来源选择/影响事件及本人当晚实际死亡。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录关联目标、触发原因与书童死亡。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "首夜同类事件不触发；目标被“影响”也能记录，不局限直接被选择。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
+    "input": "首夜选择关联玩家：目标玩家（玩家选择）；关联玩家受邪恶影响而书童死亡：关联的先前记录（记录选择）、被影响目标与原关系（关系＋事件关联）、邪恶能力来源（记录选择）、实际结算（分支单选／按目标逐项填写）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【主语】选择了【目标】作为书童关联玩家。 【主语】因关联玩家【目标】被【邪恶来源】【选择／影响】而在当晚死亡。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "将选择和影响改成实际选择项，明确具体来源。 保留旧方案和批准证据，当前改变部分单独复审。",
     "normalExample": "1号玩家（书童）选择了5号玩家（调查员）作为书童关联玩家。",
     "boundaryExample": "同类影响发生在首夜不构成通常触发；不要求一定直接选择5号才能记录影响。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o030",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "zhshutongoashoiahokrtoaiwjsjfn8qh13rfbnoihc-9j",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "【主语】因关联玩家【目标】被【邪恶来源】选择或影响而在当晚死亡。\r\n\r\n改为\r\n\r\n【主语】因关联玩家【目标】被【邪恶来源】【选择/影响】而在当晚死亡。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#o030; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5046,6 +6065,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "将选择和影响改成实际选择项，明确具体来源。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-O030"
@@ -5066,7 +6092,18 @@
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-o031",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "shiyizhaoya",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "删除该角色，正式游戏中不会出现。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#o031; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5096,8 +6133,19 @@
     "boundaryExample": "5号另有寡妇毒时，只结束投毒者毒源；本次未生效仍保存选择和实际结果。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m001",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "touduzheeeeeeee111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过投毒者的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m001; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5127,8 +6175,19 @@
     "boundaryExample": "后续角色或生死变化不改旧魔典；死后特殊识别仍可记录，真角色仍是间谍。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m002",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "jiandieeeeeee111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过间谍的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m002; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5159,7 +6218,18 @@
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m003",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "hongchunnvlangaaaaaaaa111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "解释分支2存在的意义",
+          "source": "project-docs/docs/M1角色行动修改意见.md#m003; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5196,8 +6266,19 @@
     "boundaryExample": "没有男爵主动夜间选人；人数偏离推荐时保留调整说明，不自动恢复。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m004",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "nanjueeeee111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过男爵的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m004; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5227,8 +6308,19 @@
     "boundaryExample": "外来者死亡不必来自处决；教父攻击不替代恶魔自身攻击，分别保存效果来源。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m005",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "zhijiagedaziji111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过教父的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m005; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5258,8 +6350,19 @@
     "boundaryExample": "日1其他原因杀死5号不被此保护自动阻止；夜2同选5号需提示前夜重复。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m006",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "jiushigelvshi111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过魔鬼代言人的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m006; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5289,8 +6392,19 @@
     "boundaryExample": "刺客醉毒或特殊例外导致未死时保留结果与消耗说明；明确不使用不消耗。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m007",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "baonijuhua111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过刺客的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m007; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5320,8 +6434,19 @@
     "boundaryExample": "追加白天无人处决的实际裁决另填，不能补造正文未给出的赢家；处决未死仍保留处决。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m008",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "zheshigeyizi111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过主谋的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m008; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5351,8 +6476,19 @@
     "boundaryExample": "判定善良双子用当时阵营；双方活着阻止善良胜利的记录与处决链分开。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m009",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "jiejiene111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过镜像双子的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m009; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5382,8 +6518,19 @@
     "boundaryExample": "恰好3名存活时登记失能；不把正文条件自动扩大成所有≤3的时点。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m010",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "noita111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过女巫的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m010; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5413,8 +6560,19 @@
     "boundaryExample": "5号没有实际变为厨师；说书人决定不处决也保留违反或满足判定。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m011",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "xixi111111111111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过洗脑师的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m011; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5435,17 +6593,28 @@
     "name": "麻脸巫婆",
     "type": "minion",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "非首夜每晚。",
-    "input": "选1名玩家+1个角色；填该角色是否在场、实际换角；新建恶魔时另填说书人决定的死亡集。 另填行动者、触发时来源及快照、结果状态和逐人完整旧→新映射；通知独立。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。 实际换角逐人先选新角色再选当前阵营，保留前后角色/阵营映射。",
-    "result": "记录选择、换角/未换角、通知及当晚特殊死亡裁决。 实际成功才显示逐人新角色；独立入口引用同一结果，不重复交换。 自定义原文/换行原样保存，文本本身不产生实际效果。 阵营文字善良蓝字、邪恶红字；角色/阵营同时完整生效，历史颜色不回改。",
-    "exceptions": "换角不自动转阵营；不能把“创造恶魔”简化为普通必杀1人。 不使用/仅选择/未生效不产生换角后果；重复目标或缺失映射保留草稿提示。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
-    "normalExample": "1号玩家（麻脸巫婆）选择了5号玩家（调查员）和小恶魔，使其变为小恶魔；当晚死亡由说书人另行记录。\n5号玩家现在的角色是小恶魔，当前阵营为善良",
+    "input": "选择玩家和新角色：目标玩家（玩家单选）、目标角色（角色单选）、实际换角与通知（原／新角色＋通知）、创造恶魔时当晚死亡（实际死者集／无死亡／裁决）、逐人新角色结果（由本次实际映射展开显示）、触发时来源与快照（来源事件＋前/后时点＋来源玩家/角色/规则版）、本次换角状态（仅选择/触发／未生效／实际成功）、成功结果及完整映射（每个受影响玩家：旧角色→新角色）、展示关联和通知（同一实际结果关联＋独立通知记录）、逐人当前实际阵营（在每人新角色之后选择：善良／邪恶）、旧阵营与生效映射（逐人旧角色/旧阵营→新角色/当前阵营）；仅记录选择，尚未填写实际换角：实际行动者与来源（玩家/说书人＋具体来源记录）、目标及旧角色（玩家/受影响者选择＋事件时快照）、结算状态（仅选择/触发）；实际未生效／条件不满足：实际行动者与来源（玩家/说书人＋具体来源记录）、本次目标与旧角色（玩家/受影响者选择）、未生效依据（文本＋实际来源/条件）、消耗及其他后果（独立确认）；创造恶魔当晚阻止死亡：关联创造恶魔和原攻击（两个具体来源记录）、未死目标与阻止来源（玩家及麻脸巫婆实例）；创造恶魔当晚造成死亡：实际死亡玩家（玩家多选）、麻脸巫婆来源（关联本次创造恶魔记录）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【主语】选择了【目标】和【角色】，使其变为【角色】。 因创造恶魔，当晚死亡由说书人决定。 【玩家昵称】现在的角色是【本次实际新角色】，当前阵营为【实际阵营】。 【行动者】选择了【目标旧角色】，换角结果待填写。 【行动者】记录了【目标旧角色】的换角核验：【实际未生效依据】。 【恶魔】选择了【目标】，但【目标】因【麻脸巫婆】的能力而没有死亡。 【玩家】因【麻脸巫婆】的能力而死亡了。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "创造恶魔只写裁决窗口，实际免死／死亡以麻脸巫婆为来源分别记录。 保留旧方案和批准证据，当前改变部分单独复审。",
+    "normalExample": "1号玩家（麻脸巫婆）选择了5号玩家（调查员）和小恶魔，使其变为小恶魔。\n因创造恶魔，当晚死亡由说书人决定。\n5号玩家现在的角色是小恶魔，当前阵营为善良。",
     "boundaryExample": "创造恶魔不自动等于转邪或必死一人；选择已在场角色时保留未换角原因。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m012",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "lllllllllllllllllllllll11111111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "麻脸巫婆因创造恶魔而产生的生死无常夜中，麻脸巫婆可以阻止恶魔的死亡，或者造成死亡，麻脸巫婆为阻止死亡和造成死亡的来源\r\n\r\n因创造恶魔，当晚死亡由说书人决定：【结果】。\r\n\r\n改成\r\n\r\n因创造恶魔，当晚死亡由说书人决定。\r\n\r\n额外增加：\r\n\r\nA号玩家（小恶魔）选择了X号玩家，但X号玩家因Y号（麻脸巫婆）的能力而没有死亡。\r\n\r\nZ号玩家因Y号（麻脸巫婆）的能力而死亡了。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#m012; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5463,6 +6632,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；角色变化明确当前阵营及红蓝结果；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "创造恶魔只写裁决窗口，实际免死／死亡以麻脸巫婆为来源分别记录。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-M012"
@@ -5482,8 +6658,19 @@
     "boundaryExample": "知情者变化可补通知；毒源无明确截止不自动次日结束，旧魔典不改成最终魔典。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m013",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "youzhizhua11111111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过寡妇的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m013; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5513,8 +6700,19 @@
     "boundaryExample": "公开通知不自动公布5号是谁；处决未死也可满足正文被处决条件。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m014",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "lajidongxi111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过恐惧之灵的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m014; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5535,17 +6733,28 @@
     "name": "精神病患者",
     "type": "minion",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "白天提名前公开攻击；本人被处决时猜拳。",
-    "input": "攻击选1名玩家并填死亡；处决分支绑定提名者、猜拳双方与胜/负/平、实际生死。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录公开击杀；本人仅猜拳输时因处决死亡。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "猜拳平局/重赛实际记录用说明；提名开始后不能作为默认主动提醒，但允许记录例外。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
+    "input": "提名前公开杀人：目标玩家（玩家选择）、实际结算（分支单选／按目标逐项填写）；被处决后的猜拳结算：关联的先前记录（记录选择）、猜拳双方及结果（本人输／赢／平＋实际过程）、实际死亡（死／未死＋原因）、自己提名自己的例外（提名者=本人时由说书人替代）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【主语】公开选择了【目标】，导致其死亡。 【主语】被处决后与【提名者】猜拳，【输赢】，因此【实际生死】。 【主语】提名了自己并被处决，由说书人与【主语】猜拳，【输赢】，因此【实际生死】。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "补精神病患者自提名处决时由说书人猜拳。 保留旧方案和批准证据，当前改变部分单独复审。",
     "normalExample": "1号玩家（精神病患者）公开选择了5号玩家（调查员），导致其死亡。",
     "boundaryExample": "猜拳平局保存实际处理；提名后发动作为例外附说明，不把处决与猜拳结果合并。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m015",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "dafutoufeiguolaila111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "补充：如果精神病患者提名自己并被处决，由说书人和精神病患者猜拳。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#m015; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5556,6 +6765,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "补精神病患者自提名处决时由说书人猜拳。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-M015"
@@ -5575,8 +6791,19 @@
     "boundaryExample": "他人伪装宣称也能记录原话，但不能自动产生真实哥布林胜利效果。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m016",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "gebulinaaaaaaa111111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过哥布林的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m016; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5597,17 +6824,28 @@
     "name": "灵言师",
     "type": "minion",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "本人首夜关键词；首个善良玩家白天说出后当晚。",
-    "input": "填关键词原文；记录首位善良说出者和公开语句，关联当晚转邪/通知。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录关键词、说出者、阵营转变。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "首位和说话时阵营要保留；后续重复说词不擅自再转一人。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
+    "input": "得知关键词：实际关键词（自由文本）；白天说出关键词：说出者及原话（玩家＋原始文本）、灵言师来源与首位资格（关联能力与实际依据）；当晚因关键词加入邪恶：关联说关键词事件（记录选择）、实际转邪玩家与阵营前后值（玩家＋善良→邪恶）、灵言师能力来源（具体来源玩家及能力实例）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【主语】得知关键词“【关键词】”。 【玩家】说出了灵言师关键词。 【玩家】因【灵言师】的能力在当晚加入邪恶阵营。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "将白天说关键词与夜晚实际转邪拆成两条记录。 保留旧方案和批准证据，当前改变部分单独复审。",
     "normalExample": "1号玩家（灵言师）得知关键词“灯塔”。",
     "boundaryExample": "后续善良再说该词不自动再次转邪；首位角色按说出时阵营保存。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m017",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "chukouchengzhang",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "【玩家】说出关键词“【词】”，因【灵言师】的能力在当晚加入邪恶阵营。\r\n\r\n改为\r\n\r\n【玩家】说出了灵言师关键词。\r\n\r\n说出关键词和加入邪恶阵营是在2个不同时间点发生的事情，所以需要单独在夜间说明玩家加入邪恶阵营的情况。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#m017; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5618,6 +6856,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "将白天说关键词与夜晚实际转邪拆成两条记录。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-M017"
@@ -5628,17 +6873,28 @@
     "name": "提线木偶",
     "type": "minion",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "分配认知善良角色及邻座设置；恶魔获知本人。",
-    "input": "填真实提线木偶、认知善良角色、与恶魔邻座校验、恶魔收到其角色；表面行动可填认知获得能力。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录认知覆盖、恶魔通知及认知角色模拟行动。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "认知能力获得与真实能力获得必须分开；示例“以为炼金术士获得教父”可显示并不自动产生真实教父效果。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
+    "input": "木偶认知、邻座及恶魔通知：真实角色／认知善良角色（木偶固定＋角色单选）、与恶魔邻座依据（座位／玩家关系）、恶魔实际通知（接收者与原文）；按认知角色及认知获得能力填写：认知角色／认知获能链（能力选择与参数）、表面输入与实际信息（按对应角色具体格式）、真实后果（默认不由表面动作产生）；展开所认知角色的完整填写格式：当前认知角色（对应类型角色选择）、认知能力来源链（按已登记认知角色或认知获得能力逐层选择）、对应角色填写项（动态展开所选角色具体模板）、本次模式（认知行动（固定））。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【玩家】实际为提线木偶，但以为自己是【善良角色】。 【恶魔】得知【玩家】是提线木偶。 【主语】得知在场的外来者角色为【列表】。（认知教父示例） 【实际角色[认知角色]主语】【对应认知角色的实际输入与信息】。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "增加动态认知模板：按对应角色字段展开并固定认知模式，不生成真实效果。 保留旧方案和批准证据，当前改变部分单独复审。",
     "normalExample": "1号玩家实际为提线木偶，但以为自己是炼金术士。\n7号玩家（小恶魔）得知1号玩家是提线木偶。",
     "boundaryExample": "表面选择和信息不自动制造真实教父攻击；与恶魔邻座的设置依据保留。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m018",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "zheyeshigejiugui111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过提线木偶的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m018; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5649,6 +6905,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "增加动态认知模板：按对应角色字段展开并固定认知模式，不生成真实效果。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-M018"
@@ -5668,8 +6931,19 @@
     "boundaryExample": "初步死亡与第二轮指认致死分开；平票或不足三人保留实际裁决，不提前补规则。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m019",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "zhadaobaozhala111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过炸弹人的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m019; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5699,8 +6973,19 @@
     "boundaryExample": "醉酒时是否仍适用秘密投票按实际记录；秘密内容可保存摘要，不自动补造每票。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m020",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "shabihouzi122211",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过街头风琴手的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m020; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5730,8 +7015,19 @@
     "boundaryExample": "保留原提名和投票来源；白天免死与即时处决分别记录，处决不自动致死。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m021",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "tiehuaibi11111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过维齐尔的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m021; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5761,8 +7057,19 @@
     "boundaryExample": "两名目标顺序不可对调；实际多名死者可逐个记录，5号不因此真实转邪。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m022",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "yingyingying111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过鹰身女妖的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m022; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5792,8 +7099,19 @@
     "boundaryExample": "第三夜按游戏轮次，不从获得召唤师能力后重新数三夜；换角与转邪分别保存。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m023",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "zhaohuandaxiangjiao111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过召唤师的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m023; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5830,8 +7148,19 @@
     "boundaryExample": "恶魔醉毒时仍可记录拥有该能力；拥有与一次具体生效不同，各层能力消耗独立。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m024",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "weishenmebushilianjinshushi111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过科学怪人的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m024; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5852,17 +7181,28 @@
     "name": "限",
     "type": "minion",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "准备外来者数量任意；游戏夜晚数等于初始外来者数时。",
-    "input": "保存初始外来者数N；第N夜记录所有镇民实际中毒对象和截至下个黄昏的效果。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录配置和批量中毒。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "N=0没有第0夜时不擅自改成首夜，留实际规则说明；按初始数不按当时剩余外来者数。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
-    "normalExample": "限为本局游戏增加了1个外来者。",
+    "input": "记录任意外来者设置与初始数：初始外来者数N（非负整数＋实际分配）、外来者数量覆盖依据（本局存在限／卡扎力／堤丰之首及实际裁决）；第N夜镇民群体中毒：关联的先前记录（记录选择）、实际中毒镇民集（玩家多选）、N=0或异常裁决（说明）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "限为本局带来了【数量】个外来者。 在第【N】夜，【镇民玩家集】因【限】的能力中毒直到下个黄昏。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "按最终数量记录“带来了N个外来者”，抑制其他外来者数量增减。 保留旧方案和批准证据，当前改变部分单独复审。",
+    "normalExample": "限为本局带来了2个外来者。",
     "boundaryExample": "N不随外来者后续死亡改变；N=0时不擅自把第0夜改成首夜。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m025",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "tousioahsdoasidhas",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "限是所有设置调整角色里比较特殊的，限、卡扎力、堤丰之首在场时，其他外来设置调整都不生效，限的设置调整需要记录为\r\n\r\n”限为本局带来了X个外来者。“",
+          "source": "project-docs/docs/M1角色行动修改意见.md#m025; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5873,6 +7213,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "按最终数量记录“带来了N个外来者”，抑制其他外来者数量增减。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-M025"
@@ -5892,8 +7239,19 @@
     "boundaryExample": "许愿时点未限夜晚；未实现也记录愿望和次数裁决，不自动添加固定代价。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m026",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "wushihsihsihsihsihsihsish",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过巫师的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m026; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5924,7 +7282,18 @@
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m027",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "354a531c-7b89-484-243c3e167818",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "删除该角色，正式配版不会出现该角色",
+          "source": "project-docs/docs/M1角色行动修改意见.md#m027; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5954,8 +7323,19 @@
     "boundaryExample": "处决未死不作为通常触发；目标是否已死不被源文未写的存活限制强行过滤。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m028",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "huuuuuuuuuuuuu111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过狐媚娘的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m028; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -5986,7 +7366,18 @@
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m029",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "yangaaaaaaaaaaaa111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "解释分支1的存在意义",
+          "source": "project-docs/docs/M1角色行动修改意见.md#m029; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6016,8 +7407,19 @@
     "boundaryExample": "5号下一次死亡不能重复赠予首次效果；物理邻座不自动替换成存活邻居。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m030",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "huoshiduizuo111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过赶尸人的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m030; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6047,8 +7449,19 @@
     "boundaryExample": "夜2一次性变为逆时针后不再反复变向；目标不是下一名任意存活玩家，其他毒源独立。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m031",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "gudiao1",
+          "ruleVersion": "user-confirmed-2026-10-14",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过蛊雕的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m031; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6069,17 +7482,28 @@
     "name": "画皮",
     "type": "minion",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "本人首夜选人；该目标下一次死亡后重生、本人重获能力。",
-    "input": "选1名存活玩家，记录死亡并被当作存活；关联其下一次死亡、实际重生和画皮重获能力。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录活尸链、后续复活和能力恢复。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "重获后再发动的时点保留实际事件；不把复活等同直接清空所有状态。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
-    "normalExample": "1号玩家（画皮）选择了5号玩家（调查员），使其死亡但被当作存活。",
+    "input": "首夜使玩家成为活尸：目标玩家（玩家选择）、实际结算（分支单选／按目标逐项填写）；目标再次死亡后的重生与重获：关联的先前记录（记录选择）、目标实际重生（确认＋状态解除）、画皮重获能力（确认＋新能力来源）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【主语】选择了【目标】，【目标】因【主语】的能力成为活尸，被当作仍然存活。 【目标】再次死亡后重生，【画皮】因此重获能力。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "活尸文字与赶尸人一致，保留来源及实际已死语义。 保留旧方案和批准证据，当前改变部分单独复审。",
+    "normalExample": "1号玩家（画皮）选择了5号玩家（调查员），5号玩家（调查员）因1号玩家（画皮）的能力成为活尸，被当作仍然存活。",
     "boundaryExample": "复活不清空其他状态；重获后何时再发动附实际裁决，保留两次死亡来源链。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m032",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "huasapidpaiwopippippipp123i123p12ip3p1i23p1",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "画皮的活尸描述和赶尸人一致，分支1改为：【主语】选择了【目标】，【目标】因【主语】的能力成为活尸，被当作仍然存活。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#m032; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6090,6 +7514,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "活尸文字与赶尸人一致，保留来源及实际已死语义。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-M032"
@@ -6109,8 +7540,19 @@
     "boundaryExample": "选择‘死亡’本身不直接让禁卫军死亡；何为‘这样做’按具体行为和判定说明。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m033",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "jinweijiunuansoeoqiepi213123123",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过禁卫军（改）的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m033; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6140,8 +7582,19 @@
     "boundaryExample": "5号也可选择能力描述变为‘你没有能力’；不使用、回应、实际死亡和失能分别保存。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m034",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "mengpo11",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过孟婆的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m034; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6171,8 +7624,19 @@
     "boundaryExample": "目标之后再次得知不自动重复替换；信息替换不是中毒，原信息与替换信息都保留。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m035",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "zniangiajisudaiohwiodhisoahdioashdk2h143on211",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过酿酒师的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-m035; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6203,7 +7667,18 @@
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-m036",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "shiyizhenmin",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "删除该角色",
+          "source": "project-docs/docs/M1角色行动修改意见.md#m036; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6233,8 +7708,19 @@
     "boundaryExample": "自杀被保护阻止时不能自动传位；换角不附加源文未写的阵营变化。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d001",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "xiaoemo1111111eee111eee111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过小恶魔的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-d001; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6262,17 +7748,28 @@
     "name": "僵怖",
     "type": "demon",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "非首夜白天无人死亡时攻击；本人首次死亡尝试。",
-    "input": "记录前一白天死亡集合，符合时选1名玩家；本人首次死时填实际仍存活/被当作死亡。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录攻击和假死效果。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "公开死亡后仍可能行动；不能因头像公开变灰就把本人当实际死者移除。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
+    "input": "选择1名玩家并记录实际后果：目标玩家（玩家选择）、实际结算（分支单选／按目标逐项填写）、关联的先前记录（记录选择）；首次死亡后记录假死：关联的先前记录（记录选择）、首次机会与实际仍活（确认）、假死状态（实际确认）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【主语】选择了【目标玩家】，导致【实际死者】死亡。 【主语】选择了【目标玩家】，【未死目标】因【保护来源】的能力而没有死亡。 【主语】选择了【目标玩家】。（尚未记录结算） 【主语】因【主语】的能力进入假死状态，被当作死亡但实际仍然存活。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "明确自身能力造成假死、实际仍活。 保留旧方案和批准证据，当前改变部分单独复审。",
     "normalExample": "1号玩家（僵怖）选择了5号玩家（调查员），导致5号玩家（调查员）死亡。",
     "boundaryExample": "僵怖实际仍活却被当作死亡时保留夜行动入口；公开死亡不等于真正死亡。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d002",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "zhiwudazhanjiangshi111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "【主语】首次死亡结算后仍然存活，但被当作死亡。\r\n\r\n改为\r\n\r\n【主语】因【主语】的能力进入假死状态，被当作死亡但实际仍然存活。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#d002; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6283,6 +7780,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "明确自身能力造成假死、实际仍活。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-D002"
@@ -6302,8 +7806,19 @@
     "boundaryExample": "连续选择5号时仍区分前后来源时段；解除旧普卡毒不清除另一个投毒者来源。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d003",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "xiaoweibaxiliuxiliu111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过普卡的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-d003; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6333,8 +7848,19 @@
     "boundaryExample": "不能反刍任意非上夜目标死者；未反刍不补造复活，攻击两目标要不同。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d004",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "yigeshaba111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过沙巴洛斯的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-d004; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6364,8 +7890,19 @@
     "boundaryExample": "上次选人但无人死亡不算蓄力；三目标分支与普通0或1目标的数量分别校验。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d005",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "opppppppppp1111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过珀的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-d005; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6396,7 +7933,18 @@
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d006",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "fangguuuuuuuuuuuuuu111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "解释分支4、5存在的意义",
+          "source": "project-docs/docs/M1角色行动修改意见.md#d006; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6433,8 +7981,19 @@
     "boundaryExample": "4号仍能记录获保留的夜/昼能力；毒无源定截止就不自动黎明解除。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d007",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "wangguuuuuuuu111111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过亡骨魔的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-d007; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6464,8 +8023,19 @@
     "boundaryExample": "座位或角色变化需明确更新毒源；不能将持续邻座中毒改成每晚任选一人。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d008",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "meiyoudashi11111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过诺-达鲺的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-d008; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6486,17 +8056,28 @@
     "name": "涡流",
     "type": "demon",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "非首夜每晚攻击；镇民获取信息；白天无处决判胜。",
-    "input": "选1名玩家并填死亡；关联镇民得到的错误信息；白天结束保存是否有处决、邪恶胜利判定。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录攻击、错误信息和无处决邪恶获胜。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "用户已排除房规“首日特胜失效”，按正文各白天可记录；处决没死仍是有处决。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
+    "input": "选择1名玩家并记录实际后果：目标玩家（玩家选择）、实际结算（分支单选／按目标逐项填写）；无处决的白天结束判定：当日是否有人被处决（关联处决／无处决）、实际胜利裁决（邪恶获胜／其他实际说明）；涡流具有能力，镇民信息从此错误：全体镇民集合（集合主语）、涡流能力来源（玩家＋能力实例）；涡流失能，解除此来源的错误信息覆盖：失能事实与涡流来源（关联事件及具体来源）、全体镇民集合（集合主语）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【主语】选择了【目标玩家】，导致【实际死者】死亡。 【主语】选择了【目标玩家】，【未死目标】因【保护来源】的能力而没有死亡。 【主语】选择了【目标玩家】。（尚未记录结算） 第【日数】天无人被处决，因涡流能力，邪恶阵营获胜。 【全体镇民】因【涡流】的能力而从现在开始将获得错误信息。 【全体镇民】从现在开始将获得正确信息。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "删除逐镇民错误信息专用分支，改为全体起止状态；解除仅限涡流来源。 保留旧方案和批准证据，当前改变部分单独复审。",
     "normalExample": "1号玩家（涡流）选择了5号玩家（调查员），导致5号玩家（调查员）死亡。",
     "boundaryExample": "日2处决但没人死亡仍算有处决；不套首日特胜失效的已排除房规。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d009",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "woliuliuliu111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "不需要单独记录每个镇民，只需要在涡流具有能力时，记录\r\n\r\n【全体镇民】因X号（涡流）的能力而从现在开始将获得错误信息。\r\n\r\n涡流失去能力时（如死亡或醉酒中毒），记录\r\n\r\n【全体镇民】从现在开始将获得正确信息。\r\n\r\n删除分支2",
+          "source": "project-docs/docs/M1角色行动修改意见.md#d009; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6507,6 +8088,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "删除逐镇民错误信息专用分支，改为全体起止状态；解除仅限涡流来源。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-D009"
@@ -6526,8 +8114,19 @@
     "boundaryExample": "照看者不是自动真实变角；可能无人死亡，也不创建小怪宝玩家必须选人的表单。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d010",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "xiaoshabi111111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过小怪宝的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-d010; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6557,8 +8156,19 @@
     "boundaryExample": "宿主公开假死不等于真正死亡；宿主字段与每夜攻击目标分开，旧毒源独立。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d011",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "lizhiiiiii111111111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过痢蛭的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-d011; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6579,17 +8189,28 @@
     "name": "哈迪寂亚",
     "type": "demon",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "非首夜可选3人并公开；目标逐人秘密生死抉择。",
-    "input": "选3名不同玩家或不发动，记录全体得知目标；逐目标选生/死、实际生死变化；初步都活时记录三人最终死亡。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录公开选人、三人的秘密选择、第一轮结算及全活后二次死亡。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "玩家选择“生”不等于实际存活，选择“死”不等于实际死亡；可能有复活和免死，逐段保存。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
-    "normalExample": "1号玩家（哈迪寂亚）公开选择了2号玩家（厨师）、5号玩家（调查员）和8号玩家（圣徒）。",
+    "input": "依次选择三名玩家：本次是否使用（使用／不使用）、三名目标（玩家选择×3）、全体通知（实际公开名单）；三人秘密选择与两轮实际结算：关联的先前记录（记录选择）、每人秘密决定（逐行选择生／死）、第一轮生死结果（逐目标实际存活／死亡／复活及原因）、是否初步全活与第二轮结果（确认＋三人实际后果）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【主语】依次选择了【玩家1】、【玩家2】和【玩家3】。 【玩家】秘密选择了【生／死】，实际【结果】。 三名目标初步均存活，因哈迪寂亚能力再次结算，实际【死者集】死亡。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "三名目标依次秘密选择、随后逐个公开。 保留旧方案和批准证据，当前改变部分单独复审。",
+    "normalExample": "1号玩家（哈迪寂亚）依次选择了2号玩家（厨师）、5号玩家（调查员）和8号玩家（圣徒）。",
     "boundaryExample": "选择‘生’与实际存活分开，死者可能复活、保护可能免死；不提前只保存最终布尔值。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d012",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "haliluya111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "该恶魔并不是公开选择，而是秘密选择后再逐个公开，\r\n\r\n【主语】公开选择了【玩家1】、【玩家2】和【玩家3】。\r\n\r\n改为\r\n\r\n【主语】依次选择了【玩家1】、【玩家2】和【玩家3】。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#d012; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6600,6 +8221,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "三名目标依次秘密选择、随后逐个公开。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-D012"
@@ -6610,17 +8238,38 @@
     "name": "军团",
     "type": "demon",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "设置多数军团；非首夜可能杀人；提名投票有效性。",
-    "input": "设置保存所有军团玩家；说书人填是否/谁死亡；每次投票记录投票者阵营及只有邪恶投票的无效结果。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录多数配版、可能死亡、无效投票和被当作爪牙判定。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "没有军团本人每晚选人的默认表单；不自动使全部邪恶投票发生，记录实际票况。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
+    "input": "多数玩家为军团：军团玩家集（逐人角色分配）；军团的可能死亡：实际安排（无死亡／实际玩家多选）、实际结算（分支单选／按目标逐项填写）；仅邪恶投票的无效结果：关联的先前记录（记录选择）、是否仅邪恶投票（实际确认与投票时阵营）、投票有效性（有效／无效＋依据）；军团被当作爪牙：关联的先前记录（记录选择）、本次判定范围（来源能力＋具体爪牙角色单选）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "初始设置中，多数玩家为军团：【玩家集】。 【玩家】因军团能力而死亡。 对【目标】的提名只有邪恶玩家投票，因军团能力，此次投票无效。 【军团玩家】被【来源能力】当作【爪牙角色】。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "支持任意具体爪牙识别和多个军团来源的同夜多名死者。 保留旧方案和批准证据，当前改变部分单独复审。",
     "normalExample": "初始设置中，多数玩家为军团：1号玩家、3号玩家、4号玩家、6号玩家、7号玩家、8号玩家、9号玩家、10号玩家和12号玩家。",
     "boundaryExample": "没有军团本人每晚默认选人；有效性依实际票况和当时阵营，不自动造票。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d013",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "yiqunshabiemo222",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过军团的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-d013; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        },
+        {
+          "roleId": "yiqunshabiemo222",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "军团可以被当作任意爪牙角色，因此分支4应该改为\r\n\r\n【军团玩家】被【来源能力】当作【爪牙角色】。\r\n\r\n同时有多少个军团玩家在场，当夜就可能有多少个玩家死亡，因此分支2中死亡玩家可以不止一个。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#d013; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6631,6 +8280,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "支持任意具体爪牙识别和多个军团来源的同夜多名死者。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-D013"
@@ -6641,17 +8297,28 @@
     "name": "利维坦",
     "type": "demon",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "全体知晓在场/日数；善良处决数量；第五白天结束。",
-    "input": "填公开通知、日序；保存被处决善良玩家集合与裁决；第5天结束填邪恶胜利。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录在场公开、日数及两类邪恶获胜触发。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "计被处决玩家，不以死亡数代替；后续通知可记录实际省略，但不引入房规。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
+    "input": "公开利维坦在场与日序：在场通知与当前白天（公开文本＋日数）；两名善良处决或第五天结束判胜：触发分支（多于1名善良被处决／第5白天结束）、关联的先前记录（记录选择）、实际胜利（裁决与最终确认）；善良玩家被处决计入利维坦条件：关联处决事件与实际阵营（记录＋处决时阵营）、利维坦能力与本次序号（来源资格＋正整数）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "全体玩家得知利维坦在场，当前是第【N】天。 多于一名善良玩家被处决，因利维坦能力，邪恶阵营获胜。 第五个白天结束，因利维坦能力，邪恶阵营获胜。 【善良玩家】被处决，本次处决计入利维坦的特殊胜利条件中，这是第【N】名被处决的善良玩家。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "新增有能力时善良处决的有效计数。 保留旧方案和批准证据，当前改变部分单独复审。",
     "normalExample": "全体玩家得知利维坦在场，当前是第1天。",
     "boundaryExample": "被处决未死仍计处决事实；不以死亡总数替代善良处决条件。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d014",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "shenhaijuyao111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "需要增加分支：当一名善良玩家在利维坦具有能力时被处决，需要特殊记录：\r\n\r\n【善良玩家】被处决，本次处决计入利维坦的特殊胜利条件中，这是第X名被处决的善良玩家。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#d014; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6662,6 +8329,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "新增有能力时善良处决的有效计数。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-D014"
@@ -6672,17 +8346,28 @@
     "name": "暴乱",
     "type": "demon",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "游戏第三白天；当天连续提名。",
-    "input": "列所有爪牙变暴乱的真实换角；每条提名保存提名者、目标、立即死亡结果及该目标必须再提名的后续链。 另填行动者、触发时来源及快照、结果状态和逐人完整旧→新映射；通知独立。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。 实际换角逐人先选新角色再选当前阵营，保留前后角色/阵营映射。",
-    "result": "记录第三日群体换角和提名-立即死亡-下一提名序列。 实际成功才显示逐人新角色；独立入口引用同一结果，不重复交换。 自定义原文/换行原样保存，文本本身不产生实际效果。 阵营文字善良蓝字、邪恶红字；角色/阵营同时完整生效，历史颜色不回改。",
-    "exceptions": "这是死亡而不是处决；已死目标保留继续提名记录；链终点/例外由说书人填。 不使用/仅选择/未生效不产生换角后果；重复目标或缺失映射保留草稿提示。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
+    "input": "第三白天爪牙变暴乱：实际爪牙换角映射（逐玩家原角／新暴乱）、逐人新角色结果（由本次实际映射展开显示）、触发时来源与快照（来源事件＋前/后时点＋来源玩家/角色/规则版）、本次换角状态（仅选择/触发／未生效／实际成功）、成功结果及完整映射（每个受影响玩家：旧角色→新角色）、展示关联和通知（同一实际结果关联＋独立通知记录）、逐人当前实际阵营（在每人新角色之后选择：善良／邪恶）、旧阵营与生效映射（逐人旧角色/旧阵营→新角色/当前阵营）；提名、立即死亡与继续提名链：提名者／目标（玩家单选×2）、关联的先前记录（记录选择）、实际结算（分支单选／按目标逐项填写）；仅登记触发，尚未填写实际换角：实际行动者与来源（玩家/说书人＋具体来源记录）、目标及旧角色（玩家/受影响者选择＋事件时快照）、结算状态（仅选择/触发）；实际未生效／条件不满足：实际行动者与来源（玩家/说书人＋具体来源记录）、本次目标与旧角色（玩家/受影响者选择）、未生效依据（文本＋实际来源/条件）、消耗及其他后果（独立确认）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "在第三个白天，【爪牙玩家集】变为暴乱。 【玩家昵称】现在的角色是【本次实际新角色】，当前阵营为【实际阵营】。 【提名者】提名了【目标】，因暴乱能力，【目标】立即死亡，并继续提名【下一目标】。 【行动者】记录了【受影响玩家】的换角触发，换角结果待填写。 【行动者】记录了【目标旧角色】的换角核验：【实际未生效依据】。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "修正未生效示例第二白天的来源与依据一致，仅作有依据的核验，不新增跳过被动技能。 保留旧方案和批准证据，当前改变部分单独复审。",
     "normalExample": "在第三个白天，4号玩家和9号玩家变为暴乱。\n4号玩家现在的角色是暴乱，当前阵营为邪恶\n9号玩家现在的角色是暴乱，当前阵营为邪恶",
     "boundaryExample": "这些是死亡而非处决；5号已死仍保留其后续必须提名，不能按普通死者权限删链。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d015",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "zuixihuandeyiji111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "解释分支3、4的存在的意义",
+          "source": "project-docs/docs/M1角色行动修改意见.md#d015; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6700,6 +8385,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；角色变化明确当前阵营及红蓝结果；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "修正未生效示例第二白天的来源与依据一致，仅作有依据的核验，不新增跳过被动技能。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-D015"
@@ -6719,8 +8411,19 @@
     "boundaryExample": "选不在场角色时另填说书人决定的受害者和原因，不自动改成无事发生。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d016",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "oeeroeeerooooeeeeee1111111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过奥赫的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-d016; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6741,17 +8444,28 @@
     "name": "卡扎力",
     "type": "demon",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "准备任意外来者及本人首夜指定爪牙；非首夜攻击。",
-    "input": "首夜填玩家→爪牙角色映射和转邪；记录实际外来者调整；夜间选1名玩家并填死亡。 初始配角单独显示，不填写游戏中换角的旧/新映射。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录邪恶爪牙设置、通知、配版及攻击。 逐人标注初始分配。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "源正文爪牙配置和夜间提醒都保留；用户已排除额外房规可选范围通知。 准备配角不等同于实际换角。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
-    "normalExample": "1号玩家（卡扎力）指定4号玩家为投毒者、9号玩家为刺客，实际使其成为邪恶爪牙；卡扎力为本局游戏减少了1个外来者。\n初始分配：4号玩家的角色是投毒者\n初始分配：9号玩家的角色是刺客",
+    "input": "卡扎力指定爪牙与外来者配置：玩家→爪牙角色映射（逐人玩家与新角色行）、实际转邪与通知（逐人确认）、最终外来者数与覆盖依据（非负整数＋本局覆盖来源）；选择1名玩家并记录实际后果：目标玩家（玩家选择）、实际结算（分支单选／按目标逐项填写）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【卡扎力】指定【玩家角色映射】，实际使其成为邪恶爪牙。 卡扎力为本局带来了【数量】个外来者。 【主语】选择了【目标玩家】，导致【实际死者】死亡。 【主语】选择了【目标玩家】，【未死目标】因【保护来源】的能力而没有死亡。 【主语】选择了【目标玩家】。（尚未记录结算） 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "同限记录最终外来者数量并保留独立爪牙／座位设置。 保留旧方案和批准证据，当前改变部分单独复审。",
+    "normalExample": "1号玩家（卡扎力）指定4号玩家为投毒者、9号玩家为刺客，实际使其成为邪恶爪牙。\n卡扎力为本局带来了2个外来者。\n初始分配：4号玩家的角色是投毒者。\n初始分配：9号玩家的角色是刺客。",
     "boundaryExample": "实际外来者配置另存；不靠角色名称合并两名玩家，也不添加房规额外范围通知。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d017",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "kakakakkakakakakakakakaakakak111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "改动同M025",
+          "source": "project-docs/docs/M1角色行动修改意见.md#d017; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6769,6 +8483,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "同限记录最终外来者数量并保留独立爪牙／座位设置。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-D017"
@@ -6779,17 +8500,28 @@
     "name": "牙噶巴卜",
     "type": "demon",
     "ruleVersion": "user-confirmed-2026-10-14",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "本人首夜得知短语；白天每次公开说出短语形成一次触发；允许在白天或延后到关联夜晚结算死亡。",
-    "input": "填秘密短语；逐次保存本人公开说出短语的事件、触发计数与结算窗口、已结算/未结算状态；关联死亡安排、目标、实际发生时点、结果及相关标记数量。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录短语获得、白天触发及其关联的白天/夜晚死亡，保存实际消耗和剩余触发次数。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "触发次数提供可安排死亡的上限，不要求每次必死；已在白天结算的同一触发不再在夜晚重复消费。防死或特殊结果保留实际结果与裁决说明，延迟死亡归属实际发生的阶段。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
+    "input": "得知秘密短语：秘密短语（自由文本）；白天公开说出短语次数：关联的秘密短语（记录选择）、公开说出次数（本次或累计非负整数＋具体事件）、实际结算窗口（关联来源时点）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【主语】得知秘密短语“【短语】”。 【主语】公开说出了【次数】次“【短语】”。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "简化白天次数句，实际死亡移到通用死亡入口并保留因果与次数消耗。 保留旧方案和批准证据，当前改变部分单独复审。",
     "normalExample": "1号玩家（牙噶巴卜）得知秘密短语“今晚有风”。",
     "boundaryExample": "白天已结算的触发不能夜晚重复消费；可能死亡不等于必死，防死时消耗按实际裁决。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d018",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "waibibaboabbbb1111",
+          "ruleVersion": "user-confirmed-2026-10-14",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "分支2的\r\n\r\n【主语】公开说出“【短语】”，形成第【次数】次短语触发。\r\n\r\n改为\r\n\r\n【主语】公开说出了X次“【短语】”。\r\n\r\n移出分支3，只需要简单记录”X号玩家因Y号玩家（牙嘎巴卜）的能力而死亡了。“",
+          "source": "project-docs/docs/M1角色行动修改意见.md#d018; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6800,6 +8532,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "简化白天次数句，实际死亡移到通用死亡入口并保留因果与次数消耗。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-D018"
@@ -6810,17 +8549,28 @@
     "name": "堤丰之首",
     "type": "demon",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "设置邪恶连续邻座、居中、爪牙+1、任意外来者；非首夜攻击。",
-    "input": "记录事件时座位与邪恶玩家连续排列、两侧爪牙角色/转邪/通知和配版；夜间选1名玩家。 初始配角单独显示，不填写游戏中换角的旧/新映射。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录设置调整、角色/阵营及夜攻击结果。 逐人标注初始分配。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "阵营颜色不等于角色类型；异常座位设置允许记录说书人解释。 准备配角不等同于实际换角。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
-    "normalExample": "初始设置：邪恶玩家按12号→1号→2号连续邻座，1号玩家（堤丰之首）居中，堤丰之首为本局游戏增加了1个爪牙，外来者数量本次不变。\n初始分配：12号玩家的角色是投毒者\n初始分配：2号玩家的角色是刺客",
+    "input": "连续邪恶邻座与配版：邪恶连续座位与本人居中（有序座位列表）、两侧爪牙映射与转邪（逐人实际记录）、实际数量调整（爪牙+1；外来者最终数量）、最终外来者数与覆盖依据（非负整数＋本局覆盖来源）；选择1名玩家并记录实际后果：目标玩家（玩家选择）、实际结算（分支单选／按目标逐项填写）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "初始设置：邪恶玩家按【座位序列】连续邻座，【堤丰之首】居中。 堤丰之首为本局游戏增加了1个爪牙。 堤丰之首为本局带来了【数量】个外来者。 【主语】选择了【目标玩家】，导致【实际死者】死亡。 【主语】选择了【目标玩家】，【未死目标】因【保护来源】的能力而没有死亡。 【主语】选择了【目标玩家】。（尚未记录结算） 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "同限记录最终外来者数量并保留独立爪牙／座位设置。 保留旧方案和批准证据，当前改变部分单独复审。",
+    "normalExample": "初始设置：邪恶玩家按12号→1号→2号连续邻座，1号玩家（堤丰之首）居中。\n堤丰之首为本局游戏增加了1个爪牙。\n堤丰之首为本局带来了2个外来者。\n初始分配：12号玩家的角色是投毒者。\n初始分配：2号玩家的角色是刺客。",
     "boundaryExample": "角色类型与阵营分别保存；不符合常规连续座位的实际局保留设置例外说明。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d019",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "tifeng11zhishou11111111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "改动同M025",
+          "source": "project-docs/docs/M1角色行动修改意见.md#d019; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6838,6 +8588,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "同限记录最终外来者数量并保留独立爪牙／座位设置。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-D019"
@@ -6857,8 +8614,19 @@
     "boundaryExample": "攻击被阻止则不从选择自动产生群毒；5号由其他来源杀死也需区分。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d020",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "hundundundundun111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过混沌的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-d020; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6879,17 +8647,28 @@
     "name": "穷奇",
     "type": "demon",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "准备+1外来者；非首夜每晚，依据白天外来者死亡分支。",
-    "input": "记录白天外来者死亡事件；普通分支选1并填死亡，特殊分支选1→死亡活尸，再由说书人填另一死亡玩家。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录攻击、活尸状态和追加死亡的不同目标/顺序。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "特殊分支是死后被当作存活，不是复活；追加目标须另一玩家，实际效果单独确认。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
+    "input": "外来者增加1：实际配版（+1与分配）；选择1名玩家并记录实际后果：目标玩家（玩家选择）、实际结算（分支单选／按目标逐项填写）；白天外来者死亡后的活尸加另一死亡：关联的先前记录（记录选择）、穷奇所选玩家（玩家单选）、另一个死亡玩家（说书人玩家选择）、实际结算（分支单选／按目标逐项填写）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【来源角色】为本局游戏【增加／减少】了【数量】个外来者。 【主语】选择了【目标玩家】，导致【实际死者】死亡。 【主语】选择了【目标玩家】，【未死目标】因【保护来源】的能力而没有死亡。 【主语】选择了【目标玩家】。（尚未记录结算） 【主语】选择了【目标】，【目标】因【主语】的能力成为活尸，被当作仍然存活；随后【另一玩家】死亡。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "活尸文字与赶尸人一致，保留两项实际死亡效果。 保留旧方案和批准证据，当前改变部分单独复审。",
     "normalExample": "穷奇为本局游戏增加了1个外来者。",
     "boundaryExample": "5号不是复活；两段死亡用不同目标和顺序，没有白天条件时保留普通一目标分支。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d021",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "qiongb1111111111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "分支3中关于活尸的部分修改为和赶尸人一致",
+          "source": "project-docs/docs/M1角色行动修改意见.md#d021; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6900,6 +8679,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "活尸文字与赶尸人一致，保留两项实际死亡效果。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-D021"
@@ -6919,8 +8705,19 @@
     "boundaryExample": "没有合格爪牙时保存本人实际死亡裁决；不能随意让死爪牙再次失能来免死。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d022",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "taowuuuuuuuuuuuu11111111",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过梼杌的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-d022; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6950,8 +8747,19 @@
     "boundaryExample": "两名镇民不符合类型互异时保存选择和未生效；不强加二人或三人上限，不开启旅行者分支。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d023",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "taotieeeeeeeeeeee",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过饕餮的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-d023; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -6981,8 +8789,19 @@
     "boundaryExample": "攻击未杀死不自动触发；暴虐只关联下一夜，上夜全局死亡人数不限制本夜选人。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d024",
     "review": {
-      "status": "re-review",
-      "feedback": [],
+      "status": "approved",
+      "feedback": [
+        {
+          "roleId": "baojun3",
+          "ruleVersion": "user-confirmed-2026-10-14",
+          "proposalVersion": "m1-action-v4",
+          "kind": "approve",
+          "scope": "complete-action",
+          "originalText": "- [x] **通过暴君的动作及最终填写格式（m1-action-v4）**",
+          "source": "project-docs/docs/m1-role-action-review.md#s001-r-d024; 原稿SHA 042cbff30b18c92cf373799ed0ad616269aa35f350819601be3e18ca5c222545; 原勾选时间未知，recordedAt为采集时间",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -7003,17 +8822,28 @@
     "name": "典狱长",
     "type": "demon",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "每夜选择本轮目标；下一白天处决与随后夜间结算。",
-    "input": "选0～3名不同玩家（0是否使用需实际说明），独立保存本轮和上一轮目标集；关联上一组中的白天处决致死玩家。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "若上一组有人死于处决，填其他旧目标实际死亡；否则说书人从旧组填1名死亡；本夜新组选取另记。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "新旧组不能覆盖；不是处决就等于死于处决；首夜无旧组时记录只建组而非虚构死亡。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
+    "input": "建立本轮目标组：本轮目标组（玩家多选）、该组所属夜晚（显示当前夜晚）；结算上一轮目标组：结算哪一轮组（先前夜晚组选择）、旧组内是否有人死于处决（关联具体处决及死亡／无）、实际结算分支（有人处决致死→其他旧目标；否则说书人从旧组选1）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【主语】在第【N】夜选择了【本轮目标集】。 【主语】因上次选择的玩家中的【处决死者】死于处决而杀死了【本轮死者集】。 【主语】因上次选择的玩家中无人死于处决而杀死了【本轮死者】。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "以典狱长为行动主语，分别生成旧组有处决死者／无人死于处决两支。 保留旧方案和批准证据，当前改变部分单独复审。",
     "normalExample": "1号玩家（典狱长）在第1夜选择了2号玩家（厨师）、5号玩家（调查员）和8号玩家（圣徒）。",
     "boundaryExample": "旧目标被处决未死按无处决致死分支由说书人填旧组一人死亡；首夜无旧组不虚构结算。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d025",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "dianyuzhangaowhorahwpru903qu5rpiqhnrf1",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "分支2修改为：\r\n\r\n【主语】因上次选择的玩家中的【X号玩家】死于处决而杀死了【Y号玩家】【Z号玩家】。\r\n\r\n【主语】因上次选择的玩家中无人死于处决而杀死了【X号玩家】。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#d025; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -7024,6 +8854,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "以典狱长为行动主语，分别生成旧组有处决死者／无人死于处决两支。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-D025"
@@ -7065,17 +8902,28 @@
     "name": "奸佞",
     "type": "demon",
     "ruleVersion": "user-confirmed-2026-10-14",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "非首夜每晚攻击；任意爪牙死亡的当晚额外行动。",
-    "input": "本人的攻击选1名玩家；逐名死亡爪牙在其死亡当晚选1名玩家，填是否按善良生效及实际死亡。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "记录奸佞攻击、爪牙死亡触发、该死爪牙选择及善良目标死亡。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "已由用户确认采用正文；禁止加入白天未投票攻击两次。死爪牙有独立触发入口，即使已从常规夜序移除。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
+    "input": "选择1名玩家并记录实际后果：目标玩家（玩家选择）、实际结算（分支单选／按目标逐项填写）；死亡爪牙当晚选择玩家：行动的死爪牙（玩家选择）、所选玩家（玩家单选）、目标善良判定（是／否／说明）、实际结算（分支单选／按目标逐项填写）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【主语】选择了【目标玩家】，导致【实际死者】死亡。 【主语】选择了【目标玩家】，【未死目标】因【保护来源】的能力而没有死亡。 【主语】选择了【目标玩家】。（尚未记录结算） 【死爪牙】因奸佞的能力在死亡当晚选择了【目标】，【目标】死亡了。 【死爪牙】因奸佞的能力在死亡当晚选择了【目标】，无事发生。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "死爪牙行动只显示实际死亡或无事发生，保留内部阵营依据。 保留旧方案和批准证据，当前改变部分单独复审。",
     "normalExample": "1号玩家（奸佞）选择了5号玩家（调查员），导致5号玩家（调查员）死亡。",
     "boundaryExample": "死亡爪牙入口保留且各自独立；不恢复白天未投票可攻击两次的旧版本。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d027",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "jianiningasihdohwqr91q23rhnfipo1q23",
+          "ruleVersion": "user-confirmed-2026-10-14",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "分支2改为\r\n\r\n【死爪牙】因奸佞的能力在死亡当晚选择了【目标】，【目标】死亡了。\r\n\r\n或者\r\n\r\n【死爪牙】因奸佞的能力在死亡当晚选择了【目标】，无事发生。\r\n\r\n不需要强调善良的判定",
+          "source": "project-docs/docs/M1角色行动修改意见.md#d027; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -7086,6 +8934,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "死爪牙行动只显示实际死亡或无事发生，保留内部阵营依据。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-D027"
@@ -7096,17 +8951,28 @@
     "name": "阎罗",
     "type": "demon",
     "ruleVersion": "source-v1",
-    "proposalVersion": "m1-action-v4",
+    "proposalVersion": "m1-action-v5",
     "trigger": "本人首夜看魔典并双目标；每夜延迟攻击；游戏第三夜必杀。",
-    "input": "首夜存魔典快照，分别选“第三夜必杀目标”和“本夜延迟目标”（是否同人按实际填写）；每夜保存新延迟目标与上一夜延迟目标。 所有行动、信息、结果及下级选择保留“自定义”，仅校验适用公共字段及非空正文。",
-    "result": "第三夜必杀源独立记录无视免死死亡；每夜结算上一延迟目标，另建本夜延迟记录。 自定义原文/换行原样保存，文本本身不产生实际效果。",
-    "exceptions": "两条目标链禁止共用一个字段；首夜无上一延迟目标不虚构死亡；必杀例外与通常攻击分开。 新版全分支自定义及角色术语已展开，原勾选仅适用于原方案版本。",
+    "input": "首夜看魔典并指定第三夜必杀：当时魔典（时点快照确认）、第三夜必杀目标（玩家单选）；选择本夜延迟目标：目标玩家（玩家选择）；分别结算两条目标链：结算链（上一夜延迟／首夜第三夜必杀）、关联的先前记录（记录选择）、实际结算（分支单选／按目标逐项填写）。各级保留自定义，不适用预设字段不阻断自由原文保存。",
+    "result": "【主语】查看了当时的魔典，选择【目标】作为第三夜必杀目标。 【主语】在第【N】夜选择了【目标】。 【目标】因【阎罗】上一夜的选择而死亡。 【固定目标】因【阎罗】首夜选择而死亡了。 自定义原文及换行不改写，实际效果必须明确来源且只应用一次。",
+    "exceptions": "简化逐夜选择句而保留延迟目标链数据。 固定目标用首夜选择的来源句，保留第三夜和两链校验。 保留旧方案和批准证据，当前改变部分单独复审。",
     "normalExample": "1号玩家（阎罗）查看了当时的魔典，选择5号玩家（调查员）作为第三夜必杀目标。",
     "boundaryExample": "第3夜同时结算必杀链与上一夜延迟链，各自有ID；首夜无上一延迟目标不补造死亡。",
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d028",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "yanluoaysoiehd0281y0eird1op2y4890r1yh4h01894jr108",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "changes-requested",
+          "scope": "complete-action",
+          "originalText": "分支2改为\r\n\r\n【主语】在第【N】夜选择了【目标】。\r\n\r\n分支3的\r\n\r\n【主语】在第【N】夜选择了【目标】，作为下一夜的延迟结算目标。\r\n\r\n改为\r\n\r\n【固定目标】因【阎罗】首夜选择而死亡了。",
+          "source": "project-docs/docs/M1角色行动修改意见.md#d028; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },
@@ -7117,6 +8983,13 @@
         "source": "project-docs/project-plan.md v0.9（8d10b19），M1第7～9项、A23/A24/A25；用户本轮同步指令",
         "summary": "全分支自定义与统一角色文案；保留旧勾选/反馈，新版单独复审。",
         "changedAt": "2026-10-15T17:02:48.280Z"
+      },
+      {
+        "fromVersion": "m1-action-v4",
+        "toVersion": "m1-action-v5",
+        "source": "project-docs/docs/M1角色行动修改意见.md；SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e",
+        "summary": "简化逐夜选择句而保留延迟目标链数据。 固定目标用首夜选择的来源句，保留第三夜和两链校验。",
+        "changedAt": "2026-10-17T17:20:37.302Z"
       }
     ],
     "recordingProfile": "shared/roles/recording-formats.json#S001-R-D028"
@@ -7137,7 +9010,18 @@
     "reviewDocument": "project-docs/docs/m1-role-action-review.md#s001-r-d029",
     "review": {
       "status": "re-review",
-      "feedback": [],
+      "feedback": [
+        {
+          "roleId": "shiyiemo",
+          "ruleVersion": "source-v1",
+          "proposalVersion": "m1-action-v4",
+          "kind": "comment",
+          "scope": "complete-action",
+          "originalText": "删除该角色",
+          "source": "project-docs/docs/M1角色行动修改意见.md#d029; 原稿SHA c9705410dcd76faac31f197b0a9aaaeb46cc66e0ad0d79ad4ceef6776709672e; 已实现的既有意见或纯解释按comment保留，实质方案改变按changes-requested",
+          "recordedAt": "2026-10-17T17:20:37.302Z"
+        }
+      ],
       "implementation": "not-implemented",
       "validation": "not-run"
     },

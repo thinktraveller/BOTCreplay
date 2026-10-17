@@ -1,0 +1,288 @@
+{
+  "version": "m1-feedback-20261018",
+  "detail": {
+    "explicit": [
+      {
+        "id": "T004",
+        "reason": "各对相邻邪恶玩家",
+        "status": "specified"
+      },
+      {
+        "id": "T005",
+        "reason": "实际邻近的两名存活玩家",
+        "status": "specified"
+      },
+      {
+        "id": "T027",
+        "reason": "用于最近距离的恶魔与爪牙",
+        "status": "specified"
+      },
+      {
+        "id": "T030",
+        "reason": "被数学家统计的具体能力异常玩家",
+        "status": "specified"
+      },
+      {
+        "id": "T033",
+        "reason": "计入数字的邪恶死者",
+        "status": "specified"
+      },
+      {
+        "id": "T038",
+        "reason": "猜对的玩家与角色",
+        "status": "specified"
+      },
+      {
+        "id": "T070",
+        "reason": "四个角色中实际在场者及对应玩家",
+        "status": "specified"
+      },
+      {
+        "id": "T071",
+        "reason": "最近邪恶玩家、真实方向及收到信息正误",
+        "status": "specified"
+      },
+      {
+        "id": "T075",
+        "reason": "两名候选死者，实际首死另记",
+        "status": "specified"
+      }
+    ],
+    "proposed": [
+      {
+        "id": "T001",
+        "reason": "两名候选中真正对应者与错误候选",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T002",
+        "reason": "外来者候选真正对应者或无外来者依据",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T003",
+        "reason": "爪牙候选真正对应者与特殊识别来源",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T006",
+        "reason": "有恶魔、干扰项及特殊识别的具体依据",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T016",
+        "reason": "选定两人中当晚因自身能力醒来的实际玩家",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T031",
+        "reason": "今天投票的实际恶魔及对应投票记录",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T032",
+        "reason": "今天提名的实际爪牙及对应提名记录",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T039",
+        "reason": "两人中实际杀死本人的恶魔",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T041",
+        "reason": "三人中实际邪恶者及特殊信息依据",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T056",
+        "reason": "得知存活角色的实际对应玩家",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T064",
+        "reason": "最近邪恶玩家及顺逆时针距离",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T087",
+        "reason": "本夜所得角色各自对应的在场玩家",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T092",
+        "reason": "计入数字的存活镇民清单",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T097",
+        "reason": "实际被邪恶能力选择或影响的目标与来源",
+        "status": "awaiting-review"
+      }
+    ]
+  },
+  "noEffect": {
+    "explicit": [
+      {
+        "id": "T011",
+        "reason": "已使用且未选中恶魔",
+        "status": "specified"
+      },
+      {
+        "id": "T021",
+        "reason": "已选择的角色不在场",
+        "status": "specified"
+      },
+      {
+        "id": "T029",
+        "reason": "已选择的玩家不是恶魔",
+        "status": "specified"
+      },
+      {
+        "id": "T047",
+        "reason": "实际发起教派但有善良玩家未加入",
+        "status": "specified"
+      },
+      {
+        "id": "T090",
+        "reason": "实际选定两人而阵营不同",
+        "status": "specified"
+      },
+      {
+        "id": "T094",
+        "reason": "实际所选一名或两名角色不在场，或对应玩家未同时存活，本次保护未成立",
+        "status": "specified"
+      },
+      {
+        "id": "T098",
+        "reason": "首夜所选玩家实际邪恶",
+        "status": "specified"
+      },
+      {
+        "id": "D027",
+        "reason": "死爪牙已选择但本次没有符合条件的死亡或其他效果",
+        "status": "specified"
+      }
+    ],
+    "proposed": [
+      {
+        "id": "T010",
+        "reason": "首次被提名且提名者非镇民，未触发立刻处决",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T017",
+        "reason": "已选择的玩家不是恶魔，本次驱魔未触发",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T022",
+        "reason": "已使用且死者不是镇民，未复活",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T045",
+        "reason": "已选择的玩家非爪牙，没有通知或失能",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T048",
+        "reason": "已选择的玩家不符合善良判定，没有杀死或抑制恶魔死亡",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T052",
+        "reason": "已使用但目标不是落难少女，未变角",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T067",
+        "reason": "已公开猜测爪牙和恶魔且未猜对，没有胜利",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T068",
+        "reason": "夜间已选择目标但目标未醉酒中毒，未导致本人死亡",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T075",
+        "reason": "猜测错误且本次保护没有生效，仅限保护结果",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T078",
+        "reason": "已使用且夜间确认观众无恶魔，本技能没有导致本人死亡",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T085",
+        "reason": "已使用但目标不是先前得知角色，没有死亡",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T086",
+        "reason": "已选择的玩家不是恶魔，本人未死且目标未醉",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T089",
+        "reason": "整晚结束后确认条件未满足而未交换；结算前仍为待定",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "T099",
+        "reason": "已使用且所选镇民不在场，无中毒或死亡",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "O006",
+        "reason": "已公开选择非善良目标且本技能没有导致死亡",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "O012",
+        "reason": "已公开选择非邪恶目标且本技能没有导致落败",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "O016",
+        "reason": "爪牙已公开猜测且猜错，没有落败",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "O017",
+        "reason": "实际唯一提名目标是恶魔，没有因魔像能力死亡",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "M012",
+        "reason": "已选择的角色在场，不发生换角或创造恶魔裁决",
+        "status": "awaiting-review"
+      },
+      {
+        "id": "D023",
+        "reason": "已选择的目标角色类型重复，本技能未造成任何死亡",
+        "status": "awaiting-review"
+      }
+    ]
+  },
+  "excludedNoEffect": [
+    {
+      "id": "T036",
+      "reason": "目标角色不在场仍获得其能力，不能将整次行动写成无事发生。"
+    },
+    {
+      "id": "D016",
+      "reason": "所选角色不在场改由说书人决定死者，不能写无事发生。"
+    },
+    {
+      "id": "T048",
+      "reason": "只未死亡但仍有恶魔抑制等实际效果时，不使用无事发生。"
+    },
+    {
+      "id": "D028",
+      "reason": "本夜刚选择而等待下一夜或第三夜，不是无事发生。"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import sourceData from './source-data.json' with { type: 'json' };
 import proposalData from './action-proposals.json' with { type: 'json' };
 import overrideData from './rule-overrides.json' with { type: 'json' };
+import scopeData from './role-scope.json' with { type: 'json' };
 import type { RuleReference } from '../domain/contracts.js';
 import type { ActionProposal, RuleOverride, SourceRole } from './types.js';
 
@@ -9,20 +10,32 @@ export const roleSourceManifest = Object.freeze(sourceData.manifest);
 const sources = new Map((sourceData.roles as SourceRole[]).map(role => [role.id, role]));
 const proposals = new Map((proposalData as ActionProposal[]).map(role => [role.roleId, role]));
 const overrides = new Map((overrideData as RuleOverride[]).map(rule => [rule.roleId, rule]));
-export const supportedRoleIds: readonly string[] = Object.freeze([...sources.keys()]);
-export function getSourceRole(exactId: string): SourceRole | undefined {
+const retiredIds = new Set(scopeData.retired.map(role => role.roleId));
+export const supportedRoleIds: readonly string[] = Object.freeze([...sources.keys()].filter(id => !retiredIds.has(id)));
+export function isRoleActive(exactId: string): boolean { return sources.has(exactId) && !retiredIds.has(exactId); }
+export function getArchivedSourceRole(exactId: string): SourceRole | undefined {
   const role = sources.get(exactId);
   return role ? structuredClone(role) : undefined;
 }
-export function getActionProposal(exactId: string): ActionProposal | undefined {
+export function getSourceRole(exactId: string): SourceRole | undefined {
+  return isRoleActive(exactId) ? getArchivedSourceRole(exactId) : undefined;
+}
+export function getArchivedActionProposal(exactId: string): ActionProposal | undefined {
   const proposal = proposals.get(exactId);
   return proposal ? structuredClone(proposal) : undefined;
+}
+export function getActionProposal(exactId: string): ActionProposal | undefined {
+  return isRoleActive(exactId) ? getArchivedActionProposal(exactId) : undefined;
 }
 export function getRuleOverride(exactId: string): RuleOverride | undefined {
   const rule = overrides.get(exactId);
   return rule ? structuredClone(rule) : undefined;
 }
 export function getCurrentRule(exactId: string): RuleReference | undefined {
+  return isRoleActive(exactId) ? getArchivedRule(exactId) : undefined;
+}
+// Historical replay facts remain readable even after a role is removed from new games.
+export function getArchivedRule(exactId: string): RuleReference | undefined {
   const raw = sources.get(exactId);
   const proposal = proposals.get(exactId);
   if (!raw || !proposal) return undefined;
@@ -36,12 +49,14 @@ export function getCurrentRule(exactId: string): RuleReference | undefined {
     actionReview: { proposalVersion: proposal.proposalVersion, status: proposal.review.status },
   };
 }
-export function getExcludedRoles() { return structuredClone(sourceData.excluded); }
+export function getRetiredRoles() { return structuredClone(scopeData.retired); }
+export function getExcludedRoles() { return [...structuredClone(sourceData.excluded), ...scopeData.retired.map(item => ({ roleId:item.roleId,reason:item.reason,raw:getArchivedSourceRole(item.roleId)! }))]; }
 export function getRoleCoverage() {
   const byType = { townsfolk: 0, outsider: 0, minion: 0, demon: 0 };
-  for (const role of sources.values()) byType[role.team]++;
-  return { supported: sources.size, byType, excluded: sourceData.excluded.length, proposals: proposals.size, approved: [...proposals.values()].filter(x => x.review.status === 'approved').length, implemented: [...proposals.values()].filter(x => x.review.implementation === 'implemented').length };
+  for (const id of supportedRoleIds) byType[sources.get(id)!.team]++;
+  const activeProposals = [...proposals.values()].filter(item=>isRoleActive(item.roleId));
+  return { supported: supportedRoleIds.length, archived: sources.size, retired:retiredIds.size, byType, excluded: sourceData.excluded.length+retiredIds.size, proposals: activeProposals.length, approved: activeProposals.filter(x => x.review.status === 'approved').length, implemented: activeProposals.filter(x => x.review.implementation === 'implemented').length };
 }
 // Aliases require explicit source verification; names and normalized IDs never bind automatically.
 export const verifiedRoleAliases: Readonly<Record<string, string>> = Object.freeze({});
-export function resolveExactRoleId(id: string): string | undefined { return sources.has(id) ? id : verifiedRoleAliases[id]; }
+export function resolveExactRoleId(id: string): string | undefined { return isRoleActive(id) ? id : verifiedRoleAliases[id]; }
