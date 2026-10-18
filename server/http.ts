@@ -2,11 +2,13 @@ import { createServer, type IncomingMessage, type ServerResponse } from 'node:ht
 import { readFile, stat } from 'node:fs/promises';
 import { resolve, extname, sep } from 'node:path';
 import { createRoleLibraryApi } from './role-library.js';
+import { createReplayApi } from './replay-api.js';
 
 type Middleware = (request: IncomingMessage, response: ServerResponse, next: () => void) => void;
 const mime: Record<string, string> = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.png': 'image/png', '.svg': 'image/svg+xml' };
 export function createLocalServer(middleware?: Middleware, webRoot = resolve('dist/web'), roleLibraryFile?: string) {
   const roleLibraryApi=createRoleLibraryApi(roleLibraryFile);
+  const replayApi=createReplayApi(process.env.BOTCREPLAY_DATA_DIR);
   return createServer((request, response) => {
     const origin = request.headers.origin;
     const host = request.headers.host ?? '';
@@ -15,12 +17,13 @@ export function createLocalServer(middleware?: Middleware, webRoot = resolve('di
       return;
     }
     if (request.url === '/api/health') {
-      response.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' }).end(JSON.stringify({ service: 'BOTCreplay', milestone: 'M1-role-workbench', schemaVersion: '0.2.0', roleLibraryVersion:'role-library-v1' }));
+      response.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' }).end(JSON.stringify({ service: 'BOTCreplay', milestone: 'M2-replays', schemaVersion: '0.2.0', roleLibraryVersion:'role-library-v1' }));
       return;
     }
     void (async () => {
       try {
         if(await roleLibraryApi(request,response))return;
+        if(await replayApi.handle(request,response))return;
         if (middleware) { middleware(request, response, () => response.writeHead(404).end('页面不存在')); return; }
         if (request.method !== 'GET' && request.method !== 'HEAD') { response.writeHead(405).end(); return; }
         const pathname = decodeURIComponent(new URL(request.url ?? '/', 'http://localhost').pathname);
