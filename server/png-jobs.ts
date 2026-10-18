@@ -22,8 +22,8 @@ export function createPngJobs(store:ReturnType<typeof createReplayStore>,assets:
       for(const [id,job]of jobs)if(Date.now()-job.created>60*60*1000&&job.state!=='composing'){await clean(job).catch(()=>{});jobs.delete(id);}
       if(url.pathname==='/api/png-jobs'&&request.method==='POST'){
         if(jobs.size>=8){const old=[...jobs.values()].find(job=>['complete','cancelled','failed'].includes(job.state));if(old){await clean(old).catch(()=>{});jobs.delete(old.id);}else throw new ApiError(429,'已有多个导出任务，请先完成或取消');}
-        let input:{replayId:string;revision:number};try{input=JSON.parse((await body(request,4096)).toString('utf8'));}catch{throw new ApiError(400,'需要复盘编号和保存版本');}
-        const snapshot=await savedExportSnapshot(store,assets,input.replayId,input.revision),id=randomUUID(),directory=resolve(base,id);await mkdir(directory,{recursive:true});
+        let input:{replayId:string;revision:number;phaseId?:string};try{input=JSON.parse((await body(request,4096)).toString('utf8'));}catch{throw new ApiError(400,'需要复盘编号和保存版本');}
+        const snapshot=await savedExportSnapshot(store,assets,input.replayId,input.revision,input.phaseId),id=randomUUID(),directory=resolve(base,id);await mkdir(directory,{recursive:true});
         const job:Job={id,revision:snapshot.document.revision,title:snapshot.document.title,directory,created:Date.now(),state:'receiving',tiles:[],height:0,bytes:0,lock:Promise.resolve()};jobs.set(id,job);json(response,201,{...view(job),presentation:snapshot.presentation,warnings:snapshot.warnings,limits:EXPORT_LIMITS});return true;
       }
       const match=/^\/api\/png-jobs\/([a-zA-Z0-9_-]+)(?:\/(tiles|compose|file))?$/.exec(url.pathname);if(!match)throw new ApiError(404,'导出接口不存在');const job=find(match[1]),action=match[2];

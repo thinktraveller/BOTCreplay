@@ -19,6 +19,7 @@ export function parseStrictJson(text: string): { value?: JsonValue; errors: Impo
   const root = parseTree(text, syntax, { disallowComments: true, allowTrailingComma: false, allowEmptyContent: false });
   errors.push(...syntax.map(error => ({ path: '/', message: printParseErrorCode(error.error), ...locate(error.offset) })));
   function check(node: JsonNode, path: string) {
+    if(node.type==='number'&&!Number.isFinite(node.value))errors.push({path:path||'/',message:'数值须为有限数值',...locate(node.offset)});
     if (node.type === 'object') {
       const names = new Set<string>();
       for (const property of node.children ?? []) {
@@ -59,8 +60,9 @@ export function importScript(text: string): ScriptImport {
     if (!source && !full) { errors.push({ path, message: `找不到仅ID角色“${id}”的资料，请提供完整定义` }); return; }
     if (!definition(raw)) { errors.push(...(definition.errors ?? []).map(error => ({ path: path + error.instancePath, message: error.message ?? '角色字段无效' }))); return; }
     raw = raw as Record<string, JsonValue>; urls(raw, path);
-    const rule = source && (!full || raw.ability === source.ability) ? getCurrentRule(exact!)! : { roleId: id, roleName: String(raw.name), version: 'imported-manual-v1', abilityText: String(raw.ability), source: 'imported-script', actionReview: { proposalVersion: 'manual', status: 'pending' as const } };
-    if (full && source && raw.ability !== source.ability) warnings.push({ path: path + '/ability', message: '导入技能与内置版本不同，保留导入版本并仅开放人工记录' });
+    const knownRule=source?getCurrentRule(exact!):undefined,matches=source&&(!full||raw.ability===source.ability||raw.ability===knownRule?.abilityText);
+    const rule = matches ? knownRule! : { roleId: id, roleName: String(raw.name), version: 'imported-manual-v1', abilityText: String(raw.ability), source: 'imported-script', actionReview: { proposalVersion: 'manual', status: 'pending' as const } };
+    if (full && source && !matches) warnings.push({ path: path + '/ability', message: '导入技能与内置版本不同，保留导入版本并仅开放人工记录' });
     script.roles.push({ role: { roleId: exact ?? id, name: String(raw.name), type: raw.team as RoleType, ruleVersion: rule.version }, raw: raw as Record<string, JsonValue>, currentRule: rule });
   });
   // Explicit night-order lists are optional; unknown player references are still diagnosed.

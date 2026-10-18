@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed, ref,watch } from 'vue';
 import type { ReplayPresentation } from './types.js';
 
 const props = defineProps<{ replay: ReplayPresentation; print?: boolean }>();
@@ -7,11 +7,14 @@ const phaseId = ref('');
 const selectedEventId = ref('');
 const seatTiming=ref('after');
 const jumpId=ref('');
+const failedIcons=ref(new Set<string>());
+watch(()=>props.replay,()=>failedIcons.value.clear());
 const events = computed(() => props.print || !phaseId.value ? props.replay.events : props.replay.events.filter(event => event.phaseId === phaseId.value));
 const selected = computed(() => props.replay.events.find(event => event.eventId === selectedEventId.value));
 const selectedPlayers=computed(()=>seatTiming.value==='after'?selected.value?.playersAfter??selected.value?.players:selected.value?.players);
 function jump(){phaseId.value='';selectedEventId.value=jumpId.value;setTimeout(()=>document.querySelector(`[data-event-id="${CSS.escape(jumpId.value)}"]`)?.scrollIntoView({behavior:'smooth',block:'center'}),0);}
 function embeddedIcon(assetId?: string) {
+  if(assetId&&failedIcons.value.has(assetId))return undefined;
   const asset = assetId ? props.replay.assets[assetId] : undefined;
   if (asset?.dataUrl && /^data:image\/(png|jpeg|webp);base64,[a-z\d+/=]+$/i.test(asset.dataUrl)) return asset.dataUrl;
   if (asset?.localUrl && /^https?:$/.test(location.protocol)) {
@@ -35,7 +38,7 @@ function embeddedIcon(assetId?: string) {
     </nav>
     <section class="event-list" aria-label="复盘事件">
       <article v-for="(event, index) in events" :key="event.eventId" class="event-card" :data-event-id="event.eventId">
-        <img v-if="embeddedIcon(event.iconAssetId)" class="role-icon" :src="embeddedIcon(event.iconAssetId)" :alt="replay.assets[event.iconAssetId!]?.label || '角色图标'">
+        <img v-if="embeddedIcon(event.iconAssetId)" class="role-icon" :src="embeddedIcon(event.iconAssetId)" :alt="replay.assets[event.iconAssetId!]?.label || '角色图标'" @error="event.iconAssetId&&failedIcons.add(event.iconAssetId)">
         <span v-else class="role-icon placeholder" role="img" aria-label="缺失图标占位">?</span>
         <div class="event-content">
           <div class="event-heading"><span class="event-index">{{ index + 1 }}</span><span v-if="event.subjectParts" class="subject"><span v-for="(part, partIndex) in event.subjectParts" :key="partIndex" :class="part.alignment">{{ part.text }}</span></span><span v-else class="subject" :class="event.alignment">{{ event.subject }}</span><span class="event-phase">{{replay.phases.find(phase=>phase.phaseId===event.phaseId)?.label}}</span></div>
@@ -48,7 +51,7 @@ function embeddedIcon(assetId?: string) {
     </section>
     <aside v-if="selected && !print" class="seat-panel" aria-label="事件时座位">
       <h2>此时的座位 · {{ selected.subject }}</h2><label>查看时点<select v-model="seatTiming" aria-label="查看时点"><option value="before">事件发生前</option><option value="after">事件发生后</option></select></label>
-      <ol class="seat-list"><li v-for="player in selectedPlayers" :key="player.playerId" :class="player.alignment"><img v-if="embeddedIcon(player.iconAssetId)" class="role-icon" :src="embeddedIcon(player.iconAssetId)" :alt="player.identity"><strong>{{ player.seat }} · {{ player.nickname }}</strong><span>{{ player.identity }} · {{player.alignment==='good'?'善良':'邪恶'}} · {{ player.alive ? '存活' : '死亡' }}</span><span v-for="(condition,index) in player.states" :key="'s'+index">{{condition}}</span><span v-for="(ability,index) in player.abilities" :key="'a'+index">{{ability}}</span><span v-for="(reminder,index) in player.reminders" :key="'r'+index">标记：{{reminder}}</span></li></ol>
+      <ol class="seat-list"><li v-for="player in selectedPlayers" :key="player.playerId" :class="player.alignment"><img v-if="embeddedIcon(player.iconAssetId)" class="role-icon" :src="embeddedIcon(player.iconAssetId)" :alt="player.identity" @error="player.iconAssetId&&failedIcons.add(player.iconAssetId)"><strong>{{ player.seat }} · {{ player.nickname }}</strong><span>{{ player.identity }} · {{player.alignment==='good'?'善良':'邪恶'}} · {{ player.alive ? '存活' : '死亡' }}</span><span v-for="(condition,index) in player.states" :key="'s'+index">{{condition}}</span><span v-for="(ability,index) in player.abilities" :key="'a'+index">{{ability}}</span><span v-for="(reminder,index) in player.reminders" :key="'r'+index">标记：{{reminder}}</span></li></ol>
     </aside>
     <footer class="replay-footer">复盘结束 · {{ replay.events.length }} 条记录 · {{ replay.replayId }} / r{{ replay.revision }}</footer>
   </main>

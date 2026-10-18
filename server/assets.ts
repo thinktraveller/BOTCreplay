@@ -12,7 +12,7 @@ export function validateRemoteAddress(address:string) {
   if(isIP(value)===4) { const a=value.split('.').map(Number); return !(a[0]===0||a[0]===10||a[0]===127||a[0]>=224||a[0]===169&&a[1]===254||a[0]===172&&a[1]>=16&&a[1]<=31||a[0]===192&&a[1]===168||a[0]===100&&a[1]>=64&&a[1]<=127); }
   return isIP(value)===6 && !(/^(::|fc|fd|fe8|fe9|fea|feb)/.test(value));
 }
-export function createAssetCache(root=resolve('runtime-data/assets'), options:{fetcher?:typeof fetch;validateHost?:(url:URL)=>Promise<void>}={}) {
+export function createAssetCache(root=resolve('runtime-data/assets'), options:{fetcher?:typeof fetch;validateHost?:(url:URL)=>Promise<void>;requestTimeoutMs?:number}={}) {
   const fetcher=options.fetcher??fetch;
   const validateHost=options.validateHost??(async(url:URL)=>{ const results=await lookup(url.hostname.replace(/^\[|\]$/g,''),{all:true}); if(!results.length||results.some(result=>!validateRemoteAddress(result.address))) throw new ApiError(422,'图标地址不可指向本机或内网'); });
   const active=new Map<string,Promise<AssetReference>>();
@@ -35,7 +35,7 @@ export function createAssetCache(root=resolve('runtime-data/assets'), options:{f
     let target=new URL(urlText);
     for(let redirect=0;redirect<4;redirect++) {
       if(!['http:','https:'].includes(target.protocol)||target.username||target.password) throw new ApiError(422,'图标仅支持无凭据HTTP(S)'); await validateHost(target);
-      const response=await fetcher(target,{redirect:'manual',signal:AbortSignal.timeout(12_000)});
+      const response=await fetcher(target,{redirect:'manual',signal:AbortSignal.timeout(options.requestTimeoutMs??12_000)});
       if(response.status>=300&&response.status<400&&response.headers.get('location')) { await response.body?.cancel(); target=new URL(response.headers.get('location')!,target); continue; }
       if(!response.ok||!response.body) throw new ApiError(422,`图标下载失败：HTTP ${response.status}`);
       if(Number(response.headers.get('content-length'))>MAX_BYTES) { await response.body.cancel(); throw new ApiError(413,'单个图标超过5MiB'); }

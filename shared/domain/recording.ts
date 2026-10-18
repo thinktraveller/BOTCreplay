@@ -17,12 +17,15 @@ export type EffectDraftKind='death'|'revive'|'alignment'|'role'|'perceived'|'dis
 export interface EffectDraft { id:string; kind:EffectDraftKind; playerId:string; roleId:string; alignment:Alignment|''; reference:string; text:string; amount:number; mode:'real'|'perceived'; deathAccess:'none'|'on-death'|'retained'|'source-trigger'; limit?:number; expiresPhaseId?:string; holderKind?:'player'|'storyteller'|'group'; holderName?:string; parentAbilityId?:string }
 export interface EventDraft {
   eventId:string; phaseId:string; playerId:string; action:string; text:string; information:string; note:string; exceptionReason:string; targetIds:string[]; visibility:ReplayEvent['visibility'];
-  sourceEventId:string; sourcePlayerId:string; relatedEffectIds:string[]; abilityId:string; effects:EffectDraft[];
+  sourceEventId:string; sourcePlayerId:string;sourceTiming?:'before'|'after';originAbilityId?:string; relatedEffectIds:string[]; abilityId:string; effects:EffectDraft[];
   roleChangeKind:'exchange'|'replacement'; roleChangeStatus:'not-used'|'selected'|'failed'|'applied'; voteTotal?:number; voteDetails?:string;
   hintOrder?:string[];
+  winningAlignment?:Alignment;finalConfirmed?:boolean;
+  roleChangeResultId?:string;
+  generalCustom?:boolean;
   template?:{role:EditorRole;branch:EditorBranch;values:Record<string,string>;customKeys:string[];variantId:string;customText?:string;libraryRevision:number};
 }
-export function newEventDraft(phaseId:string,playerId=''):EventDraft {return {eventId:crypto.randomUUID(),phaseId,playerId,action:'自定义',text:'',information:'',note:'',exceptionReason:'',targetIds:[],visibility:'storyteller',sourceEventId:'',sourcePlayerId:'',relatedEffectIds:[],abilityId:'',effects:[],roleChangeKind:'replacement',roleChangeStatus:'applied'};}
+export function newEventDraft(phaseId:string,playerId=''):EventDraft {return {eventId:crypto.randomUUID(),phaseId,playerId,action:'自定义',text:'',information:'',note:'',exceptionReason:'',targetIds:[],visibility:'storyteller',sourceEventId:'',sourcePlayerId:'',sourceTiming:'after',relatedEffectIds:[],abilityId:'',effects:[],roleChangeKind:'replacement',roleChangeStatus:'applied'};}
 export function newEffectDraft(kind:EffectDraftKind='death',playerId=''):EffectDraft{return {id:crypto.randomUUID(),kind,playerId,roleId:'',alignment:'',reference:'',text:'',amount:1,mode:'real',deathAccess:'none'};}
 export function advancePhase(document:ReplayDocument):ReplayDocument {
   const value=structuredClone(document),last=[...value.phases].sort((a,b)=>a.order-b.order).at(-1)!;
@@ -45,17 +48,20 @@ export function buildRecordedEvent(document:ReplayDocument,draft:EventDraft,stat
     if(ability&&eligibility.formal)requireFact(ability.rule.roleId===template.role.id,'template-role','模板角色须与本次能力实例一致；借用其他来源请人工记录并关联来源');
   } else if(draft.abilityId) {const ability=state.abilities.find(ability=>ability.abilityInstanceId===draft.abilityId);requireFact(ability,'ability','能力实例不存在');event.abilityInstanceId=ability.abilityInstanceId;event.mode=ability.mode==='perceived'?'perceived-action':'manual';}
   if(text.trim())event.customRecords=[{part:'action',branchPath:[draft.template?.role.id??'general',draft.template?.branch.id??draft.action],choice:'自定义',text}];
-  requireFact(text.trim()||draft.action!=='自定义','text','请填写自定义正文');
-  if(draft.action==='投票') {requireFact(draft.voteTotal!==undefined&&Number.isSafeInteger(draft.voteTotal)&&draft.voteTotal>=0,'votes','总票数须为非负整数');event.action.input.总票数=draft.voteTotal;event.action.input.个人票及技能补录=draft.voteDetails??'';event.action.input.投票发生时=JSON.parse(JSON.stringify(state.players)) as JsonValue;}
+  if(draft.roleChangeResultId){event.roleChangeResultId=draft.roleChangeResultId;const effect=document.events.flatMap(event=>event.effects).find(effect=>effect.kind==='change-roles'&&effect.resultId===draft.roleChangeResultId);requireFact(effect,'role-result','找不到既有角色变化结果');if(!event.relatedEffectIds.includes(effect.effectId))event.relatedEffectIds.push(effect.effectId);}
+  requireFact(text.trim()||draft.action!=='自定义'&&!draft.generalCustom,'text','请填写自定义正文');
+  if(draft.action==='投票'&&(!draft.generalCustom||draft.voteTotal!==undefined)) {requireFact(draft.voteTotal!==undefined&&Number.isSafeInteger(draft.voteTotal)&&draft.voteTotal>=0,'votes','总票数须为非负整数');event.action.input.总票数=draft.voteTotal;event.action.input.个人票及技能补录=draft.voteDetails??'';event.action.input.投票发生时=JSON.parse(JSON.stringify(state.players)) as JsonValue;}
   if(draft.sourcePlayerId) {
-    requireFact(draft.sourceEventId,'source','请选择触发来源事件');const source=projectReplay(document).events.find(snapshot=>snapshot.eventId===draft.sourceEventId);const origin=source?.before.players.find(player=>player.playerId===draft.sourcePlayerId);requireFact(origin,'source','来源事件没有该玩家');event.abilityOrigin={eventId:draft.sourceEventId,timing:'before',playerId:origin.playerId,role:structuredClone(origin.actualRole)};
+    requireFact(draft.sourceEventId,'source','请选择触发来源事件');const timing=draft.sourceTiming??'before',source=projectReplay(document).events.find(snapshot=>snapshot.eventId===draft.sourceEventId),sourceState=source?.[timing],origin=sourceState?.players.find(player=>player.playerId===draft.sourcePlayerId);requireFact(origin,'source','来源事件没有该玩家');let originRole=structuredClone(origin.actualRole);if(draft.originAbilityId){const ability=sourceState?.abilities.find(ability=>ability.abilityInstanceId===draft.originAbilityId);requireFact(ability,'source-ability','触发时该能力实例不存在');const reference=document.script.roles.find(entry=>entry.role.roleId===ability.rule.roleId)?.role;requireFact(reference,'source-ability','来源能力角色没有资料');originRole={...structuredClone(reference),ruleVersion:ability.rule.version};}event.abilityOrigin={eventId:draft.sourceEventId,timing,playerId:origin.playerId,role:originRole,...(draft.originAbilityId?{abilityInstanceId:draft.originAbilityId}:{})};
   }
+  if(draft.abilityId&&!draft.playerId){const ability=state.abilities.find(ability=>ability.abilityInstanceId===draft.abilityId);if(ability&&ability.holder.kind!=='player')event.subject=structuredClone(ability.holder);}
   event.action.input.editorDraft=JSON.parse(JSON.stringify(draft)) as JsonValue;
   if(draft.hintOrder)event.action.input.hintOrder=[...draft.hintOrder];
+  if(draft.action==='最终裁决'&&(!draft.generalCustom||draft.finalConfirmed)){requireFact(draft.finalConfirmed&&draft.text.trim(),'final-decision','最终裁决须填写依据并由说书人明确确认');event.action.input.finalDecision={explanation:draft.text,confirmedByStoryteller:true,...(draft.winningAlignment?{winningAlignment:draft.winningAlignment}:{})};}
   let order=0;
   const add=(effect:object,id:string=crypto.randomUUID())=>{event.effects.push({effectId:id,order:order++,source:{eventId:event.eventId,...(event.abilityInstanceId?{abilityInstanceId:event.abilityInstanceId}:{})},...effect} as EffectOperation);};
   const changes=draft.effects.filter(effect=>effect.kind==='role');
-  if(changes.length||draft.action==='角色变化') {
+  if(changes.length||draft.action==='角色变化'&&!draft.generalCustom) {
     const affected=changes.map(change=>change.playerId),selected=draft.targetIds.length?draft.targetIds:affected;
     event.roleChange={kind:draft.roleChangeKind,status:draft.roleChangeStatus,selectedPlayerIds:draft.roleChangeStatus==='not-used'?[]:[...selected],...(draft.roleChangeStatus==='applied'?{affectedPlayerIds:affected,resultId:'result-'+draft.eventId}:{})};
     requireFact(draft.roleChangeStatus==='applied'||!changes.length,'role-change','仅选择、失败或未使用时不能填写实际换角效果');
@@ -82,4 +88,4 @@ export function buildRecordedEvent(document:ReplayDocument,draft:EventDraft,stat
   }
   return event;
 }
-export function appendRecordedEvent(document:ReplayDocument,draft:EventDraft):ReplayDocument {const value=structuredClone(document),order=value.phases.find(phase=>phase.phaseId===draft.phaseId)?.order??Infinity;const before={...value,events:value.events.filter(event=>(value.phases.find(phase=>phase.phaseId===event.phaseId)?.order??Infinity)<=order)};value.events.push(buildRecordedEvent(value,draft,projectReplay(before).state));projectReplay(value);return value;}
+export function appendRecordedEvent(document:ReplayDocument,draft:EventDraft):ReplayDocument {const value=structuredClone(document),order=value.phases.find(phase=>phase.phaseId===draft.phaseId)?.order??Infinity;const before={...value,events:value.events.filter(event=>(value.phases.find(phase=>phase.phaseId===event.phaseId)?.order??Infinity)<=order)};const event=buildRecordedEvent(value,draft,projectReplay(before).state);value.events.push(event);if(event.action.input.finalDecision)value.finalDecision={eventId:event.eventId,explanation:draft.text,confirmedByStoryteller:true,...(draft.winningAlignment?{winningAlignment:draft.winningAlignment}:{})};projectReplay(value);return value;}

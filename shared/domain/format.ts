@@ -50,7 +50,7 @@ export function formatEffect(effect: EffectOperation, before: StateSnapshot, aft
   }
 }
 export function formatEventText(event: ReplayEvent, before: StateSnapshot, after: StateSnapshot, context?: { origin?: EventSnapshot['abilityOrigin']; referencedResult?: RoleChangeResult }): { action: string; information: string; effects: string[]; lines: IdentityPart[][] } {
-  const internalKeys=new Set(['editorDraft','recordingDraft','templateSnapshot','renderedText','reviewedPreset','投票发生时','hintOrder','总票数','个人票及技能补录']);
+  const internalKeys=new Set(['editorDraft','recordingDraft','templateSnapshot','renderedText','reviewedPreset','投票发生时','hintOrder','总票数','个人票及技能补录','设置关系','finalDecision']);
   const visibleInput=Object.fromEntries(Object.entries(event.action.input).filter(([key])=>!internalKeys.has(key)));
   let action = `${event.action.name}${Object.keys(visibleInput).length ? `：${formatRecordedValue(visibleInput)}` : ''}`;
   let actionParts: IdentityPart[] = [{ text: action }];
@@ -75,5 +75,6 @@ export function formatEventText(event: ReplayEvent, before: StateSnapshot, after
   if(custom.has('result'))effectLines=[[{text:custom.get('result')!}],...requiredRoleLines];
   if(custom.has('follow-up'))effectLines.push([{text:custom.get('follow-up')!}]);
   if(event.action.name==='投票'&&typeof event.action.input.总票数==='number')effectLines.unshift([{text:`总票数：${event.action.input.总票数}${event.action.input.个人票及技能补录?`；个人票及技能补录：${formatRecordedValue(event.action.input.个人票及技能补录)}`:''}`}]);
+  if(event.action.name==='最终裁决'){const decision=event.action.input.finalDecision as {winningAlignment?:'good'|'evil'}|undefined;if(decision?.winningAlignment)effectLines.push([{text:`说书人确认${decision.winningAlignment==='good'?'善良':'邪恶'}阵营获胜。`,alignment:decision.winningAlignment}]);}
   return { action, information, effects:effectLines.map(line=>line.map(part=>part.text).join('')), lines:[...(action?[actionParts]:[]),...(information?[[{text:information}]]:[]),...effectLines] };
 }

@@ -5,10 +5,11 @@ import { createReplayStore,ApiError } from './replays.js';
 import { createAssetCache } from './assets.js';
 import { presentReplay } from '../shared/presentation/from-domain.js';
 import { buildStandaloneHtml } from '../shared/export/html.js';
-export async function savedExportSnapshot(store:ReturnType<typeof createReplayStore>,assets:ReturnType<typeof createAssetCache>,id:string,revision:number) {
+export async function savedExportSnapshot(store:ReturnType<typeof createReplayStore>,assets:ReturnType<typeof createAssetCache>,id:string,revision:number,phaseId?:string) {
   const document=await store.load(id);if(!document)throw new ApiError(404,'复盘不存在');
   if(!Number.isSafeInteger(revision)||document.revision!==revision)throw new ApiError(409,'已保存版本已经改变，请重新载入后导出');
   const presentation=presentReplay(document),warnings:string[]=[];
+  if(phaseId){const phase=presentation.phases.find(phase=>phase.phaseId===phaseId);if(!phase)throw new ApiError(422,'导出阶段不存在');presentation.events=presentation.events.filter(event=>event.phaseId===phaseId);presentation.phases=[phase];presentation.title+=' · '+phase.label;}
   await Promise.all(Object.entries(presentation.assets).map(async([id,view])=>{
     delete view.localUrl;
     const asset=document.assets.find(asset=>asset.assetId===id);
@@ -21,7 +22,7 @@ export function createHtmlExportApi(store:ReturnType<typeof createReplayStore>,a
   return async(request:IncomingMessage,response:ServerResponse)=>{
     const url=new URL(request.url??'/','http://localhost'),match=/^\/api\/replays\/([a-zA-Z0-9_-]+)\/export\/(html|snapshot)$/.exec(url.pathname);
     if(!match)return false;if(request.method!=='GET')throw new ApiError(405,'导出快照仅支持GET');
-    const snapshot=await savedExportSnapshot(store,assets,match[1],Number(url.searchParams.get('revision')));
+    const snapshot=await savedExportSnapshot(store,assets,match[1],Number(url.searchParams.get('revision')),url.searchParams.get('phaseId')||undefined);
     if(match[2]==='snapshot'){response.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}).end(JSON.stringify({presentation:snapshot.presentation,warnings:snapshot.warnings}));return true;}
     const [javascript,css]=await Promise.all([readFile(resolve(viewerRoot,'viewer.js'),'utf8'),readFile(resolve(viewerRoot,'viewer.css'),'utf8')]);
     const html=buildStandaloneHtml(snapshot.presentation,{javascript,css});

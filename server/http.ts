@@ -17,7 +17,7 @@ export function createLocalServer(middleware?: Middleware, webRoot = resolve('di
       return;
     }
     if (request.url === '/api/health') {
-      response.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' }).end(JSON.stringify({ service: 'BOTCreplay', milestone: 'M2-replays', schemaVersion: '0.2.0', roleLibraryVersion:'role-library-v1' }));
+      response.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' }).end(JSON.stringify({ service: 'BOTCreplay', milestone: 'M2-M6-replay-editor', schemaVersion: '0.2.0', roleLibraryVersion:'role-library-v1' }));
       return;
     }
     void (async () => {

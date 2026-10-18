@@ -10,6 +10,7 @@ function dependencies(event:ReplayEvent,removed:ReplayEvent[]) {
 export function previewHistory(document:ReplayDocument,events:ReplayEvent[],reason:string,cascade=false):RevisionPreview {
   requireFact(reason.trim(),'revision-reason','请填写历史修订原因');
   const before=projectReplay(document),candidate=structuredClone(document);candidate.events=structuredClone(events);
+  if(candidate.finalDecision){const event=candidate.events.find(event=>event.eventId===candidate.finalDecision!.eventId),decision=event?.action.input.finalDecision as unknown as Omit<NonNullable<ReplayDocument['finalDecision']>,'eventId'>|undefined;if(!event)delete candidate.finalDecision;else if(decision)candidate.finalDecision={eventId:event.eventId,...structuredClone(decision)};}
   let removed=document.events.filter(event=>!candidate.events.some(next=>next.eventId===event.eventId));
   if(cascade){while(true){const dependents=candidate.events.filter(event=>dependencies(event,removed));if(!dependents.length)break;const ids=new Set(dependents.map(event=>event.eventId));candidate.events=candidate.events.filter(event=>!ids.has(event.eventId));removed=[...removed,...dependents];}}
   for(const phase of candidate.phases){const ordered=candidate.events.filter(event=>event.phaseId===phase.phaseId).sort((a,b)=>a.order-b.order);ordered.forEach((event,index)=>event.order=index);}
