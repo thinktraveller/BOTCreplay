@@ -9,6 +9,7 @@
     "check": "vue-tsc --noEmit && tsc -p tsconfig.server.json --noEmit",
     "build": "npm run check && node scripts/build.mjs && tsc -p tsconfig.server.json",
     "start": "node dist/server/server/main.js",
+    "start:local": "node scripts/start-local.mjs",
     "test": "vitest run"
   },
   "dependencies": {
