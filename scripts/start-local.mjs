@@ -14,7 +14,7 @@ async function healthy() {
     const response = await fetch(url + '/api/health', { signal: AbortSignal.timeout(1000) });
     if (!response.ok) return false;
     const data = await response.json();
-    return data.service === 'BOTCreplay' && data.milestone === 'M1-role-workbench';
+    return data.service === 'BOTCreplay' && data.schemaVersion === '0.2.0';
   } catch { return false; }
 }
 function portOccupied() {

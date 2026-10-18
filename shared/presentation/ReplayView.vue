@@ -5,8 +5,12 @@ import type { ReplayPresentation } from './types.js';
 const props = defineProps<{ replay: ReplayPresentation; print?: boolean }>();
 const phaseId = ref('');
 const selectedEventId = ref('');
+const seatTiming=ref('after');
+const jumpId=ref('');
 const events = computed(() => props.print || !phaseId.value ? props.replay.events : props.replay.events.filter(event => event.phaseId === phaseId.value));
 const selected = computed(() => props.replay.events.find(event => event.eventId === selectedEventId.value));
+const selectedPlayers=computed(()=>seatTiming.value==='after'?selected.value?.playersAfter??selected.value?.players:selected.value?.players);
+function jump(){phaseId.value='';selectedEventId.value=jumpId.value;setTimeout(()=>document.querySelector(`[data-event-id="${CSS.escape(jumpId.value)}"]`)?.scrollIntoView({behavior:'smooth',block:'center'}),0);}
 function embeddedIcon(assetId?: string) {
   const asset = assetId ? props.replay.assets[assetId] : undefined;
   if (asset?.dataUrl && /^data:image\/(png|jpeg|webp);base64,[a-z\d+/=]+$/i.test(asset.dataUrl)) return asset.dataUrl;
@@ -27,6 +31,7 @@ function embeddedIcon(assetId?: string) {
     <nav v-if="!print && replay.events.length" class="phase-nav" aria-label="阶段定位">
       <label>查看阶段 <select v-model="phaseId" aria-label="查看阶段"><option value="">全部阶段</option><option v-for="phase in replay.phases" :key="phase.phaseId" :value="phase.phaseId">{{ phase.label }}</option></select></label>
       <span>{{ events.length }} 条记录</span>
+      <label>定位记录<select v-model="jumpId" @change="jump" aria-label="定位记录"><option value="">请选择</option><option v-for="(event,index) in replay.events" :key="event.eventId" :value="event.eventId">{{index+1}} · {{event.subject.slice(0,30)}}</option></select></label>
     </nav>
     <section class="event-list" aria-label="复盘事件">
       <article v-for="(event, index) in events" :key="event.eventId" class="event-card" :data-event-id="event.eventId">
@@ -42,8 +47,8 @@ function embeddedIcon(assetId?: string) {
       <p v-if="!events.length" class="empty-state">尚无复盘记录</p>
     </section>
     <aside v-if="selected && !print" class="seat-panel" aria-label="事件时座位">
-      <h2>此时的座位 · {{ selected.subject }}</h2>
-      <ol class="seat-list"><li v-for="player in selected.players" :key="player.playerId" :class="player.alignment"><strong>{{ player.seat }} · {{ player.nickname }}</strong><span>{{ player.identity }} · {{ player.alive ? '存活' : '死亡' }}</span></li></ol>
+      <h2>此时的座位 · {{ selected.subject }}</h2><label>查看时点<select v-model="seatTiming" aria-label="查看时点"><option value="before">事件发生前</option><option value="after">事件发生后</option></select></label>
+      <ol class="seat-list"><li v-for="player in selectedPlayers" :key="player.playerId" :class="player.alignment"><img v-if="embeddedIcon(player.iconAssetId)" class="role-icon" :src="embeddedIcon(player.iconAssetId)" :alt="player.identity"><strong>{{ player.seat }} · {{ player.nickname }}</strong><span>{{ player.identity }} · {{player.alignment==='good'?'善良':'邪恶'}} · {{ player.alive ? '存活' : '死亡' }}</span><span v-for="(condition,index) in player.states" :key="'s'+index">{{condition}}</span><span v-for="(ability,index) in player.abilities" :key="'a'+index">{{ability}}</span><span v-for="(reminder,index) in player.reminders" :key="'r'+index">标记：{{reminder}}</span></li></ol>
     </aside>
     <footer class="replay-footer">复盘结束 · {{ replay.events.length }} 条记录 · {{ replay.replayId }} / r{{ replay.revision }}</footer>
   </main>

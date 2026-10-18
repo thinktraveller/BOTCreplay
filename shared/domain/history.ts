@@ -1,0 +1,22 @@
+import type { ReplayDocument, ReplayEvent } from './contracts.js';
+import { projectReplay } from './projection.js';
+import { requireFact } from './errors.js';
+export interface RevisionPreview { candidate?:ReplayDocument; error?:string; removedIds:string[]; changedSnapshotIds:string[]; unchangedInformation:number; reason:string; baseRevision:number }
+function dependencies(event:ReplayEvent,removed:ReplayEvent[]) {
+  const events=new Set(removed.map(item=>item.eventId)),effects=new Set(removed.flatMap(item=>item.effects.map(effect=>effect.effectId))),abilities=new Set(removed.flatMap(item=>item.effects.flatMap(effect=>effect.kind==='grant-ability'?[effect.ability.abilityInstanceId]:[]))),conditions=new Set(removed.flatMap(item=>item.effects.flatMap(effect=>effect.kind==='add-condition'?[effect.condition.conditionId]:[]))),triggers=new Set(removed.flatMap(item=>item.effects.flatMap(effect=>effect.kind==='schedule-trigger'?[effect.trigger.triggerId]:[]))),results=new Set(removed.flatMap(item=>item.effects.flatMap(effect=>effect.kind==='change-roles'?[effect.resultId]:[])));
+  return event.causes.some(source=>events.has(source.eventId))||!!event.abilityOrigin&&events.has(event.abilityOrigin.eventId)||event.relatedEffectIds.some(id=>effects.has(id))||!!event.abilityInstanceId&&abilities.has(event.abilityInstanceId)||!!event.roleChangeResultId&&results.has(event.roleChangeResultId)||event.effects.some(effect=>
+    events.has(effect.source.eventId)||!!effect.source.abilityInstanceId&&abilities.has(effect.source.abilityInstanceId)||effect.kind==='end-condition'&&conditions.has(effect.conditionId)||effect.kind==='update-ability'&&abilities.has(effect.abilityInstanceId)||['settle-trigger','cancel-trigger'].includes(effect.kind)&&triggers.has((effect as {triggerId:string}).triggerId)||effect.kind==='settle-trigger'&&effect.effectIds.some(id=>effects.has(id))||effect.kind==='grant-ability'&&(!!effect.ability.parentAbilityInstanceId&&abilities.has(effect.ability.parentAbilityInstanceId)||!!effect.ability.source&&events.has(effect.ability.source.eventId)));
+}
+export function previewHistory(document:ReplayDocument,events:ReplayEvent[],reason:string,cascade=false):RevisionPreview {
+  requireFact(reason.trim(),'revision-reason','请填写历史修订原因');
+  const before=projectReplay(document),candidate=structuredClone(document);candidate.events=structuredClone(events);
+  let removed=document.events.filter(event=>!candidate.events.some(next=>next.eventId===event.eventId));
+  if(cascade){while(true){const dependents=candidate.events.filter(event=>dependencies(event,removed));if(!dependents.length)break;const ids=new Set(dependents.map(event=>event.eventId));candidate.events=candidate.events.filter(event=>!ids.has(event.eventId));removed=[...removed,...dependents];}}
+  for(const phase of candidate.phases){const ordered=candidate.events.filter(event=>event.phaseId===phase.phaseId).sort((a,b)=>a.order-b.order);ordered.forEach((event,index)=>event.order=index);}
+  const base={baseRevision:document.revision,removedIds:removed.map(event=>event.eventId),changedSnapshotIds:[] as string[],unchangedInformation:candidate.events.filter(event=>{const original=document.events.find(item=>item.eventId===event.eventId);return original&&JSON.stringify(original.receivedInformation)===JSON.stringify(event.receivedInformation);}).length,reason:reason.trim()};
+  try{const after=projectReplay(candidate);base.changedSnapshotIds=after.events.filter(event=>{const old=before.events.find(item=>item.eventId===event.eventId);return !old||JSON.stringify(old.before)!==JSON.stringify(event.before)||JSON.stringify(old.after)!==JSON.stringify(event.after);}).map(event=>event.eventId);return {...base,candidate};}catch(error){return {...base,error:(error as Error).message};}
+}
+export function auditRevision(candidate:ReplayDocument,reason:string,previousRevision:number):ReplayDocument {
+  const value=structuredClone(candidate),phase=value.phases.at(-1)!;
+  value.events.push({eventId:crypto.randomUUID(),phaseId:phase.phaseId,order:Math.max(-1,...value.events.filter(event=>event.phaseId===phase.phaseId).map(event=>event.order))+1,subject:{kind:'storyteller',name:'说书人'},mode:'manual',action:{name:'历史修订',input:{原因:reason,修订前版本:previousRevision}},receivedInformation:null,effects:[],relatedEffectIds:[],causes:[],visibility:'storyteller',recipients:[],note:'保留已填写的信息与通知，状态按修订后的有序事实重建。'});projectReplay(value);return value;
+}

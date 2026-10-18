@@ -4,6 +4,8 @@ import { createReplayStore, ApiError, MAX_REPLAY_BYTES } from './replays.js';
 import { createAssetCache } from './assets.js';
 import { importScript } from '../shared/import/script.js';
 import type { AssetReference, ReplayDocument } from '../shared/domain/contracts.js';
+import { projectReplay } from '../shared/domain/projection.js';
+import { randomUUID } from 'node:crypto';
 export function sendJson(response:ServerResponse,status:number,value:unknown) { response.writeHead(status,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}).end(JSON.stringify(value)); }
 export async function readJson(request:IncomingMessage,limit=MAX_REPLAY_BYTES):Promise<any> {
   if(!(request.headers['content-type']??'').startsWith('application/json')) throw new ApiError(415,'请使用JSON请求');
@@ -33,6 +35,21 @@ export function createReplayApi(root=resolve('runtime-data')) {
       if(assetMatch&&request.method==='GET') { const data=await assets.read(assetMatch[1]); response.writeHead(200,{'Content-Type':'image/png','Cache-Control':'public, max-age=31536000, immutable','X-Content-Type-Options':'nosniff'}).end(data); return true; }
       if(path==='/api/replays'&&request.method==='GET') { sendJson(response,200,await store.list()); return true; }
       if(path==='/api/replays'&&request.method==='POST') { const body=await readJson(request); sendJson(response,201,await store.save(body.document,null)); return true; }
+      if(path==='/api/replays/restore-version'&&request.method==='POST') {const body=await readJson(request);const source=await store.loadVersion(body.replayId,body.revision);source.replayId=randomUUID();source.revision=0;source.title+='（恢复副本）';sendJson(response,201,await store.save(source,null));return true;}
+      if(path==='/api/replays/restore'&&request.method==='POST') {
+        const body=await readJson(request,128*1024*1024),backup=body.backup;
+        if(backup?.format!=='botcreplay-backup-v1'||!backup.document||typeof backup.assets!=='object'||!backup.assets||Array.isArray(backup.assets))throw new ApiError(422,'不是受支持的整局资源备份');
+        const document=structuredClone(backup.document) as ReplayDocument;projectReplay(document);document.replayId=randomUUID();document.revision=0;document.title+='（导入副本）';
+        for(const asset of document.assets) if(asset.contentHash&&Object.hasOwn(backup.assets,asset.contentHash)){if(typeof backup.assets[asset.contentHash]!=='string')throw new ApiError(422,'备份资源格式无效');await assets.ingest(backup.assets[asset.contentHash],asset);}else if(asset.status==='cached')asset.status='missing';
+        sendJson(response,201,await store.save(document,null));return true;
+      }
+      const backupMatch=/^\/api\/replays\/([a-zA-Z0-9_-]+)\/backup$/.exec(path);
+      if(backupMatch&&request.method==='GET') {
+        const document=await store.load(backupMatch[1]);if(!document)throw new ApiError(404,'复盘不存在');if(Number(url.searchParams.get('revision'))!==document.revision)throw new ApiError(409,'复盘版本已改变，请重新载入再备份');
+        const embedded:Record<string,string>={},warnings:string[]=[];
+        for(const asset of document.assets)if(asset.status==='cached'&&asset.contentHash)try{embedded[asset.contentHash]='data:image/png;base64,'+(await assets.read(asset.contentHash)).toString('base64');}catch{warnings.push(asset.placeholderLabel+'：图标缺失，恢复时使用占位');}
+        sendJson(response,200,{format:'botcreplay-backup-v1',createdAt:new Date().toISOString(),document,assets:embedded,warnings});return true;
+      }
       const match=/^\/api\/replays\/([a-zA-Z0-9_-]+)(?:\/(history|cache)(?:\/(\d+))?)?$/.exec(path);
       if(!match) throw new ApiError(404,'接口不存在');
       const [,id,action,version]=match;

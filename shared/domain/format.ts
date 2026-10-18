@@ -31,6 +31,7 @@ export function formatRecordedValue(value: JsonValue): string {
 }
 export function formatEffect(effect: EffectOperation, before: StateSnapshot, after: StateSnapshot): string {
   const playerName = (id: string) => playerById(after, id).nickname;
+  const abilityName=(id:string)=>[...before.abilities,...after.abilities].find(ability=>ability.abilityInstanceId===id)?.rule.roleName??'能力';
   switch (effect.kind) {
     case 'change-roles': return effect.changes.map(change => `${playerName(change.playerId)}现在的角色是${change.to.name}，当前阵营为${(change.toAlignment ?? playerById(after, change.playerId).alignment) === 'good' ? '善良' : '邪恶'}`).join('\n');
     case 'set-role': return `${playerName(effect.playerId)}的${effect.perception === 'actual' ? '真实角色' : effect.perception === 'perceived' ? '认知角色' : '伪装'}为${effect.role.name}`;
@@ -38,18 +39,20 @@ export function formatEffect(effect: EffectOperation, before: StateSnapshot, aft
     case 'set-alignment': return `${playerName(effect.playerId)}转为${effect.alignment === 'good' ? '善良' : '邪恶'}`;
     case 'set-life': return `${playerName(effect.playerId)}${effect.actuallyAlive ? '实际存活' : '实际死亡'}`;
     case 'execution': return `${playerName(effect.playerId)}被处决（生死另记）`;
-    case 'add-condition': return `${playerName(effect.condition.targetPlayerId)}新增${({ drunk: '醉酒', poisoned: '中毒', 'zombuul-alive': '活尸', 'falsely-dead': '假死', registration: '特殊识别' })[effect.condition.kind]}来源 ${effect.condition.conditionId}`;
-    case 'end-condition': { const condition = before.conditions.find(x => x.conditionId === effect.conditionId) ?? after.conditions.find(x => x.conditionId === effect.conditionId); return `${condition ? playerName(condition.targetPlayerId) : ''}解除来源 ${effect.conditionId}`; }
-    case 'grant-ability': return `${formatSubject(effect.ability.holder, after).map(x => x.text).join('')}获得${effect.ability.mode === 'perceived' ? '认知' : '真实'}能力实例 ${effect.ability.abilityInstanceId}`;
-    case 'update-ability': return `能力 ${effect.abilityInstanceId}：已用${effect.usage.used}${effect.usage.limit === undefined ? '' : `/${effect.usage.limit}`}，${({ unused: '未使用', activated: '已发动', consumed: '已耗尽', lost: '已失去' })[effect.usage.state]}`;
+    case 'add-condition': return `${playerName(effect.condition.targetPlayerId)}新增${({ drunk: '醉酒', poisoned: '中毒', 'zombuul-alive': '活尸', 'falsely-dead': '假死', registration: '特殊识别' })[effect.condition.kind]}（独立来源）`;
+    case 'end-condition': { const condition = before.conditions.find(x => x.conditionId === effect.conditionId) ?? after.conditions.find(x => x.conditionId === effect.conditionId); return `${condition ? playerName(condition.targetPlayerId) : ''}解除一项${condition?({drunk:'醉酒',poisoned:'中毒','zombuul-alive':'活尸','falsely-dead':'假死',registration:'特殊识别'})[condition.kind]:'状态'}来源`; }
+    case 'grant-ability': return `${formatSubject(effect.ability.holder, after).map(x => x.text).join('')}获得${effect.ability.mode === 'perceived' ? '认知' : '真实'}${effect.ability.rule.roleName??'角色'}能力`;
+    case 'update-ability': return `${abilityName(effect.abilityInstanceId)}能力：已用${effect.usage.used}${effect.usage.limit === undefined ? '' : `/${effect.usage.limit}`}，${({ unused: '未使用', activated: '已发动', consumed: '已耗尽', lost: '已失去' })[effect.usage.state]}`;
     case 'set-reminder': return `${playerName(effect.playerId)}${effect.active ? '添加' : '移除'}标记“${effect.reminder.text}”`;
-    case 'schedule-trigger': return `建立待结算链 ${effect.trigger.chainId} / ${effect.trigger.triggerId}：${effect.trigger.targetPlayerIds.map(playerName).join('、')}，${effect.trigger.window.description}`;
-    case 'settle-trigger': return `触发 ${effect.triggerId}实际消耗${effect.consumed}次，关联后果${effect.effectIds.length}项`;
-    case 'cancel-trigger': return `取消触发 ${effect.triggerId}：${effect.reason}`;
+    case 'schedule-trigger': return `建立待结算：${effect.trigger.targetPlayerIds.map(playerName).join('、')}，${effect.trigger.window.description}，剩余${effect.trigger.remaining}次`;
+    case 'settle-trigger': return `本次待结算触发实际消耗${effect.consumed}次，关联后果${effect.effectIds.length}项`;
+    case 'cancel-trigger': return `取消待结算触发：${effect.reason}`;
   }
 }
 export function formatEventText(event: ReplayEvent, before: StateSnapshot, after: StateSnapshot, context?: { origin?: EventSnapshot['abilityOrigin']; referencedResult?: RoleChangeResult }): { action: string; information: string; effects: string[]; lines: IdentityPart[][] } {
-  let action = `${event.action.name}${Object.keys(event.action.input).length ? `：${formatRecordedValue(event.action.input)}` : ''}`;
+  const internalKeys=new Set(['editorDraft','recordingDraft','templateSnapshot','renderedText','reviewedPreset','投票发生时','hintOrder','总票数','个人票及技能补录']);
+  const visibleInput=Object.fromEntries(Object.entries(event.action.input).filter(([key])=>!internalKeys.has(key)));
+  let action = `${event.action.name}${Object.keys(visibleInput).length ? `：${formatRecordedValue(visibleInput)}` : ''}`;
   let actionParts: IdentityPart[] = [{ text: action }];
   if (event.roleChange) {
     const subject = formatSubject(event.subject, before);

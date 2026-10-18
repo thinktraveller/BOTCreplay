@@ -5,6 +5,7 @@ import { requireFact } from './errors.js';
 export interface SetupPlayer { nickname: string; roleId: string; alignment: Alignment; perceivedRoleId?: string; disguiseRoleId?: string }
 export interface SetupInput { replayId: string; title: string; players: SetupPlayer[]; notes: string }
 export const BASE_COUNTS: Record<number, [number, number, number, number]> = { 7:[5,0,1,1],8:[5,1,1,1],9:[5,2,1,1],10:[7,0,2,1],11:[7,1,2,1],12:[7,2,2,1],13:[9,0,3,1],14:[9,1,3,1],15:[9,2,3,1] };
+export function initialDeathAccess(name:string) {if(name==='孟婆')return 'retained' as const;if(['守鸦人','贤者','秉笔','报丧女妖','月之子','心上人','理发师','瘟疫医生','帽匠','炸弹人'].includes(name))return 'on-death' as const;if(['典狱长','阎罗'].includes(name))return 'source-trigger' as const;return 'none' as const;}
 export function createReplay(script: ScriptSnapshot, input: SetupInput): ReplayDocument {
   const base = BASE_COUNTS[input.players.length];
   requireFact(base, 'player-count', '人数须为7～15人');
@@ -23,7 +24,7 @@ export function createReplay(script: ScriptSnapshot, input: SetupInput): ReplayD
       const entry = find(roleId), abilityInstanceId = `${player.playerId}-${mode}`;
       player.abilityInstanceIds.push(abilityInstanceId);
       // Setup stores provenance and capabilities; role-specific outcomes remain explicitly recorded.
-      document.initialState.abilities.push({ abilityInstanceId, holder:{kind:'player', playerId:player.playerId}, rule:structuredClone(entry.currentRule), mode, parameters:{}, usage:{state:'unused',used:0,evidenceEventIds:[]}, startsAt:{phaseId:'preparation'}, deathAccess:entry.role.name==='孟婆'?'retained':'source-trigger' });
+      document.initialState.abilities.push({ abilityInstanceId, holder:{kind:'player', playerId:player.playerId}, rule:structuredClone(entry.currentRule), mode, parameters:{}, usage:{state:'unused',used:0,evidenceEventIds:[]}, startsAt:{phaseId:'preparation'}, deathAccess:initialDeathAccess(entry.role.name) });
     };
     add(player.actualRole.roleId, 'real'); if (player.perceivedRole) add(player.perceivedRole.roleId, 'perceived');
   }

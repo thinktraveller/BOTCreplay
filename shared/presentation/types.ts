@@ -1,7 +1,7 @@
 import type { Alignment } from '../domain/contracts.js';
 
 // Read-only export view model; role rules and effect application are supplied by the domain layer in M1.
-export interface PresentedPlayer { playerId: string; seat: number; nickname: string; identity: string; alignment: Alignment; alive: boolean }
+export interface PresentedPlayer { playerId: string; seat: number; nickname: string; identity: string; alignment: Alignment; alive: boolean;iconAssetId?:string;states?:string[];abilities?:string[];reminders?:string[] }
 export interface PresentedEvent {
   eventId: string;
   phaseId: string;
