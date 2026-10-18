@@ -23,7 +23,7 @@ export function createReplay(script: ScriptSnapshot, input: SetupInput): ReplayD
       const entry = find(roleId), abilityInstanceId = `${player.playerId}-${mode}`;
       player.abilityInstanceIds.push(abilityInstanceId);
       // Setup stores provenance and capabilities; role-specific outcomes remain explicitly recorded.
-      document.initialState.abilities.push({ abilityInstanceId, holder:{kind:'player', playerId:player.playerId}, rule:structuredClone(entry.currentRule), mode, parameters:{}, usage:{state:'unused',used:0,evidenceEventIds:[]}, startsAt:{phaseId:'preparation'}, deathAccess:'source-trigger' });
+      document.initialState.abilities.push({ abilityInstanceId, holder:{kind:'player', playerId:player.playerId}, rule:structuredClone(entry.currentRule), mode, parameters:{}, usage:{state:'unused',used:0,evidenceEventIds:[]}, startsAt:{phaseId:'preparation'}, deathAccess:entry.role.name==='孟婆'?'retained':'source-trigger' });
     };
     add(player.actualRole.roleId, 'real'); if (player.perceivedRole) add(player.perceivedRole.roleId, 'perceived');
   }

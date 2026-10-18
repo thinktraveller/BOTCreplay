@@ -49,7 +49,7 @@ export function createAssetCache(root=resolve('runtime-data/assets'), options:{f
     if(originalUrl.length>MAX_BYTES*1.4) throw new ApiError(413,'图标地址过长');
     const urlHash=hash(originalUrl), assetId='asset-'+urlHash;
     const pointer=resolve(root,'url-'+urlHash+'.json');
-    if(!retry) { try { const record=JSON.parse(await readFile(pointer,'utf8')) as AssetReference; await read(record.contentHash!); return {...record,placeholderLabel:label}; } catch { /* Retry missing/corrupt entries. */ } }
+    try { const record=JSON.parse(await readFile(pointer,'utf8')) as AssetReference; await read(record.contentHash!); return {...record,placeholderLabel:label}; } catch { /* Retry only missing/corrupt entries; successful resources are always reused. */ }
     const inFlight=active.get(originalUrl); if(inFlight) return {...await inFlight,placeholderLabel:label};
     const run=(async()=>{
       const base={assetId,originalUrl,mediaType:'image/png',placeholderLabel:label};

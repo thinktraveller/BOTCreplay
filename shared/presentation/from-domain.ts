@@ -10,7 +10,7 @@ export function presentReplay(document: ReplayDocument, projection: ReplayProjec
   return {
     replayId: document.replayId, revision: document.revision, title: document.title,
     phases: [...document.phases].sort((a, b) => a.order - b.order).map(phase => ({ phaseId: phase.phaseId, label: phase.kind === 'preparation' ? '准备' : `第${phase.number}${phase.kind === 'night' ? '夜' : '天'}` })),
-    assets: Object.fromEntries(document.assets.map(asset => [asset.assetId, { label: asset.placeholderLabel }])),
+    assets: Object.fromEntries(document.assets.map(asset => [asset.assetId, { label: asset.placeholderLabel,...(asset.status==='cached'&&asset.contentHash?{localUrl:'/api/assets/'+asset.contentHash}:{}) }])),
     events: projection.events.map(snapshot => {
       const event = events.get(snapshot.eventId)!;
       const parts = formatSubject(event.subject, snapshot.before);

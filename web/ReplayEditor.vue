@@ -7,6 +7,8 @@ import { projectReplay } from '../shared/domain/projection.js';
 import { presentReplay } from '../shared/presentation/from-domain.js';
 import ReplayView from '../shared/presentation/ReplayView.vue';
 import { TEAM_LABELS, copyJson } from '../shared/roles/editor-model.js';
+import RecordComposer from './RecordComposer.vue';
+import { advancePhase, appendRecordedEvent, newEventDraft, newEffectDraft, type EventDraft } from '../shared/domain/recording.js';
 
 const rows=ref<{replayId:string;title:string;revision:number;events:number}[]>([]), current=ref<ReplayDocument>();
 const screen=ref<'list'|'setup'|'editor'>('list'),error=ref(''),message=ref(''),busy=ref(false);
@@ -14,7 +16,14 @@ const sourceText=ref(''),preview=ref<ScriptImport>(),script=ref<ScriptSnapshot>(
 const title=ref('我的对局复盘'),count=ref(12),players=ref<SetupPlayer[]>([]),setupNotes=ref(''),dirty=ref(false);
 const presentation=computed(()=>current.value?presentReplay(copyJson(current.value)):undefined);
 const draftKey='botcreplay-replay-draft-v1';
+const composer=ref<InstanceType<typeof RecordComposer>>();
+const state=computed(()=>current.value?projectReplay(copyJson(current.value)).state:undefined);
+const latestPhase=computed(()=>current.value?.phases.at(-1));
+const nightOrder=ref<string[]>([]);
+const nightEntrances=computed(()=>{if(!current.value||!state.value||latestPhase.value?.kind!=='night')return [];const key=latestPhase.value.number===1?'firstNight':'otherNight';return state.value.abilities.map(ability=>{const holder=ability.holder;const player=holder.kind==='player'?state.value!.players.find(player=>player.playerId===holder.playerId):undefined;const entry=current.value!.script.roles.find(item=>item.role.roleId===ability.rule.roleId);return {ability,player,order:Number(entry?.raw[key]??0)};}).filter(item=>item.player&&(item.player.life.actuallyAlive||item.ability.deathAccess==='retained')&&item.ability.usage.state!=='lost'&&item.ability.usage.state!=='consumed'&&item.order>0).sort((a,b)=>{const ai=nightOrder.value.indexOf(a.ability.abilityInstanceId),bi=nightOrder.value.indexOf(b.ability.abilityInstanceId);return ai>=0||bi>=0?(ai<0?1e6:ai)-(bi<0?1e6:bi):a.order-b.order;});});
 const draftAvailable=ref(!!localStorage.getItem(draftKey));
+const conditionLabel=(kind:string)=>({drunk:'醉酒',poisoned:'中毒','zombuul-alive':'活尸','falsely-dead':'假死',registration:'特殊识别'}[kind]??kind);
+function playerIcon(assetId?:string){const asset=current.value?.assets.find(asset=>asset.assetId===assetId);return asset?.status==='cached'&&asset.contentHash?'/api/assets/'+asset.contentHash:undefined;}
 const phaseLabel=(phase:ReplayDocument['phases'][number])=>phase.kind==='preparation'?'准备':`第${phase.number}${phase.kind==='night'?'夜':'天'}`;
 async function api<T>(path:string,method='GET',body?:unknown):Promise<T> { const response=await fetch(path,{method,headers:body?{'Content-Type':'application/json'}:undefined,body:body?JSON.stringify(body):undefined}); const value=await response.json(); if(!response.ok) throw new Error(value.error??'本地服务操作失败'); return value; }
 async function act(fn:()=>Promise<void>) { error.value='';message.value='';busy.value=true;try{await fn();}catch(e){error.value=(e as Error).message;}finally{busy.value=false;} }
@@ -35,6 +44,13 @@ function restoreDraft(){try{const document=JSON.parse(localStorage.getItem(draft
 function download(data:string,name:string,type='application/json'){const url=URL.createObjectURL(new Blob([data],{type}));const anchor=document.createElement('a');anchor.href=url;anchor.download=name;anchor.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 function draftDownload(){download(localStorage.getItem(draftKey)??'{}','BOTCreplay-草稿.json');}
 function discardDraft(){localStorage.removeItem(draftKey);draftAvailable.value=false;}
+async function persistCandidate(candidate:ReplayDocument,text:string){if(!current.value)return;const saved=await api<ReplayDocument>('/api/replays/'+candidate.replayId,'PUT',{document:candidate,expectedRevision:current.value.revision});current.value=saved;dirty.value=false;message.value=`${text} · 已保存修订 ${saved.revision}`;}
+async function nextPhase(){await act(async()=>{if(!current.value)return;await persistCandidate(advancePhase(copyJson(current.value)),'阶段已推进');nightOrder.value=[];});}
+async function record(draft:EventDraft){await act(async()=>{if(!current.value)return;const candidate=appendRecordedEvent(copyJson(current.value),draft);await persistCandidate(candidate,'记录已保存');composer.value?.clear();});}
+async function quickLife(playerId:string){if(!current.value||!state.value)return;const player=state.value.players.find(player=>player.playerId===playerId)!;const draft=newEventDraft(current.value.phases.at(-1)!.phaseId,playerId);draft.action=player.life.actuallyAlive?'实际死亡':'实际复活';draft.text=`${player.nickname}由说书人记录${player.life.actuallyAlive?'实际死亡':'实际复活'}。`;draft.effects=[newEffectDraft(player.life.actuallyAlive?'death':'revive',playerId)];await record(draft);}
+function moveNight(index:number,offset:number){const ids=nightEntrances.value.map(item=>item.ability.abilityInstanceId),to=index+offset;if(to<0||to>=ids.length)return;[ids[index],ids[to]]=[ids[to]!,ids[index]!];nightOrder.value=ids;}
+async function saveNight(){if(!current.value)return;const draft=newEventDraft(current.value.phases.at(-1)!.phaseId);draft.action='夜序提示';draft.hintOrder=nightEntrances.value.map(item=>item.ability.abilityInstanceId);draft.text='本夜手动提示顺序：'+nightEntrances.value.map(item=>`${item.player!.nickname}（${item.ability.rule.roleName} · ${item.ability.mode==='real'?'真实':'认知'}）`).join(' → ');draft.note='仅改变提示顺序，既有事实顺序保持。';await record(draft);}
+watch(()=>[current.value?.replayId,current.value?.phases.at(-1)?.phaseId],()=>{const last=current.value?.events.filter(event=>event.phaseId===latestPhase.value?.phaseId&&event.action.name==='夜序提示').at(-1);nightOrder.value=Array.isArray(last?.action.input.hintOrder)?last!.action.input.hintOrder as string[]:[];});
 watch(current,()=>{if(dirty.value&&current.value){try{localStorage.setItem(draftKey,JSON.stringify(current.value));draftAvailable.value=true;}catch{error.value='浏览器草稿存储已满，请保存或下载草稿。';}}},{deep:true});
 onMounted(()=>void act(refresh));
 </script>
@@ -54,7 +70,10 @@ onMounted(()=>void act(refresh));
       <label>设置关系、配版调整与准备说明<textarea v-model="setupNotes" placeholder="与基础数量不同、同角色多人、认知覆盖来源或特殊设置时写明依据"></textarea></label><button :disabled="busy" @click="create">保存准备 · 创建整局</button></section>
     </template>
     <template v-if="screen==='editor'&&current">
-      <section class="panel"><div class="toolbar"><button @click="screen='list';refresh()">← 本地复盘</button><strong>{{current.title}} · 修订 {{current.revision}}</strong><button @click="save" :disabled="busy">保存整局</button><button @click="cache" :disabled="busy">缓存 / 重试剧本图标</button></div><p>当前阶段：{{phaseLabel(current.phases.at(-1)!)}} · {{current.initialState.players.length}} 人 · {{current.events.length}} 条记录</p><p class="muted">图标按需缓存到本机，下载失败保留角色文字与占位。</p></section>
+      <section class="panel"><div class="toolbar"><button @click="screen='list';refresh()">← 本地复盘</button><strong>{{current.title}} · 修订 {{current.revision}}</strong><button @click="save" :disabled="busy">保存整局</button><button @click="cache" :disabled="busy">缓存 / 重试剧本图标</button><button @click="nextPhase" :disabled="busy">{{latestPhase?.kind==='preparation'?'进入首夜':latestPhase?.kind==='night'?'进入白天':'进入下一夜'}}</button></div><p>当前阶段：{{phaseLabel(current.phases.at(-1)!)}} · {{current.initialState.players.length}} 人 · {{current.events.length}} 条记录</p><p class="muted">图标按需缓存到本机，下载失败保留角色文字与占位。</p></section>
+      <section v-if="state" class="panel"><h2>当前座位 · {{phaseLabel(current.phases.at(-1)!)}}</h2><div class="seat-ring"><div class="ring-center"><strong>{{state.players.length}}人</strong><span>{{phaseLabel(current.phases.at(-1)!)}}</span></div><div v-for="(player,index) in state.players" :key="player.playerId" class="ring-seat" :class="{dead:!player.life.actuallyAlive}" :style="{left:`${50+42*Math.sin(2*Math.PI*index/state.players.length)}%`,top:`${50-42*Math.cos(2*Math.PI*index/state.players.length)}%`}"><img v-if="playerIcon(player.actualRole.iconAssetId)" class="seat-icon" :src="playerIcon(player.actualRole.iconAssetId)" :alt="player.actualRole.name"><span v-else class="seat-icon seat-placeholder" aria-label="图标未缓存">?</span><strong :class="player.alignment">{{player.seat}} · {{player.nickname}}</strong><span :class="player.alignment">{{player.actualRole.name}} · {{player.alignment==='good'?'善良':'邪恶'}}</span><small v-if="player.perceivedRole">认知：{{player.perceivedRole.name}}</small><small>{{state.conditions.filter(item=>item.targetPlayerId===player.playerId&&item.active).map(item=>conditionLabel(item.kind)).join(' / ')}}</small><button :disabled="busy" @click="quickLife(player.playerId)" :aria-label="`${player.seat}号${player.life.actuallyAlive?'记录死亡':'记录复活'}`">{{player.life.actuallyAlive?'存活 → 记录死亡':'💀 死亡 → 复活'}}</button></div></div></section>
+      <section v-if="latestPhase?.kind==='night'" class="panel"><h2>本夜提示顺序</h2><p class="muted">按剧本夜序与在场真实/认知能力提示，可人工调整；死亡触发仍从记录入口关联来源。</p><ol class="night-list"><li v-for="(item,index) in nightEntrances" :key="item.ability.abilityInstanceId"><span>{{item.player!.seat}}号 {{item.player!.nickname}} · {{item.ability.rule.roleName}}（{{item.ability.mode==='real'?'真实':'认知'}}）</span><button @click="moveNight(index,-1)" :disabled="index===0">上移</button><button @click="moveNight(index,1)" :disabled="index===nightEntrances.length-1">下移</button></li></ol><button @click="saveNight" :disabled="busy">保存本夜提示顺序</button></section>
+      <RecordComposer v-if="state" ref="composer" :document="current" :state="state" :busy="busy" @record="record" />
       <ReplayView v-if="presentation" :replay="presentation" />
     </template>
   </section>

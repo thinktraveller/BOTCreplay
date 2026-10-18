@@ -71,5 +71,6 @@ export function formatEventText(event: ReplayEvent, before: StateSnapshot, after
   if(custom.has('information'))information=custom.get('information')!;
   if(custom.has('result'))effectLines=[[{text:custom.get('result')!}],...requiredRoleLines];
   if(custom.has('follow-up'))effectLines.push([{text:custom.get('follow-up')!}]);
+  if(event.action.name==='投票'&&typeof event.action.input.总票数==='number')effectLines.unshift([{text:`总票数：${event.action.input.总票数}${event.action.input.个人票及技能补录?`；个人票及技能补录：${formatRecordedValue(event.action.input.个人票及技能补录)}`:''}`}]);
   return { action, information, effects:effectLines.map(line=>line.map(part=>part.text).join('')), lines:[...(action?[actionParts]:[]),...(information?[[{text:information}]]:[]),...effectLines] };
 }
