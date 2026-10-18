@@ -2,7 +2,7 @@ import { createServer as createViteServer } from 'vite';
 import { createLocalServer } from '../server/http.js';
 
 const vite = await createViteServer({ server: { middlewareMode: true } });
-const server = createLocalServer(vite.middlewares);
+const server = createLocalServer(vite.middlewares,undefined,process.env.BOTCREPLAY_ROLE_LIBRARY_FILE);
 const port = Number(process.env.PORT ?? 5173);
 server.on('error', (error: NodeJS.ErrnoException) => {
   console.error(error.code === 'EADDRINUSE' ? `端口 ${port} 已被占用，请关闭占用程序或设置 PORT。` : error.message);

@@ -1,123 +1,457 @@
 {
-  "version": "m1-feedback-20261018",
+  "version": "m1-branch-decisions-20261018",
   "detail": {
     "explicit": [
       {
         "id": "T004",
         "reason": "各对相邻邪恶玩家",
-        "status": "specified"
+        "status": "approved",
+        "approval": {
+          "scope": "detail-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T004-B01",
+            "fieldLabels": [
+              "详细记录"
+            ]
+          }
+        ]
       },
       {
         "id": "T005",
         "reason": "实际邻近的两名存活玩家",
-        "status": "specified"
+        "status": "approved",
+        "approval": {
+          "scope": "detail-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T005-B01",
+            "fieldLabels": [
+              "详细记录"
+            ]
+          }
+        ]
       },
       {
         "id": "T027",
         "reason": "用于最近距离的恶魔与爪牙",
-        "status": "specified"
+        "status": "approved",
+        "approval": {
+          "scope": "detail-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T027-B01",
+            "fieldLabels": [
+              "详细记录"
+            ]
+          }
+        ]
       },
       {
         "id": "T030",
         "reason": "被数学家统计的具体能力异常玩家",
-        "status": "specified"
+        "status": "approved",
+        "approval": {
+          "scope": "detail-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T030-B01",
+            "fieldLabels": [
+              "详细记录"
+            ]
+          }
+        ]
       },
       {
         "id": "T033",
         "reason": "计入数字的邪恶死者",
-        "status": "specified"
+        "status": "approved",
+        "approval": {
+          "scope": "detail-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T033-B01",
+            "fieldLabels": [
+              "详细记录"
+            ]
+          }
+        ]
       },
       {
         "id": "T038",
         "reason": "猜对的玩家与角色",
-        "status": "specified"
+        "status": "approved",
+        "approval": {
+          "scope": "detail-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T038-B02",
+            "fieldLabels": [
+              "详细记录"
+            ]
+          }
+        ]
       },
       {
         "id": "T070",
         "reason": "四个角色中实际在场者及对应玩家",
-        "status": "specified"
+        "status": "approved",
+        "approval": {
+          "scope": "detail-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T070-B01",
+            "fieldLabels": [
+              "详细记录"
+            ]
+          }
+        ]
       },
       {
         "id": "T071",
         "reason": "最近邪恶玩家、真实方向及收到信息正误",
-        "status": "specified"
+        "status": "approved",
+        "approval": {
+          "scope": "detail-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T071-B01",
+            "fieldLabels": [
+              "详细记录"
+            ]
+          }
+        ]
       },
       {
         "id": "T075",
         "reason": "两名候选死者，实际首死另记",
-        "status": "specified"
+        "status": "approved",
+        "approval": {
+          "scope": "detail-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T075-B01",
+            "fieldLabels": [
+              "详细记录"
+            ]
+          }
+        ]
       }
     ],
     "proposed": [
       {
         "id": "T001",
         "reason": "两名候选中真正对应者与错误候选",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "detail-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T001-B01",
+            "fieldLabels": [
+              "详细说明"
+            ]
+          }
+        ]
       },
       {
         "id": "T002",
         "reason": "外来者候选真正对应者或无外来者依据",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "detail-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T002-B01",
+            "fieldLabels": [
+              "详细说明"
+            ]
+          },
+          {
+            "branchId": "S001-R-T002-B02",
+            "fieldLabels": [
+              "详细说明"
+            ]
+          }
+        ]
       },
       {
         "id": "T003",
         "reason": "爪牙候选真正对应者与特殊识别来源",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "detail-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T003-B01",
+            "fieldLabels": [
+              "详细说明"
+            ]
+          },
+          {
+            "branchId": "S001-R-T003-B02",
+            "fieldLabels": [
+              "详细说明"
+            ]
+          }
+        ]
       },
       {
         "id": "T006",
         "reason": "有恶魔、干扰项及特殊识别的具体依据",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "detail-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T006-B02",
+            "fieldLabels": [
+              "详细说明"
+            ]
+          }
+        ]
       },
       {
         "id": "T016",
         "reason": "选定两人中当晚因自身能力醒来的实际玩家",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "detail-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T016-B01",
+            "fieldLabels": [
+              "详细说明"
+            ]
+          }
+        ]
       },
       {
         "id": "T031",
         "reason": "今天投票的实际恶魔及对应投票记录",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "detail-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T031-B01",
+            "fieldLabels": [
+              "详细说明"
+            ]
+          }
+        ]
       },
       {
         "id": "T032",
         "reason": "今天提名的实际爪牙及对应提名记录",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "detail-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T032-B01",
+            "fieldLabels": [
+              "详细说明"
+            ]
+          }
+        ]
       },
       {
         "id": "T039",
         "reason": "两人中实际杀死本人的恶魔",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "detail-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T039-B01",
+            "fieldLabels": [
+              "详细说明"
+            ]
+          }
+        ]
       },
       {
         "id": "T041",
         "reason": "三人中实际邪恶者及特殊信息依据",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "detail-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T041-B01",
+            "fieldLabels": [
+              "详细说明"
+            ]
+          }
+        ]
       },
       {
         "id": "T056",
         "reason": "得知存活角色的实际对应玩家",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "detail-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T056-B02",
+            "fieldLabels": [
+              "详细说明"
+            ]
+          }
+        ]
       },
       {
         "id": "T064",
         "reason": "最近邪恶玩家及顺逆时针距离",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "detail-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T064-B01",
+            "fieldLabels": [
+              "详细说明"
+            ]
+          }
+        ]
       },
       {
         "id": "T087",
         "reason": "本夜所得角色各自对应的在场玩家",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "detail-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T087-B02",
+            "fieldLabels": [
+              "详细说明"
+            ]
+          }
+        ]
       },
       {
         "id": "T092",
         "reason": "计入数字的存活镇民清单",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "detail-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T092-B01",
+            "fieldLabels": [
+              "详细说明"
+            ]
+          }
+        ]
       },
       {
         "id": "T097",
         "reason": "实际被邪恶能力选择或影响的目标与来源",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "detail-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T097-B01",
+            "fieldLabels": [
+              "详细说明"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -126,144 +460,698 @@
       {
         "id": "T011",
         "reason": "已使用且未选中恶魔",
-        "status": "specified"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T011-B01",
+            "fieldLabels": [
+              "目标玩家",
+              "目标恶魔判定",
+              "实际结算",
+              "次数是否消耗"
+            ],
+            "resultOptions": [
+              "【主语】公开选择了【目标】，未选中恶魔，无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "T021",
         "reason": "已选择的角色不在场",
-        "status": "specified"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T021-B02",
+            "fieldLabels": [
+              "所选角色及在场判定"
+            ],
+            "resultOptions": [
+              "【主语】选择了【角色】，该角色不在场，无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "T029",
         "reason": "已选择的玩家不是恶魔",
-        "status": "specified"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T029-B03",
+            "fieldLabels": [
+              "实际行动者与来源",
+              "本次目标与旧角色",
+              "未生效依据",
+              "消耗及其他后果"
+            ],
+            "resultOptions": [
+              "【主语】选择了【目标】，未选中恶魔，无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "T047",
         "reason": "实际发起教派但有善良玩家未加入",
-        "status": "specified"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T047-B03",
+            "fieldLabels": [
+              "提议全文",
+              "同意参加者",
+              "胜利裁决"
+            ],
+            "resultOptions": [
+              "【主语】提议成立教派，但有善良玩家没有加入，无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "T090",
         "reason": "实际选定两人而阵营不同",
-        "status": "specified"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T090-B03",
+            "fieldLabels": [
+              "玩家1、玩家2",
+              "两人实际阵营"
+            ],
+            "resultOptions": [
+              "【主语】选择了【玩家1】和【玩家2】，因为他们的阵营不同，无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "T094",
         "reason": "实际所选一名或两名角色不在场，或对应玩家未同时存活，本次保护未成立",
-        "status": "specified"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T094-B02",
+            "fieldLabels": [
+              "角色1、角色2",
+              "不在场角色",
+              "在场但未存活的对应玩家"
+            ],
+            "resultOptions": [
+              "【主语】选择了【角色1】和【角色2】，其中【不在场角色集】不在场，无事发生。",
+              "【主语】选择了【角色1】和【角色2】，对应玩家未同时存活，无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "T098",
         "reason": "首夜所选玩家实际邪恶",
-        "status": "specified"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T098-B03",
+            "fieldLabels": [
+              "目标玩家",
+              "目标实际邪恶依据"
+            ],
+            "resultOptions": [
+              "【主语】选择了【目标】；因为【目标】是邪恶的，无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "D027",
         "reason": "死爪牙已选择但本次没有符合条件的死亡或其他效果",
-        "status": "specified"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-D027-B02",
+            "fieldLabels": [
+              "行动的死爪牙",
+              "所选玩家",
+              "目标善良判定",
+              "实际结算"
+            ],
+            "resultOptions": [
+              "【死爪牙】因奸佞的能力在死亡当晚选择了【目标】，无事发生。"
+            ]
+          }
+        ]
       }
     ],
     "proposed": [
       {
         "id": "T010",
         "reason": "首次被提名且提名者非镇民，未触发立刻处决",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T010-B04",
+            "fieldLabels": [
+              "提名者与贞洁者",
+              "本次已发动或触发",
+              "条件与实际结果确认",
+              "次数和其他来源"
+            ],
+            "resultOptions": [
+              "【贞洁者】首次被【提名者】提名；提名者不是镇民，本次能力未触发立即处决，无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "T017",
         "reason": "已选择的玩家不是恶魔，本次驱魔未触发",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T017-B02",
+            "fieldLabels": [
+              "目标玩家",
+              "本次已发动或触发",
+              "条件与实际结果确认",
+              "次数和其他来源"
+            ],
+            "resultOptions": [
+              "【主语】选择了【目标】，因其不是恶魔，无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "T022",
         "reason": "已使用且死者不是镇民，未复活",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T022-B02",
+            "fieldLabels": [
+              "目标玩家",
+              "本次已发动或触发",
+              "条件与实际结果确认",
+              "次数和其他来源"
+            ],
+            "resultOptions": [
+              "【主语】选择了【目标】，因其不是镇民，没有使其复活，无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "T045",
         "reason": "已选择的玩家非爪牙，没有通知或失能",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T045-B02",
+            "fieldLabels": [
+              "目标玩家",
+              "本次已发动或触发",
+              "条件与实际结果确认",
+              "次数和其他来源"
+            ],
+            "resultOptions": [
+              "【主语】选择了【目标】，因其不是爪牙，无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "T048",
         "reason": "已选择的玩家不符合善良判定，没有杀死或抑制恶魔死亡",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T048-B03",
+            "fieldLabels": [
+              "目标玩家",
+              "本次已发动或触发",
+              "条件与实际结果确认",
+              "次数和其他来源"
+            ],
+            "resultOptions": [
+              "【主语】选择了【目标】，因其不符合本次善良判定，无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "T052",
         "reason": "已使用但目标不是落难少女，未变角",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T052-B04",
+            "fieldLabels": [
+              "目标玩家",
+              "本次已发动或触发",
+              "条件与实际结果确认",
+              "次数和其他来源"
+            ],
+            "resultOptions": [
+              "【主语】选择了【目标】，因其不是落难少女，无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "T067",
         "reason": "已公开猜测爪牙和恶魔且未猜对，没有胜利",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T067-B02",
+            "fieldLabels": [
+              "猜作爪牙的玩家",
+              "猜作恶魔的玩家",
+              "本次已发动或触发",
+              "条件与实际结果确认",
+              "次数和其他来源"
+            ],
+            "resultOptions": [
+              "【主语】公开猜测【玩家1】是爪牙、【玩家2】是恶魔，猜测错误，无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "T068",
         "reason": "夜间已选择目标但目标未醉酒中毒，未导致本人死亡",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T068-B02",
+            "fieldLabels": [
+              "目标玩家",
+              "本次已发动或触发",
+              "条件与实际结果确认",
+              "次数和其他来源"
+            ],
+            "resultOptions": [
+              "【主语】选择了【目标】，因其当晚没有醉酒或中毒，本人未因本能力死亡，无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "T075",
         "reason": "猜测错误且本次保护没有生效，仅限保护结果",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T075-B03",
+            "fieldLabels": [
+              "原猜测与首死记录",
+              "本次已发动或触发",
+              "条件与实际结果确认",
+              "次数和其他来源"
+            ],
+            "resultOptions": [
+              "【主语】猜测距离为【距离】，实际首名死者是【死者】，本次猜测错误，保护无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "T078",
         "reason": "已使用且夜间确认观众无恶魔，本技能没有导致本人死亡",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T078-B03",
+            "fieldLabels": [
+              "白天观众来源",
+              "本次已发动或触发",
+              "条件与实际结果确认",
+              "次数和其他来源"
+            ],
+            "resultOptions": [
+              "【主语】当晚确认先前选择的观众中没有恶魔，本能力未导致其死亡，无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "T085",
         "reason": "已使用但目标不是先前得知角色，没有死亡",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T085-B03",
+            "fieldLabels": [
+              "所选目标与先前信息",
+              "本次已发动或触发",
+              "条件与实际结果确认",
+              "次数和其他来源"
+            ],
+            "resultOptions": [
+              "【主语】公开选择了【目标】，因其不是先前得知的【角色】，无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "T086",
         "reason": "已选择的玩家不是恶魔，本人未死且目标未醉",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T086-B02",
+            "fieldLabels": [
+              "目标玩家",
+              "本次已发动或触发",
+              "条件与实际结果确认",
+              "次数和其他来源"
+            ],
+            "resultOptions": [
+              "【主语】选择了【目标】，因其不是恶魔，本人未死亡且目标未醉酒，无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "T089",
         "reason": "整晚结束后确认条件未满足而未交换；结算前仍为待定",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T089-B04",
+            "fieldLabels": [
+              "当晚原选择记录",
+              "整晚结算与条件核验",
+              "本次已发动或触发",
+              "条件与实际结果确认",
+              "次数和其他来源"
+            ],
+            "resultOptions": [
+              "整晚结算结束，【主语】先前选择的【目标】未在当晚被邪恶角色杀死，本次未交换角色，无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "T099",
         "reason": "已使用且所选镇民不在场，无中毒或死亡",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-T099-B02",
+            "fieldLabels": [
+              "所选镇民角色",
+              "本次已发动或触发",
+              "条件与实际结果确认",
+              "次数和其他来源"
+            ],
+            "resultOptions": [
+              "【主语】选择了【镇民角色】，该角色不在场，无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "O006",
         "reason": "已公开选择非善良目标且本技能没有导致死亡",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-O006-B03",
+            "fieldLabels": [
+              "原死亡与公开选择",
+              "本次已发动或触发",
+              "条件与实际结果确认",
+              "次数和其他来源"
+            ],
+            "resultOptions": [
+              "【主语】得知自己死亡后公开选择了【目标】，因其不是善良玩家，本能力无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "O012",
         "reason": "已公开选择非邪恶目标且本技能没有导致落败",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-O012-B02",
+            "fieldLabels": [
+              "原死亡与所选目标",
+              "本次已发动或触发",
+              "条件与实际结果确认",
+              "次数和其他来源"
+            ],
+            "resultOptions": [
+              "【主语】得知自己死亡后公开选择了【目标】，因其不是邪恶玩家，本能力未导致阵营落败，无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "O016",
         "reason": "爪牙已公开猜测且猜错，没有落败",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-O016-B03",
+            "fieldLabels": [
+              "发动爪牙与所猜玩家",
+              "本次已发动或触发",
+              "条件与实际结果确认",
+              "次数和其他来源"
+            ],
+            "resultOptions": [
+              "【爪牙】公开猜测【目标】是落难少女，猜测错误，本能力未导致落败，无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "O017",
         "reason": "实际唯一提名目标是恶魔，没有因魔像能力死亡",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-O017-B02",
+            "fieldLabels": [
+              "通用提名与目标玩家",
+              "本次已发动或触发",
+              "条件与实际结果确认",
+              "次数和其他来源"
+            ],
+            "resultOptions": [
+              "【主语】提名了【目标】，因其是恶魔，本能力未导致其死亡，无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "M012",
         "reason": "已选择的角色在场，不发生换角或创造恶魔裁决",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-M012-B03",
+            "fieldLabels": [
+              "目标玩家与所选角色",
+              "本次已发动或触发",
+              "条件与实际结果确认",
+              "次数和其他来源"
+            ],
+            "resultOptions": [
+              "【主语】选择了【目标】和【角色】，因该角色已在场，无事发生。"
+            ]
+          }
+        ]
       },
       {
         "id": "D023",
         "reason": "已选择的目标角色类型重复，本技能未造成任何死亡",
-        "status": "awaiting-review"
+        "status": "approved",
+        "approval": {
+          "scope": "no-effect-supplement",
+          "originalText": "所有详细说明与无事发生清单审核通过",
+          "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+          "recordedAt": "2026-10-18T01:42:12.882Z"
+        },
+        "applied": [
+          {
+            "branchId": "S001-R-D023-B03",
+            "fieldLabels": [
+              "实际所选玩家集",
+              "本次已发动或触发",
+              "条件与实际结果确认",
+              "次数和其他来源"
+            ],
+            "resultOptions": [
+              "【主语】选择了【玩家集】，因所选目标的角色类型重复，本能力未造成任何死亡，无事发生。"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -283,6 +1171,171 @@
     {
       "id": "D028",
       "reason": "本夜刚选择而等待下一夜或第三夜，不是无事发生。"
+    }
+  ],
+  "decision": {
+    "originalText": "将所有需要解释的分支删除，我不认为这些分支有存在的必要；所有详细说明与无事发生清单审核通过；最后这些复盘填写格式能否使用更加可视化、工程化的方式展示与实现，帮助用户实现可以随时的编辑已有角色、添加新角色或者删除旧角色",
+    "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+    "recordedAt": "2026-10-18T01:42:12.882Z",
+    "approvedScopes": [
+      "detail-supplement",
+      "no-effect-supplement",
+      "listed-branch-removal"
+    ],
+    "completeRoleApproval": false
+  },
+  "removedBranches": [
+    {
+      "id": "O020",
+      "roleId": "fengmaoziyuailisi111",
+      "branchId": "S001-R-O020-B02",
+      "label": "仅记录选择，尚未填写实际换角",
+      "originalRequestedNumber": 2,
+      "decision": {
+        "scope": "listed-branch-removal",
+        "originalText": "将所有需要解释的分支删除，我不认为这些分支有存在的必要",
+        "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+        "recordedAt": "2026-10-18T01:42:12.882Z"
+      }
+    },
+    {
+      "id": "O020",
+      "roleId": "fengmaoziyuailisi111",
+      "branchId": "S001-R-O020-B03",
+      "label": "实际未生效／条件不满足",
+      "originalRequestedNumber": 3,
+      "decision": {
+        "scope": "listed-branch-removal",
+        "originalText": "将所有需要解释的分支删除，我不认为这些分支有存在的必要",
+        "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+        "recordedAt": "2026-10-18T01:42:12.882Z"
+      }
+    },
+    {
+      "id": "O020",
+      "roleId": "fengmaoziyuailisi111",
+      "branchId": "S001-R-O020-B04",
+      "label": "本次不使用换角机会",
+      "originalRequestedNumber": 4,
+      "decision": {
+        "scope": "listed-branch-removal",
+        "originalText": "将所有需要解释的分支删除，我不认为这些分支有存在的必要",
+        "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+        "recordedAt": "2026-10-18T01:42:12.882Z"
+      }
+    },
+    {
+      "id": "O029",
+      "roleId": "zrulianshihsihsihsihishisihc-9j",
+      "branchId": "S001-R-O029-B03",
+      "label": "仅登记触发，尚未填写实际换角",
+      "originalRequestedNumber": 3,
+      "decision": {
+        "scope": "listed-branch-removal",
+        "originalText": "将所有需要解释的分支删除，我不认为这些分支有存在的必要",
+        "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+        "recordedAt": "2026-10-18T01:42:12.882Z"
+      }
+    },
+    {
+      "id": "O029",
+      "roleId": "zrulianshihsihsihsihishisihc-9j",
+      "branchId": "S001-R-O029-B04",
+      "label": "实际未生效／条件不满足",
+      "originalRequestedNumber": 4,
+      "decision": {
+        "scope": "listed-branch-removal",
+        "originalText": "将所有需要解释的分支删除，我不认为这些分支有存在的必要",
+        "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+        "recordedAt": "2026-10-18T01:42:12.882Z"
+      }
+    },
+    {
+      "id": "M003",
+      "roleId": "hongchunnvlangaaaaaaaa111",
+      "branchId": "S001-R-M003-B02",
+      "label": "仅登记触发，尚未填写实际换角",
+      "originalRequestedNumber": 2,
+      "decision": {
+        "scope": "listed-branch-removal",
+        "originalText": "将所有需要解释的分支删除，我不认为这些分支有存在的必要",
+        "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+        "recordedAt": "2026-10-18T01:42:12.882Z"
+      }
+    },
+    {
+      "id": "M029",
+      "roleId": "yangaaaaaaaaaaaa111",
+      "branchId": "S001-R-M029-B01",
+      "label": "提名存活养蛊人形成结算关系",
+      "originalRequestedNumber": 1,
+      "decision": {
+        "scope": "listed-branch-removal",
+        "originalText": "将所有需要解释的分支删除，我不认为这些分支有存在的必要",
+        "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+        "recordedAt": "2026-10-18T01:42:12.882Z"
+      }
+    },
+    {
+      "id": "D006",
+      "roleId": "fangguuuuuuuuuuuuuu111",
+      "branchId": "S001-R-D006-B04",
+      "label": "仅记录选择，尚未填写实际换角",
+      "originalRequestedNumber": 4,
+      "decision": {
+        "scope": "listed-branch-removal",
+        "originalText": "将所有需要解释的分支删除，我不认为这些分支有存在的必要",
+        "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+        "recordedAt": "2026-10-18T01:42:12.882Z"
+      }
+    },
+    {
+      "id": "D006",
+      "roleId": "fangguuuuuuuuuuuuuu111",
+      "branchId": "S001-R-D006-B05",
+      "label": "实际未生效／条件不满足",
+      "originalRequestedNumber": 5,
+      "decision": {
+        "scope": "listed-branch-removal",
+        "originalText": "将所有需要解释的分支删除，我不认为这些分支有存在的必要",
+        "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+        "recordedAt": "2026-10-18T01:42:12.882Z"
+      }
+    },
+    {
+      "id": "D015",
+      "roleId": "zuixihuandeyiji111",
+      "branchId": "S001-R-D015-B03",
+      "label": "仅登记触发，尚未填写实际换角",
+      "originalRequestedNumber": 3,
+      "decision": {
+        "scope": "listed-branch-removal",
+        "originalText": "将所有需要解释的分支删除，我不认为这些分支有存在的必要",
+        "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+        "recordedAt": "2026-10-18T01:42:12.882Z"
+      }
+    },
+    {
+      "id": "D015",
+      "roleId": "zuixihuandeyiji111",
+      "branchId": "S001-R-D015-B04",
+      "label": "实际未生效／条件不满足",
+      "originalRequestedNumber": 4,
+      "decision": {
+        "scope": "listed-branch-removal",
+        "originalText": "将所有需要解释的分支删除，我不认为这些分支有存在的必要",
+        "source": "用户2026-10-18本轮直接指令；_verify/m1-branch-decisions-20261018/input-audit.json",
+        "recordedAt": "2026-10-18T01:42:12.882Z"
+      }
+    }
+  ],
+  "correctedBranchIds": [
+    {
+      "id": "T098",
+      "from": "S001-R-T098-B02",
+      "to": "S001-R-T098-B03",
+      "label": "选择邪恶玩家，无事发生",
+      "reason": "原B02同时指代免死后果与失败分支；免死B02保留，失败分支改唯一B03"
     }
   ]
 }

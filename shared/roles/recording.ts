@@ -6,10 +6,13 @@ import { getSourceRole, isRoleActive } from './catalog.js';
 import type { RecordedActionDraft } from '../domain/drafts.js';
 
 export interface RecordingField { label: string; control: string; detail: string; customOption: '自定义'; customPart: CustomRecord['part'] }
+export interface RecordingRequirement { condition: string; source: string }
 export interface RecordingForm {
   branchId: string; label: string; timing: string; fields: RecordingField[]; path: string;
   sentences: string[]; exampleInput: string; exampleOutput: string[]; notes: string;
   custom: { choice: '自定义'; parts: CustomRecord['part'][]; textRequired: true; retainContext: true; effects: 'explicit-only'; path: string; exampleText: string };
+  detailRequirement?: RecordingRequirement;
+  noEffectRequirement?: RecordingRequirement;
 }
 export interface RecordingProfile { roleId: string; entryId: string; proposalVersion: string; customOption: '自定义'; forms: RecordingForm[] }
 const profiles = new Map((catalogue.roles as RecordingProfile[]).map(profile=>[profile.roleId,profile]));

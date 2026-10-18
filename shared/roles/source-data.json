@@ -2,7 +2,7 @@
   "manifest": {
     "sourcePath": "project-docs/docs/BOTCreplay设计需求.md",
     "sourceSha256": "3581301886538031e40e8d5ee5da39aa8186a5a613fc74b002cfa58edea1a13a",
-    "goalSha256": "021b19a7ec96be33231a514915730e329721b3dd3c236467dd7c05f829bac27c",
+    "goalSha256": "f157ae67054b2d4ddade7eeeffbe7d5c57af739a8d26f5808c012153b6c2e507",
     "sourceVersion": "source-v1",
     "originalItemCount": 221,
     "supportedCount": 197,
@@ -11,7 +11,7 @@
     "note": "原始字段与缺失保持原状；不执行_meta.state、旅行者或传奇/房规行为。角色动作审查与技能版本决定分别登记。",
     "previousSourceSha256": "7377ac4e2b39d64e4cd5896b27241dfddb4e189afc6e72b1eeab51f388a2d931",
     "previousGoalSha256": "e5b422adc2fa493c4f113b8d0527fb491565337479f9b361ee34878bb1842961",
-    "presentationBaseline": "2026-10-18 用户修改意见增量：当前可用192，原始197只读保留；v4通过按证据登记，实际修改者升v5复审。",
+    "presentationBaseline": "2026-10-18 v0.12：删除11解释分支，23/28项补充全部通过；当前192、完整方案63通过/129待复审；角色工作台使用独立本地配置版本。",
     "inputHistory": [
       {
         "sourceSha256": "318c272e008218ae7dc8e1f9d6c4b23f7ba81d4d8f1f73376da7289e5eb86754",
@@ -24,6 +24,12 @@
         "goalSha256": "bc5bd3b53924c90776c1febdbbd27039a513ab52e5f9f5fdc6889d3736868ecd",
         "plan": "v0.10",
         "note": "2026-10-18用户范围与认知模板更新前基准，保留历史。"
+      },
+      {
+        "sourceSha256": "3581301886538031e40e8d5ee5da39aa8186a5a613fc74b002cfa58edea1a13a",
+        "goalSha256": "021b19a7ec96be33231a514915730e329721b3dd3c236467dd7c05f829bac27c",
+        "plan": "v0.11",
+        "note": "2026-10-18解释分支删除、补充批准与角色工作台前的输入基准，保留历史。"
       }
     ],
     "activeSupportedCount": 192,
