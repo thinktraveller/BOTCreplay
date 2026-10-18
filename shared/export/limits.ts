@@ -1,4 +1,5 @@
-// M0 candidate limits. They are explicit budgets, not a claim that every replay is supported.
+// Explicit production guardrails, verified on Windows/Edge with 15 seats and 1000 events.
+// They are budgets, not a promise that every input near the ceiling fits available memory.
 export const EXPORT_LIMITS = Object.freeze({
   assetBytes: 5 * 1024 * 1024,
   width: 1280,

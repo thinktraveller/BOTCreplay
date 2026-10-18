@@ -7,6 +7,7 @@ import type { AssetReference, ReplayDocument } from '../shared/domain/contracts.
 import { projectReplay } from '../shared/domain/projection.js';
 import { randomUUID } from 'node:crypto';
 import { createHtmlExportApi } from './export.js';
+import { createPngJobs } from './png-jobs.js';
 export function sendJson(response:ServerResponse,status:number,value:unknown) { response.writeHead(status,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}).end(JSON.stringify(value)); }
 export async function readJson(request:IncomingMessage,limit=MAX_REPLAY_BYTES):Promise<any> {
   if(!(request.headers['content-type']??'').startsWith('application/json')) throw new ApiError(415,'请使用JSON请求');
@@ -16,6 +17,7 @@ export async function readJson(request:IncomingMessage,limit=MAX_REPLAY_BYTES):P
 export function createReplayApi(root=resolve('runtime-data')) {
   const store=createReplayStore(resolve(root,'replays')), assets=createAssetCache(resolve(root,'assets'));
   const htmlExport=createHtmlExportApi(store,assets);
+  const pngJobs=createPngJobs(store,assets,resolve(root,'exports'));
   async function cacheDocument(document:ReplayDocument,retry=false) {
     const value=structuredClone(document),refs:AssetReference[]=[];
     // Four workers bound concurrent downloads, with no total cache eviction.
@@ -30,9 +32,10 @@ export function createReplayApi(root=resolve('runtime-data')) {
   }
   return {store,assets,handle:async(request:IncomingMessage,response:ServerResponse)=>{
     const url=new URL(request.url??'/','http://localhost'),path=url.pathname;
-    if(!path.startsWith('/api/replays')&&!path.startsWith('/api/assets/')&&path!=='/api/scripts/preview') return false;
+    if(!path.startsWith('/api/replays')&&!path.startsWith('/api/assets/')&&path!=='/api/scripts/preview'&&!path.startsWith('/api/png-jobs')) return false;
     try {
       if(await htmlExport(request,response))return true;
+      if(await pngJobs(request,response))return true;
       if(path==='/api/scripts/preview'&&request.method==='POST') { const body=await readJson(request,16*1024*1024); if(typeof body?.text!=='string') throw new ApiError(400,'请提供剧本原文'); sendJson(response,200,importScript(body.text)); return true; }
       const assetMatch=/^\/api\/assets\/([a-f0-9]{64})$/.exec(path);
       if(assetMatch&&request.method==='GET') { const data=await assets.read(assetMatch[1]); response.writeHead(200,{'Content-Type':'image/png','Cache-Control':'public, max-age=31536000, immutable','X-Content-Type-Options':'nosniff'}).end(data); return true; }

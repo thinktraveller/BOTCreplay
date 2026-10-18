@@ -32,3 +32,4 @@ summary { cursor: pointer; color: #536b76; }
 .print-view { width: 1280px; margin: 0; background: white; }
 .print-view .replay-header, .print-view .replay-footer { border-radius: 0; }
 @media (max-width: 600px) { .replay:not(.print-view) { width: 100%; margin: 0; } .replay-header, .event-card { padding: 24px 18px; } .phase-nav { padding: 16px 18px; } .replay-header { border-radius: 0; } .event-card { gap: 12px; } h1 { font-size: 25px; } }
+.event-phase{margin-left:auto;font-size:12px;white-space:nowrap;color:#688087}
