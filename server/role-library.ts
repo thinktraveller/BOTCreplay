@@ -4,6 +4,7 @@ import { randomUUID } from 'node:crypto';
 import type { IncomingMessage, ServerResponse } from 'node:http';
 import { createDefaultLibrary } from '../shared/roles/editor-defaults.js';
 import { MAX_LIBRARY_BYTES, validateLibrary, type RoleLibrary } from '../shared/roles/editor-model.js';
+import { renameCurrentText } from '../shared/roles/names.js';
 class StoreError extends Error {
     constructor(public status: number, message: string) { super(message); }
 }
@@ -28,7 +29,7 @@ export function createRoleLibraryStore(file = resolve('runtime-data/role-library
         }
         if (validateLibrary(value).length)
             throw new StoreError(500, '本地角色库格式无效，请从有效备份恢复。');
-        return value as RoleLibrary;
+        return renameCurrentText(value as RoleLibrary);
     }
     async function save(value: unknown, expectedRevision: unknown): Promise<RoleLibrary> {
         const run = pending.catch(() => { }).then(async () => {

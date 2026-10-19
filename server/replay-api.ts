@@ -8,13 +8,15 @@ import { projectReplay } from '../shared/domain/projection.js';
 import { randomUUID } from 'node:crypto';
 import { createHtmlExportApi } from './export.js';
 import { createPngJobs } from './png-jobs.js';
+import { createRoleLibraryStore } from './role-library.js';
 export function sendJson(response:ServerResponse,status:number,value:unknown) { response.writeHead(status,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}).end(JSON.stringify(value)); }
 export async function readJson(request:IncomingMessage,limit=MAX_REPLAY_BYTES):Promise<any> {
   if(!(request.headers['content-type']??'').startsWith('application/json')) throw new ApiError(415,'请使用JSON请求');
   let size=0; const chunks:Buffer[]=[]; for await(const chunk of request) { const data=Buffer.from(chunk); size+=data.length; if(size>limit) throw new ApiError(413,'请求超过大小上限'); chunks.push(data); }
   try { return JSON.parse(Buffer.concat(chunks).toString('utf8')); } catch { throw new ApiError(400,'JSON无法解析，原复盘未改变'); }
 }
-export function createReplayApi(root=resolve('runtime-data')) {
+export function createReplayApi(root=resolve('runtime-data'),roleLibraryFile?:string) {
+  const library=createRoleLibraryStore(roleLibraryFile);
   const store=createReplayStore(resolve(root,'replays')), assets=createAssetCache(resolve(root,'assets'));
   const htmlExport=createHtmlExportApi(store,assets);
   const pngJobs=createPngJobs(store,assets,resolve(root,'exports'));
@@ -36,7 +38,7 @@ export function createReplayApi(root=resolve('runtime-data')) {
     try {
       if(await htmlExport(request,response))return true;
       if(await pngJobs(request,response))return true;
-      if(path==='/api/scripts/preview'&&request.method==='POST') { const body=await readJson(request,16*1024*1024); if(typeof body?.text!=='string') throw new ApiError(400,'请提供剧本原文'); sendJson(response,200,importScript(body.text)); return true; }
+      if(path==='/api/scripts/preview'&&request.method==='POST') { const body=await readJson(request,16*1024*1024); if(typeof body?.text!=='string') throw new ApiError(400,'请提供剧本原文'); if(body.versions!==undefined&&(!body.versions||typeof body.versions!=='object'||Array.isArray(body.versions)||Object.values(body.versions).some(value=>typeof value!=='string')))throw new ApiError(400,'版本选择须为名称与版本的对应关系'); sendJson(response,200,importScript(body.text,{versions:body.versions,libraryRoles:(await library.load()).roles})); return true; }
       const assetMatch=/^\/api\/assets\/([a-f0-9]{64})$/.exec(path);
       if(assetMatch&&request.method==='GET') { const data=await assets.read(assetMatch[1]); response.writeHead(200,{'Content-Type':'image/png','Cache-Control':'public, max-age=31536000, immutable','X-Content-Type-Options':'nosniff'}).end(data); return true; }
       if(path==='/api/replays'&&request.method==='GET') { sendJson(response,200,await store.list()); return true; }

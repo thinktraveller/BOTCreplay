@@ -4,6 +4,7 @@ import scope from './role-scope.json' with { type: 'json' };
 import reviewRequirements from './review-requirements.json' with { type: 'json' };
 import { getSourceRole, isRoleActive } from './catalog.js';
 import type { RecordedActionDraft } from '../domain/drafts.js';
+import { renameCurrentText } from './names.js';
 
 export interface RecordingField { label: string; control: string; detail: string; customOption: '自定义'; customPart: CustomRecord['part'] }
 export interface RecordingRequirement { condition: string; source: string }
@@ -17,7 +18,8 @@ export interface RecordingForm {
 export interface RecordingProfile { roleId: string; entryId: string; proposalVersion: string; customOption: '自定义'; forms: RecordingForm[] }
 const profiles = new Map((catalogue.roles as RecordingProfile[]).map(profile=>[profile.roleId,profile]));
 export function getRecordingProfile(exactRoleId: string): RecordingProfile | undefined {
-  return isRoleActive(exactRoleId) ? getArchivedRecordingProfile(exactRoleId) : undefined;
+  const profile = isRoleActive(exactRoleId) ? getArchivedRecordingProfile(exactRoleId) : undefined;
+  return profile ? renameCurrentText(profile) : undefined;
 }
 export function getArchivedRecordingProfile(exactRoleId: string): RecordingProfile | undefined {
   const profile=profiles.get(exactRoleId);return profile?structuredClone(profile):undefined;

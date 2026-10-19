@@ -4,6 +4,7 @@ import overrideData from './rule-overrides.json' with { type: 'json' };
 import scopeData from './role-scope.json' with { type: 'json' };
 import type { RuleReference } from '../domain/contracts.js';
 import type { ActionProposal, RuleOverride, SourceRole } from './types.js';
+import { roleName, renameCurrentText } from './names.js';
 
 export const roleSourceManifest = Object.freeze(sourceData.manifest);
 // Export copies so callers cannot mutate the application catalogue across replays.
@@ -12,27 +13,35 @@ const proposals = new Map((proposalData as ActionProposal[]).map(role => [role.r
 const overrides = new Map((overrideData as RuleOverride[]).map(rule => [rule.roleId, rule]));
 const retiredIds = new Set(scopeData.retired.map(role => role.roleId));
 export const supportedRoleIds: readonly string[] = Object.freeze([...sources.keys()].filter(id => !retiredIds.has(id)));
+const roleNameIds = new Map<string,string[]>();
+for (const id of supportedRoleIds) { const name=roleName(sources.get(id)!.name); roleNameIds.set(name,[...(roleNameIds.get(name)??[]),id]); }
 export function isRoleActive(exactId: string): boolean { return sources.has(exactId) && !retiredIds.has(exactId); }
 export function getArchivedSourceRole(exactId: string): SourceRole | undefined {
   const role = sources.get(exactId);
   return role ? structuredClone(role) : undefined;
 }
 export function getSourceRole(exactId: string): SourceRole | undefined {
-  return isRoleActive(exactId) ? getArchivedSourceRole(exactId) : undefined;
+  const role = isRoleActive(exactId) ? getArchivedSourceRole(exactId) : undefined;
+  return role ? renameCurrentText({ ...role, name: roleName(role.name) }) : undefined;
+}
+export function getSourceRolesByName(name: string): SourceRole[] {
+  return (roleNameIds.get(roleName(name))??[]).map(id=>getSourceRole(id)!);
 }
 export function getArchivedActionProposal(exactId: string): ActionProposal | undefined {
   const proposal = proposals.get(exactId);
   return proposal ? structuredClone(proposal) : undefined;
 }
 export function getActionProposal(exactId: string): ActionProposal | undefined {
-  return isRoleActive(exactId) ? getArchivedActionProposal(exactId) : undefined;
+  const proposal = isRoleActive(exactId) ? getArchivedActionProposal(exactId) : undefined;
+  return proposal ? renameCurrentText(proposal) : undefined;
 }
 export function getRuleOverride(exactId: string): RuleOverride | undefined {
   const rule = overrides.get(exactId);
   return rule ? structuredClone(rule) : undefined;
 }
 export function getCurrentRule(exactId: string): RuleReference | undefined {
-  return isRoleActive(exactId) ? getArchivedRule(exactId) : undefined;
+  const rule = isRoleActive(exactId) ? getArchivedRule(exactId) : undefined;
+  return rule ? { ...rule, roleName: roleName(rule.roleName!) } : undefined;
 }
 // Historical replay facts remain readable even after a role is removed from new games.
 export function getArchivedRule(exactId: string): RuleReference | undefined {

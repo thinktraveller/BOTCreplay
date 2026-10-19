@@ -8,7 +8,7 @@ type Middleware = (request: IncomingMessage, response: ServerResponse, next: () 
 const mime: Record<string, string> = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.png': 'image/png', '.svg': 'image/svg+xml' };
 export function createLocalServer(middleware?: Middleware, webRoot = resolve('dist/web'), roleLibraryFile?: string) {
   const roleLibraryApi=createRoleLibraryApi(roleLibraryFile);
-  const replayApi=createReplayApi(process.env.BOTCREPLAY_DATA_DIR);
+  const replayApi=createReplayApi(process.env.BOTCREPLAY_DATA_DIR,roleLibraryFile);
   return createServer((request, response) => {
     const origin = request.headers.origin;
     const host = request.headers.host ?? '';
