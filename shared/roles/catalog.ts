@@ -58,5 +58,17 @@ export function getRoleCoverage() {
   return { supported: supportedRoleIds.length, archived: sources.size, retired:retiredIds.size, byType, excluded: sourceData.excluded.length+retiredIds.size, proposals: activeProposals.length, approved: activeProposals.filter(x => x.review.status === 'approved').length, implemented: activeProposals.filter(x => x.review.implementation === 'implemented').length };
 }
 // Aliases require explicit source verification; names and normalized IDs never bind automatically.
-export const verifiedRoleAliases: Readonly<Record<string, string>> = Object.freeze({});
-export function resolveExactRoleId(id: string): string | undefined { return isRoleActive(id) ? id : verifiedRoleAliases[id]; }
+// Verified against townsquare/src/roles.json at b8f8e84c5a34e5a402fd7cbc96f8a332366f427d
+// by ability, team and source icon filename. Keep the local rule/review versions.
+export const verifiedRoleAliases: Readonly<Record<string, string>> = Object.freeze({
+  yinyangshi: 'yinyangshiqidong111',
+  bianlianshi: 'chaojibianbianbian111',
+  alsaahir: 'xixifafashishishishishishishi',
+  drunk: 'woheduolema111',
+  cerenovus: 'xixi111111111111',
+});
+export function resolveExactRoleId(id: string): string | undefined {
+  if (isRoleActive(id)) return id;
+  const target = Object.hasOwn(verifiedRoleAliases, id) ? verifiedRoleAliases[id] : undefined;
+  return target && isRoleActive(target) ? target : undefined;
+}

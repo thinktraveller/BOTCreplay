@@ -37,7 +37,7 @@ export function importScript(text: string): ScriptImport {
   const parsed = parseStrictJson(text), errors = [...parsed.errors], warnings: ImportIssue[] = [], metadata: Record<string, JsonValue> = {};
   if (errors.length) return { errors, warnings, metadata };
   if (!Array.isArray(parsed.value)) return { errors: [{ path: '/', message: '剧本须为角色数组' }], warnings, metadata };
-  const script: ScriptSnapshot = { originalJson: text, roles: [], excluded: [] }, ids = new Set<string>();
+  const script: ScriptSnapshot = { originalJson: text, roles: [], excluded: [] }, ids = new Set<string>(), roleIds = new Set<string>();
   const excluded = new Map(getExcludedRoles().map(item => [item.roleId, item.reason]));
   const special = new Set(['dusk', 'dawn', 'minioninfo', 'demoninfo']);
   const urls = (raw: Record<string, JsonValue>, path: string) => {
@@ -54,16 +54,18 @@ export function importScript(text: string): ScriptImport {
     if (special.has(id) || excluded.has(id) || ['traveler', 'traveller', 'fabled', 'jinxed'].includes(String(item.team))) {
       const reason = excluded.get(id) ?? (special.has(id) ? '夜序系统提示，非玩家角色' : '本阶段不支持此角色类型'); script.excluded.push({ id, reason, raw: entry }); warnings.push({ path, message: `${id}：${reason}` }); return;
     }
-    const exact = resolveExactRoleId(id), source = exact ? getSourceRole(exact) : undefined;
+    const exact = resolveExactRoleId(id), roleId = exact ?? id, source = exact ? getSourceRole(exact) : undefined;
+    if (roleIds.has(roleId)) { errors.push({ path: `${path}/id`, message: `角色解析后重复：${id}（${roleId}）` }); return; }
     const full = ['name', 'team', 'ability'].some(key => Object.hasOwn(item, key));
     let raw = source ? { ...source, ...item } : item;
     if (!source && !full) { errors.push({ path, message: `找不到仅ID角色“${id}”的资料，请提供完整定义` }); return; }
     if (!definition(raw)) { errors.push(...(definition.errors ?? []).map(error => ({ path: path + error.instancePath, message: error.message ?? '角色字段无效' }))); return; }
     raw = raw as Record<string, JsonValue>; urls(raw, path);
     const knownRule=source?getCurrentRule(exact!):undefined,matches=source&&(!full||raw.ability===source.ability||raw.ability===knownRule?.abilityText);
-    const rule = matches ? knownRule! : { roleId: id, roleName: String(raw.name), version: 'imported-manual-v1', abilityText: String(raw.ability), source: 'imported-script', actionReview: { proposalVersion: 'manual', status: 'pending' as const } };
+    const rule = matches ? knownRule! : { roleId, roleName: String(raw.name), version: 'imported-manual-v1', abilityText: String(raw.ability), source: 'imported-script', actionReview: { proposalVersion: 'manual', status: 'pending' as const } };
     if (full && source && !matches) warnings.push({ path: path + '/ability', message: '导入技能与内置版本不同，保留导入版本并仅开放人工记录' });
-    script.roles.push({ role: { roleId: exact ?? id, name: String(raw.name), type: raw.team as RoleType, ruleVersion: rule.version }, raw: raw as Record<string, JsonValue>, currentRule: rule });
+    roleIds.add(roleId);
+    script.roles.push({ role: { roleId, name: String(raw.name), type: raw.team as RoleType, ruleVersion: rule.version }, raw: raw as Record<string, JsonValue>, currentRule: rule });
   });
   // Explicit night-order lists are optional; unknown player references are still diagnosed.
   for (const key of ['firstNight', 'otherNight']) {
