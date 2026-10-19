@@ -51,7 +51,7 @@ export function importScript(text: string): ScriptImport {
     const id = item.id;
     if (ids.has(id)) { errors.push({ path: `${path}/id`, message: `角色/元数据id重复：${id}` }); return; } ids.add(id);
     if (id === '_meta') { Object.assign(metadata, item); if (Object.hasOwn(item, 'state')) warnings.push({ path: path + '/state', message: '保留原文，但不启用_meta.state房规' }); return; }
-    if (special.has(id) || excluded.has(id) || ['traveller', 'fabled', 'jinxed'].includes(String(item.team))) {
+    if (special.has(id) || excluded.has(id) || ['traveler', 'traveller', 'fabled', 'jinxed'].includes(String(item.team))) {
       const reason = excluded.get(id) ?? (special.has(id) ? '夜序系统提示，非玩家角色' : '本阶段不支持此角色类型'); script.excluded.push({ id, reason, raw: entry }); warnings.push({ path, message: `${id}：${reason}` }); return;
     }
     const exact = resolveExactRoleId(id), source = exact ? getSourceRole(exact) : undefined;
