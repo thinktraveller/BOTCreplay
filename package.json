@@ -1,6 +1,15 @@
 {
   "name": "botcreplay",
   "version": "0.1.0",
+  "description": "血染钟楼本地复盘编辑器，支持角色配置、时间轴记录及 HTML / PNG 导出。",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thinktraveller/BOTCreplay.git"
+  },
+  "homepage": "https://github.com/thinktraveller/BOTCreplay/blob/project-docs/README.md",
+  "bugs": {
+    "url": "https://github.com/thinktraveller/BOTCreplay/issues"
+  },
   "private": true,
   "type": "module",
   "engines": { "node": "^22.12.0 || ^24.0.0 || >=26.0.0", "npm": ">=10" },
